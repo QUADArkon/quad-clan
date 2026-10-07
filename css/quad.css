@@ -83,15 +83,93 @@ body.nav-page {
   font: 11px Arial, Helvetica, sans-serif;
 }
 
-.site-nav {
-  width: 150px;
+.nav-spacer { height: 138px; }
+.site-nav { width: 150px; margin: 0; padding: 0; }
+.nav-top, .nav-bottom { display: block; width: 150px; height: 24px; margin: 0; padding: 0; border: 0; }
+.nav-body { position: relative; width: 150px; height: 265px; margin: 0; padding: 0; overflow: hidden; }
+.nav-side { position: absolute; top: 0; display: block; width: 8px; height: 265px; margin: 0; padding: 0; border: 0; z-index: 2; }
+.nav-side-left { left: 0; }
+.nav-side-right { right: 0; }
+
+.nav-menu {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 134px;
+  height: 265px;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  background: #000;
 }
 
-.site-nav a {
+.nav-menu details { width: 100%; margin: 0; padding: 0; border: 0; }
+
+.nav-menu summary,
+.nav-email {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 1px 2px 0;
   color: #fff;
+  background-color: #000;
+  background-image: url("../images/nav/menuimage.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  font: bold 14px/16px "Times New Roman", Times, serif;
+  text-align: center;
   text-decoration: none;
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav-menu summary::-webkit-details-marker { display: none; }
+.nav-menu summary::marker { content: ""; }
+
+
+.nav-menu ul {
+  width: 100%;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+  background: #000;
+  transition: height 180ms ease-in-out;
+}
+
+.nav-menu li { width: 100%; margin: 0; padding: 0; }
+
+.nav-menu li a {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 1px 3px;
+  color: #fff;
+  background: #000;
+  font: bold 11px/13px Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms linear, background-color 100ms linear;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:focus-visible {
+  color: #4fffff;
+  background: #800000;
+  outline: none;
+}
+
+.nav-email:hover,
+.nav-email:focus-visible {
+  color: #4fffff;
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-menu ul,
+  .nav-menu li a { transition: none; }
 }
 
 /* ===== main.html ===== */
