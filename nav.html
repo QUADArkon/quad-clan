@@ -3,13 +3,106 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[QUAD] Menu</title>
   <base target="main">
-  <title>[QUAD] Navigation</title>
   <link rel="stylesheet" href="css/quad.css">
 </head>
 <body class="nav-page" background="images/nav/mlight.gif">
-  <nav class="site-nav" aria-label="Main navigation">
-    <a href="main.html">Main</a>
+  <div class="nav-spacer" aria-hidden="true"></div>
+
+  <nav class="site-nav" aria-label="QUAD navigation">
+    <img class="nav-top" src="images/nav/menutop.gif" width="150" height="24" alt="">
+
+    <div class="nav-body">
+      <img class="nav-side nav-side-left" src="images/nav/menuleft.gif" width="8" height="265" alt="">
+
+      <div class="nav-menu">
+        <details>
+          <summary>Main</summary>
+          <ul>
+            <li><a href="main/logo/logo.html">Clan Logo</a></li><li><a href="main/history/history.html">History</a></li><li><a href="main/code/code.html">Code</a></li><li><a href="main/members/members.html">Members</a></li><li><a href="main/join/join.html">Join</a></li><li><a href="main/challenge/challenge.html">Challenge</a></li><li><a href="main/clanwars/clanwars.html">Clanwars</a></li><li><a href="main/demos/demos.html">Demos</a></li><li><a href="main/lan/lans.html">LAN Parties</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>News &amp; Boards</summary>
+          <ul>
+            <li><a href="news/news.html">News</a></li><li><a href="news/archive/archive.html">News archive</a></li><li><a href="http://arkon.proboards.com/index.cgi" target="_blank" rel="noopener noreferrer">[QUAD] Forum</a></li><li><a href="http://pub23.bravenet.com/guestbook/1964437133/index.cgi" target="_blank" rel="noopener noreferrer">[QUAD] Guestbook</a></li><li><a href="news/servers/servers.html">[QUAD] Servers</a></li><li><a href="news/interviews/interviews.html">Interviews</a></li><li><a href="news/links/links.html">Links</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Hints &amp; Guides</summary>
+          <ul>
+            <li><a href="guides/bible/bible.html">Quake Bible</a></li><li><a href="guides/overview/overview.html">Maps Overview</a></li><li><a href="guides/console/console.html">Console 1.06</a></li><li><a href="guides/comlines/comlines.html">Command Line 1.09</a></li><li><a href="guides/name/name.html">Online Name Maker</a></li><li><a href="guides/rules/rules.html">N.O.T. Rules</a></li><li><a href="guides/quetiquette/quetiquette.html">Quetiquette</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>The Elders</summary>
+          <ul>
+            <li><a href="main/members/arkon/arkon.html">[QUAD] Arkon</a></li><li><a href="main/members/biagio/biagio.html">[QUAD] Biagio</a></li><li><a href="main/members/hiroshi/hiroshi.html">[QUAD] Hiroshi</a></li><li><a href="main/members/polarite/polarite.html">[QUAD] Polarite</a></li><li><a href="main/members/raistlin/raistlin.html">[QUAD] Raistlin</a></li><li><a href="main/members/ronin/ronin.html">[QUAD] Ronin666</a></li><li><a href="main/members/wham/wham.html">[QUAD] Wham!</a></li><li><a href="main/members/yanosh/yanosh.html">[QUAD] Yanosh</a></li><li><a href="main/members/zizu/zizu.html">[QUAD] Zizu</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Files</summary>
+          <ul>
+            <li><a href="files/extreme/extreme.html">Extreme Mod</a></li><li><a href="files/crmod/crmod.html">CRMod</a></li><li><a href="files/qview/qview.html">QView</a></li><li><a href="files/maps/maps.html">Maps</a></li><li><a href="files/bots/bots.html">Bots</a></li><li><a href="files/utils/utils.html">Utilities</a></li>
+          </ul>
+        </details>
+
+        <a class="nav-email" href="mailto:quadarkonSPAMOFF@tiscali.it">Email</a>
+      </div>
+
+      <img class="nav-side nav-side-right" src="images/nav/menuright.gif" width="8" height="265" alt="">
+    </div>
+
+    <img class="nav-bottom" src="images/nav/menubottom.gif" width="150" height="24" alt="">
   </nav>
+
+  <script>
+    document.querySelectorAll('.nav-menu details').forEach((section) => {
+      const list = section.querySelector('ul');
+      list.style.height = '0px';
+
+      section.querySelector('summary').addEventListener('click', (event) => {
+        event.preventDefault();
+        const opening = !section.open;
+
+        document.querySelectorAll('.nav-menu details').forEach((other) => {
+          if (other !== section && other.open) {
+            const otherList = other.querySelector('ul');
+            otherList.style.height = otherList.scrollHeight + 'px';
+            requestAnimationFrame(() => {
+              otherList.style.height = '0px';
+            });
+            otherList.addEventListener('transitionend', () => {
+              other.open = false;
+            }, { once: true });
+          }
+        });
+
+        if (opening) {
+          section.open = true;
+          list.style.height = '0px';
+          requestAnimationFrame(() => {
+            list.style.height = list.scrollHeight + 'px';
+          });
+          list.addEventListener('transitionend', () => {
+            if (section.open) list.style.height = 'auto';
+          }, { once: true });
+        } else {
+          list.style.height = list.scrollHeight + 'px';
+          requestAnimationFrame(() => {
+            list.style.height = '0px';
+          });
+          list.addEventListener('transitionend', () => {
+            section.open = false;
+          }, { once: true });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
