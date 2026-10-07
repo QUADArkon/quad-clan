@@ -1,0 +1,109 @@
+/* QUAD shared stylesheet. Historical backgrounds are defined by each HTML document. */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+}
+
+/* ===== index.html: iframe geometry matching old 155,* / 68,* frameset ===== */
+html,
+body.index-page {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body.index-page {
+  position: relative;
+}
+
+.quad-nav,
+.quad-header,
+.quad-main {
+  position: absolute;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.quad-nav {
+  top: 0;
+  left: 0;
+  width: 155px;
+  height: 100%;
+}
+
+.quad-header {
+  top: 0;
+  left: 155px;
+  width: calc(100% - 155px);
+  height: 68px;
+}
+
+.quad-main {
+  top: 68px;
+  left: 155px;
+  width: calc(100% - 155px);
+  height: calc(100% - 68px);
+}
+
+/* ===== header.html ===== */
+body.header-page {
+  margin: 0;
+  padding: 10px 0 0;
+  overflow: hidden;
+}
+
+.header-banner {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.header-banner img {
+  display: block;
+  width: 600px;
+  height: 49px;
+  margin: 0 auto;
+  border: 0;
+}
+
+/* ===== nav.html ===== */
+body.nav-page {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #fff;
+  font: 11px Arial, Helvetica, sans-serif;
+}
+
+.site-nav {
+  width: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ===== main.html ===== */
+body.main-page {
+  margin: 8px;
+  color: #fff;
+  background-color: #000;
+  font: 11px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.site-main {
+  width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
