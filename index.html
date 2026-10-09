@@ -10,8 +10,22 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body class="index-page">
-  <iframe class="quad-nav" src="nav.html" title="[QUAD] Navigation" scrolling="no"></iframe>
-  <iframe class="quad-header" src="header.html" title="[QUAD] Header" scrolling="no"></iframe>
-  <iframe class="quad-main" name="main" src="main.html" title="[QUAD] Main" scrolling="auto"></iframe>
+  <div class="desktop-site">
+    <iframe class="quad-nav" src="nav.html" title="[QUAD] Navigation" scrolling="no"></iframe>
+    <iframe class="quad-header" src="header.html" title="[QUAD] Header" scrolling="no"></iframe>
+    <iframe class="quad-main" name="main" src="news/news.html" title="[QUAD] Main" scrolling="auto"></iframe>
+  </div>
+
+  <div class="mobile-site">
+    <header class="mobile-header">
+      <img src="images/header/quadban.gif" width="600" height="49" alt="[QUAD]">
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="QUAD navigation"><div id="mobile-menu-host"></div></nav>
+    <main class="mobile-content" id="mobile-content"><p class="mobile-loading">Loading...</p></main>
+  </div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/mobile.js"></script>
 </body>
 </html>
