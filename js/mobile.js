@@ -41,7 +41,7 @@
       const imported = source.cloneNode(true);
       fixUrls(imported, pageUrl);
       content.replaceChildren(imported);
-      document.title = documentFromPage.title || '[QUAD] Clan Homepage';
+      if (push) document.title = documentFromPage.title || '[QUAD] Clan Homepage';
       nav.classList.remove('is-open');
       toggle.setAttribute('aria-expanded', 'false');
       window.scrollTo(0, 0);
