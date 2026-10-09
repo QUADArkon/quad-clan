@@ -1,187 +1,135 @@
-/* QUAD shared stylesheet. Historical backgrounds are defined by each HTML document. */
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  padding: 0;
-}
+/* QUAD shared stylesheet */
+* { box-sizing: border-box; }
+html, body { padding:0; scrollbar-color:#555555 #000000; scrollbar-width:auto; }
 
 /* ===== index.html: iframe geometry matching old 155,* / 68,* frameset ===== */
-html,
-body.index-page {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
-}
+html, body.index-page { width:100%; height:100%; margin:0; overflow:hidden; }
+body.index-page { position:relative; }
+.quad-nav,.quad-header,.quad-main { position:absolute; display:block; margin:0; padding:0; border:0; }
+.quad-nav { top:0; left:0; width:155px; height:100%; }
+.quad-header { top:0; left:155px; width:calc(100% - 155px); height:68px; }
+.quad-main { top:68px; left:155px; width:calc(100% - 155px); height:calc(100% - 68px); }
 
-body.index-page {
-  position: relative;
+/* ===== shared continuous lightning surface ===== */
+body.nav-page,
+body.header-page,
+body.main-page,
+body.content-page {
+  background-color:#000;
+  background-image:url("../images/lightnings.gif");
+  background-repeat:repeat;
+  background-attachment:fixed;
 }
-
-.quad-nav,
-.quad-header,
-.quad-main {
-  position: absolute;
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-.quad-nav {
-  top: 0;
-  left: 0;
-  width: 155px;
-  height: 100%;
-}
-
-.quad-header {
-  top: 0;
-  left: 155px;
-  width: calc(100% - 155px);
-  height: 68px;
-}
-
-.quad-main {
-  top: 68px;
-  left: 155px;
-  width: calc(100% - 155px);
-  height: calc(100% - 68px);
-}
+body.nav-page { background-position:0 -68px; }
+body.header-page { background-position:-155px 0; }
+body.main-page,
+body.content-page { background-position:-155px -68px; }
 
 /* ===== header.html ===== */
-body.header-page {
-  margin: 0;
-  padding: 10px 0 0;
-  overflow: hidden;
-}
-
-.header-banner {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.header-banner img {
-  display: block;
-  width: 600px;
-  height: 49px;
-  margin: 0 auto;
-  border: 0;
-}
+body.header-page { position:relative; margin:0; padding:10px 0 0; overflow:hidden; }
+.header-grid { position:absolute; top:0; left:0; z-index:1; display:block; pointer-events:none; }
+.header-banner { position:relative; z-index:2; margin:0; padding:0; text-align:center; }
+.header-banner img { display:block; width:600px; height:49px; margin:0 auto; border:0; }
 
 /* ===== nav.html ===== */
-body.nav-page {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  color: #fff;
-  font: 11px Arial, Helvetica, sans-serif;
+body.nav-page { position:relative; margin:0; padding:0; overflow:hidden; color:#fff; font:11px Arial,Helvetica,sans-serif; }
+.nav-grid { position:absolute; top:0; left:0; z-index:1; display:block; pointer-events:none; }
+
+/* Keep the complete logo asset at native size.
+   The 155px-wide NAV iframe/body acts as the viewing window. */
+.quake-logo {
+  position:absolute;
+  top:-41px;
+  left:-25px;
+  z-index:2;
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:none;
+  pointer-events:none;
 }
 
-.nav-spacer { height: 138px; }
-.site-nav { width: 150px; margin: 0; padding: 0; }
-.nav-top, .nav-bottom { display: block; width: 150px; height: 24px; margin: 0; padding: 0; border: 0; }
-.nav-body { position: relative; width: 150px; height: 265px; margin: 0; padding: 0; overflow: hidden; }
-.nav-side { position: absolute; top: 0; display: block; width: 8px; height: 265px; margin: 0; padding: 0; border: 0; z-index: 2; }
-.nav-side-left { left: 0; }
-.nav-side-right { right: 0; }
-
-.nav-menu {
-  position: absolute;
-  top: 0;
-  left: 8px;
-  width: 134px;
-  height: 265px;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background: #000;
-}
-
-.nav-menu details { width: 100%; margin: 0; padding: 0; border: 0; }
-
-.nav-menu summary,
-.nav-email {
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 1px 2px 0;
-  color: #fff;
-  background-color: #000;
-  background-image: url("../images/nav/menuimage.jpeg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100% 100%;
-  font: bold 14px/16px "Times New Roman", Times, serif;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  list-style: none;
-}
-
-.nav-menu summary::-webkit-details-marker { display: none; }
-.nav-menu summary::marker { content: ""; }
-
-
-.nav-menu ul {
-  width: 100%;
-  height: 0;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  list-style: none;
-  background: #000;
-  transition: height 180ms ease-in-out;
-}
-
-.nav-menu li { width: 100%; margin: 0; padding: 0; }
-
-.nav-menu li a {
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 1px 3px;
-  color: #fff;
-  background: #000;
-  font: bold 11px/13px Arial, Helvetica, sans-serif;
-  text-align: center;
-  text-decoration: none;
-  transition: color 100ms linear, background-color 100ms linear;
-}
-
-.nav-menu li a:hover,
-.nav-menu li a:focus-visible {
-  color: #4fffff;
-  background: #800000;
-  outline: none;
-}
-
-.nav-email:hover,
-.nav-email:focus-visible {
-  color: #4fffff;
-  outline: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .nav-menu ul,
-  .nav-menu li a { transition: none; }
-}
+.nav-spacer { height:138px; }
+.site-nav { position:relative; z-index:3; width:150px; margin:0; padding:0; }
+.nav-top,.nav-bottom { display:block; width:150px; height:24px; margin:0; padding:0; border:0; }
+.nav-body { position:relative; width:150px; height:265px; margin:0; padding:0; overflow:hidden; }
+.nav-side { position:absolute; top:0; display:block; width:8px; height:265px; margin:0; padding:0; border:0; z-index:2; }
+.nav-side-left { left:0; }
+.nav-side-right { right:0; }
+.nav-menu { position:absolute; top:0; left:8px; width:134px; height:265px; margin:0; padding:0; overflow:hidden; background:#000; }
+.nav-menu details { width:100%; margin:0; padding:0; border:0; }
+.nav-menu summary,.nav-email { display:block; width:100%; margin:0; padding:1px 2px 0; color:#fff; background-color:#000; background-image:url("../images/nav/menuimage.jpeg"); background-repeat:no-repeat; background-position:center center; background-size:100% 100%; font:bold 14px/16px "Times New Roman",Times,serif; text-align:center; text-decoration:none; cursor:pointer; list-style:none; }
+.nav-menu summary::-webkit-details-marker { display:none; }
+.nav-menu summary::marker { content:""; }
+.nav-menu ul { width:100%; height:0; margin:0; padding:0; overflow:hidden; list-style:none; background:#000; transition:height 180ms ease-in-out; }
+.nav-menu li { width:100%; margin:0; padding:0; }
+.nav-menu li a { display:block; width:100%; margin:0; padding:1px 3px; color:#fff; background:#000; font:bold 11px/13px Arial,Helvetica,sans-serif; text-align:center; text-decoration:none; transition:color 100ms linear,background-color 100ms linear; }
+.nav-menu li a:hover,.nav-menu li a:focus-visible { color:#4fffff; background:#800000; outline:none; }
+.nav-email:hover,.nav-email:focus-visible { color:#4fffff; outline:none; }
+@media (prefers-reduced-motion:reduce) { .nav-menu ul,.nav-menu li a { transition:none; } }
 
 /* ===== main.html ===== */
-body.main-page {
-  margin: 8px;
-  color: #fff;
-  background-color: #000;
-  font: 11px Verdana, Arial, Helvetica, sans-serif;
-}
+body.main-page { margin:8px; color:#fff; font:11px Verdana,Arial,Helvetica,sans-serif; }
+.site-main { width:600px; margin:0 auto; padding:0; }
 
-.site-main {
-  width: 600px;
-  margin: 0 auto;
-  padding: 0;
+/* ===== CONTENT / NEWS ===== */
+html:has(body.content-page) { min-height:100%; overflow-y:auto; }
+body.content-page { margin:8px; padding:0; color:#fff; font:10pt Verdana,Arial,Helvetica,sans-serif; }
+.content-page a:link,.content-page a:active { color:#ffff00; text-decoration:none; }
+.content-page a:visited { color:#ff8000; text-decoration:none; }
+.content-page a:hover,.content-page a:focus-visible { color:#ff0000; text-decoration:underline overline; outline:none; }
+.news-page { width:600px; margin:0 auto; }
+.content-box { box-sizing:border-box; border:2px solid #555; border-radius:8px; background:rgba(0,0,0,.42); }
+.news-tools { display:grid; grid-template-columns:298px 297px; gap:5px; width:600px; margin:0 0 5px; }
+.potw-box,.latest-files-box { min-height:118px; padding:7px; font-size:8pt; }
+.potw-head { display:grid; grid-template-columns:1fr 1fr; margin-bottom:4px; color:#00ffff; }
+.potw-head span:last-child { text-align:center; }
+.potw-body { display:grid; grid-template-columns:128px 1fr; gap:8px; align-items:start; }
+.potw-body img { display:block; width:128px; height:96px; }
+.potw-links { text-align:center; line-height:1.5; }
+.box-label { margin-bottom:4px; color:#00ffff; }
+.latest-files-body { display:grid; grid-template-columns:1fr 96px; gap:4px; align-items:start; }
+.file-links a { display:block; line-height:1.35; }
+.quakeitalia,.quakeitalia img { display:block; width:96px; height:96px; }
+.news-box { width:600px; padding:8px 10px; }
+.news-header { margin:0 0 12px; }
+.news-title { display:flex; align-items:center; gap:2px; margin:0 0 2px; color:#ff0000; line-height:15px; }
+.news-title img { display:block; width:28px; height:15px; flex:0 0 auto; }
+.news-title strong { font-weight:bold; }
+.news-meta { color:#fff; font-size:8pt; }
+.news-content { color:#fff; line-height:1.35; }
+.news-content p { margin:0 0 10px; }
+.news-content p:last-child { margin-bottom:0; }
+.news-content img { max-width:100%; height:auto; }
+.news-command { color:#ff0000; }
+
+
+/* ===== responsive shell ===== */
+.desktop-site { display:block; }
+.mobile-site { display:none; }
+
+@media (max-width:767px) {
+  html,body.index-page { width:100%; min-height:100%; height:auto; margin:0; overflow:visible; }
+  body.index-page { background-color:#000; background-image:url("../images/lightnings.gif"); background-repeat:repeat; background-position:0 0; background-attachment:fixed; color:#fff; }
+  .desktop-site { display:none; }
+  .mobile-site { display:block; min-height:100vh; }
+  .mobile-header { display:flex; align-items:center; gap:8px; width:100%; max-width:600px; margin:0 auto; padding:8px; }
+  .mobile-header img { display:block; min-width:0; width:calc(100% - 52px); max-width:600px; height:auto; }
+  .mobile-menu-toggle { flex:0 0 44px; width:44px; height:44px; padding:9px 7px; border:1px solid #555; border-radius:8px; background:#000; cursor:pointer; }
+  .mobile-menu-toggle span { display:block; height:2px; margin:5px 0; background:#fff; }
+  .mobile-nav { width:calc(100% - 16px); max-width:600px; max-height:0; margin:0 auto; overflow:hidden; transition:max-height 180ms ease-in-out; }
+  .mobile-nav.is-open { max-height:1200px; }
+  #mobile-menu-host details,#mobile-menu-host ul,#mobile-menu-host li { width:100%; margin:0; padding:0; }
+  #mobile-menu-host ul { list-style:none; background:#000; }
+  #mobile-menu-host summary,.mobile-nav-email { display:block; width:100%; margin:0; padding:5px; color:#fff; background-color:#000; background-image:url("../images/nav/menuimage.jpeg"); background-repeat:no-repeat; background-position:center; background-size:100% 100%; font:bold 15px/20px "Times New Roman",Times,serif; text-align:center; text-decoration:none; cursor:pointer; list-style:none; }
+  #mobile-menu-host summary::-webkit-details-marker { display:none; }
+  #mobile-menu-host summary::marker { content:""; }
+  #mobile-menu-host li a { display:block; padding:7px 8px; color:#fff; background:#000; font:bold 12px/16px Arial,Helvetica,sans-serif; text-align:center; text-decoration:none; }
+  #mobile-menu-host li a:hover,#mobile-menu-host li a:focus-visible,.mobile-nav-email:hover,.mobile-nav-email:focus-visible { color:#4fffff; background:#800000; outline:none; }
+  .mobile-content { width:100%; padding:8px; }
+  .mobile-content > .news-page,.mobile-content .news-page { width:100%; max-width:600px; margin:0 auto; }
+  .mobile-content .news-tools { grid-template-columns:1fr; width:100%; gap:5px; }
+  .mobile-content .potw-box,.mobile-content .latest-files-box,.mobile-content .news-box { width:100%; }
+  .mobile-content img { max-width:100%; height:auto; }
+  .mobile-error,.mobile-loading { text-align:center; }
 }
