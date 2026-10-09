@@ -127,6 +127,8 @@ body.content-page { margin:8px; padding:0; color:#fff; font:10pt Verdana,Arial,H
   #mobile-menu-host li a { display:block; padding:7px 8px; color:#fff; background:#000; font:bold 12px/16px Arial,Helvetica,sans-serif; text-align:center; text-decoration:none; }
   #mobile-menu-host li a:hover,#mobile-menu-host li a:focus-visible,.mobile-nav-email:hover,.mobile-nav-email:focus-visible { color:#4fffff; background:#800000; outline:none; }
   .mobile-content { width:100%; padding:8px; }
+  .mobile-content a:link,.mobile-content a:active { color:#ffff00; text-decoration:none; }
+  .mobile-content a:visited { color:#ff8000; text-decoration:none; }
   .mobile-content > .news-page,.mobile-content .news-page { width:100%; max-width:600px; margin:0 auto; }
   .mobile-content .news-tools { grid-template-columns:1fr; width:100%; gap:5px; }
   .mobile-content .potw-box,.mobile-content .latest-files-box,.mobile-content .news-box { width:100%; }
