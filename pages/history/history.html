@@ -8,17 +8,17 @@
 <style>
 html,body{margin:0;width:100%;height:auto;overflow:hidden;background:transparent;font-family:"Arial Narrow","Liberation Sans Narrow",Arial,sans-serif}
 body{display:block}
-#stage{position:relative;isolation:isolate;width:calc(100% - 8px);height:auto;aspect-ratio:1 / 1;margin:4px;overflow:hidden;background:#000;color:#feda4a;border-radius:4px}
+#stage{position:relative;isolation:isolate;width:588px;height:588px;margin:4px auto;overflow:hidden;background:#000;color:#feda4a;border-radius:4px}
 #scene{position:absolute;inset:0;z-index:1;width:100%;height:100%;display:block}
 #intro{position:absolute;inset:0;z-index:30;display:grid;place-items:center;text-align:center;pointer-events:none;opacity:0}
-#introText{font-size:38px;font-weight:700;letter-spacing:.12em;line-height:1.35}
-#crawlViewport{position:absolute;inset:0;z-index:20;overflow:hidden;perspective:290px;perspective-origin:50% 28%;opacity:0}
-#crawlViewport::after{content:"";position:absolute;z-index:5;left:0;right:0;top:0;height:205px;pointer-events:none;background:linear-gradient(#000 8%,rgba(0,0,0,.88) 45%,transparent)}
-#plane{position:absolute;left:-20%;width:140%;height:1900px;top:100%;transform-origin:50% 0;transform:rotateX(58deg)}
-#crawl{position:absolute;left:0;top:0;width:100%;text-align:center;font-size:24px;font-weight:700;letter-spacing:.018em;line-height:1.35;will-change:transform}
-#crawl .crawl-title{text-align:center;margin:0 0 58px}
+#introText{font-size:37px;font-weight:700;letter-spacing:.12em;line-height:1.35}
+#crawlViewport{position:absolute;inset:0;z-index:20;overflow:hidden;perspective:284px;perspective-origin:50% 28%;opacity:0}
+#crawlViewport::after{content:"";position:absolute;z-index:5;left:0;right:0;top:0;height:201px;pointer-events:none;background:linear-gradient(#000 8%,rgba(0,0,0,.88) 45%,transparent)}
+#plane{position:absolute;left:-20%;width:140%;height:1862px;top:100%;transform-origin:50% 0;transform:rotateX(58deg)}
+#crawl{position:absolute;left:0;top:0;width:100%;text-align:center;font-size:23.5px;font-weight:700;letter-spacing:.018em;line-height:1.35;will-change:transform}
+#crawl .crawl-title{text-align:center;margin:0 0 57px}
 #crawl .crawl-title p{margin:0 0 14px}
-#crawl p{margin:0 0 32px;padding:0 34px;box-sizing:border-box}
+#crawl p{margin:0 0 31px;padding:0 33px;box-sizing:border-box}
 #crawl .ending{text-align:center}
 #status{position:absolute;z-index:2000;right:8px;bottom:7px;color:#909090;font:10px Arial,sans-serif;cursor:pointer;user-select:none;letter-spacing:.04em}
 #loader{position:absolute;inset:0;z-index:3000;display:flex;align-items:center;justify-content:center;background:#000;color:#feda4a;text-align:center}
@@ -30,7 +30,7 @@ body{display:block}
 #loader.awaiting-audio{cursor:pointer}
 #loader.awaiting-audio #loaderTrack{display:none}
 #loader.awaiting-audio #loaderLabel{text-decoration:underline}
-@media(max-width:600px){#stage{width:calc(100% - 8px);height:auto;aspect-ratio:1 / 1;margin:4px}#plane{top:100%;left:-22%;width:144%}#crawl{font-size:4vw}#crawl .crawl-title{margin-bottom:9vw}#crawl p{margin-bottom:5.5vw}}
+@media(max-width:588px){#stage{width:calc(100vw - 8px);height:calc(100vw - 8px);margin:4px auto}#plane{top:100%;left:-22%;width:144%}#crawl{font-size:4vw}#crawl .crawl-title{margin-bottom:9vw}#crawl p{margin-bottom:5.5vw}}
 </style>
 </head>
 <body class="content-page">
@@ -103,7 +103,7 @@ let logoReady=false;
 logo.addEventListener('load',()=>{logoReady=true;});
 if(logo.complete&&logo.naturalWidth)logoReady=true;
 let startTime=performance.now();
-let W=600,H=600,DPR=1;
+let W=588,H=588,DPR=1;
 let stars=[];
 let smoke=[];
 
