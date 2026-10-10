@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>[QUAD] Menu</title><link rel="stylesheet" href="css/quad.css"></head>
+<body class="nav-page">
+  <img class="nav-grid" src="images/nav/navret.png" alt="">
+  <img class="quake-logo" src="images/nav/quakelogo.gif" alt="[QUAD]">
+  <div class="nav-spacer"></div>
+  <nav class="site-nav" aria-label="QUAD navigation">
+    <img class="nav-top" src="images/nav/menutop.gif" alt="">
+    <div class="nav-body">
+      <img class="nav-side nav-side-left" src="images/nav/menuleft.gif" alt="">
+      <div class="nav-menu" id="desktop-menu-host"></div>
+      <img class="nav-side nav-side-right" src="images/nav/menuright.gif" alt="">
+    </div>
+    <img class="nav-bottom" src="images/nav/menubottom.gif" alt="">
+  </nav>
+  <script src="js/menu.js"></script>
+  <script>
+    const desktopMenuHost = document.getElementById('desktop-menu-host');
+
+    renderQuadMenu(desktopMenuHost, { linkTarget: 'main' });
+
+    desktopMenuHost.addEventListener('click', event => {
+      const link = event.target.closest('a');
+      if (!link || link.target === '_blank' || link.protocol === 'mailto:') return;
+
+      event.preventDefault();
+      parent.postMessage({ type: 'quad-desktop-navigate', href: link.href }, '*');
+    });
+
+    desktopMenuHost.addEventListener('toggle', event => {
+      const section = event.target;
+      if (!(section instanceof HTMLDetailsElement) || !section.open) return;
+      document.querySelectorAll('#desktop-menu-host details').forEach(other => { if (other !== section) other.open = false; });
+      const list = section.querySelector('ul');
+      document.querySelectorAll('#desktop-menu-host details ul').forEach(ul => { ul.style.height = ul === list ? ul.scrollHeight + 'px' : '0px'; });
+    }, true);
+  </script>
+</body>
+</html>
