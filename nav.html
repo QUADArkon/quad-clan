@@ -28,13 +28,39 @@
       parent.postMessage({ type: 'quad-desktop-navigate', href: link.href }, '*');
     });
 
-    desktopMenuHost.addEventListener('toggle', event => {
-      const section = event.target;
-      if (!(section instanceof HTMLDetailsElement) || !section.open) return;
-      document.querySelectorAll('#desktop-menu-host details').forEach(other => { if (other !== section) other.open = false; });
+    const MENU_MS = 260;
+
+    function closeSection(section) {
       const list = section.querySelector('ul');
-      document.querySelectorAll('#desktop-menu-host details ul').forEach(ul => { ul.style.height = ul === list ? ul.scrollHeight + 'px' : '0px'; });
-    }, true);
+      if (!list || !section.open) return;
+      list.style.height = list.scrollHeight + 'px';
+      requestAnimationFrame(() => {
+        list.style.height = '0px';
+        window.setTimeout(() => { section.open = false; }, MENU_MS);
+      });
+    }
+
+    function openSection(section) {
+      const list = section.querySelector('ul');
+      if (!list) return;
+      document.querySelectorAll('#desktop-menu-host details').forEach(other => {
+        if (other !== section) closeSection(other);
+      });
+      section.open = true;
+      list.style.height = '0px';
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => { list.style.height = list.scrollHeight + 'px'; });
+      });
+    }
+
+    desktopMenuHost.addEventListener('click', event => {
+      const summary = event.target.closest('summary');
+      if (!summary) return;
+      const section = summary.closest('details');
+      if (!section) return;
+      event.preventDefault();
+      if (section.open) closeSection(section); else openSection(section);
+    });
   </script>
 </body>
 </html>
