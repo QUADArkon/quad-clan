@@ -26,6 +26,10 @@
   window.addEventListener('message', event => {
     const data = event.data;
     if (!data || data.type !== 'quad-desktop-navigate' || typeof data.href !== 'string') return;
+    if (mobileMain && event.source === mobileMain.contentWindow) {
+      fadeNavigate(mobileMain, data.href, 'mobile');
+      return;
+    }
     fadeNavigate(desktopMain, data.href, 'desktop');
   });
   if (menuHost && window.renderQuadMenu) renderQuadMenu(menuHost, { mobile: true });
