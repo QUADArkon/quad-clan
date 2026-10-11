@@ -1,15 +1,15 @@
 window.QUAD_MENU = [
   { title: "Main", items: [
-    ["Clan Logo", "pages/logo/logo.html"], ["History", "pages/history/history.html"], ["Code", "pages/code/code.html"], ["Members", "pages/members/members.html"], ["Join", "pages/join/join.html"], ["Challenge", "pages/challenge/challenge.html"], ["Clanwars", "pages/clanwars/clanwars.html"], ["Demos", "pages/demos/demos.html"], ["LAN Parties", "pages/lan/lans.html"]
+    ["Clan Logo", "pages/logo/logo.html"], ["History", "pages/history/history.html"], ["Code", "pages/code/code.html"], ["Join", "pages/join/join.html"], ["Challenge", "pages/challenge/challenge.html"], ["Clanwars", "pages/clanwars/clanwars.html"], ["Demos", "pages/demos/demos.html"], ["Trophies", "pages/trophies/trophies.html"], ["LAN Parties", "pages/lan/lans.html"]
   ]},
   { title: "News & Boards", items: [
-    ["News", "pages/news/news.html"], ["News archive", "news/archive/archive.html"], ["[QUAD] Forum", "https://quad.forumotion.me/"], ["[QUAD] Guestbook", "http://pub23.bravenet.com/guestbook/1964437133/index.cgi", "_blank"], ["[QUAD] Servers", "news/servers/servers.html"], ["Interviews", "news/interviews/interviews.html"], ["Links", "pages/links/links.html"]
+    ["News", "pages/news/news.html"], ["News archive", "news/archive/archive.html"], ["[QUAD] Forum", "https://quad.forumotion.me/"], ["[QUAD] Servers", "news/servers/servers.html"], ["Interviews", "news/interviews/interviews.html"], ["Links", "pages/links/links.html"]
   ]},
   { title: "Hints & Guides", items: [
     ["Quake Bible", "pages/help/bible.html"], ["Maps Overview", "pages/help/overview.html"], ["Console 1.06", "pages/help/console.html"], ["Command Line 1.09", "pages/help/comlines.html"], ["Online Name Maker", "pages/help/name.html"], ["N.O.T. Rules", "pages/help/rules.html"], ["Quetiquette", "pages/help/quetiquette.html"]
   ]},
-  { title: "The Elders", items: [
-    ["[QUAD] Arkon", "main/members/arkon/arkon.html"], ["[QUAD] Biagio", "main/members/biagio/biagio.html"], ["[QUAD] Hiroshi", "main/members/hiroshi/hiroshi.html"], ["[QUAD] Polarite", "main/members/polarite/polarite.html"], ["[QUAD] Raistlin", "main/members/raistlin/raistlin.html"], ["[QUAD] Ronin666", "main/members/ronin/ronin.html"], ["[QUAD] Wham!", "main/members/wham/wham.html"], ["[QUAD] Yanosh", "main/members/yanosh/yanosh.html"], ["[QUAD] Zizu", "main/members/zizu/zizu.html"]
+  { title: "Clanmates", items: [
+    ["[QUAD] Arkon", "main/members/arkon/arkon.html"], ["[QUAD] Bent", "main/members/bent/bent.html"], ["[QUAD] Biagio", "main/members/biagio/biagio.html"], ["[QUAD] Hiroshi", "main/members/hiroshi/hiroshi.html"], ["[QUAD] Morpheus", "main/members/morpheus/morpheus.html"], ["[QUAD] Polarite", "main/members/polarite/polarite.html"], ["[QUAD] Raistlin", "main/members/raistlin/raistlin.html"], ["[QUAD] Ronin666", "main/members/ronin/ronin.html"], ["[QUAD] Wham!", "main/members/wham/wham.html"], ["[QUAD] Yanosh", "main/members/yanosh/yanosh.html"], ["[QUAD] Zizu", "main/members/zizu/zizu.html"]
   ]},
   { title: "Files", items: [
     ["Extreme Mod", "pages/files/extreme.html"], ["CRMod", "pages/files/crmod.html"], ["QView", "pages/files/qview.html"], ["Maps", "pages/files/maps.html"], ["Bots", "pages/files/bots.html"], ["Utilities", "pages/files/utils.html"]
