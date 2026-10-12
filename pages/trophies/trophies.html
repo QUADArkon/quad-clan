@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>[QUAD] Trophies</title>
+<link rel="stylesheet" href="../../css/quad.css">
+<style>
+.trophies-wrap{opacity:1;transition:opacity .5s ease}.trophies-wrap.is-fading{opacity:0}.trophies{width:100%;padding:8px 10px}.trophies-header{text-align:center}.trophies-header img{display:block;max-width:100%;height:auto;margin:0 auto 8px}.trophies-title{margin:0 0 10px;text-align:center;font-weight:bold}.trophies-pages{text-align:center;margin:10px 0 14px}.trophies-pages a{cursor:pointer;margin:0 4px}.trophies-pages a.active{font-weight:bold;text-decoration:none}.trophies-grid{display:grid;grid-template-columns:repeat(4,128px);justify-content:center;gap:14px 12px}.trophy{width:128px;text-align:center}.trophy-link{display:block;width:128px;height:96px;margin:0 auto 4px}.trophy-link img{display:block;width:128px;height:96px;object-fit:contain;border:0}.trophy-player,.trophy-date{display:block;line-height:1.2}.trophy-player{font-weight:bold}.trophies-bottom{margin-top:16px}.trophies-last-row{grid-column:1/-1;display:flex;justify-content:center;gap:12px}.trophies-viewer{display:none;text-align:center}.trophies-viewer.is-visible{display:block}.viewer-bottom{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;margin:10px 0 12px}.viewer-bottom>a:first-child{text-align:left}.viewer-bottom>a:last-child{text-align:right}.viewer-center{text-align:center}.viewer-position{display:block;color:#fff;margin-top:2px}.viewer-image-link{display:block;text-align:center}.viewer-image{display:block;max-width:100%;height:auto;margin:0 auto;border:0}.viewer-info{margin:0;line-height:1.35}.viewer-player{display:block;font-weight:bold}.viewer-date{display:block}.viewer-back{display:inline-block;margin:0 0 4px}@media(max-width:600px){.trophies-grid{grid-template-columns:repeat(2,128px)}.trophies-last-row{display:contents}.viewer-bottom{grid-template-columns:auto 1fr auto;gap:8px}.viewer-bottom a{white-space:nowrap}}@media(prefers-reduced-motion:reduce){.trophies-wrap{transition:none}}
+</style>
+</head>
+<body class="content-page">
+<div class="quad-content trophies-wrap">
+  <div class="content-box trophies">
+    <div id="trophiesHeader" class="trophies-header">
+      <img src="../../images/pages/trophies/runningquad.gif" alt="Trophies">
+      <div class="trophies-title">TROPHIES</div>
+    </div>
+
+    <div id="galleryView">
+      <div id="pagesTop" class="trophies-pages"></div>
+      <div id="trophiesGrid" class="trophies-grid"></div>
+      <div id="pagesBottom" class="trophies-pages trophies-bottom"></div>
+    </div>
+
+    <div id="viewerView" class="trophies-viewer">
+      <a id="viewerImageLink" class="viewer-image-link" href="#">
+        <img id="viewerImage" class="viewer-image" src="" alt="">
+      </a>
+      <div class="viewer-bottom">
+        <a id="viewerPrevious" href="#">&laquo; PREVIOUS</a>
+        <div class="viewer-center">
+          <div class="viewer-info">
+            <span id="viewerPlayer" class="viewer-player"></span>
+            <span id="viewerDate" class="viewer-date"></span>
+          </div>
+          <span id="viewerPosition" class="viewer-position"></span>
+        </div>
+        <a id="viewerNext" href="#">NEXT &raquo;</a>
+      </div>
+      <a id="viewerBack" class="viewer-back" href="#">BACK TO GALLERY</a>
+    </div>
+  </div>
+</div>
+
+<script src="../../js/trophies.js"></script>
+<script>
+(function(){
+  var PER_PAGE=107,FADE_MS=500,currentPage=1,currentIndex=0,changing=false,savedScroll=0;
+  var wrap=document.querySelector('.trophies-wrap');
+  var trophiesHeader=document.getElementById('trophiesHeader');
+  var galleryView=document.getElementById('galleryView');
+  var viewerView=document.getElementById('viewerView');
+  var grid=document.getElementById('trophiesGrid');
+  var pagesTop=document.getElementById('pagesTop');
+  var pagesBottom=document.getElementById('pagesBottom');
+  var viewerPrevious=document.getElementById('viewerPrevious');
+  var viewerNext=document.getElementById('viewerNext');
+  var viewerPosition=document.getElementById('viewerPosition');
+  var viewerImage=document.getElementById('viewerImage');
+  var viewerImageLink=document.getElementById('viewerImageLink');
+  var viewerPlayer=document.getElementById('viewerPlayer');
+  var viewerDate=document.getElementById('viewerDate');
+  var viewerBack=document.getElementById('viewerBack');
+
+  function getInfo(path){
+    var p=path.replace(/\\/g,'/').split('/');
+    var file=p[p.length-1];
+    var player=p[p.length-2];
+    player=player.charAt(0).toUpperCase()+player.slice(1);
+    var m=file.match(/^(\d{4})(\d{2})(\d{2})_/);
+    return{player:player,date:m?m[3]+'/'+m[2]+'/'+m[1]:''};
+  }
+
+  function fadeChange(action,scrollTo){
+    if(changing)return;
+    changing=true;
+    wrap.classList.add('is-fading');
+    setTimeout(function(){
+      action();
+      window.scrollTo(0,scrollTo);
+      requestAnimationFrame(function(){
+        requestAnimationFrame(function(){
+          wrap.classList.remove('is-fading');
+          setTimeout(function(){changing=false},FADE_MS);
+        });
+      });
+    },FADE_MS);
+  }
+
+  function makeItem(path,index){
+    var info=getInfo(path);
+    var item=document.createElement('div');
+    var link=document.createElement('a');
+    var img=document.createElement('img');
+    var player=document.createElement('span');
+    var date=document.createElement('span');
+    item.className='trophy';
+    link.className='trophy-link';
+    link.href='#';
+    link.dataset.index=index;
+    link.onclick=function(e){e.preventDefault();openViewer(parseInt(this.dataset.index,10))};
+    img.src=path;
+    img.alt=info.player+' - '+info.date;
+    img.loading='lazy';
+    player.className='trophy-player';
+    player.textContent=info.player;
+    date.className='trophy-date';
+    date.textContent=info.date;
+    link.appendChild(img);
+    item.appendChild(link);
+    item.appendChild(player);
+    item.appendChild(date);
+    return item;
+  }
+
+  function renderNavigation(container){
+    container.innerHTML='';
+    var total=Math.ceil(trophies.length/PER_PAGE);
+    for(var i=1;i<=total;i++){
+      var a=document.createElement('a');
+      a.href='#';
+      a.textContent=i;
+      if(i===currentPage)a.className='active';
+      a.dataset.page=i;
+      a.onclick=function(e){e.preventDefault();changePage(parseInt(this.dataset.page,10))};
+      container.appendChild(a);
+    }
+  }
+
+  function renderGallery(){
+    grid.innerHTML='';
+    var start=(currentPage-1)*PER_PAGE;
+    var end=Math.min(start+PER_PAGE,trophies.length);
+    var count=end-start;
+    var full=count-(count%4);
+    for(var i=start;i<start+full;i++)grid.appendChild(makeItem(trophies[i],i));
+    if(full<count){
+      var row=document.createElement('div');
+      row.className='trophies-last-row';
+      for(var j=start+full;j<end;j++)row.appendChild(makeItem(trophies[j],j));
+      grid.appendChild(row);
+    }
+    renderNavigation(pagesTop);
+    renderNavigation(pagesBottom);
+  }
+
+  function changePage(page){
+    if(page===currentPage||changing)return;
+    fadeChange(function(){
+      currentPage=page;
+      renderGallery();
+    },0);
+  }
+
+  function renderViewer(){
+    var path=trophies[currentIndex];
+    var info=getInfo(path);
+    viewerImage.src=path;
+    viewerImage.alt=info.player+' - '+info.date;
+    viewerImageLink.href='#';
+    viewerPosition.textContent=(currentIndex+1)+' / '+trophies.length;
+    viewerPlayer.textContent=info.player;
+    viewerDate.textContent=info.date;
+    viewerPrevious.style.visibility=currentIndex===0?'hidden':'visible';
+    viewerNext.style.visibility=currentIndex===trophies.length-1?'hidden':'visible';
+  }
+
+  function openViewer(index){
+    savedScroll=window.pageYOffset||document.documentElement.scrollTop||0;
+    currentIndex=index;
+    fadeChange(function(){
+      trophiesHeader.style.display='none';
+      galleryView.style.display='none';
+      viewerView.classList.add('is-visible');
+      renderViewer();
+    },0);
+  }
+
+  function moveViewer(step){
+    var next=currentIndex+step;
+    if(next<0||next>=trophies.length||changing)return;
+    fadeChange(function(){
+      currentIndex=next;
+      currentPage=Math.floor(currentIndex/PER_PAGE)+1;
+      renderViewer();
+    },0);
+  }
+
+  function closeViewer(){
+    if(changing)return;
+    fadeChange(function(){
+      viewerView.classList.remove('is-visible');
+      trophiesHeader.style.display='block';
+      galleryView.style.display='block';
+      renderGallery();
+    },savedScroll);
+  }
+
+  viewerImageLink.onclick=function(e){e.preventDefault();if(currentIndex<trophies.length-1)moveViewer(1)};
+  viewerPrevious.onclick=function(e){e.preventDefault();moveViewer(-1)};
+  viewerNext.onclick=function(e){e.preventDefault();moveViewer(1)};
+  viewerBack.onclick=function(e){e.preventDefault();closeViewer()};
+  document.addEventListener('keydown',function(e){
+    if(!viewerView.classList.contains('is-visible'))return;
+    if(e.key==='ArrowLeft')moveViewer(-1);
+    if(e.key==='ArrowRight')moveViewer(1);
+    if(e.key==='Escape')closeViewer();
+  });
+
+  renderGallery();
+})();
+</script>
+</body>
+</html>
