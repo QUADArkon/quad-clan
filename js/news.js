@@ -1,183 +1,19 @@
 (function(){
 'use strict';
-
-var FADE_MS=500;
-var currentRandom=null;
-var savedScroll=0;
-
-var page=document.getElementById('newsPage');
-var box=document.getElementById('randomPictureBox');
-var thumb=document.getElementById('randomPictureThumb');
-var info=document.getElementById('randomPictureInfo');
-var main=document.getElementById('newsMainView');
-var viewer=document.getElementById('randomViewer');
-var viewerImage=document.getElementById('randomViewerImage');
-var viewerInfo=document.getElementById('randomViewerInfo');
-var back=document.getElementById('randomBack');
-var tools=document.querySelector('.news-tools');
-
-function formatDate(value){
-    if(!value || value.length!==8) return value || '';
-    return value.slice(6,8)+'/'+value.slice(4,6)+'/'+value.slice(0,4);
-}
-
-function makeTrophy(path){
-    var parts=path.replace(/\\/g,'/').split('/');
-    var file=parts[parts.length-1];
-    var player=parts[parts.length-2] || '';
-    var match=file.match(/^(\d{4})(\d{2})(\d{2})_/);
-
-    player=player.charAt(0).toUpperCase()+player.slice(1);
-
-    return {
-        path:path,
-        lines:[
-            'Trophies',
-            player,
-            match ? match[3]+'/'+match[2]+'/'+match[1] : ''
-        ]
-    };
-}
-
-function getLanImagePath(image){
-    return typeof image==='string' ? image : image.path;
-}
-
-function makeLan(album,image){
-    var lines=[album.title];
-
-    if(album.place) lines.push(album.place);
-
-    if(album.id==='quads'){
-        lines.push(formatDate(image.date));
-    }
-    else if(album.dateEnd){
-        lines.push(formatDate(album.date)+' - '+formatDate(album.dateEnd));
-    }
-    else{
-        lines.push(formatDate(album.date));
-    }
-
-    return {
-        path:getLanImagePath(image),
-        lines:lines
-    };
-}
-
-function chooseTrophy(){
-    if(typeof trophies==='undefined' || !Array.isArray(trophies) || trophies.length===0) return null;
-    return makeTrophy(trophies[Math.floor(Math.random()*trophies.length)]);
-}
-
-function chooseLan(){
-    if(typeof lanAlbums==='undefined' || !Array.isArray(lanAlbums) || lanAlbums.length===0) return null;
-
-    var pool=[];
-
-    lanAlbums.forEach(function(album){
-        if(!album.images) return;
-        album.images.forEach(function(image){
-            pool.push({album:album,image:image});
-        });
-    });
-
-    if(pool.length===0) return null;
-
-    var chosen=pool[Math.floor(Math.random()*pool.length)];
-    return makeLan(chosen.album,chosen.image);
-}
-
-function chooseRandomPicture(){
-    var trophy=chooseTrophy();
-    var lan=chooseLan();
-
-    if(trophy && lan) return Math.random()<0.5 ? trophy : lan;
-    return trophy || lan;
-}
-
-function writeInfo(element,lines){
-    element.innerHTML='';
-
-    lines.forEach(function(line){
-        if(!line) return;
-        var div=document.createElement('div');
-        div.textContent=line;
-        element.appendChild(div);
-    });
-}
-
-function fade(action,scrollPosition){
-    page.classList.add('is-fading');
-
-    window.setTimeout(function(){
-        action();
-        window.scrollTo(0,scrollPosition || 0);
-
-        requestAnimationFrame(function(){
-            requestAnimationFrame(function(){
-                page.classList.remove('is-fading');
-            });
-        });
-    },FADE_MS);
-}
-
-function renderRandomPicture(){
-    currentRandom=chooseRandomPicture();
-
-    if(!currentRandom){
-        box.style.display='none';
-        return;
-    }
-
-    thumb.width=128;
-    thumb.height=96;
-    thumb.style.width='128px';
-    thumb.style.height='96px';
-    thumb.style.objectFit='contain';
-    thumb.style.display='block';
-    thumb.src=currentRandom.path;
-    thumb.alt=currentRandom.lines.join(' - ');
-
-    writeInfo(info,currentRandom.lines);
-}
-
-function openRandomPicture(){
-    if(!currentRandom) return;
-
-    savedScroll=window.pageYOffset || document.documentElement.scrollTop || 0;
-
-    fade(function(){
-        tools.style.display='none';
-        main.style.display='none';
-        viewer.hidden=false;
-
-        viewerImage.src=currentRandom.path;
-        viewerImage.alt=currentRandom.lines.join(' - ');
-
-        writeInfo(viewerInfo,currentRandom.lines);
-    },0);
-}
-
-function closeRandomPicture(){
-    fade(function(){
-        viewer.hidden=true;
-        tools.style.display='';
-        main.style.display='';
-    },savedScroll);
-}
-
-box.addEventListener('click',openRandomPicture);
-box.addEventListener('keydown',function(event){
-    if(event.key==='Enter' || event.key===' '){
-        event.preventDefault();
-        openRandomPicture();
-    }
-});
-
-back.addEventListener('click',function(event){
-    event.preventDefault();
-    closeRandomPicture();
-});
-
-renderRandomPicture();
+var FADE_MS=500,currentRandom=null,savedScroll=0;
+var page=document.getElementById('newsPage'),box=document.getElementById('randomPictureBox'),thumb=document.getElementById('randomPictureThumb'),info=document.getElementById('randomPictureInfo'),main=document.getElementById('newsMainView'),viewer=document.getElementById('randomViewer'),viewerImage=document.getElementById('randomViewerImage'),viewerInfo=document.getElementById('randomViewerInfo'),back=document.getElementById('randomBack'),tools=document.querySelector('.news-tools');
+function fmt(v){return v&&v.length===8?v.slice(6,8)+'/'+v.slice(4,6)+'/'+v.slice(0,4):v||''}
+function makeTrophy(path){var p=path.replace(/\\/g,'/').split('/'),file=p[p.length-1],player=p[p.length-2]||'',m=file.match(/^(\d{4})(\d{2})(\d{2})_/);player=player.charAt(0).toUpperCase()+player.slice(1);return{path:path,lines:['Trophies',player,m?m[3]+'/'+m[2]+'/'+m[1]:'']}}
+function lanPath(x){return typeof x==='string'?x:x.path}
+function makeLan(a,x){var lines=[a.title];if(a.place)lines.push(a.place);if(a.id==='quads')lines.push(fmt(x.date));else if(a.dateEnd)lines.push(fmt(a.date)+' - '+fmt(a.dateEnd));else lines.push(fmt(a.date));return{path:lanPath(x),lines:lines}}
+function chooseTrophy(){return typeof trophies!=='undefined'&&trophies.length?makeTrophy(trophies[Math.floor(Math.random()*trophies.length)]):null}
+function chooseLan(){if(typeof lanAlbums==='undefined'||!lanAlbums.length)return null;var pool=[];lanAlbums.forEach(function(a){(a.images||[]).forEach(function(x){pool.push({a:a,x:x})})});if(!pool.length)return null;var p=pool[Math.floor(Math.random()*pool.length)];return makeLan(p.a,p.x)}
+function chooseRandom(){var a=chooseTrophy(),b=chooseLan();return a&&b?(Math.random()<.5?a:b):(a||b)}
+function fill(el,lines){el.innerHTML='';lines.forEach(function(line){if(!line)return;var d=document.createElement('div');d.textContent=line;el.appendChild(d)})}
+function fade(action,scroll){page.classList.add('is-fading');setTimeout(function(){action();window.scrollTo(0,scroll||0);requestAnimationFrame(function(){requestAnimationFrame(function(){page.classList.remove('is-fading')})})},FADE_MS)}
+function renderRandom(){currentRandom=chooseRandom();if(!currentRandom){box.style.display='none';return}thumb.src=currentRandom.path;thumb.alt=currentRandom.lines.join(' - ');fill(info,currentRandom.lines)}
+function renderNews(){if(typeof newsArchive==='undefined'||!Array.isArray(newsArchive)||!newsArchive.length){main.innerHTML='';return}var list=newsArchive.slice().sort(function(a,b){return b.date.localeCompare(a.date)});main.innerHTML='';list.forEach(function(n){var article=document.createElement('article');article.className='content-box news-box';var header=document.createElement('header');header.className='news-header';var title=document.createElement('div');title.className='news-title';title.innerHTML='<img src="../../images/news/menudot_l.gif" alt="" width="28" height="15"><strong></strong><img src="../../images/news/menudot_r.gif" alt="" width="28" height="15">';title.querySelector('strong').textContent=n.title;var meta=document.createElement('div');meta.className='news-meta';var d=n.date;var dt=new Date(Number(d.slice(0,4)),Number(d.slice(4,6))-1,Number(d.slice(6,8)));meta.textContent='Posted on '+dt.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})+' by ';var author=document.createElement('a');author.href='mailto:filippochiantiaSPAMOFF@tiscali.it';author.textContent=n.author;meta.appendChild(author);header.append(title,meta);var content=document.createElement('div');content.className='news-content';(n.content||[]).forEach(function(block){if(block.type==='paragraph'){var p=document.createElement('p');p.innerHTML=block.html;content.appendChild(p)}else if(block.type==='command'){var p=document.createElement('p'),span=document.createElement('span');span.className='news-command';span.textContent=block.text;p.appendChild(span);content.appendChild(p)}});article.append(header,content);main.appendChild(article)})}
+function openRandom(){if(!currentRandom)return;savedScroll=window.pageYOffset||document.documentElement.scrollTop||0;fade(function(){tools.style.display='none';main.style.display='none';viewer.hidden=false;viewerImage.src=currentRandom.path;viewerImage.alt=currentRandom.lines.join(' - ');fill(viewerInfo,currentRandom.lines)},0)}
+function closeRandom(){fade(function(){viewer.hidden=true;tools.style.display='';main.style.display=''},savedScroll)}
+box.addEventListener('click',openRandom);box.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openRandom()}});back.addEventListener('click',function(e){e.preventDefault();closeRandom()});renderRandom();renderNews();
 })();
