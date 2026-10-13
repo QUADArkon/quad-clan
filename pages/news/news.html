@@ -5,15 +5,18 @@
   <meta name="author" content="Arkon">
   <title>[QUAD] News</title>
   <link rel="stylesheet" href="../../css/quad.css">
+<style>
+#randomPictureBox{cursor:pointer}#randomPictureThumb{width:128px;height:96px;object-fit:contain;display:block;flex:0 0 128px;cursor:pointer}#randomPictureInfo{text-align:center}
+</style>
 </head>
 <body class="content-page" >
-  <main class="quad-content news-page">
+  <main id="newsPage" class="quad-content news-page page-fade">
     <div class="news-tools">
-      <section class="content-box random-picture-box">
+      <section id="randomPictureBox" class="content-box random-picture-box" role="link" tabindex="0" aria-label="Open Random Picture">
         <div class="box-label">Random Picture:</div>
         <div class="random-picture-body">
-          <div class="random-picture-thumb-placeholder" aria-hidden="true"></div>
-          <div class="random-picture-info"><div>Folder: to be defined</div><div>Date: to be defined</div></div>
+          <img id="randomPictureThumb" class="random-picture-thumb" src="" alt="">
+          <div id="randomPictureInfo" class="random-picture-info"></div>
         </div>
       </section>
       <section class="content-box latest-files-box">
@@ -27,6 +30,7 @@
         </div></div>
       </section>
     </div>
+    <div id="newsMainView">
     <article class="content-box news-box">
       <header class="news-header">
         <div class="news-title"><img src="../../images/news/menudot_l.gif" alt="" width="28" height="15"><strong>Things I should have report</strong><img src="../../images/news/menudot_r.gif" alt="" width="28" height="15"></div>
@@ -47,6 +51,17 @@
         <p>Don't expect news reporting like it happened in the past: I will report only clan activity, major events or new file releases. There are better place where to find them: <a href="http://quakeone.com/" target="_blank" rel="noopener noreferrer">Quakeone.com</a> and <a href="https://www.quaddicted.com/" target="_blank" rel="noopener noreferrer">Quaddicted.com</a> in the first line! Netquake lives!</p>
       </div>
     </article>
-  </main>
+  </div>
+  
+  <div id="randomViewer" class="content-box" hidden>
+    <img id="randomViewerImage" src="" alt="" style="display:block;max-width:100%;height:auto;margin:0 auto">
+    <div id="randomViewerInfo" class="random-picture-info" style="text-align:center;margin-top:10px"></div>
+    <div style="text-align:center;margin-top:12px"><a id="randomBack" href="#">BACK TO NEWS</a></div>
+  </div>
+</main>
+
+<script src="../../js/trophies.js"></script>
+<script src="../../js/lans.js"></script>
+<script src="../../js/news.js"></script>
 </body>
 </html>
