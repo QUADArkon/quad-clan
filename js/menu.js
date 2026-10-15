@@ -3,18 +3,22 @@ window.QUAD_MENU = [
     ["Clan Logo", "pages/logo/logo.html"], ["History", "pages/history/history.html"], ["Code", "pages/code/code.html"], ["Join", "pages/join/join.html"], ["Challenge", "pages/challenge/challenge.html"], ["Clanwars", "pages/clanwars/clanwars.html"], ["Demos", "pages/demos/demos.html"], ["Trophies", "pages/trophies/trophies.html"], ["LAN Parties", "pages/lan/lans.html"]
   ]},
   { title: "News & Boards", items: [
-    ["News", "pages/news/news.html"], ["News archive", "news/archive/archive.html"], ["[QUAD] Forum", "https://quad.forumotion.me/"], ["[QUAD] Servers", "news/servers/servers.html"], ["Interviews", "news/interviews/interviews.html"], ["Links", "pages/links/links.html"]
+    ["News", "pages/news/news.html"], ["[QUAD] Forum", "https://quad.forumotion.me/"], ["[QUAD] Servers", "news/servers/servers.html"], ["Interviews", "news/interviews/interviews.html"], ["Links", "pages/links/links.html"]
   ]},
   { title: "Hints & Guides", items: [
     ["Quake Bible", "pages/help/bible.html"], ["Maps Overview", "pages/help/overview.html"], ["Console 1.06", "pages/help/console.html"], ["Command Line 1.09", "pages/help/comlines.html"], ["Online Name Maker", "pages/help/name.html"], ["N.O.T. Rules", "pages/help/rules.html"], ["Quetiquette", "pages/help/quetiquette.html"]
   ]},
   { title: "Clanmates", items: [
-    ["[QUAD] Arkon", "main/members/arkon/arkon.html"], ["[QUAD] Bent", "main/members/bent/bent.html"], ["[QUAD] Biagio", "main/members/biagio/biagio.html"], ["[QUAD] Hiroshi", "main/members/hiroshi/hiroshi.html"], ["[QUAD] Morpheus", "main/members/morpheus/morpheus.html"], ["[QUAD] Polarite", "main/members/polarite/polarite.html"], ["[QUAD] Raistlin", "main/members/raistlin/raistlin.html"], ["[QUAD] Ronin666", "main/members/ronin/ronin.html"], ["[QUAD] Wham!", "main/members/wham/wham.html"], ["[QUAD] Yanosh", "main/members/yanosh/yanosh.html"], ["[QUAD] Zizu", "main/members/zizu/zizu.html"]
+    ["[QUAD] Arkon", "members/arkon.html"], ["[QUAD] Bent", "members/bent.html"], ["[QUAD] Biagio", "members/biagio.html"], ["[QUAD] Hiroshi", "members/hiroshi.html"], ["[QUAD] Morpheus", "members/morpheus.html"], ["[QUAD] Polarite", "members/polarite.html"], ["[QUAD] Raistlin", "members/raistlin.html"], ["[QUAD] Ronin666", "members/ronin.html"], ["[QUAD] Wham!", "members/wham.html"], ["[QUAD] Yanosh", "members/yanosh.html"], ["[QUAD] Zizu", "members/zizu.html"]
   ]},
   { title: "Files", items: [
-    ["Extreme Mod", "pages/files/extreme.html"], ["CRMod", "pages/files/crmod.html"], ["QView", "pages/files/qview.html"], ["Maps", "pages/files/maps.html"], ["Bots", "pages/files/bots.html"], ["Utilities", "pages/files/utils.html"]
+    ["Engines", "pages/files/engines.html"], ["Maps", "pages/files/maps.html"], ["Modifications", "pages/files/mods.html"], ["Offline Bots", "pages/files/bots.html"], ["Improvements", "pages/files/improvements.html"], ["Tools", "pages/files/tools.html"]
+  ]},
+  { title: "Extra", items: [
+    ["Under Construction", "#"], ["Updating", "#"]
   ]}
 ];
+
 window.renderQuadMenu = function(container, options = {}) {
   const mobile = !!options.mobile;
   const linkTarget = options.linkTarget || "";
@@ -31,13 +35,10 @@ window.renderQuadMenu = function(container, options = {}) {
       a.href = href;
       if (target) { a.target = target; a.rel = "noopener noreferrer"; }
       else if (linkTarget) a.target = linkTarget;
-      li.appendChild(a); ul.appendChild(li);
+      li.appendChild(a);
+      ul.appendChild(li);
     });
-    details.append(summary, ul); container.appendChild(details);
+    details.append(summary, ul);
+    container.appendChild(details);
   });
-  const email = document.createElement("a");
-  email.className = mobile ? "mobile-nav-email" : "nav-email";
-  email.href = "mailto:filippochiantiaSPAMOFF@tiscali.it";
-  email.textContent = "Email";
-  container.appendChild(email);
 };
