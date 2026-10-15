@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>[QUAD] Raistlin</title>
+  <link rel="stylesheet" href="../css/quad.css">
+  <style>
+    .raistlin-box{width:600px;max-width:calc(100% - 16px);margin:0 auto;padding:24px 30px 22px}
+    .raistlin-title{text-align:center;margin:0 0 24px}.raistlin-title img{width:300px;max-width:100%;height:auto}
+    .raistlin-top,.raistlin-lower{display:grid;grid-template-columns:minmax(0,1fr) 164px;gap:20px}
+    .raistlin-top{align-items:start}.raistlin-lower{align-items:center;margin-top:10px}
+    .raistlin-data p{margin:0 0 16px}.raistlin-data img{vertical-align:middle}
+    .raistlin-role{color:#f00;font-weight:bold}.raistlin-classified,.raistlin-status{color:#f00}.status-icon{width:33px;height:17px}
+    .raistlin-photo,.raistlin-secondary{text-align:center}
+    .raistlin-photo .content-box,.raistlin-secondary .content-box,.viewer-box{display:inline-block;padding:7px}
+    .raistlin-photo img{display:block;width:131px;height:auto}
+    .raistlin-name-strip{display:flex;justify-content:center;align-items:center;line-height:0;white-space:nowrap}
+    .raistlin-name-strip img{display:block;width:15px;height:19px}
+    .raistlin-trophies{display:grid;grid-template-columns:repeat(2,90px);gap:14px;align-items:center}
+    .raistlin-trophy{display:block;width:90px;height:67px;overflow:hidden}.raistlin-trophy img{display:block;width:90px;height:67px;object-fit:cover}
+    .raistlin-description{margin:24px 0 0;line-height:1.6}
+    #raistlinViewer[hidden]{display:none}#raistlinViewer{text-align:center}.viewer-box img{display:block;max-width:100%;height:auto}.raistlin-back{text-align:center;margin:18px 0 0}
+    @media(max-width:560px){.raistlin-box{padding:22px 18px}.raistlin-top,.raistlin-lower{grid-template-columns:1fr}.raistlin-photo,.raistlin-secondary{grid-row:1}.raistlin-trophies{justify-content:center}}
+  </style>
+</head>
+<body class="content-page">
+<div id="raistlinPage" class="page-fade">
+  <main id="raistlinProfile" class="quad-content">
+    <section class="content-box raistlin-box">
+      <div class="raistlin-title"><img src="../images/members/raistlin/raistlin.gif" alt="[QUAD] Raistlin"></div>
+      <div class="raistlin-top">
+        <div class="raistlin-data">
+          <p>
+            Real Name: Francesco<br>
+            Callsign: <img src="../images/members/raistlin/raistlin.gif" alt="Raistlin"><br>
+            Other akas: <span class="raistlin-classified">classified</span><br>
+            Birthday: 04/05/1972<br>
+            Hometown: Torino, Italy
+          </p>
+          <p>
+            Member since: 2/2000 (<span class="raistlin-role">founder member</span>)<br>
+            Older affiliations: [MiA]<br>
+            Favourite map: E1M2<br>
+            Favourite weapon: normal shotgun
+          </p>
+          <p>Status: <img class="status-icon" src="../images/members/status_inactive.gif" alt="Inactive">&nbsp; <span class="raistlin-status">inactive</span></p>
+        </div>
+        <div class="raistlin-photo"><div class="content-box"><img src="../images/members/raistlin/raistlin.jpg" alt="Raistlin"></div></div>
+      </div>
+      <div class="raistlin-lower">
+        <div class="raistlin-trophies">
+          <a class="raistlin-trophy" href="../images/members/raistlin/quakeuk.jpg" data-trophy="../images/members/raistlin/quakeuk.jpg"><img src="../images/members/raistlin/quakeuk.jpg" alt="QuakeUK trophy"></a>
+          <a class="raistlin-trophy" href="../images/members/raistlin/ngiraist.jpg" data-trophy="../images/members/raistlin/ngiraist.jpg"><img src="../images/members/raistlin/ngiraist.jpg" alt="NGI Raistlin trophy"></a>
+        </div>
+        <div class="raistlin-secondary"><div class="content-box"><div class="raistlin-name-strip">
+          <img src="../images/members/raistlin/rsmclr.gif" alt="R"><img src="../images/members/raistlin/asmclr.gif" alt="A"><img src="../images/members/raistlin/ismclr.gif" alt="I"><img src="../images/members/raistlin/ssmclr.gif" alt="S"><img src="../images/members/raistlin/tsmclr.gif" alt="T"><img src="../images/members/raistlin/lsmclr.gif" alt="L"><img src="../images/members/raistlin/ismclr.gif" alt="I"><img src="../images/members/raistlin/nsmclr.gif" alt="N">
+        </div></div></div>
+      </div>
+      <p class="raistlin-description">No other player has all-around skills like Raistlin. He analyzes his clan mates as well as his opponents and fits the weaknesses of the firsts while breaking through the second ones'. Founder member of the clan, had [QUAD] project in mind even before leaving [MiA]s.</p>
+    </section>
+  </main>
+  <section id="raistlinViewer" class="quad-content" hidden aria-label="Trophy viewer">
+    <div class="content-box viewer-box"><img id="raistlinViewerImage" src="" alt="Raistlin trophy"></div>
+    <p class="raistlin-back"><a id="raistlinViewerBack" href="raistlin.html">Back to Raistlin's profile</a></p>
+  </section>
+</div>
+<script>
+(function(){var page=document.getElementById('raistlinPage'),profile=document.getElementById('raistlinProfile'),viewer=document.getElementById('raistlinViewer'),image=document.getElementById('raistlinViewerImage'),back=document.getElementById('raistlinViewerBack'),savedY=0;function swap(action,y){page.classList.add('is-fading');setTimeout(function(){action();window.scrollTo(0,y||0);requestAnimationFrame(function(){requestAnimationFrame(function(){page.classList.remove('is-fading')})})},500)}document.querySelectorAll('.raistlin-trophy').forEach(function(link){link.addEventListener('click',function(e){e.preventDefault();savedY=window.pageYOffset||0;var thumb=link.querySelector('img');swap(function(){profile.hidden=true;viewer.hidden=false;image.src=link.dataset.trophy;image.alt=thumb.alt},0)})});back.addEventListener('click',function(e){e.preventDefault();swap(function(){viewer.hidden=true;image.src='';profile.hidden=false},savedY)})}());
+</script>
+</body>
+</html>

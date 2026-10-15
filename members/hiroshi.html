@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>[QUAD] Hiroshi</title>
+<link rel="stylesheet" href="../css/quad.css">
+<style>
+.hiroshi-box{width:600px;max-width:calc(100% - 16px);margin:0 auto;padding:24px 30px 22px}.hiroshi-title{text-align:center;margin:0 0 24px}.hiroshi-title img{width:300px;max-width:100%;height:auto}.hiroshi-top,.hiroshi-lower{display:grid;grid-template-columns:minmax(0,1fr) 184px;gap:20px}.hiroshi-top{align-items:start}.hiroshi-lower{align-items:center;margin-top:10px}.hiroshi-data p{margin:0 0 16px}.hiroshi-data img{vertical-align:middle}.hiroshi-status{color:#0f0}.status-icon{width:33px;height:17px}.hiroshi-photo,.hiroshi-secondary{text-align:center}.hiroshi-photo .content-box,.hiroshi-secondary .content-box,.viewer-box{display:inline-block;padding:7px}.hiroshi-photo img{display:block;width:158px;height:auto}.hiroshi-secondary img{display:block;width:170px;height:auto}.hiroshi-trophies{display:grid;grid-template-columns:90px;align-items:center}.hiroshi-trophy{display:block;width:90px;height:67px;overflow:hidden}.hiroshi-trophy img{display:block;width:90px;height:67px;object-fit:cover}.hiroshi-description{margin:24px 0 0;line-height:1.6}#hiroshiViewer[hidden]{display:none}#hiroshiViewer{text-align:center}.viewer-box img{display:block;max-width:100%;height:auto}.hiroshi-back{text-align:center;margin:18px 0 0}@media(max-width:560px){.hiroshi-box{padding:22px 18px}.hiroshi-top,.hiroshi-lower{grid-template-columns:1fr}.hiroshi-photo,.hiroshi-secondary{grid-row:1}.hiroshi-trophies{justify-content:center}}
+</style>
+</head>
+<body class="content-page">
+<div id="hiroshiPage" class="page-fade">
+<main id="hiroshiProfile" class="quad-content"><section class="content-box hiroshi-box">
+<div class="hiroshi-title"><img src="../images/members/hiroshi/hiroshi.gif" alt="[QUAD] Hiroshi"></div>
+<div class="hiroshi-top"><div class="hiroshi-data">
+<p>Real Name: Alessandro<br>Callsign: <img src="../images/members/hiroshi/hiroshi.gif" alt="Hiroshi"><br>Other akas: <img src="../images/members/hiroshi/h.gif" alt="[QUAD] H">,&nbsp; <img src="../images/members/hiroshi/attla.gif" alt="ATTLA"><br>Birthday: 29/09/1976<br>Hometown: Las Chafiras, Tenerife, Spain</p>
+<p>Member since: 3/2000<br>Older affiliations: none<br>Favourite map: DM6<br>Favourite weapon: rocket launcher</p>
+<p>Status: <img class="status-icon" src="../images/members/status_active.gif" alt="Active">&nbsp; <span class="hiroshi-status">active</span></p>
+</div><div class="hiroshi-photo"><div class="content-box"><img src="../images/members/hiroshi/hiroshi.jpg" alt="Hiroshi"></div></div></div>
+<div class="hiroshi-lower"><div class="hiroshi-trophies"><a class="hiroshi-trophy" href="../images/members/hiroshi/flashiro.jpg" data-trophy="../images/members/hiroshi/flashiro.jpg"><img src="../images/members/hiroshi/flashiro.jpg" alt="Flashiro trophy"></a></div><div class="hiroshi-secondary"><div class="content-box"><img src="../images/members/hiroshi/sf32.gif" alt="Street Fighter graphic"></div></div></div>
+<p class="hiroshi-description">One of the most talented Netquake player ever . Fast and lethal, he knows perfectly where you are in most maps while duelling and he leads [QUAD] attack while playing in team, causing an extreme amount of damage.</p>
+</section></main>
+<section id="hiroshiViewer" class="quad-content" hidden><div class="content-box viewer-box"><img id="hiroshiViewerImage" src="" alt="Hiroshi trophy"></div><p class="hiroshi-back"><a id="hiroshiViewerBack" href="hiroshi.html">Back to Hiroshi's profile</a></p></section>
+</div>
+<script>(function(){var page=document.getElementById('hiroshiPage'),profile=document.getElementById('hiroshiProfile'),viewer=document.getElementById('hiroshiViewer'),image=document.getElementById('hiroshiViewerImage'),back=document.getElementById('hiroshiViewerBack'),savedY=0;function swap(action,y){page.classList.add('is-fading');setTimeout(function(){action();window.scrollTo(0,y||0);requestAnimationFrame(function(){requestAnimationFrame(function(){page.classList.remove('is-fading')})})},500)}document.querySelectorAll('.hiroshi-trophy').forEach(function(link){link.addEventListener('click',function(e){e.preventDefault();savedY=window.pageYOffset||0;var thumb=link.querySelector('img');swap(function(){profile.hidden=true;viewer.hidden=false;image.src=link.dataset.trophy;image.alt=thumb.alt},0)})});back.addEventListener('click',function(e){e.preventDefault();swap(function(){viewer.hidden=true;image.src='';profile.hidden=false},savedY)})}());</script>
+</body></html>

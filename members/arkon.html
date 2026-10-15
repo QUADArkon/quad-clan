@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[QUAD] Arkon</title>
+  <link rel="stylesheet" href="../css/quad.css">
+  <style>
+    /* Layout specifico della scheda Arkon. Font, colori, link, box e fade: quad.css. */
+    .arkon-box{width:600px;max-width:calc(100% - 16px);margin:0 auto;padding:24px 30px 22px}
+    .arkon-title{text-align:center;margin:0 0 24px}.arkon-title img{width:300px;max-width:100%;height:auto}
+    .arkon-top,.arkon-lower{display:grid;grid-template-columns:minmax(0,1fr) 164px;gap:20px}
+    .arkon-top{align-items:start}.arkon-lower{align-items:center;margin-top:10px}
+    .arkon-data p{margin:0 0 16px}.arkon-data img{vertical-align:middle}
+    .arkon-role{color:#f00;font-weight:bold}.arkon-status{color:#0f0}.status-icon{width:33px;height:17px}
+    .arkon-photo,.arkon-secondary{text-align:center}
+    .arkon-photo .content-box,.arkon-secondary .content-box,.viewer-box{display:inline-block;padding:7px}
+    .arkon-photo img,.arkon-secondary img{display:block;width:150px;height:auto}
+    .arkon-trophies{display:grid;grid-template-columns:repeat(3,90px);gap:14px;align-items:center}
+    .arkon-trophy{display:block;width:90px;height:67px;overflow:hidden}
+    .arkon-trophy img{display:block;width:90px;height:67px;object-fit:cover}
+    .arkon-description{margin:24px 0 0;line-height:1.6}
+    #arkonViewer[hidden]{display:none}#arkonViewer{text-align:center}.viewer-box img{display:block;max-width:100%;height:auto}.arkon-back{text-align:center;margin:18px 0 0}
+    @media(max-width:560px){.arkon-box{padding:22px 18px}.arkon-top,.arkon-lower{grid-template-columns:1fr}.arkon-photo,.arkon-secondary{grid-row:1}.arkon-trophies{justify-content:center}}
+  </style>
+</head>
+<body class="content-page">
+  <div id="arkonPage" class="page-fade">
+    <main id="arkonProfile" class="quad-content">
+      <section class="content-box arkon-box">
+        <div class="arkon-title">
+          <img src="../images/members/arkon/arkon.gif" alt="[QUAD] Arkon">
+        </div>
+        <div class="arkon-top">
+          <div class="arkon-data">
+            <p>
+              Real Name: Filippo<br>
+              Callsign: <img src="../images/members/arkon/arkon.gif" alt="Arkon"><br>
+              Other akas: <img src="../images/members/arkon/feydrautha.gif" alt="Feyd Rautha">,&nbsp;
+              <img src="../images/members/arkon/godfather.gif" alt="The Godfather"><br>
+              Birthday: 14/06/1971<br>
+              Hometown: Torino, Italy
+            </p>
+            <p>
+              Member since: 2/2000 (<span class="arkon-role">clanleader</span>)<br>
+              Older affiliations: [MiA]<br>
+              Favourite map: E1M2<br>
+              Favourite weapon: grenade launcher
+            </p>
+            <p>Status: <img class="status-icon" src="../images/members/status_active.gif" alt="Active">&nbsp; <span class="arkon-status">active</span></p>
+          </div>
+          <div class="arkon-photo">
+            <div class="content-box">
+              <img src="../images/members/arkon/arkon.jpg" alt="Arkon">
+            </div>
+          </div>
+        </div>
+        <div class="arkon-lower">
+          <div class="arkon-trophies" aria-label="Arkon trophies">
+            <a class="arkon-trophy" href="../images/members/arkon/qguk.jpg" data-trophy="../images/members/arkon/qguk.jpg"><img src="../images/members/arkon/qguk.jpg" alt="QGUK trophy"></a>
+            <a class="arkon-trophy" href="../images/members/arkon/flashnet.jpg" data-trophy="../images/members/arkon/flashnet.jpg"><img src="../images/members/arkon/flashnet.jpg" alt="Flashnet trophy"></a>
+            <a class="arkon-trophy" href="../images/members/arkon/arklair.jpg" data-trophy="../images/members/arkon/arklair.jpg"><img src="../images/members/arkon/arklair.jpg" alt="Arklair trophy"></a>
+          </div>
+          <div class="arkon-secondary">
+            <div class="content-box">
+              <img src="../images/members/arkon/arkon1.gif" alt="Arkon graphic">
+            </div>
+          </div>
+        </div>
+        <p class="arkon-description">Clanleader, webmaster, server administrator, modder, mapper and engine coder. His addiction to the game and his stubbornness made possible projects and clan facts that seemed impossible in the first place. His killer instinct did the rest.</p>
+      </section>
+    </main>
+    <section id="arkonViewer" class="quad-content" hidden aria-label="Trophy viewer">
+      <div class="content-box viewer-box">
+        <img id="arkonViewerImage" src="" alt="Arkon trophy">
+      </div>
+      <p class="arkon-back"><a id="arkonViewerBack" href="arkon.html">Back to Arkon's profile</a></p>
+    </section>
+  </div>
+  <script>
+  (function () {
+    var page = document.getElementById('arkonPage');
+    var profile = document.getElementById('arkonProfile');
+    var viewer = document.getElementById('arkonViewer');
+    var image = document.getElementById('arkonViewerImage');
+    var back = document.getElementById('arkonViewerBack');
+    var savedY = 0;
+    function swap(action, y) {
+      page.classList.add('is-fading');
+      window.setTimeout(function () {
+        action();
+        window.scrollTo(0, y || 0);
+        window.requestAnimationFrame(function () {
+          window.requestAnimationFrame(function () {
+            page.classList.remove('is-fading');
+          });
+        });
+      }, 500);
+    }
+    document.querySelectorAll('.arkon-trophy').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        savedY = window.pageYOffset || 0;
+        var thumb = link.querySelector('img');
+        swap(function () {
+          profile.hidden = true;
+          viewer.hidden = false;
+          image.src = link.dataset.trophy;
+          image.alt = thumb.alt;
+        }, 0);
+      });
+    });
+    back.addEventListener('click', function (event) {
+      event.preventDefault();
+      swap(function () {
+        viewer.hidden = true;
+        image.src = '';
+        profile.hidden = false;
+      }, savedY);
+    });
+  }());
+  </script>
+</body>
+</html>

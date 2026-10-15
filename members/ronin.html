@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>[QUAD] Ronin666</title>
+  <link rel="stylesheet" href="../css/quad.css">
+  <style>
+    .ronin-box{width:600px;max-width:calc(100% - 16px);margin:0 auto;padding:24px 30px 22px}
+    .ronin-title{text-align:center;margin:0 0 24px}.ronin-title img{width:300px;max-width:100%;height:auto}
+    .ronin-top,.ronin-lower{display:grid;grid-template-columns:minmax(0,1fr) 164px;gap:20px}
+    .ronin-top{align-items:start}.ronin-lower{align-items:center;margin-top:10px}
+    .ronin-data p{margin:0 0 16px}.ronin-data img{vertical-align:middle}
+    .ronin-classified,.ronin-status{color:#f00}.status-icon{width:33px;height:17px}
+    .ronin-photo,.ronin-secondary{text-align:center}
+    .ronin-photo .content-box,.ronin-secondary .content-box,.viewer-box{display:inline-block;padding:7px}
+    .ronin-photo img{display:block;width:122px;height:auto}.ronin-secondary img{display:block;width:150px;height:auto}
+    .ronin-trophies{display:grid;grid-template-columns:repeat(2,90px);gap:14px;align-items:center}
+    .ronin-trophy{display:block;width:90px;height:67px;overflow:hidden}.ronin-trophy img{display:block;width:90px;height:67px;object-fit:cover}
+    .ronin-description{margin:24px 0 0;line-height:1.6}
+    #roninViewer[hidden]{display:none}#roninViewer{text-align:center}.viewer-box img{display:block;max-width:100%;height:auto}.ronin-back{text-align:center;margin:18px 0 0}
+    @media(max-width:560px){.ronin-box{padding:22px 18px}.ronin-top,.ronin-lower{grid-template-columns:1fr}.ronin-photo,.ronin-secondary{grid-row:1}.ronin-trophies{justify-content:center}}
+  </style>
+</head>
+<body class="content-page">
+<div id="roninPage" class="page-fade">
+  <main id="roninProfile" class="quad-content">
+    <section class="content-box ronin-box">
+      <div class="ronin-title"><img src="../images/members/ronin/ronin.gif" alt="[QUAD] Ronin666"></div>
+      <div class="ronin-top">
+        <div class="ronin-data">
+          <p>Real Name: Dario<br>
+          Callsign: <img src="../images/members/ronin/ronin.gif" alt="Ronin"><br>
+          Other akas: <span class="ronin-classified">classified</span><br>
+          Birthday: 23/03/1980<br>
+          Hometown: Napoli, Italy</p>
+          <p>Member since: 3/2000<br>
+          Older affiliations: [BSB]<br>
+          Favourite map: DM6<br>
+          Favourite weapon: rocket launcher</p>
+          <p>Status: <img class="status-icon" src="../images/members/status_inactive.gif" alt="Inactive">&nbsp; <span class="ronin-status">inactive</span></p>
+        </div>
+        <div class="ronin-photo"><div class="content-box"><img src="../images/members/ronin/dario2.jpg" alt="Ronin666"></div></div>
+      </div>
+      <div class="ronin-lower">
+        <div class="ronin-trophies">
+          <a class="ronin-trophy" href="../images/members/ronin/ngi7.jpg" data-trophy="../images/members/ronin/ngi7.jpg"><img src="../images/members/ronin/ngi7.jpg" alt="NGI7 trophy"></a>
+          <a class="ronin-trophy" href="../images/members/ronin/roninlair.jpg" data-trophy="../images/members/ronin/roninlair.jpg"><img src="../images/members/ronin/roninlair.jpg" alt="RoninLair trophy"></a>
+        </div>
+        <div class="ronin-secondary"><div class="content-box"><img src="../images/members/ronin/ronin3.jpg" alt="Ronin666 graphic"></div></div>
+      </div>
+      <p class="ronin-description">The daemonic samurai is a really die-hard player: you shoot, he jumps somewhere safer. Specialized in silent attacks, he prefers duels and team matches rather than chaotic FFA massacres.</p>
+    </section>
+  </main>
+  <section id="roninViewer" class="quad-content" hidden aria-label="Trophy viewer">
+    <div class="content-box viewer-box"><img id="roninViewerImage" src="" alt="Ronin666 trophy"></div>
+    <p class="ronin-back"><a id="roninViewerBack" href="ronin.html">Back to Ronin666's profile</a></p>
+  </section>
+</div>
+<script>
+(function(){var page=document.getElementById('roninPage'),profile=document.getElementById('roninProfile'),viewer=document.getElementById('roninViewer'),image=document.getElementById('roninViewerImage'),back=document.getElementById('roninViewerBack'),savedY=0;function swap(action,y){page.classList.add('is-fading');setTimeout(function(){action();window.scrollTo(0,y||0);requestAnimationFrame(function(){requestAnimationFrame(function(){page.classList.remove('is-fading')})})},500)}document.querySelectorAll('.ronin-trophy').forEach(function(link){link.addEventListener('click',function(e){e.preventDefault();savedY=window.pageYOffset||0;var thumb=link.querySelector('img');swap(function(){profile.hidden=true;viewer.hidden=false;image.src=link.dataset.trophy;image.alt=thumb.alt},0)})});back.addEventListener('click',function(e){e.preventDefault();swap(function(){viewer.hidden=true;image.src='';profile.hidden=false},savedY)})}());
+</script>
+</body>
+</html>

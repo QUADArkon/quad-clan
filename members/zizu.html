@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>[QUAD] Zizu</title>
+  <link rel="stylesheet" href="../css/quad.css">
+  <style>
+    .zizu-box{width:600px;max-width:calc(100% - 16px);margin:0 auto;padding:24px 30px 22px}
+    .zizu-title{text-align:center;margin:0 0 24px}.zizu-title img{width:300px;max-width:100%;height:auto}
+    .zizu-top,.zizu-lower{display:grid;grid-template-columns:minmax(0,1fr) 214px;gap:20px}
+    .zizu-top{align-items:start}.zizu-lower{align-items:center;margin-top:10px}
+    .zizu-data p{margin:0 0 16px}.zizu-data img{vertical-align:middle}
+    .zizu-status{color:#f00}.status-icon{width:33px;height:17px}
+    .zizu-photo,.zizu-secondary{text-align:center}
+    .zizu-photo .content-box,.zizu-secondary .content-box,.viewer-box{display:inline-block;padding:7px}
+    .zizu-photo img{display:block;width:153px;height:auto}.zizu-secondary img{display:block;width:200px;height:auto}
+    .zizu-trophies{display:grid;grid-template-columns:repeat(2,90px);gap:14px;align-items:center}
+    .zizu-trophy{display:block;width:90px;height:67px;overflow:hidden}.zizu-trophy img{display:block;width:90px;height:67px;object-fit:cover}
+    .zizu-description{margin:24px 0 0;line-height:1.6}
+    #zizuViewer[hidden]{display:none}#zizuViewer{text-align:center}.viewer-box img{display:block;max-width:100%;height:auto}.zizu-back{text-align:center;margin:18px 0 0}
+    @media(max-width:560px){.zizu-box{padding:22px 18px}.zizu-top,.zizu-lower{grid-template-columns:1fr}.zizu-photo,.zizu-secondary{grid-row:1}.zizu-trophies{justify-content:center}}
+  </style>
+</head>
+<body class="content-page">
+<div id="zizuPage" class="page-fade">
+  <main id="zizuProfile" class="quad-content">
+    <section class="content-box zizu-box">
+      <div class="zizu-title"><img src="../images/members/zizu/zizu.gif" alt="[QUAD] Zizu"></div>
+      <div class="zizu-top">
+        <div class="zizu-data">
+          <p>Real Name: Davide<br>
+          Callsign: <img src="../images/members/zizu/zizu.gif" alt="Zizu"><br>
+          Other akas: <img src="../images/members/zizu/zizu2.gif" alt="[QUAD] KAMPER"><br>
+          Birthday: 18/05/1970<br>
+          Hometown: Ravenna, Italy</p>
+          <p>Member since: 9/2000<br>
+          Older affiliations: [M.P]<br>
+          Favourite map: E1M5<br>
+          Favourite weapon: rocket launcher</p>
+          <p>Status: <img class="status-icon" src="../images/members/status_inactive.gif" alt="Inactive">&nbsp; <span class="zizu-status">inactive</span></p>
+        </div>
+        <div class="zizu-photo"><div class="content-box"><img src="../images/members/zizu/zizu.jpg" alt="Zizu"></div></div>
+      </div>
+      <div class="zizu-lower">
+        <div class="zizu-trophies">
+          <a class="zizu-trophy" href="../images/members/zizu/ngi7.jpg" data-trophy="../images/members/zizu/ngi7.jpg"><img src="../images/members/zizu/ngi7.jpg" alt="NGI7 trophy"></a>
+          <a class="zizu-trophy" href="../images/members/zizu/zizuark.jpg" data-trophy="../images/members/zizu/zizuark.jpg"><img src="../images/members/zizu/zizuark.jpg" alt="ZizuArk trophy"></a>
+        </div>
+        <div class="zizu-secondary"><div class="content-box"><img src="../images/members/zizu/evil3.gif" alt="Zizu graphic"></div></div>
+      </div>
+      <p class="zizu-description">When Zizu takes an area, he claims that as his own and there is no way to take it back. This, and his absolutely unique rocket-jumping technique, made of him the perfect defender. His contribution made the difference several times.</p>
+    </section>
+  </main>
+  <section id="zizuViewer" class="quad-content" hidden aria-label="Trophy viewer">
+    <div class="content-box viewer-box"><img id="zizuViewerImage" src="" alt="Zizu trophy"></div>
+    <p class="zizu-back"><a id="zizuViewerBack" href="zizu.html">Back to Zizu's profile</a></p>
+  </section>
+</div>
+<script>
+(function(){var page=document.getElementById('zizuPage'),profile=document.getElementById('zizuProfile'),viewer=document.getElementById('zizuViewer'),image=document.getElementById('zizuViewerImage'),back=document.getElementById('zizuViewerBack'),savedY=0;function swap(action,y){page.classList.add('is-fading');setTimeout(function(){action();window.scrollTo(0,y||0);requestAnimationFrame(function(){requestAnimationFrame(function(){page.classList.remove('is-fading')})})},500)}document.querySelectorAll('.zizu-trophy').forEach(function(link){link.addEventListener('click',function(e){e.preventDefault();savedY=window.pageYOffset||0;var thumb=link.querySelector('img');swap(function(){profile.hidden=true;viewer.hidden=false;image.src=link.dataset.trophy;image.alt=thumb.alt},0)})});back.addEventListener('click',function(e){e.preventDefault();swap(function(){viewer.hidden=true;image.src='';profile.hidden=false},savedY)})}());
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>[QUAD] Bent</title>
+<link rel="stylesheet" href="../css/quad.css">
+<style>
+.bent-box{width:600px;max-width:calc(100% - 16px);margin:0 auto;padding:24px 30px 22px}.bent-title{text-align:center;margin:0 0 24px}.bent-title img{width:300px;max-width:100%;height:auto}.bent-top,.bent-lower{display:grid;grid-template-columns:minmax(0,1fr) 164px;gap:20px}.bent-top{align-items:start}.bent-lower{align-items:center;margin-top:10px}.bent-data p{margin:0 0 16px}.bent-data img{vertical-align:middle}.bent-status{color:#f00}.status-icon{width:33px;height:17px}.bent-photo,.bent-secondary{text-align:center}.bent-photo .content-box,.bent-secondary .content-box,.viewer-box{display:inline-block;padding:7px}.bent-photo img{display:block;width:158px;height:auto}.bent-secondary img{display:block;width:141px;height:auto}.bent-trophies{display:grid;grid-template-columns:90px;align-items:center}.bent-trophy{display:block;width:90px;height:68px;overflow:hidden}.bent-trophy img{display:block;width:90px;height:68px;object-fit:cover}.bent-description{margin:24px 0 0;line-height:1.6}#bentViewer[hidden]{display:none}#bentViewer{text-align:center}.viewer-box img{display:block;max-width:100%;height:auto}.bent-back{text-align:center;margin:18px 0 0}@media(max-width:560px){.bent-box{padding:22px 18px}.bent-top,.bent-lower{grid-template-columns:1fr}.bent-photo,.bent-secondary{grid-row:1}.bent-trophies{justify-content:center}}
+</style>
+</head>
+<body class="content-page">
+<div id="bentPage" class="page-fade">
+<main id="bentProfile" class="quad-content"><section class="content-box bent-box">
+<div class="bent-title"><img src="../images/members/bent/bent.gif" alt="[QUAD] Bent"></div>
+<div class="bent-top"><div class="bent-data">
+<p>Real Name: Gabor Hugli<br>Callsign: <img src="../images/members/bent/bent.gif" alt="Bent"><br>Other akas: <img src="../images/members/bent/max.gif" alt="MAX">,&nbsp; <img src="../images/members/bent/ed.gif" alt="ED"><br>Birthday: 04/05/1987<br>Hometown: Eger, Hungary</p>
+<p>Member since: 2/2003<br>Older affiliations: [WING]<br>Favourite map: DM6<br>Favourite weapon: rocket launcher</p>
+<p>Status: <img class="status-icon" src="../images/members/status_inactive.gif" alt="Inactive">&nbsp; <span class="bent-status">inactive</span></p>
+</div><div class="bent-photo"><div class="content-box"><img src="../images/members/bent/hgmin.jpg" alt="Bent"></div></div></div>
+<div class="bent-lower"><div class="bent-trophies"><a class="bent-trophy" href="../images/members/bent/bentdirc.jpg" data-trophy="../images/members/bent/bentdirc.jpg"><img src="../images/members/bent/bentdirc.jpg" alt="Bent DIRC trophy"></a></div><div class="bent-secondary"><div class="content-box"><img src="../images/members/bent/lightsaber.jpg" alt="Lightsaber"></div></div></div>
+<p class="bent-description">The White Jedi has grown fast, so fast that speed become his obsession. Bent is the man behind the demos included in nQuake package, showing to the world what bunny-hopping and trick-jumping means.</p>
+</section></main>
+<section id="bentViewer" class="quad-content" hidden><div class="content-box viewer-box"><img id="bentViewerImage" src="" alt="Bent trophy"></div><p class="bent-back"><a id="bentViewerBack" href="bent.html">Back to Bent's profile</a></p></section>
+</div>
+<script>(function(){var page=document.getElementById('bentPage'),profile=document.getElementById('bentProfile'),viewer=document.getElementById('bentViewer'),image=document.getElementById('bentViewerImage'),back=document.getElementById('bentViewerBack'),savedY=0;function swap(action,y){page.classList.add('is-fading');setTimeout(function(){action();window.scrollTo(0,y||0);requestAnimationFrame(function(){requestAnimationFrame(function(){page.classList.remove('is-fading')})})},500)}document.querySelectorAll('.bent-trophy').forEach(function(link){link.addEventListener('click',function(e){e.preventDefault();savedY=window.pageYOffset||0;var thumb=link.querySelector('img');swap(function(){profile.hidden=true;viewer.hidden=false;image.src=link.dataset.trophy;image.alt=thumb.alt},0)})});back.addEventListener('click',function(e){e.preventDefault();swap(function(){viewer.hidden=true;image.src='';profile.hidden=false},savedY)})}());</script>
+</body></html>

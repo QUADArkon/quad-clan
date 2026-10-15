@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>[QUAD] Wham!</title>
+  <link rel="stylesheet" href="../css/quad.css">
+  <style>
+    .wham-box{width:600px;max-width:calc(100% - 16px);margin:0 auto;padding:24px 30px 22px}
+    .wham-title{text-align:center;margin:0 0 24px}.wham-title img{width:300px;max-width:100%;height:auto}
+    .wham-top,.wham-lower{display:grid;grid-template-columns:minmax(0,1fr) 164px;gap:20px}
+    .wham-top{align-items:start}.wham-lower{align-items:center;margin-top:10px}
+    .wham-data p{margin:0 0 16px}.wham-data img{vertical-align:middle}
+    .wham-classified{color:#f00}.wham-status{color:#f00}.status-icon{width:33px;height:17px}
+    .wham-photo,.wham-secondary{text-align:center}
+    .wham-photo .content-box,.wham-secondary .content-box,.viewer-box{display:inline-block;padding:7px}
+    .wham-photo img{display:block;width:150px;height:auto}.wham-secondary img{display:block;width:150px;height:auto}
+    .wham-trophies{display:grid;grid-template-columns:90px;align-items:center}
+    .wham-trophy{display:block;width:90px;height:67px;overflow:hidden}.wham-trophy img{display:block;width:90px;height:67px;object-fit:cover}
+    .wham-description{margin:24px 0 0;line-height:1.6}
+    #whamViewer[hidden]{display:none}#whamViewer{text-align:center}.viewer-box img{display:block;max-width:100%;height:auto}.wham-back{text-align:center;margin:18px 0 0}
+    @media(max-width:560px){.wham-box{padding:22px 18px}.wham-top,.wham-lower{grid-template-columns:1fr}.wham-photo,.wham-secondary{grid-row:1}.wham-trophies{justify-content:center}}
+  </style>
+</head>
+<body class="content-page">
+<div id="whamPage" class="page-fade">
+  <main id="whamProfile" class="quad-content">
+    <section class="content-box wham-box">
+      <div class="wham-title"><img src="../images/members/wham/wham.gif" alt="[QUAD] Wham!"></div>
+      <div class="wham-top">
+        <div class="wham-data">
+          <p>Real Name: Federico<br>
+          Callsign: <img src="../images/members/wham/wham.gif" alt="Wham!"><br>
+          Other akas: <span class="wham-classified">classified</span><br>
+          Birthday: 01/10/1977<br>
+          Hometown: Torino, Italy</p>
+          <p>Member since: 4/2001<br>
+          Older affiliations: [MiA]<br>
+          Favourite map: E1M2<br>
+          Favourite weapon: rocket launcher</p>
+          <p>Status: <img class="status-icon" src="../images/members/status_inactive.gif" alt="Inactive">&nbsp; <span class="wham-status">inactive</span></p>
+        </div>
+        <div class="wham-photo"><div class="content-box"><img src="../images/members/wham/wham.jpg" alt="Wham!"></div></div>
+      </div>
+      <div class="wham-lower">
+        <div class="wham-trophies">
+          <a class="wham-trophy" href="../images/members/wham/whamuk.jpg" data-trophy="../images/members/wham/whamuk.jpg"><img src="../images/members/wham/whamuk.jpg" alt="WhamUK trophy"></a>
+        </div>
+        <div class="wham-secondary"><div class="content-box"><img src="../images/members/wham/whamlogo.jpg" alt="Wham! logo"></div></div>
+      </div>
+      <p class="wham-description">You don't know shooting prediction, Wham! does. He is one of the few players who raises his ping in LAN games to compare the one he has while playing online. The results are devastating and always spectacular.</p>
+    </section>
+  </main>
+  <section id="whamViewer" class="quad-content" hidden aria-label="Trophy viewer">
+    <div class="content-box viewer-box"><img id="whamViewerImage" src="" alt="Wham! trophy"></div>
+    <p class="wham-back"><a id="whamViewerBack" href="wham.html">Back to Wham!'s profile</a></p>
+  </section>
+</div>
+<script>
+(function(){var page=document.getElementById('whamPage'),profile=document.getElementById('whamProfile'),viewer=document.getElementById('whamViewer'),image=document.getElementById('whamViewerImage'),back=document.getElementById('whamViewerBack'),savedY=0;function swap(action,y){page.classList.add('is-fading');setTimeout(function(){action();window.scrollTo(0,y||0);requestAnimationFrame(function(){requestAnimationFrame(function(){page.classList.remove('is-fading')})})},500)}document.querySelectorAll('.wham-trophy').forEach(function(link){link.addEventListener('click',function(e){e.preventDefault();savedY=window.pageYOffset||0;var thumb=link.querySelector('img');swap(function(){profile.hidden=true;viewer.hidden=false;image.src=link.dataset.trophy;image.alt=thumb.alt},0)})});back.addEventListener('click',function(e){e.preventDefault();swap(function(){viewer.hidden=true;image.src='';profile.hidden=false},savedY)})}());
+</script>
+</body>
+</html>
