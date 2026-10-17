@@ -6,7 +6,7 @@ window.QUAD_MENU = [
     ["News", "pages/news/news.html"], ["[QUAD] Forum", "https://quad.forumotion.me/"], ["[QUAD] Servers", "news/servers/servers.html"], ["Interviews", "news/interviews/interviews.html"], ["Links", "pages/links/links.html"]
   ]},
   { title: "Hints & Guides", items: [
-    ["Quake Bible", "pages/help/bible.html"], ["Maps Overview", "pages/help/overview.html"], ["Console 1.06", "pages/help/console.html"], ["Command Line 1.09", "pages/help/comlines.html"], ["Online Name Maker", "pages/help/name.html"], ["N.O.T. Rules", "pages/help/rules.html"], ["Quetiquette", "pages/help/quetiquette.html"]
+    ["Quake Bible", "help/bible.html"], ["Maps Overview", "help/overview.html"], ["Console 1.06", "help/console.html"], ["Command Line 1.09", "help/comlines.html"], ["Online Name Maker", "help/name.html"], ["N.O.T. Rules", "help/rules.html"], ["Quetiquette", "help/quetiquette.html"]
   ]},
   { title: "Clanmates", items: [
     ["[QUAD] Arkon", "members/arkon.html"], ["[QUAD] Bent", "members/bent.html"], ["[QUAD] Biagio", "members/biagio.html"], ["[QUAD] Hiroshi", "members/hiroshi.html"], ["[QUAD] Morpheus", "members/morpheus.html"], ["[QUAD] Polarite", "members/polarite.html"], ["[QUAD] Raistlin", "members/raistlin.html"], ["[QUAD] Ronin666", "members/ronin.html"], ["[QUAD] Wham!", "members/wham.html"], ["[QUAD] Yanosh", "members/yanosh.html"], ["[QUAD] Zizu", "members/zizu.html"]
