@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[QUAD] Site Maintenance</title>
+<link rel="stylesheet" href="css/quad.css">
+<style>
+.maintenance-page{position:relative;min-height:100vh;overflow:hidden}
+.season-layer{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.maintenance-page .page-fade{position:relative;z-index:1}
+.maintenance-box{width:600px;max-width:calc(100% - 16px);margin:0 auto;padding:22px 20px;box-sizing:border-box;text-align:center}
+.maintenance-title{margin:0 0 16px;color:#fff;text-align:center}
+.maintenance-image{display:block;width:466px;height:350px;max-width:100%;object-fit:contain;margin:0 auto 18px;border:0}
+.maintenance-message{margin:0;text-align:center}.maintenance-signature{display:block;margin-top:8px;color:#fff}
+.season-item{position:absolute;left:0;top:0;will-change:transform,opacity;user-select:none}
+.snowflake{color:#fff;text-shadow:0 0 4px #fff;opacity:.8}
+.leaf{width:10px;height:7px;border-radius:80% 0 80% 0;background:#b55a20;box-shadow:0 0 2px rgba(0,0,0,.35);opacity:.75}
+.firefly{width:3px;height:3px;border-radius:50%;background:#fff7a0;box-shadow:0 0 6px 2px #d8ff75;opacity:.25;animation:fireflyGlow 2.8s ease-in-out infinite alternate}
+.swallow{width:22px;height:10px;opacity:.7}
+.swallow::before,.swallow::after{content:"";position:absolute;top:4px;width:13px;height:5px;border-top:2px solid #aaa;border-radius:50% 50% 0 0}
+.swallow::before{left:0;transform:rotate(18deg)}.swallow::after{right:0;transform:rotate(-18deg)}
+@keyframes fireflyGlow{from{opacity:.18;box-shadow:0 0 3px 1px #d8ff75}to{opacity:.9;box-shadow:0 0 9px 3px #fff7a0}}
+@media(max-width:640px){.maintenance-box{padding:16px 12px}.maintenance-image{height:auto}}
+@media(prefers-reduced-motion:reduce){.season-layer{display:none}}
+</style>
+</head>
+<body class="content-page maintenance-page">
+<div class="season-layer" id="seasonLayer" aria-hidden="true"></div>
+<div class="page-fade"><main class="quad-content"><section class="content-box maintenance-box">
+<h3 class="maintenance-title">Site Maintenance</h3>
+<img class="maintenance-image" src="images/monoscopio.jpg" alt="Monoscopio" width="466" height="350">
+<p class="maintenance-message">The site is currently being updated:<br>please try again in a few minutes.<span class="maintenance-signature">[QUAD] Arkon</span></p>
+</section></main></div>
+<script>
+(function(){
+'use strict';
+var layer=document.getElementById('seasonLayer');
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var month=new Date().getMonth();
+var params=new URLSearchParams(window.location.search);
+var forcedSeason=(params.get('season')||'').toLowerCase();
+var validSeasons=['winter','spring','summer','autumn'];
+var automaticSeason=month===11||month<=1?'winter':month<=4?'spring':month<=7?'summer':'autumn';
+var season=validSeasons.indexOf(forcedSeason)!==-1?forcedSeason:automaticSeason;
+var count={winter:24,spring:6,summer:16,autumn:14}[season];
+var items=[];
+function random(min,max){return min+Math.random()*(max-min)}
+function makeItem(i){
+ var el=document.createElement('span'),item={el:el};el.className='season-item ' + (season==='winter'?'snowflake':season==='spring'?'swallow':season==='summer'?'firefly':'leaf');
+ if(season==='winter'){el.textContent=Math.random()>.5?'•':'*';el.style.fontSize=random(8,16)+'px';item.x=random(0,innerWidth);item.y=random(-innerHeight,innerHeight);item.vx=random(-.15,.2);item.vy=random(.35,.8);item.spin=random(-.01,.01)}
+ if(season==='autumn'){item.x=random(0,innerWidth);item.y=random(-innerHeight,innerHeight);item.vx=random(-.25,.35);item.vy=random(.25,.65);item.spin=random(-.025,.025);item.angle=random(0,Math.PI*2);el.style.background=['#b55a20','#c77b22','#8c4c24','#a87821'][i%4]}
+ if(season==='summer'){item.x=random(0,innerWidth);item.y=random(0,innerHeight);item.vx=random(-.08,.08);item.vy=random(-.06,.06);item.angle=0;el.style.animationDelay=random(0,2.8)+'s'}
+ if(season==='spring'){item.x=random(-innerWidth,innerWidth);item.y=random(30,Math.max(60,innerHeight*.55));item.vx=random(.65,1.25);item.vy=random(-.08,.08);item.angle=0}
+ layer.appendChild(el);return item
+}
+for(var i=0;i<count;i++)items.push(makeItem(i));
+var last=performance.now();
+function frame(now){
+ var dt=Math.min((now-last)/16.667,3);last=now;
+ items.forEach(function(item){
+  item.x+=item.vx*dt;item.y+=item.vy*dt;if(season==='winter'||season==='autumn'){item.x+=Math.sin(item.y*.015)*.18*dt;item.angle=(item.angle||0)+item.spin*dt;if(item.y>innerHeight+20){item.y=-20;item.x=random(0,innerWidth)}if(item.x<-30)item.x=innerWidth+20;if(item.x>innerWidth+30)item.x=-20}
+  if(season==='summer'){if(item.x<0||item.x>innerWidth)item.vx*=-1;if(item.y<0||item.y>innerHeight)item.vy*=-1}
+  if(season==='spring'){if(item.x>innerWidth+40){item.x=-40;item.y=random(30,Math.max(60,innerHeight*.55))}}
+  item.el.style.transform='translate3d('+item.x.toFixed(1)+'px,'+item.y.toFixed(1)+'px,0) rotate('+((item.angle||0)*57.2958).toFixed(1)+'deg)';
+ });
+ requestAnimationFrame(frame)
+}
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

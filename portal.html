@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[QUAD] Portal</title>
+<style>
+@font-face{font-family:"dpquakeregular";src:url("fonts/dpquake_-webfont.woff2") format("woff2");font-weight:normal;font-style:normal;font-display:swap}
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#000}body{color:#fff;font-family:Arial,sans-serif}
+.portal{position:fixed;inset:0;overflow:hidden;background:#000;isolation:isolate}
+
+/* Two identical viewport panels move together by exactly one panel width. */
+.bg-track{position:absolute;z-index:1;inset:0 auto 0 0;width:200%;display:flex;animation:bgLoop 60s linear infinite;will-change:transform}
+.bg-panel{position:relative;flex:0 0 50%;width:50%;height:100%;overflow:hidden;background:#000}
+.bg-panel img{display:block;width:100%;height:100%;object-fit:cover;object-position:center center}
+
+.portal-overlay{position:absolute;z-index:2;inset:0;display:block;width:100%;height:100%;opacity:0;pointer-events:none;animation:overlayFadeIn 1.5s ease 1.5s forwards}
+.portal-content{position:absolute;z-index:3;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;pointer-events:none}
+.portal-header{width:92%;opacity:0;transform:translateY(1em);animation:titleFadeIn 1s ease 2.25s forwards}
+.portal-title{margin:0;color:#fff;font-family:"dpquakeregular","Times New Roman",serif;font-size:clamp(2.8rem,7vw,5.6rem);font-weight:normal;line-height:1;letter-spacing:-.035em;text-shadow:0 2px 6px rgba(0,0,0,.95)}
+.portal-subtitle{margin:1.15em 0 0;color:#fff;font-size:clamp(.9rem,2.1vw,1.25rem);font-weight:300;line-height:1.6;letter-spacing:-.025em;opacity:.76;text-shadow:0 1px 5px #000}
+
+@keyframes bgLoop{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@keyframes overlayFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes titleFadeIn{from{opacity:0;transform:translateY(1em)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.bg-track{animation:none}.portal-overlay,.portal-header{animation:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<main class="portal">
+  <div class="bg-track" aria-hidden="true">
+    <div class="bg-panel"><img src="images/portal/bg.jpg" alt=""></div>
+    <div class="bg-panel"><img src="images/portal/bg.jpg" alt=""></div>
+  </div>
+
+  <svg class="portal-overlay" viewBox="0 0 1920 1080" preserveAspectRatio="none" aria-hidden="true">
+    <polygon points="-800,0 -200,0 560,1080 -40,1080" fill="#fff" fill-opacity="0.25"/>
+    <polygon points="-200,0 400,0 1160,1080 560,1080" fill="#fff" fill-opacity="0.18"/>
+    <polygon points="400,0 1000,0 1760,1080 1160,1080" fill="#fff" fill-opacity="0.12"/>
+    <polygon points="1000,0 1600,0 2360,1080 1760,1080" fill="#fff" fill-opacity="0.06"/>
+    <line x1="-200" y1="0" x2="560" y2="1080" stroke="#fff" stroke-opacity="0.24" stroke-width="1"/>
+    <line x1="400" y1="0" x2="1160" y2="1080" stroke="#fff" stroke-opacity="0.24" stroke-width="1"/>
+    <line x1="1000" y1="0" x2="1760" y2="1080" stroke="#fff" stroke-opacity="0.24" stroke-width="1"/>
+    <line x1="1600" y1="0" x2="2360" y2="1080" stroke="#fff" stroke-opacity="0.24" stroke-width="1"/>
+  </svg>
+
+  <div class="portal-content">
+    <header class="portal-header">
+      <h1 class="portal-title">QUAD CLAN</h1>
+      <p class="portal-subtitle">QUake &nbsp;&bull;&nbsp; Army &nbsp;&bull;&nbsp; of &nbsp;&bull;&nbsp; Darkness</p>
+    </header>
+  </div>
+</main>
+</body>
+</html>

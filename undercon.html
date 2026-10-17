@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[QUAD] Under Construction</title>
+<link rel="stylesheet" href="css/quad.css">
+<style>
+.undercon-box{width:600px;max-width:calc(100% - 16px);margin:0 auto;padding:22px 20px;box-sizing:border-box;text-align:center}
+.quad-name{display:block;width:446px;height:178px;max-width:100%;object-fit:contain;margin:0 auto 18px;border:0;background:transparent}
+.undercon-image{display:block;width:249px;height:148px;max-width:100%;object-fit:contain;margin:0;border:0}
+.undercon-image-wrap{display:inline-block;background:#fff;border:1px solid #fff;padding:0;line-height:0}
+#mouseClock{position:fixed;left:0;top:0;width:1px;height:1px;z-index:9999;pointer-events:none;font-family:"Times New Roman",serif;font-weight:bold;line-height:1;overflow:visible}
+.clock-part{position:absolute;left:0;top:0;width:18px;height:18px;margin:-9px 0 0 -9px;text-align:center;will-change:transform;user-select:none;text-shadow:1px 1px 2px #000}
+.clock-face{color:#ff9000;font-size:12px}.clock-date{color:#f00;font-size:12px}.clock-hour{color:#fff;font-size:18px}.clock-minute{color:#fff000;font-size:18px}.clock-second{color:#008080;font:700 18px/1 Arial,sans-serif}
+@media(max-width:640px){.undercon-box{padding:16px 12px}}
+</style>
+</head>
+<body class="content-page">
+<div class="page-fade"><main class="quad-content"><section class="content-box undercon-box">
+<img class="quad-name" src="images/quadname.gif" alt="QUAD" width="446" height="178">
+<span class="undercon-image-wrap"><img class="undercon-image" src="images/undercon.gif" alt="Under Construction" width="249" height="148"></span>
+</section></main></div>
+<div id="mouseClock" aria-hidden="true"></div>
+<script>
+(function(){
+'use strict';
+var clock=document.getElementById('mouseClock');
+var clockRadius=60,dateRadius=90,offsetX=100,offsetY=0;
+var targetX=window.innerWidth/2+offsetX,targetY=window.innerHeight/2+offsetY;
+var followSpeed=.7,dateAngle=0,dateSpeed=.25,lastTime=performance.now();
+var days=['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
+var months=['JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'];
+var now=new Date();
+var dateText=(' '+days[now.getDay()]+' '+now.getDate()+' '+months[now.getMonth()]+' '+now.getFullYear()).split('');
+function make(text,className){return text.map(function(ch){var e=document.createElement('span');e.className='clock-part '+className;e.textContent=ch;clock.appendChild(e);return e})}
+var face=make(['1','2','3','4','5','6','7','8','9','10','11','12'],'clock-face');
+var date=make(dateText,'clock-date');
+var hours=make(['\u2022','\u2022','\u2022'],'clock-hour');
+var minutes=make(['\u2022','\u2022','\u2022','\u2022'],'clock-minute');
+var seconds=make(['\u2022','\u2022','\u2022','\u2022','\u2022'],'clock-second');
+function points(count,x,y){return Array.from({length:count},function(){return{x:x,y:y,fx:x,fy:y}})}
+var dateTrail=points(date.length,targetX,targetY),faceTrail=points(face.length,targetX,targetY);
+function place(el,x,y){el.style.transform='translate3d('+x.toFixed(2)+'px,'+y.toFixed(2)+'px,0)'}
+function follow(trail){trail[0].fy+=(targetY-trail[0].fy)*followSpeed;trail[0].fx+=(targetX-trail[0].fx)*followSpeed;trail[0].y=Math.round(trail[0].fy);trail[0].x=Math.round(trail[0].fx);for(var i=1;i<trail.length;i++){trail[i].fy+=(trail[i-1].y-trail[i].fy)*followSpeed;trail[i].fx+=(trail[i-1].x-trail[i].fx)*followSpeed;trail[i].y=Math.round(trail[i].fy);trail[i].x=Math.round(trail[i].fx)}}
+function hand(elements,angle,spacing,cx,cy){elements.forEach(function(el,i){var d=(i+1)*spacing;place(el,cx+Math.cos(angle)*d,cy+Math.sin(angle)*d)})}
+function draw(time){var delta=Math.min((time-lastTime)/1000,.1);lastTime=time;dateAngle-=dateSpeed*delta;follow(dateTrail);follow(faceTrail);face.forEach(function(el,i){var a=-Math.PI/3+i*(Math.PI*2/12);place(el,faceTrail[i].x+Math.cos(a)*clockRadius,faceTrail[i].y+Math.sin(a)*clockRadius)});date.forEach(function(el,i){var a=dateAngle+i*(Math.PI*2/date.length);place(el,dateTrail[i].x+Math.cos(a)*dateRadius,dateTrail[i].y+Math.sin(a)*dateRadius)});var d=new Date(),sec=d.getSeconds()+d.getMilliseconds()/1000,min=d.getMinutes()+sec/60,hr=(d.getHours()%12)+min/60;var cx=faceTrail[0].x,cy=faceTrail[0].y;hand(hours,-Math.PI/2+hr*Math.PI/6,13.33,cx,cy);hand(minutes,-Math.PI/2+min*Math.PI/30,13.33,cx,cy);hand(seconds,-Math.PI/2+sec*Math.PI/30,13.33,cx,cy);requestAnimationFrame(draw)}
+document.addEventListener('mousemove',function(e){targetX=e.clientX+offsetX;targetY=e.clientY+offsetY},{passive:true});
+requestAnimationFrame(draw);
+})();
+</script>
+</body>
+</html>
