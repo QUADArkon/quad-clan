@@ -7,7 +7,10 @@
 <title>[QUAD] News</title>
 <link rel="stylesheet" href="../css/quad.css">
 <style>
-#randomPictureBox{cursor:pointer}#randomPictureThumb{width:128px;height:96px;object-fit:contain;display:block;flex:0 0 128px;cursor:pointer}#randomPictureInfo{text-align:center}
+#randomPictureBox{cursor:pointer}
+#randomPictureThumb{width:128px;height:96px;object-fit:contain;display:block;flex:0 0 128px;cursor:pointer}
+#randomPictureBox .random-picture-body{display:flex;align-items:center;justify-content:center;width:100%}
+#randomPictureInfo{flex:1;align-self:stretch;display:flex;flex-direction:column;justify-content:center;text-align:center}
 </style>
 </head>
 <body class="content-page">
@@ -22,13 +25,7 @@
     </section>
     <section class="content-box latest-files-box">
       <div class="box-label">Latest Files:</div>
-      <div class="latest-files-body"><div class="file-links">
-        <a href="../files/maps/fij2.zip" target="main">12/17/12 Fij2 by Xeno</a>
-        <a href="../files/maps/deceit.zip" target="main">05/08/10 Deceit by Xeno</a>
-        <a href="../files/maps/domus.zip" target="main">01/05/10 Domus by Xeno</a>
-        <a href="../files/maps/fij1.zip" target="main">12/21/09 Fij1 by Xeno</a>
-        <a href="../files/maps/mk.zip" target="main">11/06/09 Mk by Xeno</a>
-      </div></div>
+      <div id="latestFiles" class="latest-files-body" data-files-limit="5"></div>
     </section>
   </div>
   <div id="newsMainView"></div>
@@ -41,6 +38,8 @@
 <script src="../js/trophies.js"></script>
 <script src="../js/lans.js"></script>
 <script src="../js/news-data.js"></script>
+<script src="../js/files-data.js"></script>
+<script src="../js/files.js"></script>
 <script src="../js/news.js"></script>
 </body>
 </html>
