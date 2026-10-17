@@ -1,0 +1,3277 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>[QUAD] Console</title>
+<link href="../css/quad.css" rel="stylesheet"/>
+<style>
+    .console-box{width:600px;max-width:calc(100% - 16px);margin:0 auto;padding:22px 20px;box-sizing:border-box}
+    .console-header{text-align:center;margin:0 0 18px}
+    .console-header img{display:block;width:65px;height:65px;margin:0 auto}
+    .console-title{margin:10px 0 12px;text-align:center;color:#fff}
+    .console-key{margin:0;text-align:center}
+    .console-box a:link,.console-box a:visited{color:#ffff00!important}
+    .console-box a:hover,.console-box a:focus-visible{color:#ff0000!important;text-decoration:underline overline!important}
+    .console-target{scroll-margin-top:12px;text-decoration:none!important}
+    .console-target-alias{display:block;height:0;margin:0;padding:0;border:0}
+    .console-target-hit{background:#800000!important;outline:1px solid #ff0000!important}
+    .console-box hr{border:0;border-top:1px solid #777;margin:14px 0}
+    .console-box pre{max-width:100%;overflow:auto;white-space:pre-wrap}
+    .console-table{max-width:100%;border-collapse:collapse;margin:10px 0}
+    .console-table th,.console-table td{padding:2px 7px;text-align:left;vertical-align:top}
+    @media(max-width:640px){.console-box{padding:16px 12px}}
+  </style>
+</head>
+<body class="content-page">
+<div class="page-fade">
+<main class="quad-content">
+<section class="content-box console-box">
+<header class="console-header">
+<img alt="Quake shield" src="../images/help/console/qshield.gif"/>
+<h3 class="console-title">Console Commands for Quake 1.06</h3>
+<p class="console-key">Key for the list:<br/>(A)=Action (C)=Command (P)=Protocol (T)=Toggle or flag (V)=Variable (X)=Other (?)=Unknown</p>
+</header>
+<hr/>
+<b><span class="console-target console-target-alias" id="attack"></span><p class="console-target" id="attack/attack">+attack / -attack (A)</p></b><ul>
+<p>Syntax: +attack -attack </p>
+<p>When attack is active the player is firing their current weapon.<br>
+</br></p>
+<p>See also: <a href="#impulse">impulse</a></p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="back"></span><p class="console-target" id="back/back">+back / -back (A)</p></b><ul>
+<p>Syntax: +back -back </p>
+<p>When back is active the player is moving backwards.<br/>
+</p>
+<p>See also: <a href="#clbackspeed">cl_backspeed</a></p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="forward"></span><p class="console-target" id="forward/forward">+forward / -forward (A)</p></b><ul>
+<p>Syntax: +forward -forward </p>
+<p>When forward is active the player is moving forward.<br/>
+</p>
+<p>See also: <a href="#clforwardspeed">cl_forwardspeed</a></p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="jump"></span><p class="console-target" id="jump/jump">+jump / -jump (A)</p></b><ul>
+<p>Syntax: +jump -jump </p>
+<p>When jump is active the player is jumping.<br/>
+</p>
+<p>See also: <a href="#svgravity">sv_gravity</a></p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="klook"></span><p class="console-target" id="klook/klook">+klook / -klook (A)</p></b><ul>
+<p>Syntax: +klook -klook </p>
+<p>When klook is active forward and back become lookup and lookdown
+              respectively.<br/>
+</p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="left"></span><p class="console-target" id="left/left">+left / -left (A)</p></b><ul>
+<p>Syntax: +left -left </p>
+<p>When left is active the player is turning left.<br/>
+</p>
+<p>See also: <a href="#clyawspeed">cl_yawspeed</a></p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="lookdown"></span><p class="console-target" id="lookdown/lookdown">+lookdown / -lookdown (A)</p></b><ul>
+<p>Syntax: +lookdown -lookdown </p>
+<p>When lookdown is active the player's view is moving down.<br/>
+</p>
+<p>See also: <a href="#clpitchspeed">cl_pitchspeed</a>, <a href="#centerview">centerview</a>, <a href="#forcecenterview">force_centerview</a></p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="lookup"></span><p class="console-target" id="lookup/lookup">+lookup / -lookup (A)</p></b><ul>
+<p>Syntax: +lookup -lookup </p>
+<p>When lookup is active the player's view is moving up.<br/>
+</p>
+<p>See also: <a href="#clpitchspeed">cl_pitchspeed</a>, <a href="#centerview">centerview</a>, <a href="#forcecenterview">force_centerview</a></p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="mlook"></span><p class="console-target" id="mlook/mlook">+mlook / -mlook (A)</p></b><ul>
+<p>Syntax: +mlook -mlook </p>
+<p>When mlook is active moving the mouse forwards and backwards
+              performs a lookup and lookdown respectively.<br/>
+</p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="movedown"></span><p class="console-target" id="movedown/movedown">+movedown / - movedown (A)</p></b><ul>
+<p>Syntax: +movedown -movedown </p>
+<p>When movedown is active the player is swimming down in a liquid.<br/>
+</p>
+<p>See also: <a href="#clupspeed">cl_upspeed</a></p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="moveleft"></span><p class="console-target" id="moveleft/moveleft">+moveleft / -moveleft (A)</p></b><ul>
+<p>Syntax: +moveleft -moveleft </p>
+<p>When moveleft is active the player is strafing left.<br/>
+</p>
+<p>See also: <a href="#clsidespeed">cl_sidespeed</a></p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="moveright"></span><p class="console-target" id="moveright/moveright">+moveright / -moveright (A)</p></b><ul>
+<p>Syntax: +moveright -moveright </p>
+<p>When moveright is active the player is strafing right.<br/>
+</p>
+<p>See also: <a href="#clsidespeed">cl_sidespeed</a></p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="moveup"></span><p class="console-target" id="moveup/moveup">+moveup / -moveup (A)</p></b><ul>
+<p>Syntax: +moveup -moveup </p>
+<p>When moveup is active the player is swimming up in a liquid.<br/>
+</p>
+<p>See also: <a href="#clupspeed">cl_upspeed</a></p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="right"></span><p class="console-target" id="right/right">+right / -right (A)</p></b><ul>
+<p>Syntax: +right -right </p>
+<p>When right is active the player is turning right.<br/>
+</p>
+<p>See also: <a href="#clyawspeed">cl_yawspeed</a></p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="showscores"></span><p class="console-target" id="showscores/showscores">+showscores / -showscores (A)</p></b><ul>
+<p>Syntax: +showscores -showscores </p>
+<p>When showscores is active in single player mode the current level
+              stats are shown on the status bar. In multiplayer mode the current frags are shown on the
+              full screen.<br/>
+</p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="speed"></span><p class="console-target" id="speed/speed">+speed / -speed (A)</p></b><ul>
+<p>Syntax: +speed -speed </p>
+<p>When speed is active the player is running.<br/>
+</p>
+<p>See also: <a href="#clmovespeedkey">cl_movespeedkey</a>,
+              <a href="#clanglespeedkey">cl_anglespeedkey</a></p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="strafe"></span><p class="console-target" id="strafe/strafe">+strafe / -strafe (A)</p></b><ul>
+<p>Syntax: +strafe -strafe </p>
+<p>When strafe is active left and right function like moveleft and
+              moveright, strafing in that direction.<br/>
+</p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="use"></span><p class="console-target" id="use/use">+use / -use (A)</p></b><ul>
+<p>Syntax: +use &lt;?&gt; -use </p>
+<p>Sets the USE flag for the player. Currently not used by Quake.<br/>
+              Thanks to Sky Golightly &lt;sky@cruzio.com&gt; for information on this command.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clcolor">_cl_color (V)</p></b><ul>
+<p>Syntax: _cl_color &lt;value&gt; <br/>
+              Default: 0 </p>
+<p>Set the player's color. The value is SC*16+PC where SC is shirt
+              color and PC is pants color.<br/>
+</p>
+<p>See also: <a href="#color">color</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clname">_cl_name (V)</p></b><ul>
+<p>Syntax: _cl_name &lt;string&gt; <br/>
+              Default: Player </p>
+<p>Sets the player's name.<br/>
+</p>
+<p>See also: <a href="#name">name</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="configcombaud">_config_com_baud (V)</p></b><ul>
+<p>Syntax: _config_com_baud &lt;value&gt; <br/>
+              Default: 57600 </p>
+<p>Sets the default baud rate for the modem.<br/>
+</p>
+<p>See also: <a href="#com1/com2">com1/com2</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="configcomirq">_config_com_irq (V)</p></b><ul>
+<p>Syntax: _config_com_irq &lt;value&gt; <br/>
+              Default: 4 </p>
+<p>Sets the default irq for the modem.<br/>
+</p>
+<p>See also: <a href="#com1/com2">com1/com2</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="configcommodem">_config_com_modem (T)</p></b><ul>
+<p>Syntax: _config_com_modem &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>This is a really weird option. If set to 1 then com1 gets the
+              values that the _config_x commands sets. It doesn't work for com2 though. I think in
+              general it's better just to use the com1 and com2 commands.<br/>
+</p>
+<p>See also: <a href="#com1/com2">com1/com2</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="configcomport">_config_com_port (V)</p></b><ul>
+<p>Syntax: _config_com_port &lt;value&gt; <br/>
+              Default: 1016 </p>
+<p>Sets the default port for the modem. Use 0x#### to enter the
+              number in hex.<br/>
+</p>
+<p>See also: <a href="#com1/com2">com1/com2</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="configmodemclear">_config_modem_clear (V)</p></b><ul>
+<p>Syntax: _config_modem_clear &lt;string&gt; <br/>
+              Default: ATZ </p>
+<p>Sets the default modem reset command.<br/>
+</p>
+<p>See also: <a href="#com1/com2">com1/com2</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="configmodemdialtype">_config_modem_dialtype (V)</p></b><ul>
+<p>Syntax: _config_modem_dialtype &lt;P/T&gt; <br/>
+              Default: T </p>
+<p>Sets the default dailing mode to Touch Tone (T) or Pulse (P).<br/>
+</p>
+<p>See also: <a href="#com1/com2">com1/com2</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="configmodemhangup">_config_modem_hangup (V)</p></b><ul>
+<p>Syntax: _config_modem_hangup &lt;string&gt; <br/>
+              Default: AT H </p>
+<p>Sets the default hangup string for the modem.<br/>
+</p>
+<p>See also: <a href="#com1/com2">com1/com2</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="configmodeminit">_config_modem_init (V)</p></b><ul>
+<p>Syntax: _config_modem_init &lt;string&gt; <br/>
+              Default: (none) </p>
+<p>Sets the default modem init string.<br/>
+</p>
+<p>See also: <a href="#com1/com2">com1/com2</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="viddefaultmode">_vid_default_mode (V)</p></b><ul>
+<p>Syntax: _vid_default_mode &lt;mode&gt; <br/>
+              Default: 0 </p>
+<p>Sets the default video mode that Quake uses.<br/>
+</p>
+<p>See also: <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="vidwaitoverride">_vid_wait_override (T)</p></b><ul>
+<p>Syntax: _vid_wait_override &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p><i>From techinfo.txt:</i></p>
+<pre>       can be used to force wait for vertical sync in all modes. When
+        _vid_wait_override is set to 0, the type of waiting, if any,
+        for each video mode that's set thereafter is automatically set
+        to that appears to be the fastest safe state. However, it is
+        possible in some cases that automatic setting may result in
+        some screen glitching, and it is also true that shear can be
+        eliminated by waiting for vertical sync (although at a cost in
+        performance), so it may be desirable in some cases to override
+        the automatic wait selection and always wait for vertical
+        sync.  This can be done by setting _vid_wait_override to 1. Once
+        set, this remains in effect through all succeeding mode sets,
+        even when Quake is exited and re-entered; the only way to keep
+        Quake from waiting for vertical sync once _vid_wait_override is
+        set to 1 is to set _vid_wait_override to 0. Note that changing
+        _vid_wait_override doesn't affect the current mode, but rather
+        takes effect on the next mode set.
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="alias">alias (C)</p></b><ul>
+<p>Syntax: alias &lt;name&gt; [command] </p>
+<p>Using alias without the [command] option will erase the alias
+              specified in &lt;name&gt;.<br/>
+</p>
+<p><i>From techinfo.txt:</i></p>
+<pre>       The alias command is used to create a reference to a command or list
+        of commands. When aliasing multiple commands, or commands that contain
+        multiple words (such as "fraglimit 50"), you must enclose all the
+        commands in quotation marks and separate each command with a
+        semi-colon.
+
+        Example of an alias that changes some Deathmatch server parameters: 
+
+        alias net_game "hostname my_server ; fraglimit 15 ; timelimit 15"
+        bind INS net_game
+</pre>
+<p>See also: <a href="#bind">bind</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="ambientfade">ambient_fade (V)</p></b><ul>
+<p>Syntax: ambient_fade &lt;n&gt; <br/>
+              Default: 100 </p>
+<p>How quickly ambient sounds fade in/out. Higher values make the
+              sound fade quicker.<br/>
+</p>
+<p>See also: <a href="#ambientlevel">ambient_level</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="ambientlevel">ambient_level (V)</p></b><ul>
+<p>Syntax: ambient_level &lt;n&gt; <br/>
+              Default: 0.3 </p>
+<p>How loud ambient sounds are. This includes wind, water, and other
+              ambient sounds.<br/>
+</p>
+<p>See also: <a href="#ambientfade">ambient_fade</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="auxlook">auxlook (T)</p></b><ul>
+<p>Syntax: auxlook &lt;0/1&gt; <br/>
+              Default: 1 </p>
+<p>Toggle the camera angle control for use with an auxiliary
+              controller (eg. SpaceTec &amp; SpaceOrb).<br/>
+              Thanks to Sky Golightly &lt;sky@bujin.com&gt; for the info.<br/>
+</p>
+<p>See also: <a href="#toggleauxlook">toggle_auxlook</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="ban">ban (C)</p></b><ul>
+<p>Syntax: ban &lt;ip address&gt; [mask] </p>
+<p>At long last you can ban those troublesome players. Just get
+              their ip with the status command and enter it in. However, don't get your hopes up that
+              much at this point. It is a quick hack and can only current handle one banned ip address.
+              It also supports higher order domain banning to make it easy to ban players from a
+              particular ISP or site. Once you have declared at least one banned site typing ban without
+              an ip address will list the current sites that are being banned.<br/>
+              To use the higher order domain banning the format is: ban xxx.xxx.0.0 xxx.xxx.0.0 (yes you
+              have to type twice)<br/>
+              Once banning has been turned on you can turn it off by using the command: ban off<br/>
+              Thanks to Daniel A. Sill &lt;sill@zeke.as.utexas.edu&gt; for getting the low-down on this
+              command.<br/>
+</p>
+<p>See also: <a href="#status">status</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="begin">begin (P)</p></b><ul>
+<p>Syntax: begin </p>
+<p>This command reports "Not valid from console" when run.
+              It is part of the Quake client/server protocol. Sent by a client to a server after the
+              client has processed the entity spawn messages and the client is ready to begin rendering
+              and processing game update messages. Not for use by mortals.<br/>
+              Thanks to Sky Golightly &lt;sky@cruzio.com&gt; for information on this command.<br/>
+</p>
+<p>See also: <a href="#prespawn">prespawn</a>, <a href="#spawn">spawn</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="bf">bf (C)</p></b><ul>
+<p>Syntax: bf </p>
+<p>Background flash, used when you pick up an item.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="bgmbuffer">bgmbuffer (V)</p></b><ul>
+<p>Syntax: bgmbuffer &lt;size&gt; <br/>
+              Default: 4096 </p>
+<p>Amount of memory allocated for the background music buffer, used
+              when playing from a cd.<br/>
+</p>
+<p>See also: <a href="#bgmvolume">bgmvolume</a>, <a href="#cd">cd</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="bgmvolume">bgmvolume (V)</p></b><ul>
+<p>Syntax: bgmvolume &lt;vol&gt; <br/>
+              Default: 1.0 </p>
+<p>Volume of background cd music.<br/>
+</p>
+<p>See also: <a href="#cd">cd</a>, <a href="#bgmbuffer">bgmbuffer</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="bind">bind (C)</p></b><ul>
+<p>Syntax: bind &lt;key&gt; [command] </p>
+<p>Used to bind a set of commands to a key.<br/>
+              To bind multiple command enclose the entire command in quotes and separate the commands
+              with semicolons:<br/>
+              bind q "impulse 7; +attack; wait; -attack; impulse 5"<br/>
+              When using actions commands in a bind (ie +attack or +left) the first action will
+              automatically be stopped when the key is released. To prevent this, start the command with
+              a semicolon:<br/>
+              bind q ";+mlook" (This will keep mlook on until a -mlook is executed.)<br/>
+</p>
+<p><i>From techinfo.txt:</i></p>
+<pre>       Where &lt;key&gt; is a valid key control and [command] is a valid
+        Quake command.
+
+        Example: 
+        To bind the j key to the 'jump' command, you would type: 
+        bind j +jump
+        and press enter.
+
+        Non-printable keys such as 'page up' and buttons from the
+        mouse/joystick are bound in the same manner as printable
+        characters.
+
+        Example: 
+        To bind the page up key to the 'jump' command, you would type: 
+        bind pageup +jump
+        and press enter.
+
+        To bind the right mouse button to the attack command, you would type: 
+        bind mouse2 +attack
+        and press enter.
+
+        The following keys can be bound: 
+        A-Z             0-9
+        *F1-F12         *TAB
+        ENTER           SPACE
+        BACKSPACE       UPARROW
+        DOWNARROW       LEFTARROW
+        RIGHTARROW      ALT
+        CTRL            SHIFT
+        INSDEL
+        PGDN            PGUP
+        HOME            END
+        PAUSE           SEMICOLON
+        MOUSE1 (mouse button 1)
+        MOUSE2 (mouse button 2)
+        MOUSE3 (mouse button 3)
+        *~ (tilde)
+
+        * Can only be bound on the command line or in a .cfg file.
+        The ESC key cannot be bound.
+</pre>
+<p>See also: <a href="#alias">alias</a>, <a href="#unbind">unbind</a>, <a href="#unbindall">unbindall</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="cd">cd (C)</p></b><ul>
+<p>Syntax: cd [command] </p>
+<p>Used to control the cd player.<br/>
+</p>
+<p><i>From techinfo.txt:</i></p>
+<pre>       cd on
+                Re-enables the CD audio system after a "cd off" command.
+        cd off
+                Shuts down the CD audio system. No more music will be
+                played unless it is re-enabled.
+        cd reset
+                Causes the CD audio to re-initialize. This is useful
+                if you change CDs or insert the CD after you've
+                already run Quake.
+        cd play &lt;track number&gt;
+                Plays the specified track one time.
+        cd loop &lt;track number&gt;
+                Plays the specified track. It will be repeated until
+                either it is manually stopped or another track is started.
+        cd stop
+                Stops the currently playing track.
+        cd resume
+                Will resume playback of a stopped track.
+        cd eject
+                This is for CD players that do not have a manual eject button.
+        cd remap &lt;track1&gt; &lt;track2&gt; &lt;track3&gt; ...
+                Allows you to switch what tracks are played. This is
+                especially useful if you want to play music other than
+                that on the Quake CD. If the CD audio system is told
+                to play track 1, it will instead play the 1st track
+                you specified. For example: assuming a CD with 1 data
+                track and 8 music tracks, the command "cd remap 1 9 8
+                7 6 5 4 3 2" would leave the data alone and play the
+                audio tracks as if they had been placed on the CD in
+                the opposite order.
+        cd info
+                Reports information such as the number and types of
+                tracks on the current CD, what track (if any) is
+                currently playing, and the playback volume.
+</pre>
+<p>See also: <a href="#bgmvolume">bgmvolume</a>, <a href="#bgmbuffer">bgmbuffer</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="centerview">centerview (C)</p></b><ul>
+<p>Syntax: centerview </p>
+<p>Moves player's view back to straight ahead after a +lookup or
+              +lookdown action.<br/>
+</p>
+<p>See also: <a href="#vcenterspeed">v_centerspeed</a>, <a href="#forcecenterview">force_centerview</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="changelevel">changelevel (C)</p></b><ul>
+<p>Syntax: changelevel &lt;map&gt; </p>
+<p>Switch game play to selected level. Use this command instead of
+              map when you are running a server. Unlike the command map, changelevel won't disconnect
+              all of the clients before loading the next level.<br/>
+              Thanks to Howard Ship &lt;hship@cac.stratus.com&gt; for the command clarification.<br/>
+</p>
+<p>See also: <a href="#map">map</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clanglespeedkey">cl_anglespeedkey (V)</p></b><ul>
+<p>Syntax: cl_anglespeedkey &lt;speed&gt; <br/>
+              Default: 1.5 </p>
+<p>Sets multiplier for how fast you turn when running.<br/>
+</p>
+<p>See also: <a href="#clyawspeed">cl_yawspeed</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clbackspeed">cl_backspeed (V)</p></b><ul>
+<p>Syntax: cl_backspeed &lt;speed&gt; <br/>
+              Default: 400 </p>
+<p>Sets backward movement rate.<br/>
+</p>
+<p>See also: <a href="#svmaxspeed">sv_maxspeed</a>, <a href="#clmovespeedkey">cl_movespeedkey</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clbob">cl_bob (V)</p></b><ul>
+<p>Syntax: cl_bob &lt;value&gt; <br/>
+              Default: 0.02 </p>
+<p>Sets how much your weapon moves up and down when walking.<br/>
+</p>
+<p>See also: <a href="#clbobcycle">cl_bobcycle</a>, <a href="#clbobup">cl_bobup</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clbobcycle">cl_bobcycle (V)</p></b><ul>
+<p>Syntax: cl_bobcycle &lt;value&gt; <br/>
+              Default: 0.6 </p>
+<p>Sets how quickly your weapon moves up and down when walking.<br/>
+</p>
+<p>See also: <a href="#clbob">cl_bob</a>, <a href="#clbobup">cl_bobup</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clbobup">cl_bobup (V)</p></b><ul>
+<p>Syntax: cl_bobup &lt;value&gt; <br/>
+              Default: 0.5 </p>
+<p>Sets how long your weapon stays up before cycling when walking.<br/>
+</p>
+<p>See also: <a href="#clbob">cl_bob</a>, <a href="#clbobcycle">cl_bob_cycle</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clforwardspeed">cl_forwardspeed (V)</p></b><ul>
+<p>Syntax: cl_forwardspeed &lt;speed&gt; <br/>
+              Default: 200 </p>
+<p>Sets forward movement rate.<br/>
+</p>
+<p>See also: <a href="#svmaxspeed">sv_maxspeed</a>, <a href="#clmovespeedkey">cl_movespeedkey</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clmovespeedkey">cl_movespeedkey (V)</p></b><ul>
+<p>Syntax: cl_movespeedkey &lt;speed&gt; <br/>
+              Default: 2.0 </p>
+<p>Set multiplier for how fast you move when running.<br/>
+</p>
+<p>See also: <a href="#clbackspeed">cl_backspeed</a>, <a href="#clforwardspeed">cl_forwardspeed</a>, <a href="#svmaxspeed">sv_maxspeed</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clnolerp">cl_nolerp (T)</p></b><ul>
+<p>Syntax: cl_nolerp &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>The default 0 has the following effect on game play. Normally in
+              a netgame, when you are playing Quake plays for a bit, then check for the other players
+              TCP/IP packets. This causes smooth play with the occasional jerk as it loads positions.
+              Setting it to 1 changes the behavior. This causes the game to only display 1 frame per
+              loading of positions, so it loads a positions in, displays a frame then loads positions,
+              displays a frame, etc.<br/>
+              Thanks to Stephen Cakebread &lt;Stephen.C@btinternet.com&gt; for this information.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clpitchspeed">cl_pitchspeed (V)</p></b><ul>
+<p>Syntax: cl_pitchspeed &lt;value&gt; <br/>
+              Default: 150 </p>
+<p>Sets how fast you lookup and lookdown.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clrollangle">cl_rollangle (V)</p></b><ul>
+<p>Syntax: cl_rollangle &lt;value&gt; <br/>
+              Default: 2.0 </p>
+<p>Sets how much your screen tilts when strafing.<br/>
+</p>
+<p>See also: <a href="#clrollspeed">cl_rollspeed</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clrollspeed">cl_rollspeed (V)</p></b><ul>
+<p>Syntax: cl_rollspeed &lt;speed&gt; <br/>
+              Default: 200 </p>
+<p>Sets how quickly you straighten out after strafing.<br/>
+</p>
+<p>See also: <a href="#clrollangle">cl_rollangle</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clshownet">cl_shownet (T)</p></b><ul>
+<p>Syntax: cl_shownet &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggle the display of current net status (Doesn't mean much to
+              me.)<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  98 98 120
+        120
+        98
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="clsidespeed">cl_sidespeed (V)</p></b><ul>
+<p>Syntax: cl_sidespeed &lt;speed&gt; <br/>
+              Default: 350 </p>
+<p>Sets how quickly you strafe.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clupspeed">cl_upspeed (V)</p></b><ul>
+<p>Syntax: cl_upspeed &lt;speed&gt; <br/>
+              Default: 200 </p>
+<p>Effects how quickly you moveup and movedown in liquids. Kind of
+              strange that upspeed also effects your downspeed?<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clyawspeed">cl_yawspeed (V)</p></b><ul>
+<p>Syntax: cl_yawspeed &lt;speed&gt; <br/>
+              Default: 140 </p>
+<p>Sets how quickly you turn left or right.<br/>
+</p>
+<p>See also: <a href="#clanglespeedkey">cl_anglespeedkey</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="clear">clear (C)</p></b><ul>
+<p>Syntax: clear </p>
+<p>Clears the console screen.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="cmd">cmd (C)</p></b><ul>
+<p>Syntax: cmd &lt;commands&gt; </p>
+<p>This command, when issued from the client, forwards the remaining
+              command arguments to the server for execution. For example: 'cmd sv_gravity -100', or 'cmd
+              deathmatch 0', when issued at a connected client's console, will be sent to and processed
+              by the server as if issued from the server's console. Note: as of 1.06, the server ignores
+              such commands.<br/>
+              Thanks Sky Golightly &lt;sky@bujin.com&gt; for this information.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="color">color (C)</p></b><ul>
+<p>Syntax: color &lt;shirt&gt; &lt;pants&gt; </p>
+<p>Sets the player's colors. If just the shirt color is used the
+              pants color will be the same.<br/>
+</p>
+<p>See also: <a href="#clcolor">_cl_color</a></p>
+</ul>
+<hr/>
+<b><span class="console-target console-target-alias" id="com1"></span><span class="console-target console-target-alias" id="com2"></span><p class="console-target" id="com1/com2">com1 / com2 (C)</p></b><ul>
+<p>Syntax: com1 [command] com2 [command] </p>
+<p>Control the com ports on your computer.<br/>
+</p>
+<p><i>From techinfo.txt:</i></p>
+<pre>       enable | disable
+                "enable" means that your configuration is complete and
+                you want to use the COM port. "disable" is used to
+                turn off a COM port, usually to change its
+                settings. The default (initial) state is disabled.
+
+        modem | direct
+                Use one of these two to let Quake know if you are
+                using a modem or a direct connection (also called a
+                null modem.) Quake uses this to know if it needs to
+                handles modem initialization strings, dialing
+                sequences, and hangup procedures.
+
+        reset
+                This will reset the COM port to its default settings
+                and state.
+
+        port &lt;n&gt;
+        irq &lt;n&gt;
+                These are used to set the I/O Port and IRQ that your
+                serial port uses.  The default values are: port=3f8
+                irq=4 for COM1 and port=2f8 irq=3 for COM2. Note that
+                the port number is displayed in hexadecimal; to enter
+                it you would use something like "COM2 port 0x2f8"; the
+                "0x" preceding the "2f8" indicates that you are giving
+                the value in hexadecimal otherwise decimal is assumed.
+
+        baud &lt;n&gt;
+                Sets the baud rate. Valid values for &lt;n&gt; are: 9600,
+                14400, 28800, 57600, and 115200. 57600 is the
+                default. Please note that this is the baud rate used
+                for the uart, not your modem. It is perfectly valid to
+                use 57600 on a COM port that is connected to a 28.8
+                modem.
+
+        8250 | 16550
+                Specifies the type of uart chip in your
+                system. Normally this is automatically detected, one
+                of these need only be used if your chip is incorrectly
+                detected.
+
+        clear
+        startup
+        shutdown
+                This allows you to specify the clear, startup, and
+                shutdown strings needed for a modem for playing
+                Quake. If you've found values that previously worked
+                with Doom, use them here. If you are playing over a
+                null modem cable, leave these blank.
+
+        -cts | +cts
+        -dsr | +dsr
+        -cd  | +cd
+                These determine if certain serial control lines should
+                be honored or ignored. The "-" means you want that
+                line ignored, the "+" means to honor it. "cts" is an
+                abbreviation for "clear to send", "dsr" for "data set
+                ready", and "cd" for "carrier detect". Do not change
+                these values unless you are absolutely positive you
+                need to. The default is to ignore all 3 lines.
+
+        Quake always uses no parity, 8 data bits, and 1 stop bit; these
+        values can not be changed. The baud, port, irq, and uart type can
+        not be changed on an enabled port, you must disable it first.
+
+        ----------------------
+        Configuration examples
+
+        Example1: You have a machine with two serial ports you are going
+        to use as a Quake server. COM1 will be using a null modem cable and
+        COM2 will be connected to a 14.4 modem. You would use commands similar
+        (the startup string would almost certainly be different) to these: 
+
+        COM1 baud 57600 enable
+        COM2 baud 14400 modem startup AT\N0%C0B8 enable
+
+        Example2: You are going to use your machine to connect to a dial-up
+        Quake server with your 28.8 modem connected to COM2. You would
+        use a command something like this: 
+
+        COM2 baud 57600 modem startup AT\N0%C0B8 enable
+
+        Note the baud rate is not the same as the modem speed. This allows
+        the modem-to-uart communications to occur at a higher rate than
+        the modem-to-modem communications.
+</pre>
+<p>See also: <a href="#configcombaud">_config_com_baud</a>,
+              <a href="#configcomirq">_config_com_irq</a>, <a href="#configcommodem">_config_com_modem</a>, <a href="#configcomport">_config_com_port</a>, <a href="#configmodemclear">_config_modem_clear</a>, <a href="#configmodemdialtype">_config_modem_dialtype</a>, <a href="#configmodemhangup">_config_modem_hangup</a>, <a href="#configmodeminit">_config_modem_init</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="connotifytime">con_notifytime (V)</p></b><ul>
+<p>Syntax: con_notifytime &lt;time&gt; <br/>
+              Default: 3 </p>
+<p>Sets how long messages are displayed when playing.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="connect">connect (C)</p></b><ul>
+<p>Syntax: connect &lt;server&gt; </p>
+<p>Connect to a Quake server. The name can be an absolute LAN
+              address, IP, or hostname, depending on your network connection. You can also use the
+              following format "connect xxx.xxx.xxx.xxx: xxxxx" to connect to a certain
+              udpport of a server. Make sure you use the quotes ("") otherwise it doesn't
+              work. (I've had trouble getting this to work) In general if you want to connect to a port
+              other than 26000 on a server use the port command before a connect command.<br/>
+</p>
+<p>See also: <a href="#port">port</a>, <a href="#slist">slist</a>, <a href="#disconnect">disconnect</a>, <a href="#reconnect">reconnect</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="coop">coop (T)</p></b><ul>
+<p>Syntax: coop &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggle the cooperative play mode in network games.<br/>
+</p>
+<p>See also: <a href="#deathmatch">deathmatch</a>, <a href="#teamplay">teamplay</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="crosshair">crosshair (T)</p></b><ul>
+<p>Syntax: crosshair &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggle the display of an aiming crosshair.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="dmipcap">d_mipcap (V)</p></b><ul>
+<p>Syntax: d_mipcap &lt;value&gt; <br/>
+              Default: 0 </p>
+<p>Sets the detail level. Values range from 0-3 with 0 giving the
+              highest detail.<br/>
+              Thanks to James Boswell &lt;boswell@nspace.com.au&gt; for improved documentation on this
+              command.<br/>
+</p>
+<p>See also: <a href="#dmipscale">d_mipscale</a>, <a href="#dsubdiv16">d_subdiv16</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="dmipscale">d_mipscale (V)</p></b><ul>
+<p>Syntax: d_mipscale &lt;value&gt; <br/>
+              Default: 1 </p>
+<p>Sets how much detail distant objects have. Values range from 0-40
+              with 0 not bluring distant objects at all. (Uses lots of ram if set to 0)<br/>
+              Thanks to James Boswell &lt;boswell@nspace.com.au&gt; for improved documentation on this
+              command.<br/>
+</p>
+<p>See also: <a href="#dmipcap">d_mipcap</a>, <a href="#dsubdiv16">d_subdiv16</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="dsubdiv16">d_subdiv16 (T)</p></b><ul>
+<p>Syntax: d_subdiv16 &lt;0/1&gt; <br/>
+              Default: 1 </p>
+<p>Toggle extreme perspective correction.<br/>
+</p>
+<p><i>From techinfo.txt:</i></p>
+<pre>       For maximum speed, perspective correction is performed only
+        every 16 pixels. This is normally fine, but it is possible to
+        see texture ripples in surfaces that are viewed at sharp
+        angles. For more precise texture mapping, set the console
+        variable d_subdiv16 to 0. Doing this will result in somewhat
+        slower performance, however, and the difference in visual
+        quality will not normally be noticeable.
+</pre>
+<p>See also: <a href="#dmipcap">d_mipcap</a>, <a href="#dmipscale">d_mipscale</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="deathmatch">deathmatch (T)</p></b><ul>
+<p>Syntax: deathmatch &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggle the deathmatch play mode.<br/>
+</p>
+<p>See also: <a href="#coop">coop</a>, <a href="#teamplay">teamplay</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="demos">demos (C)</p></b><ul>
+<p>Syntax: demos </p>
+<p>Start playing queued demo(s) or cycle to next one if already
+              playing.<br/>
+</p>
+<p>See also: <a href="#playdemo">playdemo</a>, <a href="#startdemos">startdemos</a>, <a href="#stopdemo">stopdemo</a>,
+              <a href="#record">record</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="developer">developer (V)</p></b><ul>
+<p>Syntax: developer &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggle display of extra debugging information.<br/>
+              Thanks to Scott McDermott &lt;scottm@compumedia.com&gt; for getting me to document this
+              command.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  SpawnServer:  e1m1
+        Clearing memory
+        Programs occupy 400K.
+        33 entities inhibited
+        Server spawned.
+        CL_EstablishConnection:  connected to local
+        Client LOCAL connected
+        the Slipgate Complex
+        CL_SignonReply:  1
+        CL_SignonReply:  2
+        CL_SignonReply:  3
+        4.2 megabyte data cache
+        CL_SignonReply:  4
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="disconnect">disconnect (C)</p></b><ul>
+<p>Syntax: disconnect </p>
+<p>Leave current server.<br/>
+</p>
+<p>See also: <a href="#connect">connect</a>, <a href="#reconnect">reconnect</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="echo">echo (C)</p></b><ul>
+<p>Syntax: echo &lt;string&gt; </p>
+<p>Print text to your own console.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="edgefriction">edgefriction (V)</p></b><ul>
+<p>Syntax: edgefriction &lt;value&gt; <br/>
+              Default: 2 </p>
+<p>Sets how easy it is to fall off an edge.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="edict">edict (C)</p></b><ul>
+<p>Syntax: edict &lt;value&gt; </p>
+<p>Get information on an edict in the game. This dumps a bunch of
+              information about the object.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  EDICT 1: 
+        modelindex59.0
+        absmin'463.0 -369.0  63.0'
+        absmax'497.0 -335.0 121.0'
+        movetype3.0
+        solid3.0
+        origin'480.0 -352.0  88.0'
+        oldorigin'480.0 -352.0  88.0'
+        angles'  0.0  90.00.0'
+        classnameplayer
+        model progs/player.mdl
+        frame  16.0
+        mins  '-16.0 -16.0 -24.0'
+        maxs  ' 16.0  16.0  32.0'
+        size  ' 32.0  32.0  56.0'
+        think player_stand1()
+        nextthink  2.8
+        health100.0
+        weapon  1.0
+        weaponmodel progs/v_shot.mdl
+        currentammo  25.0
+        ammo_shells  25.0
+        items 4353.0
+        takedamage 2.0
+        view_ofs '  0.00.0  22.0'
+        v_angle  '  0.0  90.00.0'
+        netname  Prog
+        flags 4616.0
+        colormap1.0
+        team 7.0
+        max_health  100.0
+        watertype -1.0
+        th_pain  player_pain()
+        th_diePlayerDie()
+        walkframe  5.0
+        attack_finished  1.4
+        jump_flag-31.7
+        air_finished 14.7
+        dmg  2.0
+</pre>
+<p>See also: <a href="#edictcount">edictcount</a>, <a href="#edicts">edicts</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="edictcount">edictcount (C)</p></b><ul>
+<p>Syntax: edictcount </p>
+<p>Display summary information about game edicts.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  num_edicts: 165
+            active: 164
+              view: 107
+             touch: 123
+              step:  23
+</pre>
+<p>See also: <a href="#edict">edict</a>, <a href="#edicts">edicts</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="edicts">edicts (C)</p></b><ul>
+<p>Syntax: edicts </p>
+<p>Display information on all edicts in game.<br/>
+</p>
+<p>See also: <a href="#edict">edict</a>, <a href="#edictcount">edictcount</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="entities">entities (C)</p></b><ul>
+<p>Syntax: entities </p>
+<p>Display a list of used objects in the game.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>          0: maps/e1m5.bsp:  0  (  0.0,  0.0,  0.0) [  0.00.00.0]
+        1: EMPTY
+        2: EMPTY
+        3: EMPTY
+        4: EMPTY
+        5: progs/player.mdl:  0  (-1647.9,1722.4, 24.0) [  0.0 -94.20.0]
+        6: EMPTY
+        7: progs/player.mdl: 16  (-1205.8,2276.6, 24.0) [  0.0 215.60.0]
+        (...) {Text deleted}
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="exec">exec (C)</p></b><ul>
+<p>Syntax: exec &lt;filename&gt; </p>
+<p>Execute a script file.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="flush">flush (C)</p></b><ul>
+<p>Syntax: flush </p>
+<p>Clears the current game cache this includes cached sounds.<br/>
+</p>
+<p>See also: <a href="#precache">precache</a>, <a href="#soundlist">soundlist</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="fly">fly (T)</p></b><ul>
+<p>Syntax: fly <br/>
+              Default: Off </p>
+<p>Toggle fly mode. Use moveup and movedown to adjust height.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="forcecenterview">force_centerview (C)</p></b><ul>
+<p>Syntax: force_centerview </p>
+<p>Snaps the view back to the center regardless if you are in a
+              +mlook, +klook, +lookup, or +lookdown.<br/>
+</p>
+<p>See also: <a href="#centerview">centerview</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="fov">fov (V)</p></b><ul>
+<p>Syntax: fov &lt;value&gt; <br/>
+              Default: 90 </p>
+<p>Sets the field of vision, which determines how close you are to
+              the objects.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="fraglimit">fraglimit (V)</p></b><ul>
+<p>Syntax: fraglimit &lt;value&gt; <br/>
+              Default: 0 </p>
+<p>Sets the number of frags needed before exiting a level.<br/>
+</p>
+<p>See also: <a href="#timelimit">timelimit</a>, <a href="#noexit">noexit</a>, <a href="#samelevel">samelevel</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="gamma">gamma (V)</p></b><ul>
+<p>Syntax: gamma &lt;value&gt; <br/>
+              Default: 0.0 </p>
+<p>Sets the gamma correction level (aka brightness.)<br/>
+</p>
+<p>See also: <a href="#rfullbright">r_fullbright</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="give">give (V)</p></b><ul>
+<p>Syntax: give &lt;item&gt; &lt;amount&gt; </p>
+<p>Give yourself an amount of an item. I still haven't been able to
+              figure out how to get armor.<br/>
+</p>
+<table class="console-table">
+<tr>
+<th>Item </th>
+<th>Description </th>
+<th>Maximum</th>
+</tr>
+<tr>
+<td>1 </td>
+<td>Axe</td>
+</tr>
+<tr>
+<td>2 </td>
+<td>Shotgun</td>
+</tr>
+<tr>
+<td>3 </td>
+<td>Double Shotgun</td>
+</tr>
+<tr>
+<td>4 </td>
+<td>Nailgun</td>
+</tr>
+<tr>
+<td>5 </td>
+<td>Super Nailgun</td>
+</tr>
+<tr>
+<td>6 </td>
+<td>Grenade Launcher</td>
+</tr>
+<tr>
+<td>7 </td>
+<td>Rocket Launcher</td>
+</tr>
+<tr>
+<td>8 </td>
+<td>Lighting Gun</td>
+</tr>
+<tr>
+<td>C </td>
+<td>Batteries </td>
+<td>255</td>
+</tr>
+<tr>
+<td>H </td>
+<td>Health </td>
+<td>32767</td>
+</tr>
+<tr>
+<td>N </td>
+<td>Nails </td>
+<td>255</td>
+</tr>
+<tr>
+<td>R </td>
+<td>Rockets </td>
+<td>255</td>
+</tr>
+<tr>
+<td>S </td>
+<td>Shotgun Shells </td>
+<td>255</td>
+</tr>
+</table>
+</ul>
+<hr/>
+<b><p class="console-target" id="god">god (T)</p></b><ul>
+<p>Syntax: god <br/>
+              Default: Off </p>
+<p>Toggle god mode.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="help">help (C)</p></b><ul>
+<p>Syntax: help </p>
+<p>Bring up the help system (like pressing F1.)<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="hostframerate">host_framerate (V)</p></b><ul>
+<p>Syntax: host_framerate &lt;value&gt; <br/>
+              Default: 0 </p>
+<p>This adjusts the time rate in Quake. A value of 0.1 is very fast
+              and almost unplayable. A value of 0.01 will make the gameplay speedy, but still leaves
+              some decent control. After you change the value, exit the console and hold the
+              "TAB" key. Notice the time indicator on the bottom right. The higher the rate,
+              the faster time passes.<br/>
+              Thanks to "K. Andrew Knies" &lt;aknies@midohio.net&gt; for everything about this
+              command.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="hostspeeds">host_speeds (T)</p></b><ul>
+<p>Syntax: host_speeds &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggle the display of host info. They are in order: total time,
+              server time, graphics time, and sound time. Each one is represented in ms and indicates
+              the total time spend in each sub-system.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  34 tot3 server  31 gfx0 snd
+        36 tot3 server  31 gfx2 snd
+        34 tot3 server  31 gfx0 snd
+</pre>
+<p>See also: <a href="#sndnoextraupdate">snd_noextraupdate</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="hostname">hostname (V)</p></b><ul>
+<p>Syntax: hostname &lt;name&gt; <br/>
+              Default: unnamed or local </p>
+<p>Sets the hostname of your computer.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="impulse">impulse (C)</p></b><ul>
+<p>Syntax: impulse &lt;value&gt; </p>
+<p>Perform weapon selection and also a few cheats.<br/>
+</p>
+<table class="console-table">
+<tr>
+<th>Value </th>
+<th>Action</th>
+</tr>
+<tr>
+<td>1-8 </td>
+<td>Select corresponding weapon</td>
+</tr>
+<tr>
+<td>9 </td>
+<td>Gives you all the weapons and keys</td>
+</tr>
+<tr>
+<td>10 </td>
+<td>Selects your next weapon by numerical value</td>
+</tr>
+<tr>
+<td>11 </td>
+<td>Gives you a rune</td>
+</tr>
+<tr>
+<td>12 </td>
+<td>Selects your last weapon by numerical value</td>
+</tr>
+<tr>
+<td>255 </td>
+<td>Gives you quad damage</td>
+</tr>
+</table>
+</ul>
+<hr/>
+<b><p class="console-target" id="joybuttons">joybuttons (V)</p></b><ul>
+<p>Syntax: joybuttons &lt;value&gt; Sets the number of buttons on
+              your </p>
+<p>joystick.<br/>
+</p>
+<p>See also: <a href="#joystick">joystick</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="joystick">joystick (T)</p></b><ul>
+<p>Syntax: joystick &lt;0/1&gt; </p>
+<p>Toggles if you have a joystick or not.<br/>
+</p>
+<p>See also: <a href="#joybuttons">joybuttons</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="kick">kick (C)</p></b><ul>
+<p>Syntax: kick &lt;playername&gt; or &lt;# player-number&gt;
+              &lt;message&gt; </p>
+<p>Kick a player off of your sever. You can also kick a player based
+              on their number as listed in the status command. (Haven't tried the kick by number yet but
+              it should work. I also believe that you will need the extra spaces between the # and the
+              player-number.) If you add the message at the end it will display it to the user.<br/>
+              Thanks to Jim Peterson &lt;jspeter@birch.ee.vt.edu&gt; and Danny Sizemore
+              &lt;striker@mail.bcpl.lib.md.us&gt; for updates on this command.<br/>
+</p>
+<p>See also: <a href="#status">status</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="kill">kill (C)</p></b><ul>
+<p>Syntax: kill </p>
+<p>Reduces your health to zero.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="listen">listen (T)</p></b><ul>
+<p>Syntax: listen &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles if the server will "listen" for connections.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="load">load (C)</p></b><ul>
+<p>Syntax: load &lt;filename&gt; </p>
+<p>Load a saved game.<br/>
+</p>
+<p>See also: <a href="#save">save</a>, <a href="#menuload">menu_load</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="loadas8bit">loadas8bit (T)</p></b><ul>
+<p>Syntax: loadas8bit &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles if sounds are loaded in 8-bit.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="lookspring">lookspring (T)</p></b><ul>
+<p>Syntax: lookspring &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles if the view will recenter after mlook is deactivated.
+              Only works with the mouse and joystick.<br/>
+</p>
+<p>See also: <a href="#centerview">centerview</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="lookstrafe">lookstrafe (T)</p></b><ul>
+<p>Syntax: lookstrafe &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles if turn left and right will strafe left and right when a
+              mlook is active. Only works with the mouse.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="mfilter">m_filter (T)</p></b><ul>
+<p>Syntax: m_filter &lt;0/1&gt; <br/>
+              Default: 1 </p>
+<p>Use the average of the last poistion and the current mouse
+              position to track movement. 1 gives a smoother feel while 0 gives a raw feeling.<br/>
+              Thanks to Squirrel Eiserloh &lt;squirrel@ionstorm.com&gt; for the documentation on this
+              command.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="mforward">m_forward (V)</p></b><ul>
+<p>Syntax: m_forward &lt;value&gt; <br/>
+              Default: 1 </p>
+<p>Sets how quickly moving the mouse forwards and backwards causes
+              the player to move in the respective direction.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="mpitch">m_pitch (V)</p></b><ul>
+<p>Syntax: m_pitch &lt;value&gt; <br/>
+              Default: 0.022 </p>
+<p>Sets how quickly you lookup and lookdown with the mouse when a
+              mlook is active. Using a negative value will reverse the directions that the mouse looks.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="mside">m_side (V)</p></b><ul>
+<p>Syntax: m_side &lt;value&gt; <br/>
+              Default: 0.8 </p>
+<p>Sets how quickly you strafe left and right with the mouse.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="myaw">m_yaw (V)</p></b><ul>
+<p>Syntax: m_yaw &lt;value&gt; <br/>
+              Default: 0.022 </p>
+<p>Sets how quickly you turn left and right with the mouse.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="map">map (C)</p></b><ul>
+<p>Syntax: map &lt;name&gt; </p>
+<p>Load an start a new map. Use of this command on a multiplayer
+              server isn't recommended because it disconnects all of the clients before loading the next
+              level. The changelevel command is preferred in this instance.<br/>
+              Thanks to Howard Ship &lt;hship@cac.stratus.com&gt; for the command clarification.<br/>
+</p>
+<table class="console-table">
+<tr>
+<th>Deathmatch Arena</th>
+</tr>
+<tr>
+<td>dm6 </td>
+<td>The Dark Zone </td>
+<td>dm5 </td>
+<td>The Cistern</td>
+</tr>
+<tr>
+<td>dm4 </td>
+<td>The Bad Place </td>
+<td>dm3 </td>
+<td>The Abandoned Base</td>
+</tr>
+<tr>
+<td>dm2 </td>
+<td>Claustrophobopolis </td>
+<td>dm1 </td>
+<td>Place of Two Deaths</td>
+</tr>
+<tr>
+<th>Final Level</th>
+</tr>
+<tr>
+<td>end </td>
+<td>Shub-Niggurath's Pit</td>
+</tr>
+<tr>
+<th>The Elder World</th>
+</tr>
+<tr>
+<td>e4m8 </td>
+<td>The Nameless City </td>
+<td>e4m7 </td>
+<td>Azure Agony</td>
+</tr>
+<tr>
+<td>e4m6 </td>
+<td>The Pain Maze </td>
+<td>e4m5 </td>
+<td>Hell's Atrium</td>
+</tr>
+<tr>
+<td>e4m4 </td>
+<td>The Palace of Hate </td>
+<td>e4m3 </td>
+<td>The Elder God Shrine</td>
+</tr>
+<tr>
+<td>e4m2 </td>
+<td>The Tower of Despair </td>
+<td>e4m1 </td>
+<td>The Sewage System</td>
+</tr>
+<tr>
+<th>Netherworld</th>
+</tr>
+<tr>
+<td>e3m7 </td>
+<td>The Haunted Halls </td>
+<td>e3m6 </td>
+<td>Chambers of Torment</td>
+</tr>
+<tr>
+<td>e3m5 </td>
+<td>Wind Tunnels </td>
+<td>e3m4 </td>
+<td>Satan's Dark Delight</td>
+</tr>
+<tr>
+<td>e3m3 </td>
+<td>The Tomb of Terror </td>
+<td>e3m2 </td>
+<td>The Vaults of Zin</td>
+</tr>
+<tr>
+<td>e3m1 </td>
+<td>Termination Central</td>
+</tr>
+<tr>
+<th>Realm of Black Magic</th>
+</tr>
+<tr>
+<td>e2m7 </td>
+<td>Underearth </td>
+<td>e2m6 </td>
+<td>The Dismal Oubliette</td>
+</tr>
+<tr>
+<td>e2m5 </td>
+<td>The Wizard's Manse </td>
+<td>e2m4 </td>
+<td>The Ebon Fortress</td>
+</tr>
+<tr>
+<td>e2m3 </td>
+<td>Crypt of Decay </td>
+<td>e2m2 </td>
+<td>Ogre Citadel</td>
+</tr>
+<tr>
+<td>e2m1 </td>
+<td>The Installation</td>
+</tr>
+<tr>
+<th>Doomed Dimension</th>
+</tr>
+<tr>
+<td>e1m8 </td>
+<td>Ziggurat Vertigo </td>
+<td>e1m7 </td>
+<td>The House of Chthon</td>
+</tr>
+<tr>
+<td>e1m6 </td>
+<td>The Door To Chthon </td>
+<td>e1m5 </td>
+<td>Gloom Keep</td>
+</tr>
+<tr>
+<td>e1m4 </td>
+<td>The Grisly Grotto </td>
+<td>e1m3 </td>
+<td>The Necropolis</td>
+</tr>
+<tr>
+<td>e1m2 </td>
+<td>Castle of the Damned </td>
+<td>e1m1 </td>
+<td>Slipgate Complex</td>
+</tr>
+<tr>
+<th>Welcome to Quake</th>
+</tr>
+<tr>
+<td>start </td>
+<td>Entrance</td>
+</tr>
+</table>
+<p>See also: <a href="#changelevel">changelevel</a>, <a href="#restart">restart</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="maxplayers">maxplayers (V)</p></b><ul>
+<p>Syntax: maxplayers &lt;value&gt; <br/>
+              Default: 1 </p>
+<p>Sets the number of players that can connect to a server. (Must
+              use the command line to go above 4. Can't be changed while the server is running.)<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="menukeys">menu_keys (C)</p></b><ul>
+<p>Syntax: menu_keys </p>
+<p>Brings up the key customization menu.<br/>
+</p>
+<p>See also: <a href="#menuload">menu_load</a>, <a href="#menumain">menu_main</a>, <a href="#menumultiplayer">menu_multiplayer</a>,
+              <a href="#menuoptions">menu_options</a>, <a href="#menuquit">menu_quit</a>,
+              <a href="#menusave">menu_save</a>, <a href="#menusetup">menu_setup</a>,
+              <a href="#menusingleplayer">menu_singleplayer</a>, <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="menuload">menu_load (C)</p></b><ul>
+<p>Syntax: menu_load </p>
+<p>Brings up the load game menu.<br/>
+</p>
+<p>See also: <a href="#menukeys">menu_keys</a>, <a href="#menumain">menu_main</a>, <a href="#menumultiplayer">menu_multiplayer</a>,
+              <a href="#menuoptions">menu_options</a>, <a href="#menuquit">menu_quit</a>,
+              <a href="#menusave">menu_save</a>, <a href="#menusetup">menu_setup</a>,
+              <a href="#menusingleplayer">menu_singleplayer</a>, <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="menumain">menu_main (C)</p></b><ul>
+<p>Syntax: menu_main </p>
+<p>Brings up the main menu.<br/>
+</p>
+<p>See also: <a href="#togglemenu">togglemenu</a>, <a href="#menukeys">menu_keys</a>, <a href="#menuload">menu_load</a>,
+              <a href="#menumultiplayer">menu_multiplayer</a>, <a href="#menuoptions">menu_options</a>, <a href="#menuquit">menu_quit</a>,
+              <a href="#menusave">menu_save</a>, <a href="#menusetup">menu_setup</a>,
+              <a href="#menusingleplayer">menu_singleplayer</a>, <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="menumultiplayer">menu_multiplayer (C)</p></b><ul>
+<p>Syntax: menu_multiplayer </p>
+<p>Brings up the multiplayer game option menu.<br/>
+</p>
+<p>See also: <a href="#menukeys">menu_keys</a>, <a href="#menuload">menu_load</a>, <a href="#menumain">menu_main</a>,
+              <a href="#menuoptions">menu_options</a>, <a href="#menuquit">menu_quit</a>,
+              <a href="#menusave">menu_save</a>, <a href="#menusetup">menu_setup</a>,
+              <a href="#menusingleplayer">menu_singleplayer</a>, <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="menuoptions">menu_options (C)</p></b><ul>
+<p>Syntax: menu_options </p>
+<p>Brings up the options menu.<br/>
+</p>
+<p>See also: <a href="#menukeys">menu_keys</a>, <a href="#menuload">menu_load</a>, <a href="#menumain">menu_main</a>,
+              <a href="#menumultiplayer">menu_multiplayer</a>, <a href="#menuquit">menu_quit</a>, <a href="#menusave">menu_save</a>,
+              <a href="#menusetup">menu_setup</a>, <a href="#menusingleplayer">menu_singleplayer</a>,
+              <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="menuquit">menu_quit (C)</p></b><ul>
+<p>Syntax: menu_quit </p>
+<p>Brings up the quit dialog box.<br/>
+</p>
+<p>See also: <a href="#quit">quit</a>, <a href="#menukeys">menu_keys</a>, <a href="#menuload">menu_load</a>,
+              <a href="#menumain">menu_main</a>, <a href="#menumultiplayer">menu_multiplayer</a>,
+              <a href="#menuoptions">menu_options</a>, <a href="#menusave">menu_save</a>,
+              <a href="#menusetup">menu_setup</a>, <a href="#menusingleplayer">menu_singleplayer</a>,
+              <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="menusave">menu_save (C)</p></b><ul>
+<p>Syntax: menu_save </p>
+<p>Brings up the save game menu.<br/>
+</p>
+<p>See also: <a href="#menukeys">menu_keys</a>, <a href="#menuload">menu_load</a>, <a href="#menumain">menu_main</a>,
+              <a href="#menumultiplayer">menu_multiplayer</a>, <a href="#menuoptions">menu_options</a>, <a href="#menuquit">menu_quit</a>,
+              <a href="#menusetup">menu_setup</a>, <a href="#menusingleplayer">menu_singleplayer</a>,
+              <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="menusetup">menu_setup (C)</p></b><ul>
+<p>Syntax: menu_setup </p>
+<p>Brings up the setup menu.<br/>
+</p>
+<p>See also: <a href="#menukeys">menu_keys</a>, <a href="#menuload">menu_load</a>, <a href="#menumain">menu_main</a>,
+              <a href="#menumultiplayer">menu_multiplayer</a>, <a href="#menuoptions">menu_options</a>, <a href="#menuquit">menu_quit</a>,
+              <a href="#menusave">menu_save</a>, <a href="#menusingleplayer">menu_singleplayer</a>,
+              <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="menusingleplayer">menu_singleplayer (C)</p></b><ul>
+<p>Syntax: menu_singleplayer </p>
+<p>Brings up the single player option menu.<br/>
+</p>
+<p>See also: <a href="#menukeys">menu_keys</a>, <a href="#menuload">menu_load</a>, <a href="#menumain">menu_main</a>,
+              <a href="#menumultiplayer">menu_multiplayer</a>, <a href="#menuoptions">menu_options</a>, <a href="#menuquit">menu_quit</a>,
+              <a href="#menusave">menu_save</a>, <a href="#menusetup">menu_setup</a>,
+              <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="menuvideo">menu_video (C)</p></b><ul>
+<p>Syntax: menu_video </p>
+<p>Brings up the video option menu.<br/>
+</p>
+<p>See also: <a href="#menukeys">menu_keys</a>, <a href="#menuload">menu_load</a>, <a href="#menumain">menu_main</a>,
+              <a href="#menumultiplayer">menu_multiplayer</a>, <a href="#menuoptions">menu_options</a>, <a href="#menuquit">menu_quit</a>,
+              <a href="#menusave">menu_save</a>, <a href="#menusetup">menu_setup</a>,
+              <a href="#menusingleplayer">menu_singleplayer</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="messagemode">messagemode (C)</p></b><ul>
+<p>Syntax: messagemode </p>
+<p>Prompts for string to broadcast to all other players. This
+              command can not be used on a dedicated server because it lacks the graphic environment.
+              Use a say or say_team command from a dedicated server.<br/>
+              Thanks to Robert Coward INF-SP &lt;rcoward@madge.com&gt; for improved documentation of
+              this command.<br/>
+</p>
+<p>See also: <a href="#messagemode2">messagemode2</a>, <a href="#say">say</a>, <a href="#sayteam">say_team</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="messagemode2">messagemode2 (C)</p></b><ul>
+<p>Syntax: messagemode2 </p>
+<p>Prompts for string to broadcast to your team members. This
+              command can not be used on a dedicated server because it lacks the graphic environment.
+              Use a say or say_team command from a dedicated server. <br/>
+              Thanks to Robert Coward INF-SP &lt;rcoward@madge.com&gt; for improved documentation of
+              this command.<br/>
+</p>
+<p>See also: <a href="#messagemode">messagemode</a>, <a href="#say">say</a>, <a href="#sayteam">say_team</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="name">name (V)</p></b><ul>
+<p>Syntax: name &lt;string&gt; <br/>
+              Default: Player </p>
+<p>Sets your name that other players will see and what console
+              messages will use.<br/>
+</p>
+<p>See also: <a href="#clname">_cl_name</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="netmessagetimeout">net_messagetimeout (V)</p></b><ul>
+<p>Syntax: net_messagetimeout &lt;value&gt; <br/>
+              Default: 300 </p>
+<p>Sets how long the program waits for network info before
+              considering the connection broken.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="netstats">net_stats (C)</p></b><ul>
+<p>Syntax: net_stats </p>
+<p>Reports a summary of the current net information.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  unreliable messages sent  = 0
+        unreliable messages recv  = 0
+        reliable messages sent  = 0
+        reliable messages received  = 0
+        packetsSent  = 0
+        packetsReSent  = 0
+        packetsReceived  = 0
+        receivedDuplicateCount  = 0
+        shortPacketCount  = 0
+        droppedDatagrams  = 0
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="noclip">noclip (T)</p></b><ul>
+<p>Syntax: noclip <br/>
+              Default: Off </p>
+<p>Toggle no clipping mode.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="noexit">noexit (V)</p></b><ul>
+<p>Syntax: noexit &lt;value&gt; <br/>
+              Default: 0 </p>
+<p>Toggles if players can leave the current level. Useful for
+              servers that what to use only one map. To correct a bug in v1.01 the noexit flag has the
+              following effects on the "start" map:<br/>
+              0 = noexit off (people can exit at any point)<br/>
+              1 = noexit on (goes through the levels in order. exits the "start" map when
+              either the fraglimit or timelimit has been reached)<br/>
+              2 = noexit on (players may exit into what ever episode they want from the
+              "start" map before the fraglimit or timelimit has been reached)<br/>
+</p>
+<p>See also: <a href="#fraglimit">fraglimit</a>, <a href="#timelimit">timelimit</a>, <a href="#samelevel">samelevel</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="noisetrack">noisetrack (C)</p></b><ul>
+<p>Syntax: noisetrack &lt;wav file&gt; </p>
+<p>Kind of starts up the wav file in a background loop. You have to
+              use the complete sound path name ( sound/ambience/suck1.wav ). A little flaky on my setup
+              for some reason.<br/>
+              Thanks to "Juergen P. Meier" &lt;JPM@bv.rz.fh-muenchen.de&gt; for the command
+              information.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="nosound">nosound (T)</p></b><ul>
+<p>Syntax: nosound &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles if sound is on.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="notarget">notarget (T)</p></b><ul>
+<p>Syntax: notarget <br/>
+              Default: Off </p>
+<p>Toggle if creatures automatically attack player.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="path">path (C)</p></b><ul>
+<p>Syntax: path </p>
+<p>Show what paths Quake is using.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  Current search path: 
+        c: /quake_sw/id1/pak0.pak (339 files)
+        c: /quake_sw/id1
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="pausable">pausable (T)</p></b><ul>
+<p>Syntax: pausable &lt;0/1&gt; <br/>
+              Default: 1 </p>
+<p>Toggles if players can pause the game.<br/>
+</p>
+<p>See also: <a href="#pause">pause</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="pause">pause (C)</p></b><ul>
+<p>Syntax: pause </p>
+<p>Pause and unpause the game.<br/>
+</p>
+<p>See also: <a href="#pausable">pausable</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="ping">ping (C)</p></b><ul>
+<p>Syntax: ping </p>
+<p>Find the ping time to the server and to all other connected
+              players.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  Client ping times: 
+         443 Player1
+         368 Player2
+         462 Player3
+          93 Player4
+        1050 Player5
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="play">play (C)</p></b><ul>
+<p>Syntax: play &lt;name&gt; </p>
+<p>Play a sound effect.<br/>
+</p>
+<table class="console-table">
+<tr>
+<th>Playable Sounds</th>
+</tr>
+<tr>
+<td>ambience/buzz1.wav </td>
+<td>ambience/comp1.wav </td>
+<td>ambience/drip1.wav</td>
+</tr>
+<tr>
+<td>ambience/drone6.wav </td>
+<td>ambience/fire1.wav </td>
+<td>ambience/fl_hum1.wav</td>
+</tr>
+<tr>
+<td>ambience/hum1.wav </td>
+<td>ambience/suck1.wav </td>
+<td>ambience/swamp1.wav</td>
+</tr>
+<tr>
+<td>ambience/swamp2.wav </td>
+<td>ambience/thunder1.wav </td>
+<td>ambience/water1.wav</td>
+</tr>
+<tr>
+<td>ambience/wind2.wav </td>
+<td>ambience/windfly.wav </td>
+<td>blob/death1.wav </td>
+</tr>
+<tr>
+<td>blob/hit1.wav </td>
+<td>blob/land1.wav </td>
+<td>blob/sight1.wav </td>
+</tr>
+<tr>
+<td>boss1/death.wav</td>
+<td>boss1/out1.wav </td>
+<td>boss1/pain.wav </td>
+</tr>
+<tr>
+<td>boss1/sight1.wav </td>
+<td>boss1/throw.wav </td>
+<td>boss2/death.wav </td>
+</tr>
+<tr>
+<td>boss2/idle.wav </td>
+<td>boss2/pop2.wav </td>
+<td>boss2/sight.wav </td>
+</tr>
+<tr>
+<td>buttons/airbut1.wav </td>
+<td>buttons/switch02.wav </td>
+<td>buttons/switch04.wav </td>
+</tr>
+<tr>
+<td>buttons/switch21.wav </td>
+<td>demon/ddeath.wav </td>
+<td>demon/dhit2.wav </td>
+</tr>
+<tr>
+<td>demon/djump.wav </td>
+<td>demon/dland2.wav </td>
+<td>demon/dpain1.wav </td>
+</tr>
+<tr>
+<td>demon/idle1.wav </td>
+<td>demon/sight2.wav </td>
+<td>dog/dattack1.wav </td>
+</tr>
+<tr>
+<td>dog/ddeath.wav </td>
+<td>dog/dpain1.wav </td>
+<td>dog/dsight.wav </td>
+</tr>
+<tr>
+<td>dog/idle.wav </td>
+<td>doors/airdoor1.wav </td>
+<td>doors/airdoor2.wav </td>
+</tr>
+<tr>
+<td>doors/basesec1.wav </td>
+<td>doors/basesec2.wav </td>
+<td>doors/basetry.wav </td>
+</tr>
+<tr>
+<td>doors/baseuse.wav </td>
+<td>doors/ddoor1.wav </td>
+<td>doors/ddoor2.wav </td>
+</tr>
+<tr>
+<td>doors/doormv1.wav </td>
+<td>doors/drclos4.wav </td>
+<td>doors/hydro1.wav </td>
+</tr>
+<tr>
+<td>doors/hydro2.wav </td>
+<td>doors/latch2.wav </td>
+<td>doors/medtry.wav </td>
+</tr>
+<tr>
+<td>doors/meduse.wav </td>
+<td>doors/runetry.wav </td>
+<td>doors/runeuse.wav </td>
+</tr>
+<tr>
+<td>doors/stndr1.wav </td>
+<td>doors/stndr2.wav </td>
+<td>doors/winch2.wav </td>
+</tr>
+<tr>
+<td>enforcer/death1.wav </td>
+<td>enforcer/enfire.wav </td>
+<td>enforcer/enfstop.wav </td>
+</tr>
+<tr>
+<td>enforcer/idle1.wav </td>
+<td>enforcer/pain1.wav </td>
+<td>enforcer/pain2.wav </td>
+</tr>
+<tr>
+<td>enforcer/sight1.wav </td>
+<td>enforcer/sight2.wav </td>
+<td>enforcer/sight3.wav </td>
+</tr>
+<tr>
+<td>enforcer/sight4.wav </td>
+<td>fish/bite.wav </td>
+<td>fish/death.wav </td>
+</tr>
+<tr>
+<td>fish/idle.wav </td>
+<td>hknight/attack1.wav </td>
+<td>hknight/death1.wav </td>
+</tr>
+<tr>
+<td>hknight/grunt.wav </td>
+<td>hknight/hit.wav </td>
+<td>hknight/idle.wav </td>
+</tr>
+<tr>
+<td>hknight/pain1.wav </td>
+<td>hknight/sight1.wav </td>
+<td>hknight/slash1.wav </td>
+</tr>
+<tr>
+<td>items/armor1.wav </td>
+<td>items/damage.wav </td>
+<td>items/damage2.wav </td>
+</tr>
+<tr>
+<td>items/damage3.wav </td>
+<td>items/health1.wav </td>
+<td>items/inv1.wav </td>
+</tr>
+<tr>
+<td>items/inv2.wav </td>
+<td>items/inv3.wav </td>
+<td>items/itembk2.wav </td>
+</tr>
+<tr>
+<td>items/protect.wav </td>
+<td>items/protect2.wav </td>
+<td>items/protect3.wav </td>
+</tr>
+<tr>
+<td>items/r_item1.wav </td>
+<td>items/r_item2.wav </td>
+<td>items/suit.wav </td>
+</tr>
+<tr>
+<td>items/suit2.wav </td>
+<td>knight/idle.wav </td>
+<td>knight/kdeath.wav </td>
+</tr>
+<tr>
+<td>knight/khurt.wav </td>
+<td>knight/ksight.wav </td>
+<td>knight/sword1.wav </td>
+</tr>
+<tr>
+<td>knight/sword2.wav </td>
+<td>misc/basekey.wav </td>
+<td>misc/h2ohit1.wav </td>
+</tr>
+<tr>
+<td>misc/medkey.wav </td>
+<td>misc/menu1.wav </td>
+<td>misc/menu2.wav </td>
+</tr>
+<tr>
+<td>misc/menu3.wav </td>
+<td>misc/null.wav </td>
+<td>misc/outwater.wav </td>
+</tr>
+<tr>
+<td>misc/power.wav </td>
+<td>misc/r_tele1.wav </td>
+<td>misc/r_tele2.wav </td>
+</tr>
+<tr>
+<td>misc/r_tele3.wav </td>
+<td>misc/r_tele4.wav </td>
+<td>misc/r_tele5.wav </td>
+</tr>
+<tr>
+<td>misc/runekey.wav </td>
+<td>misc/secret.wav </td>
+<td>misc/talk.wav </td>
+</tr>
+<tr>
+<td>misc/trigger1.wav </td>
+<td>misc/water1.wav </td>
+<td>misc/water2.wav </td>
+</tr>
+<tr>
+<td>ogre/ogdrag.wav </td>
+<td>ogre/ogdth.wav </td>
+<td>ogre/ogidle.wav </td>
+</tr>
+<tr>
+<td>ogre/ogidle2.wav </td>
+<td>ogre/ogpain1.wav </td>
+<td>ogre/ogsawatk.wav </td>
+</tr>
+<tr>
+<td>ogre/ogwake.wav </td>
+<td>plats/medplat1.wav </td>
+<td>plats/medplat2.wav </td>
+</tr>
+<tr>
+<td>plats/plat1.wav </td>
+<td>plats/plat2.wav </td>
+<td>plats/train1.wav </td>
+</tr>
+<tr>
+<td>plats/train2.wav </td>
+<td>player/axhit1.wav </td>
+<td>player/axhit2.wav </td>
+</tr>
+<tr>
+<td>player/death1.wav </td>
+<td>player/death2.wav </td>
+<td>player/death3.wav </td>
+</tr>
+<tr>
+<td>player/death4.wav </td>
+<td>player/death5.wav </td>
+<td>player/drown1.wav </td>
+</tr>
+<tr>
+<td>player/drown2.wav </td>
+<td>player/gasp1.wav </td>
+<td>player/gasp2.wav </td>
+</tr>
+<tr>
+<td>player/gib.wav </td>
+<td>player/h2odeath.wav </td>
+<td>player/h2ojump.wav </td>
+</tr>
+<tr>
+<td>player/inh2o.wav </td>
+<td>player/inlava.wav </td>
+<td>player/land.wav </td>
+</tr>
+<tr>
+<td>player/land2.wav </td>
+<td>player/lburn1.wav </td>
+<td>player/lburn2.wav </td>
+</tr>
+<tr>
+<td>player/pain1.wav </td>
+<td>player/pain2.wav </td>
+<td>player/pain3.wav </td>
+</tr>
+<tr>
+<td>player/pain4.wav </td>
+<td>player/pain5.wav </td>
+<td>player/pain6.wav </td>
+</tr>
+<tr>
+<td>player/plyrjmp8.wav </td>
+<td>player/slimbrn2.wav </td>
+<td>player/teledth1.wav </td>
+</tr>
+<tr>
+<td>player/tornoff2.wav </td>
+<td>player/udeath.wav </td>
+<td>shalrath/attack.wav </td>
+</tr>
+<tr>
+<td>shalrath/attack2.wav </td>
+<td>shalrath/death.wav </td>
+<td>shalrath/idle.wav </td>
+</tr>
+<tr>
+<td>shalrath/pain.wav </td>
+<td>shalrath/sight.wav </td>
+<td>shambler/melee1.wav </td>
+</tr>
+<tr>
+<td>shambler/melee2.wav </td>
+<td>shambler/sattck1.wav </td>
+<td>shambler/sboom.wav </td>
+</tr>
+<tr>
+<td>shambler/sdeath.wav </td>
+<td>shambler/shurt2.wav </td>
+<td>shambler/sidle.wav </td>
+</tr>
+<tr>
+<td>shambler/smack.wav </td>
+<td>shambler/ssight.wav </td>
+<td>soldier/death1.wav </td>
+</tr>
+<tr>
+<td>soldier/idle.wav </td>
+<td>soldier/pain1.wav </td>
+<td>soldier/pain2.wav </td>
+</tr>
+<tr>
+<td>soldier/sattck1.wav </td>
+<td>soldier/sight1.wav </td>
+<td>vomitus/v_sight1.wav </td>
+</tr>
+<tr>
+<td>weapons/ax1.wav </td>
+<td>weapons/bounce.wav </td>
+<td>weapons/grenade.wav </td>
+</tr>
+<tr>
+<td>weapons/guncock.wav </td>
+<td>weapons/lhit.wav </td>
+<td>weapons/lock4.wav </td>
+</tr>
+<tr>
+<td>weapons/lstart.wav </td>
+<td>weapons/pkup.wav </td>
+<td>weapons/r_exp3.wav </td>
+</tr>
+<tr>
+<td>weapons/ric1.wav </td>
+<td>weapons/ric2.wav </td>
+<td>weapons/ric3.wav </td>
+</tr>
+<tr>
+<td>weapons/rocket1i.wav </td>
+<td>weapons/sgun1.wav </td>
+<td>weapons/shotgn2.wav </td>
+</tr>
+<tr>
+<td>weapons/spike2.wav </td>
+<td>weapons/tink1.wav </td>
+<td>wizard/hit.wav </td>
+</tr>
+<tr>
+<td>wizard/wattack.wav </td>
+<td>wizard/wdeath.wav </td>
+<td>wizard/widle1.wav </td>
+</tr>
+<tr>
+<td>wizard/widle2.wav </td>
+<td>wizard/wpain.wav </td>
+<td>wizard/wsight.wav </td>
+</tr>
+<tr>
+<td>zombie/idle_w2.wav </td>
+<td>zombie/z_fall.wav </td>
+<td>zombie/z_gib.wav </td>
+</tr>
+<tr>
+<td>zombie/z_hit.wav </td>
+<td>zombie/z_idle.wav </td>
+<td>zombie/z_idle1.wav </td>
+</tr>
+<tr>
+<td>zombie/z_miss.wav </td>
+<td>zombie/z_pain.wav </td>
+<td>zombie/z_pain1.wav </td>
+</tr>
+<tr>
+<td>zombie/z_shot1.wav</td>
+</tr>
+</table>
+<p>See also: <a href="#playvol">playvol</a>, <a href="#volume">volume</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="playdemo">playdemo (C)</p></b><ul>
+<p>Syntax: playdemo &lt;filename&gt; </p>
+<p>Play a demo.<br/>
+</p>
+<p>See also: <a href="#demos">demos</a>, <a href="#startdemos">startdemos</a>, <a href="#stopdemo">stopdemo</a>,
+              <a href="#record">record</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="playvol">playvol (C)</p></b><ul>
+<p>Syntax: playvol &lt;filename&gt; &lt;volume&gt; </p>
+<p>Play a sound at a given volume. See play for a list of sounds.<br/>
+</p>
+<p>See also: <a href="#play">play</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="pointfile">pointfile (C)</p></b><ul>
+<p>Syntax: pointfile &lt;filename.pts&gt; </p>
+<p>If qbsp generates a non-zero .pts file a leak exists in the
+              level. This file is created in the maps directory. By using the pointfile command, it will
+              load the .pts file and give a dotted line indicating where the leak(s) are on the level.<br/>
+              Thanks to Sam Kenny &lt;SamKenny@cit.com.au&gt; for the documentation of this command.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="port">port (V)</p></b><ul>
+<p>Syntax: port &lt;port&gt; <br/>
+              Default: 26000 </p>
+<p>Sets which port the connect command will use by default. Normally
+              issuing a "connect 123.456.789.012" will connect to the server at port 26000.
+              Helpful in binding your favorite servers to aliases. (ie alias server1 "port 260001;
+              connect 123.456.789.012")<br/>
+              Thanks to David &lt;bryand@powerup.com.au&gt; for letting me know this command exists.<br/>
+</p>
+<p>See also: <a href="#connect">connect</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="precache">precache (T)</p></b><ul>
+<p>Syntax: precache &lt;0/1&gt; <br/>
+              Default: 1 </p>
+<p>Toggle the use of a precache. This caches sound and other game
+              data.<br/>
+</p>
+<p>See also: <a href="#flush">flush</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="prespawn">prespawn (P)</p></b><ul>
+<p>Syntax: prespawn </p>
+<p>This command reports "Not valid from console" when run.
+              Part of the Quake client/server protcol. Sent by a client to a server after the client has
+              processed the sign-on message from the server and the client is ready to process the ???
+              messages. Not for use by mortals.<br/>
+              Thanks to Sky Golightly &lt;sky@cruzio.com&gt; for information on this command.<br/>
+</p>
+<p>See also: <a href="#begin">begin</a>, <a href="#spawn">spawn</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="profile">profile (C)</p></b><ul>
+<p>Syntax: profile &lt;command&gt; </p>
+<p>Report info about which Quake C commands have been called the
+              most. If the command is "all" it will dump every function call made.<br/>
+              Thanks to Nelson Hicks &lt;0201207@acad.nwmissouri.edu&gt; for added documentation for
+              this command.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  185532 FindTarget
+         62092 ai_stand
+         39519 ai_walk
+         22417 WaterMove
+         21654 PlayerPreThink
+         16262 PlayerPostThink
+         16233 ImpulseCommands
+         14015 LinkDoors
+         12368 CheckRules
+         10822 CheckPowerups
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="quit">quit (C)</p></b><ul>
+<p>Syntax: quit </p>
+<p>Exit the game no questions asked.<br/>
+</p>
+<p>See also: <a href="#menuquit">menu_quit</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="raliastransadj">r_aliastransadj (X)</p></b><ul>
+<p>Syntax: r_aliastransadj &lt;?&gt; <br/>
+              Default: 200 </p>
+<p>Used in determining how much of an alias model (ie: monsters,
+              etc) is "clipped away" and how much is viewable. Currently has no effect on game
+              play.<br/>
+              Thanks to Squirrel Eiserloh &lt;squirrel@ionstorm.com&gt; for the documentation on this
+              command.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="raliastransbase">r_aliastransbase (X)</p></b><ul>
+<p>Syntax: r_aliastransbase &lt;?&gt; <br/>
+              Default: 200 </p>
+<p>Used in determining how much of an alias model (ie: monsters,
+              etc) is "clipped away" and how much is viewable. Currently has no effect on game
+              play.<br/>
+              Thanks to Squirrel Eiserloh &lt;squirrel@ionstorm.com&gt; for the documentation on this
+              command.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rambient">r_ambient (V)</p></b><ul>
+<p>Syntax: r_ambient &lt;value&gt; <br/>
+              Default: 0 </p>
+<p>Sets how bright the rooms are by default. This applies regardless
+              of seperate light source present in a room.<br/>
+              Thanks to Scott McDermott &lt;scottm@compumedia.com&gt; for the documentation for this
+              command.<br/>
+</p>
+<p>See also: <a href="#rfullbright">r_fullbright</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rclearcolor">r_clearcolor (V)</p></b><ul>
+<p>Syntax: r_clearcolor &lt;value&gt; <br/>
+              Default: 2 </p>
+<p>This sets the color for areas outside of the current map. You
+              will really only see it if you have no clipping on and walk "outside".<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rdrawentities">r_drawentities (T)</p></b><ul>
+<p>Syntax: r_drawentities &lt;0/1&gt; <br/>
+              Default: 1 </p>
+<p>Toggles the drawing of objects like doors, bars, buttons,
+              monsters, items, nails, rockets, and grenades.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rdrawflat">r_drawflat (T)</p></b><ul>
+<p>Syntax: r_drawflat &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles the drawing of texture maps (0=use texture maps.)<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rdraworder">r_draworder (T)</p></b><ul>
+<p>Syntax: r_draworder &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles correct drawing order. (1=x-ray vision.)<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rdrawviewmodel">r_drawviewmodel (T)</p></b><ul>
+<p>Syntax: r_drawviewmodel &lt;0/1&gt; <br/>
+              Default: 1 </p>
+<p>Toggles the drawing of your weapon.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rdspeeds">r_dspeeds (T)</p></b><ul>
+<p>Syntax: r_dspeeds &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles the displaying of information. (What it is I don't know.)<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  31  0.4p5w  2.5b  20s  1.0e  1.6v
+        26  0.5p5w  2.5b  15s  1.0e  1.6v
+        28  0.4p5w  2.2b  17s  1.0e  1.6v
+        26  0.3p5w  2.5b  15s  1.0e  1.6v
+        26  0.2p5w  2.2b  15s  1.0e  1.6v
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="rfullbright">r_fullbright (T)</p></b><ul>
+<p>Syntax: r_fullbright &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles whether light shading is in effect.<br/>
+</p>
+<p>See also: <a href="#gamma">gamma</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rgraphheight">r_graphheight (V)</p></b><ul>
+<p>Syntax: r_graphheight &lt;value&gt; <br/>
+              Default: 10 </p>
+<p>Set the number of lines displayed in the timegraph.<br/>
+</p>
+<p>See also: <a href="#rtimegraph">r_timegraph</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rmaxedges">r_maxedges (V)</p></b><ul>
+<p>Syntax: r_maxedges &lt;value&gt; <br/>
+              Default: 2000 </p>
+<p>Sets the maximum number of edges. The new setting does not take
+              effect until the map is restarted. Probably only helpful for map developers.<br/>
+              Thanks to Pat Fox &lt;pat.fox@ukonline.co.uk&gt; for extra information.<br/>
+</p>
+<p>See also: <a href="#rnumedges">r_numedges</a>, <a href="#rreportedgeout">r_reportedgeout</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rmaxsurfs">r_maxsurfs (V)</p></b><ul>
+<p>Syntax: r_maxsurfs &lt;value&gt; <br/>
+              Default: 1000 </p>
+<p>Sets the maximum number of surfaces. The new setting does not
+              take effect until the map is restarted. Probably only helpful for map developers.<br/>
+              Thanks to Pat Fox &lt;pat.fox@ukonline.co.uk&gt; for extra information.<br/>
+</p>
+<p>See also: <a href="#rnumsurfs">r_numsurfs</a>, <a href="#rreportsurfout">r_reportsurfout</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rnumedges">r_numedges (T)</p></b><ul>
+<p>Syntax: r_numedges &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles the displaying of number of edges currently being viewed.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  Used 517 of 2000 edges; 521 max
+        Used 517 of 2000 edges; 521 max
+        Used 513 of 2000 edges; 521 max
+        Used 513 of 2000 edges; 521 max
+</pre>
+<p>See also: <a href="#rmaxedges">r_maxedges</a>, <a href="#rreportedgeout">r_reportedgeout</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rnumsurfs">r_numsurfs (T)</p></b><ul>
+<p>Syntax: r_numsurfs &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles the displaying of number of surfaces currently being
+              viewed.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  Used 183 of 1001 surfs; 188 max
+        Used 182 of 1001 surfs; 188 max
+        Used 182 of 1001 surfs; 188 max
+        Used 178 of 1001 surfs; 188 max
+</pre>
+<p>See also: <a href="#rmaxsurfs">r_maxsurfs</a>, <a href="#rreportsurfout">r_reportsurfout</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rpolymodelstats">r_polymodelstats (T)</p></b><ul>
+<p>Syntax: r_polymodelstats &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles the displays of number of polygon models current being
+              viewed.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>          5 polygon model drawn
+        6 polygon model drawn
+        5 polygon model drawn
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="rreportedgeout">r_reportedgeout (T)</p></b><ul>
+<p>Syntax: r_reportedgeout &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggle the display of how many edges where not displayed. I've
+              never had this happen during normal game play, only when in noclip mode.<br/>
+</p>
+<p>See also: <a href="#rmaxedges">r_maxedges</a>, <a href="#rnumedges">r_numedges</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rreportsurfout">r_reportsurfout (T)</p></b><ul>
+<p>Syntax: r_reportsurfout &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggle the display of how many surfaces where not displayed. This
+              shouldn't happen during normal game play, only when in noclip mode.<br/>
+</p>
+<p>See also: <a href="#rmaxsurfs">r_maxsurfs</a>, <a href="#rnumsurfs">r_numsurfs</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rspeeds">r_speeds (T)</p></b><ul>
+<p>Syntax: r_speeds &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles the displaying of drawing time and stats of what is
+              currently being viewed.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  32.7 ms 267/196/ 74 poly   3 surf
+        38.6 ms 267/196/ 74 poly  20 surf
+        60.4 ms 267/196/ 74 poly  18 surf
+        38.2 ms 267/196/ 73 poly  18 surf
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="rtimegraph">r_timegraph (T)</p></b><ul>
+<p>Syntax: r_timegraph &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggle the display of a performance graph. (Lower levels means
+              better performance.)<br/>
+</p>
+<p>See also: <a href="#rgraphheight">r_graphheight</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="rwaterwarp">r_waterwarp (T)</p></b><ul>
+<p>Syntax: r_waterwarp &lt;0/1&gt; <br/>
+              Default: 1 </p>
+<p>Toggles whether surfaces are warped when in a liquid.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="reconnect">reconnect (C)</p></b><ul>
+<p>Syntax: reconnect </p>
+<p>Reconnect to last server.<br/>
+</p>
+<p>See also: <a href="#connect">connect</a>, <a href="#disconnect">disconnect</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="record">record (C)</p></b><ul>
+<p>Syntax: record &lt;filename&gt; &lt;map&gt; [cd track] </p>
+<p>Record a demo on a map using an optional cd track.<br/>
+</p>
+<p>See also: <a href="#stop">stop</a>, <a href="#playdemo">playdemo</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="registered">registered (T)</p></b><ul>
+<p>Syntax: registered &lt;0/1&gt; <br/>
+              Default: 0 for SW </p>
+<p>Toggles if the game is registered or not.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="restart">restart (C)</p></b><ul>
+<p>Syntax: restart </p>
+<p>Restart the current level.<br/>
+</p>
+<p>See also: <a href="#map">map</a>, <a href="#changelevel">changelevel</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="samelevel">samelevel (T)</p></b><ul>
+<p>Syntax: samelevel &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles whether exiting a level advances to the next one.<br/>
+</p>
+<p>See also: <a href="#fraglimit">fraglimit</a>, <a href="#timelimit">timelimit</a>, <a href="#noexit">noexit</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="save">save (C)</p></b><ul>
+<p>Syntax: save &lt;filename&gt; </p>
+<p>Save a game.<br/>
+</p>
+<p>See also: <a href="#load">load</a>, <a href="#menusave">menu_save</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="say">say (C)</p></b><ul>
+<p>Syntax: say &lt;string&gt; </p>
+<p>Broadcast a string to all other players. The string is entered on
+              the console, unlike the messagemode and messagemode2 commands, allowing it to be used on a
+              dedicated server.<br/>
+              Thanks to Robert Coward INF-SP &lt;rcoward@madge.com&gt; for improved documentation of
+              this command.<br/>
+</p>
+<p>See also: <a href="#messagemode">messagemode</a>, <a href="#messagemode2">messagemode2</a>, <a href="#sayteam">say_team</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="sayteam">say_team (C)</p></b><ul>
+<p>Syntax: say_team &lt;string&gt; </p>
+<p>Broadcast a string to all players on your team. The string is
+              entered on the console, unlike the messagemode and messagemode2 commands, allowing it to
+              be used on a dedicated server.<br/>
+              Thanks to Robert Coward INF-SP &lt;rcoward@madge.com&gt; for improved documentation of
+              this command.<br/>
+</p>
+<p>See also: <a href="#messagemode2">messagemode2</a>, <a href="#messagemode">messagemode</a>, <a href="#say">say</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="sbinfo">sbinfo (C)</p></b><ul>
+<p>Syntax: sbinfo </p>
+<p>Report current Sound Blaster settings.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  BLASTER=A220 I5 D1 H5 P330 T6
+        dsp version=4.13
+        dma=5
+        dma position: 79
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="scrcentertime">scr_centertime (V)</p></b><ul>
+<p>Syntax: scr_centertime &lt;time&gt; <br/>
+              Default: 2 </p>
+<p>Sets how long the screen hints are displayed on the screen. This
+              includes messages like "Step into the slipgate...".<br/>
+              Thanks to Sky Golightly &lt;sky@cruzio.com&gt; for information on this command.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="scrconspeed">scr_conspeed (V)</p></b><ul>
+<p>Syntax: scr_conspeed &lt;value&gt; <br/>
+              Default: 300 </p>
+<p>Sets how quickly the console screen scrolls up and down.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="scrofsx">scr_ofsx (V)</p></b><ul>
+<p>Syntax: scr_ofsx &lt;value&gt; <br/>
+              Default: 0 </p>
+<p>Sets how much to offset the view in the x direction.<br/>
+</p>
+<p>See also: <a href="#scrofsy">scr_ofsy</a>, <a href="#scrofsz">scr_ofsz</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="scrofsy">scr_ofsy (V)</p></b><ul>
+<p>Syntax: scr_ofsy &lt;value&gt; <br/>
+              Default: 0 </p>
+<p>Sets how much to offset the view in the y direction.<br/>
+</p>
+<p>See also: <a href="#scrofsx">scr_ofsx</a>, <a href="#scrofsz">scr_ofsz</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="scrofsz">scr_ofsz (V)</p></b><ul>
+<p>Syntax: scr_ofsz &lt;value&gt; <br/>
+              Default: 0 </p>
+<p>Sets how much to offset the view in the z direction.<br/>
+</p>
+<p>See also: <a href="#scrofsx">scr_ofsx</a>, <a href="#scrofsy">scr_ofsy</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="scrprintspeed">scr_printspeed (V)</p></b><ul>
+<p>Syntax: scr_printspeed &lt;speed&gt; <br/>
+              Default: 8 </p>
+<p>Controls how fast the text is displayed at the end of the single
+              player episodes.<br/>
+              Thanks to Phrog`gee &lt;mistix@nando.net&gt; for the syntax of this command.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="screenshot">screenshot (V)</p></b><ul>
+<p>Syntax: screenshot </p>
+<p>Captures a .pcx file of your current view. Automatically names
+              based on the existence of other screenshots.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="sensitivity">sensitivity (V)</p></b><ul>
+<p>Syntax: sensitivity &lt;value&gt; <br/>
+              Default: 3 </p>
+<p>Sets the sensitivity of the mouse.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="serverprofile">serverprofile (T)</p></b><ul>
+<p>Syntax: serverprofile &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles if server stats are displayed.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  serverprofile:4 clients 40 msec
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="showpause">showpause (T)</p></b><ul>
+<p>Syntax: showpause &lt;0/1&gt; <br/>
+              Default: 1 </p>
+<p>Toggles if the pause icon appears when the game is paused.<br/>
+</p>
+<p>See also: <a href="#showram">showram</a>, <a href="#showturtle">showturtle</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="showram">showram (T)</p></b><ul>
+<p>Syntax: showram &lt;0/1&gt; <br/>
+              Default: 1 </p>
+<p>Toggles if the ram icon appears when then game is running out of
+              memory.<br/>
+</p>
+<p>See also: <a href="#showpause">showpause</a>, <a href="#showturtle">showturtle</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="showturtle">showturtle (T)</p></b><ul>
+<p>Syntax: showturtle &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggle if the turtle icon is displayed when the frame rate drops
+              below 10.<br/>
+</p>
+<p>See also: <a href="#showpause">showpause</a>, <a href="#showram">showram</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="sizedown">sizedown (C)</p></b><ul>
+<p>Syntax: sizedown </p>
+<p>Reduces the screen size.<br/>
+</p>
+<p>See also: <a href="#sizeup">sizeup</a>, <a href="#viewsize">viewsize</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="sizeup">sizeup (C)</p></b><ul>
+<p>Syntax: sizeup </p>
+<p>Increases the screen size.<br/>
+</p>
+<p>See also: <a href="#sizedown">sizedown</a>, <a href="#viewsize">viewsize</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="skill">skill (V)</p></b><ul>
+<p>Syntax: skill &lt;level&gt; </p>
+<p>Set the skill level of the game. Useful to set before recording a
+              demo.<br/>
+</p>
+<table class="console-table">
+<tr>
+<th>Value </th>
+<th>Difficulty</th>
+</tr>
+<tr>
+<td>0 </td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>1 </td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>2 </td>
+<td>Hard</td>
+</tr>
+<tr>
+<td>3 </td>
+<td>Nightmare</td>
+</tr>
+</table>
+</ul>
+<hr/>
+<b><p class="console-target" id="slist">slist (C)</p></b><ul>
+<p>Syntax: slist </p>
+<p>Show Quake servers located on the LAN.<br/>
+</p>
+<p>See also: <a href="#connect">connect</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="sndnoextraupdate">snd_noextraupdate (T)</p></b><ul>
+<p>Syntax: snd_noextraupdate &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles the correct value display in host_speeds. Usually messes
+              up sound playback when in effect.<br/>
+</p>
+<p><i>From techinfo.txt:</i></p>
+<pre>       (Note, though, that unless you also do snd_noextraupdate
+        1&lt;enter&gt; sound time will actually show up as graphics
+        time. However, snd_noextraupdate 1 can cause sound to get
+        choppy, so it's not generally recommended.)
+</pre>
+<p>See also: <a href="#hostspeeds">host_speeds</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="sndshow">snd_show (T)</p></b><ul>
+<p>Syntax: snd_show &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles the display of sounds currently being played.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  255 106 zombie/z_idle.wav
+        218  66 zombie/z_idle.wav
+        241  89 zombie/z_idle.wav
+         70 117 ambience/fire1.wav
+        ----(4)----
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="soundinfo">soundinfo (C)</p></b><ul>
+<p>Syntax: soundinfo </p>
+<p>Reports information on the sound system.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>      1 stereo
+         2048 samples
+         1963 samplepos
+           16 samplebits
+            1 submission_chunk
+        11025 speed
+   0x7d7cf000 dma buffer
+           78 total_channels
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="soundlist">soundlist (C)</p></b><ul>
+<p>Syntax: soundlist </p>
+<p>Reports a list of sounds current cached.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  (...) {Text Deleted}
+        L( 8b) 137481 :  ambience/drip1.wav
+        L( 8b)  68273 :  ambience/swamp2.wav
+        L( 8b)  68271 :  ambience/swamp1.wav
+         (16b)  28120 :  weapons/lstart.wav
+         ( 8b)  12815 :  items/damage3.wav
+         ( 8b)  19694 :  misc/power.wav
+        Total resident:  1689633
+</pre>
+<p>See also: <a href="#flush">flush</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="spawn">spawn (P)</p></b><ul>
+<p>Syntax: spawn </p>
+<p>This command reports "Not valid from console" when run.
+              Part of the Quake client/server protocol. Sent by a client to a server after the client
+              has processed the prespawn messages and the client is ready to process the entity spawn
+              messages. Not for use by mortals.<br/>
+              Thanks to Sky Golightly &lt;sky@cruzio.com&gt; for information on this command.<br/>
+</p>
+<p>See also: <a href="#begin">begin</a>, <a href="#prespawn">prespawn</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="startdemos">startdemos (C)</p></b><ul>
+<p>Syntax: startdemos &lt;filename1&gt; &lt;filename2&gt;
+              &lt;...&gt; </p>
+<p>Setup a queue of demos to loop. Note: once you queue 3 demos your
+              list must always have 3 demos in it. Likewise if you queue 5 any future lists must also
+              have 5 demos in it. If after queueing 4 demos you then queue 2, the two demos from the 4
+              demo queue will be played after your two newly queued demos.<br/>
+</p>
+<p>See also: <a href="#demos">demos</a>, <a href="#playdemo">playdemo</a>, <a href="#stopdemo">stopdemo</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="status">status (C)</p></b><ul>
+<p>Syntax: status </p>
+<p>Report current game information.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>     host:  hostname
+            map:  e1m6
+        players:  8 active (8 max)
+        player1 10: 03: 39
+        xxx.xxx.xxx.xxx: xxxx
+        player2 20: 06: 49
+        xxx.xxx.xxx.xxx: xxxx
+        (...) {Text deleted}
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="stop">stop (C)</p></b><ul>
+<p>Syntax: stop </p>
+<p>Stop the recording of a demo.<br/>
+</p>
+<p>See also: <a href="#record">record</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="stopdemo">stopdemo (C)</p></b><ul>
+<p>Syntax: stopdemo </p>
+<p>Stops the current playback of demos.<br/>
+</p>
+<p>See also: <a href="#playdemo">playdemo</a>, <a href="#demos">demos</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="stopsound">stopsound (C)</p></b><ul>
+<p>Syntax: stopsound </p>
+<p>Stops all sounds currently being played.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="stuffcmds">stuffcmds (C)</p></b><ul>
+<p>Syntax: stuffcmds </p>
+<p>Starts execution of command line parameters. (Used during game
+              startup.)<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="svaccelerate">sv_accelerate (V)</p></b><ul>
+<p>Syntax: sv_accelerate &lt;value&gt; <br/>
+              Default: 10 </p>
+<p>Sets how quickly objects accelerate.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="svaim">sv_aim (V)</p></b><ul>
+<p>Syntax: sv_aim &lt;value&gt; <br/>
+              Default: 0.93 </p>
+<p>Sets how much leniency there is in the vertical aim when shooting
+              at a target. (0.0 gives the most leniency.)<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="svfriction">sv_friction (V)</p></b><ul>
+<p>Syntax: sv_friction &lt;value&gt; <br/>
+              Default: 4 </p>
+<p>Sets how much friction there is.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="svgravity">sv_gravity (V)</p></b><ul>
+<p>Syntax: sv_gravity &lt;value&gt; <br/>
+              Default: 800 </p>
+<p>Sets how much gravity there is.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="svidealpitchscale">sv_idealpitchscale (V)</p></b><ul>
+<p>Syntax: sv_idealpitchscale &lt;value&gt; <br/>
+              Default: 0.8 </p>
+<p>Sets how much a player's view changes when on steps or an
+              incline.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="svmaxspeed">sv_maxspeed (V)</p></b><ul>
+<p>Syntax: sv_maxspeed &lt;value&gt; <br/>
+              Default: 320 </p>
+<p>Sets the maximum rate at which a player can move.<br/>
+</p>
+<p>See also: <a href="#clbackspeed">cl_backspeed</a>, <a href="#clforwardspeed">cl_forwardspeed</a>, <a href="#clmovespeedkey">cl_movespeedkey</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="svmaxvelocity">sv_maxvelocity (V)</p></b><ul>
+<p>Syntax: sv_maxvelocity &lt;value&gt; <br/>
+              Default: 2000 </p>
+<p>Sets the maximum speed at which anything can move including
+              ammunition.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="svnostep">sv_nostep (T)</p></b><ul>
+<p>Syntax: sv_nostep &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles if players automatically walk up steps or if they have to
+              jump up them.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="svstopspeed">sv_stopspeed (V)</p></b><ul>
+<p>Syntax: sv_stopspeed &lt;value&gt; <br/>
+              Default: 100 </p>
+<p>Sets how quickly objects stop moving.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="systicrate">sys_ticrate (V)</p></b><ul>
+<p>Syntax: sys_ticrate &lt;value&gt; <br/>
+              Default: 0.05 </p>
+<p><i>From techinfo.txt:</i></p>
+<pre>       Only used by dedicated servers. This determines the rate at
+        which the server will send out updates to the clients. The
+        default value is 0.05 (20 updates per second.) For servers
+        where bandwidth is limited, using modems or the internet for
+        example, it is advisable to lower this value to 0.1 (10
+        updates per second.)  This will have a very minor effect on
+        responsiveness, but will half the outbound bandwidth required
+        making the modem players a lot happier.
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="teamplay">teamplay (T)</p></b><ul>
+<p>Syntax: teamplay &lt;value&gt; <br/>
+              Default: 0 </p>
+<p>Toggles whether team mode is on during networked games. Set
+              teamplay to 1 to turn this option on. Setting teamplay to 2 allows you to hurt yourself
+              and your team, but if you kill someone on your team you lose a frag.<br/>
+</p>
+<p>See also: <a href="#coop">coop</a>, <a href="#deathmatch">deathmatch</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="tell">tell (C)</p></b><ul>
+<p>Syntax: tell &lt;player&gt; &lt;string&gt; </p>
+<p>Send a message to a single player. Very nice in large network
+              games.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="test">test (C)</p></b><ul>
+<p>Syntax: test &lt;server&gt; </p>
+<p>Reports information about the players currently on the selected
+              server.<br/>
+              Thanks to Brian Jones &lt;polydat@infi.net&gt; for the syntax of this command.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  Player1
+          frags:0  colors: 13 13  time: 284
+          xxx.xxx.xxx.xxx: xxxx
+        Player2
+          frags:5  colors: 4 3  time: 11
+          xxx.xxx.xxx.xxx: xxxx
+        Player3
+          frags:  13  colors: 3 11  time: 3
+          xxx.xxx.xxx.xxx: xxxx
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="test2">test2 (C)</p></b><ul>
+<p>Syntax: test2 &lt;server&gt; </p>
+<p>Reports information about the current conditions the selected
+              server has.<br/>
+              Thanks to Brian Jones &lt;polydat@infi.net&gt; for the syntax of this command.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  sv_maxspeed 320
+        sv_friction 4
+        sv_gravity  800
+        noexit      0
+        teamplay    0
+        timelimit   0
+        fraglimit   50
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="timedemo">timedemo (C)</p></b><ul>
+<p>Syntax: timedemo &lt;demoname&gt; </p>
+<p>Gets demo speed and time.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  969 Frames 52.2 Seconds 18.6 FPS
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="timelimit">timelimit (V)</p></b><ul>
+<p>Syntax: timelimit &lt;value&gt; <br/>
+              Default: 0 </p>
+<p>Set a time to play the level before advancing to the next one.<br/>
+</p>
+<p>See also: <a href="#fraglimit">fraglimit</a>, <a href="#noexit">noexit</a>, <a href="#samelevel">samelevel</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="timerefresh">timerefresh (C)</p></b><ul>
+<p>Syntax: timerefresh </p>
+<p>Does a quick test to find out video refresh for your current
+              location. It calculates this based on doing a 360 degree turn.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  3.675180 Seconds (34.828222 FPS)
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="toggleauxlook">toggle_auxlook (T)</p></b><ul>
+<p>Syntax: toggle_auxlook </p>
+<p>Toggles if auxlook is on or off.<br/>
+</p>
+<p>See also: <a href="#auxlook">auxlook</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="toggleconsole">toggleconsole (C)</p></b><ul>
+<p>Syntax: toggleconsole </p>
+<p>Display or remove the console screen.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="togglemenu">togglemenu (C)</p></b><ul>
+<p>Syntax: togglemenu </p>
+<p>Display the menu screens.<br/>
+</p>
+<p>See also: <a href="#menumain">menu_main</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="unbind">unbind (C)</p></b><ul>
+<p>Syntax: unbind &lt;key&gt; </p>
+<p>Remove the current commands bound to a key.<br/>
+</p>
+<p>See also: <a href="#unbindall">unbindall</a>, <a href="#bind">bind</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="unbindall">unbindall (C)</p></b><ul>
+<p>Syntax: unbindall </p>
+<p>Remove every key binding. (Use with caution. Current key bindings
+              are saved when you exit so if you unbindall then exit only the ESC key will work. Trust me
+              I know!)<br/>
+</p>
+<p>See also: <a href="#unbind">unbind</a>, <a href="#bind">bind</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="vcentermove">v_centermove (V)</p></b><ul>
+<p>Syntax: v_centermove &lt;value&gt; <br/>
+              Default: 0.15 </p>
+<p>Sets how far the player must move forward before the view
+              recenters. A big help for those people that like to use the keyboard.<br/>
+              Thanks to James Boswell &lt;boswell@nspace.com.au&gt; for the documentation of this
+              command.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="vcenterspeed">v_centerspeed (V)</p></b><ul>
+<p>Syntax: v_centerspeed &lt;value&gt; <br/>
+              Default: 500 </p>
+<p>Sets how quickly you return to a center view after a lookup or
+              lookdown.<br/>
+</p>
+<p>See also: <a href="#centerview">centerview</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="vcshift">v_cshift (V)</p></b><ul>
+<p>Syntax: v_cshift &lt;red&gt; &lt;green&gt; &lt;blue&gt;
+              &lt;intensity&gt; </p>
+<p>This adjusts all of the colors currently being displayed. Used
+              when you are underwater, hit, or have the Ring of Shadows. Values range from 0-256 for all
+              four values.<br/>
+              Thanks to "Mr. Muh" &lt;mr.muh@cww.de&gt; for the documentation of this command.<br/>
+</p>
+</ul>
+<hr/>
+<b><p class="console-target" id="vidlescale">v_idlescale (T)</p></b><ul>
+<p>Syntax: v_idlescale &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles whether the the view remains idle. (You can get some cool
+              effects if you turn this on.)<br/>
+</p>
+<p>See also: <a href="#vipitchcycle">v_ipitch_cycle</a>,
+              <a href="#vipitchlevel">v_ipitch_level</a>, <a href="#virollcycle">v_iroll_cycle</a>,
+              <a href="#virolllevel">v_iroll_level</a>, <a href="#viyawcycle">v_iyaw_cycle</a>,
+              <a href="#viyawlevel">v_iyaw_level</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="vipitchcycle">v_ipitch_cycle (V)</p></b><ul>
+<p>Syntax: v_ipitch_cycle &lt;value&gt; <br/>
+              Default: 1 </p>
+<p>Sets how quickly you lean forwards and backwards when v_idlescale
+              is active.<br/>
+</p>
+<p>See also: <a href="#vidlescale">v_idlescale</a>, <a href="#vipitchlevel">v_ipitch_level</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="vipitchlevel">v_ipitch_level (V)</p></b><ul>
+<p>Syntax: v_ipitch_level &lt;value&gt; <br/>
+              Default: 0.3 </p>
+<p>Sets how far you lean forwards and backwards when v_idlescale is
+              active.<br/>
+</p>
+<p>See also: <a href="#vidlescale">v_idlescale</a>, <a href="#vipitchcycle">v_ipitch_cycle</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="virollcycle">v_iroll_cycle (V)</p></b><ul>
+<p>Syntax: v_iroll_cycle &lt;value&gt; <br/>
+              Default: 0.5 </p>
+<p>Sets how quickly you tilt right and left when v_idlescale is
+              active.<br/>
+</p>
+<p>See also: <a href="#vidlescale">v_idlescale</a>, <a href="#virolllevel">v_iroll_level</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="virolllevel">v_iroll_level (V)</p></b><ul>
+<p>Syntax: v_iroll_level &lt;value&gt; <br/>
+              Default: 0.1 </p>
+<p>Sets how far you tilt right and left when v_idlescale is active.<br/>
+</p>
+<p>See also: <a href="#vidlescale">v_idlescale</a>, <a href="#virollcycle">v_iroll_cycle</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="viyawcycle">v_iyaw_cycle (V)</p></b><ul>
+<p>Syntax: v_iyaw_cycle &lt;value&gt; <br/>
+              Default: 2 </p>
+<p>Sets how quickly you look left and right when v_idlescale is
+              active.<br/>
+</p>
+<p>See also: <a href="#vidlescale">v_idlescale</a>, <a href="#viyawlevel">v_iyaw_level</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="viyawlevel">v_iyaw_level (V)</p></b><ul>
+<p>Syntax: v_iyaw_level &lt;value&gt; <br/>
+              Default: 0.3 </p>
+<p>Sets how far you look left and right when v_idlescale is active.<br/>
+</p>
+<p>See also: <a href="#vidlescale">v_idlescale</a>, <a href="#viyawcycle">v_iyaw_cycle</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="vkickpitch">v_kickpitch (V)</p></b><ul>
+<p>Syntax: v_kickpitch &lt;value&gt; <br/>
+              Default: 0.6 </p>
+<p>Sets how much you look up when hit.<br/>
+</p>
+<p>See also: <a href="#vkickroll">v_kickroll</a>, <a href="#vkicktime">v_kicktime</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="vkickroll">v_kickroll (V)</p></b><ul>
+<p>Syntax: v_kickroll &lt;value&gt; <br/>
+              Default: 0.6 </p>
+<p>Sets how much you lean when hit.<br/>
+</p>
+<p>See also: <a href="#vkickpitch">v_kickpitch</a>, <a href="#vkicktime">v_kicktime</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="vkicktime">v_kicktime (V)</p></b><ul>
+<p>Syntax: v_kicktime &lt;value&gt; <br/>
+              Default: 0.5 </p>
+<p>Sets how long the "kick" effects last.<br/>
+</p>
+<p>See also: <a href="#vkickpitch">v_kickpitch</a>, <a href="#vkickroll">v_kickroll</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="version">version (C)</p></b><ul>
+<p>Syntax: version </p>
+<p>Report version information.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>  Version 1.01
+        Exe:  17: 38: 28 Jul 12 1996
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="viddescribecurrentmode">vid_describecurrentmode (C)</p></b><ul>
+<p>Syntax: vid_describecurrentmode <br/>
+              Default: 0 </p>
+<p>Report current video mode.<br/>
+</p>
+<p>See also: <a href="#viddescribemode">vid_describemode</a>,
+              <a href="#viddescribemodes">vid_describemodes</a>, <a href="#vidmode">vid_mode</a>, <a href="#vidnummodes">vid_nummodes</a>,
+              <a href="#vidtestmode">vid_testmode</a>, <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="viddescribemode">vid_describemode (C)</p></b><ul>
+<p>Syntax: vid_describemode &lt;mode&gt; </p>
+<p>Report information on selected videomode.<br/>
+</p>
+<p>See also: <a href="#viddescribecurrentmode">vid_describecurrentmode</a>,
+              <a href="#viddescribemodes">vid_describemodes</a>, <a href="#vidmode">vid_mode</a>, <a href="#vidnummodes">vid_nummodes</a>,
+              <a href="#vidtestmode">vid_testmode</a>, <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="viddescribemodes">vid_describemodes (C)</p></b><ul>
+<p>Syntax: vid_describemodes </p>
+<p>Report information on all video modes.<br/>
+</p>
+<p><i>Example output:</i></p>
+<pre>   ***** standard VGA modes *****
+         0:  320x200
+         ***** Mode X-style modes *****
+         1:  320x200
+         2:  360x200
+         3:  320x240
+         4:  360x240
+         5:  320x350
+         6:  360x350
+         7:  320x400
+         8:  360x400
+         9:  320x480
+        10:  360x480
+</pre>
+<p>See also: <a href="#viddescribecurrentmode">vid_describecurrentmode</a>,
+              <a href="#viddescribemode">vid_describemode</a>, <a href="#vidmode">vid_mode</a>, <a href="#vidnummodes">vid_nummodes</a>,
+              <a href="#vidtestmode">vid_testmode</a>, <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="vidmode">vid_mode (C)</p></b><ul>
+<p>Syntax: vid_mode &lt;mode&gt; </p>
+<p>Sets the video mode.<br/>
+</p>
+<p>See also: <a href="#viddescribecurrentmode">vid_describecurrentmode</a>,
+              <a href="#viddescribemode">vid_describemode</a>, <a href="#viddescribemodes">vid_describemodes</a>, <a href="#vidnummodes">vid_nummodes</a>, <a href="#vidtestmode">vid_testmode</a>,
+              <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="vidnopageflip">vid_nopageflip (T)</p></b><ul>
+<p>Syntax: vid_nopageflip &lt;0/1&gt; <br/>
+              Default: 0 </p>
+<p>Toggles whether page flipping is disabled.<br/>
+</p>
+<p><i>From techinfo.txt:</i></p>
+<pre>       If a given VESA mode can support page flipping, then it
+        defaults to page- flipped operation.  A VESA mode can be
+        forced to non-page-flipped operation by setting the
+        vid_nopageflip console variable to 1, then setting the mode
+        (note that vid_nopageflip takes operation on the next, not the
+        current, mode set, and note that it then stays in effect
+        permanently, even when Quake is exited and restarted, unless
+        it is manually set back to 0.)
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="vidnummodes">vid_nummodes (C)</p></b><ul>
+<p>Syntax: vid_nummodes </p>
+<p>Reports the total number of videomodes available.<br/>
+</p>
+<p>See also: <a href="#viddescribecurrentmode">vid_describecurrentmode</a>,
+              <a href="#viddescribemode">vid_describemode</a>, <a href="#viddescribemodes">vid_describemodes</a>, <a href="#vidmode">vid_mode</a>,
+              <a href="#vidtestmode">vid_testmode</a>, <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="vidtestmode">vid_testmode (C)</p></b><ul>
+<p>Syntax: vid_testmode &lt;mode&gt; </p>
+<p>Switch to another videomode temporarily, to test it.<br/>
+</p>
+<p>See also: <a href="#viddescribecurrentmode">vid_describecurrentmode</a>,
+              <a href="#viddescribemode">vid_describemode</a>, <a href="#viddescribemodes">vid_describemodes</a>, <a href="#vidmode">vid_mode</a>,
+              <a href="#vidnummodes">vid_nummodes</a>, <a href="#menuvideo">menu_video</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="vidwait">vid_wait (V)</p></b><ul>
+<p>Syntax: vid_wait &lt;value&gt; <br/>
+              Default: 0 </p>
+<p><i>From techinfo.txt:</i></p>
+<pre>       sets the type of waiting that the video adapter should do, as follows: 
+        0:  no waiting
+        1:  wait for vertical sync active
+        2:  wait for display enable active
+</pre>
+</ul>
+<hr/>
+<b><p class="console-target" id="viewframe">viewframe (X)</p></b><ul>
+<p>Syntax: viewframe &lt;number&gt; </p>
+<p>View a particular frame in the current model.<br/>
+</p>
+<p>See also: <a href="#viewmodel">viewmodel</a>, <a href="#viewnext">viewnext</a>, <a href="#viewprev">viewprev</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="viewmodel">viewmodel (X)</p></b><ul>
+<p>Syntax: viewmodel &lt;name&gt; </p>
+<p>Although mainly used internally by Quake, if you want to get an
+              idea of what the models look like while playing Quake these are the steps needed. Once in
+              Quake load up the map and you will be able to view what ever model you want now. A sample
+              map can be downloaded at http://www.ccs.neu.edu/home/danielr/quake/ .<br/>
+              A big thank you to G-boy &lt;peerbro@worldonline.nl&gt; for the map and information.<br/>
+</p>
+<table class="console-table">
+<tr>
+<th>Some models are</th>
+</tr>
+<tr>
+<td>progs/player.mdl</td>
+<td>progs/zombie.mdl</td>
+</tr>
+<tr>
+<td>progs/ogre.mdl</td>
+<td>progs/wizard.mdl</td>
+</tr>
+<tr>
+<td>progs/demon.mdl</td>
+<td>progs/hknight.mdl</td>
+</tr>
+<tr>
+<td>progs/boss.mdl</td>
+</tr>
+</table>
+<p><i>Example output:</i></p>
+<pre>  Create a map with these characteristics:
+        {
+        "classname" "viewthing"
+        "origin" "x y z"
+        }
+</pre>
+<p>See also: <a href="#viewframe">viewframe</a>, <a href="#viewnext">viewnext</a>, <a href="#viewprev">viewprev</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="viewnext">viewnext (X)</p></b><ul>
+<p>Syntax: viewnext </p>
+<p>View the next frame in the current model.<br/>
+</p>
+<p>See also: <a href="#viewframe">viewframe</a>, <a href="#viewmodel">viewmodel</a>, <a href="#viewprev">viewprev</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="viewprev">viewprev (X)</p></b><ul>
+<p>Syntax: viewprev </p>
+<p>View the previous frame in the current model.<br/>
+</p>
+<p>See also: <a href="#viewframe">viewframe</a>, <a href="#viewmodel">viewmodel</a>, <a href="#viewnext">viewnext</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="viewsize">viewsize (V)</p></b><ul>
+<p>Syntax: viewsize &lt;value&gt; <br/>
+              Default: 100 </p>
+<p>Set the screen size.<br/>
+</p>
+<p>See also: <a href="#sizedown">sizedown</a>, <a href="#sizeup">sizeup</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="volume">volume (V)</p></b><ul>
+<p>Syntax: volume &lt;volume&gt; <br/>
+              Default: 1.0 </p>
+<p>Set the volume for sound playback.<br/>
+</p>
+<p>See also: <a href="#play">play</a>, <a href="#playvol">playvol</a></p>
+</ul>
+<hr/>
+<b><p class="console-target" id="wait">wait (C)</p></b><ul>
+<p>Syntax: wait </p>
+<p>Wait a game tic.<br/>
+</p>
+</ul>
+</section>
+</main>
+</div>
+<script>
+  (function () {
+    'use strict';
+    var activeTarget = null;
+
+    function findTarget(id) {
+      return document.getElementById(id);
+    }
+
+    function navigateTo(id, updateHash) {
+      var target = findTarget(id);
+      if (!target) return false;
+
+      if (activeTarget) activeTarget.classList.remove('console-target-hit');
+      activeTarget = target;
+      activeTarget.classList.add('console-target-hit');
+
+      var top = target.getBoundingClientRect().top + window.pageYOffset - 12;
+      window.scrollTo({top: top, behavior: 'smooth'});
+
+      if (updateHash && history.replaceState) {
+        history.replaceState(null, '', '#' + encodeURIComponent(id));
+      }
+      return true;
+    }
+
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest('.console-box a[href^="#"]');
+      if (!link) return;
+
+      var id = decodeURIComponent(link.getAttribute('href').slice(1));
+      if (!id || !findTarget(id)) return;
+
+      event.preventDefault();
+      navigateTo(id, true);
+    });
+
+    window.addEventListener('load', function () {
+      if (location.hash) {
+        navigateTo(decodeURIComponent(location.hash.slice(1)), false);
+      }
+    });
+  }());
+  </script>
+</body>
+</html>

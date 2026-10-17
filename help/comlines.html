@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>[QUAD] Command Line Parameters for Quake 1.09</title>
+<link href="../css/quad.css" rel="stylesheet"/>
+<style>
+.comlines-box{width:600px;max-width:calc(100% - 16px);margin:0 auto;padding:22px 20px;box-sizing:border-box}
+.comlines-header{text-align:center;margin:0 0 18px}
+.comlines-header img{display:block;width:64px;height:64px;margin:0 auto}
+.comlines-title{margin:10px 0 12px;text-align:center;color:#fff}
+.command-line-term{margin:18px 0 6px;font-weight:bold}
+.command-line-description{margin:0 0 14px 24px}
+.command-line-description p{margin:8px 0}
+.command-line-description code{white-space:normal}
+@media(max-width:640px){.comlines-box{padding:16px 12px}.command-line-description{margin-left:14px}}
+</style>
+</head>
+<body class="content-page">
+<div class="page-fade">
+<main class="quad-content">
+<section class="content-box comlines-box">
+<header class="comlines-header">
+<img alt="Command Line Parameters" src="../images/help/comlines/comlines.gif"/>
+<h3 class="comlines-title">Command Line Parameters for Quake 1.09</h3>
+</header>
+<dl>
+<dt class="command-line-term"><b>-allow360</b> </dt>
+<dd class="command-line-description"><i>Status:</i> Disabled<p><i>Game:</i>
+            WinQuake</p>
+<p><i>Type:</i> Parameter</p>
+<p><i>Description:</i> Allow the use of video modes with the 360x???
+            resolutions.</p>
+</dd>
+<dt class="command-line-term"><b>-basedir</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Syntax:</i>
+<code>game.exe -basedir (fully qualified path)</code></p>
+<p><i>Description:</i> The location of the game data files.</p>
+<p><i>Note:</i> You can use this command to keep the executable
+            files separate of the game files and then use this command to point the game executable at
+            the location of the game files. This might be useful on networked file systems so that
+            only one copy of the game files is kept while people can use their own executable to run
+            the game. This parameter is very similar to the <code>-path</code> parameter.</p>
+<p><i>Example:</i><br/>
+<code>game.exe -basedir c:\quake</code><br/>
+<code>game.exe -basedir /usr/quake</code><br/>
+</p>
+</dd>
+<dt class="command-line-term"><b>-cachedir</b> </dt>
+<dd class="command-line-description"><i>Status:</i> Disabled<p><i>Type:</i>
+            Parameter</p>
+<p><i>Syntax:</i> <code>game.exe -cachedir (fully qualified path)</code></p>
+<p><i>Description:</i> The location of game cache files.</p>
+</dd>
+<dt class="command-line-term"><b>-condebug</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Save all console text to a file.</p>
+<p><i>Note:</i> This command was used to log all text which was
+            written to the console to the <code>qconsole.log</code> file in the <code>quake/id1/</code>
+            directory. This is very useful if you are trying to catch bugs in the game. You can also
+            use this command to keep a log of all the conversations that go on when you play on a
+            server.</p>
+</dd>
+<dt class="command-line-term"><b>-conheight</b> </dt>
+<dd class="command-line-description"><i>Game:</i> GLQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Syntax:</i> <code>game.exe -conheight (resolution)</code></p>
+<p><i>Description:</i> Specify the vertical resolution for the
+            console screen.</p>
+<p><i>Note:</i> You can use this command to stretch the size of the
+            console to the actual screen resolution in order to prevent the squashed font look. When
+            you use this command you should also use the <code>-conwidth</code> command to specify the
+            horizontal resolution.</p>
+<p><i>Example:</i><br/>
+<code>game.exe -conwidth 800 -conheight 600</code><br/>
+<code>game.exe -conwidth 640 -conheight 480</code><br/>
+</p>
+</dd>
+<dt class="command-line-term"><b>-conwidth</b> </dt>
+<dd class="command-line-description"><i>Game:</i> GLQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Syntax:</i> <code>game.exe -conwidth (resolution)</code></p>
+<p><i>Description:</i> Specify the horizontal resolution for the
+            console screen.</p>
+<p><i>Note:</i> You can use this command to stretch the size of the
+            console to the actual screen resolution in order to prevent the squashed font look. When
+            you use this command you should also use the <code>-conheight</code> command to specify
+            the vertical resolution.</p>
+<p><i>Example:</i><br/>
+<code>game.exe -conwidth 800 -conheight 600</code><br/>
+<code>game.exe -conwidth 640 -conheight 480</code><br/>
+</p>
+</dd>
+<dt class="command-line-term"><b>-current</b> </dt>
+<dd class="command-line-description"><i>Game:</i> GLQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Description:</i> Start the game in the current video mode for
+            OpenGL.</p>
+<p><i>Note:</i> This command should only be used on OpenGL
+            workstation which have integrated OpenGL accelerators.</p>
+</dd>
+<dt class="command-line-term"><b>-dedicated</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Syntax:</i>
+<code>game.exe -dedicated [maximum players]</code></p>
+<p><i>Description:</i> Start the game in a dedicated server mode.</p>
+<p><i>Note:</i> You can use this command to start a dedicated server
+            which a text only console. If you specify a number after this parameter it will be used as
+            the maximum number of players which can connect to the server and will be the maximum
+            value that you can set the <code>maxplayers</code> variable to. The maximum number of
+            players is <code>16</code>.</p>
+<p><i>Example:</i><br/>
+<code>game.exe -dedicated</code><br/>
+<code>game.exe -dedicated 16</code><br/>
+</p>
+</dd>
+<dt class="command-line-term"><b>-dibonly</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Enable windowed video modes only.</p>
+<p><i>Note:</i> If this parameter is used the game will only run in
+            windowed mode. This parameter might be useful if there are problems when running the game
+            in full screen mode.</p>
+</dd>
+<dt class="command-line-term"><b>-dinput</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Enable DirectInput mode for input devices in the game.</p>
+<p><i>Note:</i> When this parameter is used the game will use the
+            DirectX DirectInput modes for getting feedback from the input devices. This might be
+            necessary when using some of the newer joysticks or newer mouse drivers.</p>
+</dd>
+<dt class="command-line-term"><b>-force</b> </dt>
+<dd class="command-line-description"><i>Game:</i> GLQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Syntax:</i> <code>game.exe -force (video mode)</code></p>
+<p><i>Description:</i> Force the switch to the specified video mode.</p>
+<p><i>Note:</i> You can use the <code>vid_describemodes</code>
+            command to obtain a list of all the available OpenGL video modes.</p>
+<p><i>Example:</i> <code>game.exe -force 2</code></p>
+</dd>
+<dt class="command-line-term"><b>-fullsbar</b> </dt>
+<dd class="command-line-description"><i>Game:</i> GLQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Description:</i> Enable the refreshing of the full status bar.</p>
+<p><i>Note:</i> Normally the game will not refresh the full status
+            bar, only the parts of it that change. This can sometimes cause flicker when a number
+            changes on the status bar. When you use this parameter the status bar will be rendered
+            with every frame thus it will remain refreshed all the time.</p>
+</dd>
+<dt class="command-line-term"><b>-game</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Syntax:</i>
+<code>game.exe -game (relative path)</code></p>
+<p><i>Description:</i> Start the game using the files from a mission
+            pack or a mod.</p>
+<p><i>Note:</i> When this parameter is used the game will
+            additionally load the game files located in the directory specified by this parameter. By
+            default the game is started as if this parameter was specified with the <code>id1</code>
+            value. This parameter is necessary when you want to connect to a server which is running
+            one of the mission packs or a special mod such as Capture The Flag.</p>
+<p><i>Example:</i><br/>
+<code>game.exe -game ctf</code><br/>
+<code>game.exe -game rogue</code><br/>
+</p>
+</dd>
+<dt class="command-line-term"><b>-heapsize</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Syntax:</i>
+<code>game.exe -heapsize (kilobytes)</code></p>
+<p><i>Description:</i> Start the game and allocate the specified
+            number of kilobytes of memory for the game.</p>
+<p><i>Note:</i> You might need to use this parameter when playing on
+            or developing large maps which require a lot of memory. Also if you start receiving the
+            microchip icon on your game screen you might need to use this parameter to allocate more
+            memory for the game.</p>
+<p><i>Example:</i><br/>
+<code>game.exe -heapsize 16384</code><br/>
+<code>game.exe -heapsize 24576</code><br/>
+</p>
+</dd>
+<dt class="command-line-term"><b>-height</b> </dt>
+<dd class="command-line-description"><i>Game:</i> GLQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Syntax:</i> <code>game.exe -height (resolution)</code></p>
+<p><i>Description:</i> The vertical resolution to use for the game
+            screen.</p>
+<p><i>Note:</i> You should also use the <code>-width</code>
+            parameter when using this parameter to specify the horizontal resolution.</p>
+<p><i>Example:</i><br/>
+<code>game.exe -width 800 -height 600</code><br/>
+<code>game.exe -width 640 -height 480 -window</code><br/>
+</p>
+</dd>
+<dt class="command-line-term"><b>-hipnotic</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Start the game with the Hipnotic mission pack.</p>
+<p><i>Note:</i> When this parameter is used the game will be started
+            as if using the '<code>-game hipnotic</code>' parameter instead.</p>
+</dd>
+<dt class="command-line-term"><b>-ip</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Syntax:</i>
+<code>game.exe -ip (IP address)</code></p>
+<p><i>Description:</i> Start the game and specify an alternative IP
+            address to be used by the game.</p>
+<p><i>Note:</i> The only time that you would need to use this
+            command is if you are running a client or a server on a computer which has more than one
+            IP address. This command is manually specify the IP address that the game should use.</p>
+<p><i>Example:</i><br/>
+<code>game.exe -ip 127.0.0.1</code><br/>
+<code>game.exe -ip 10.0.0.1</code><br/>
+<code>game.exe -ip 123.123.123.123</code><br/>
+</p>
+</dd>
+<dt class="command-line-term"><b>-ipxport</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Syntax:</i>
+<code>game.exe -ipxport (port)</code></p>
+<p><i>Description:</i> The port number to be used by the server for
+            the IPX/SPX network protocol.</p>
+<p><i>Note:</i> This parameter should only be used if there is more
+            than one server running on the same computer. Use this parameter for the second sever and
+            specify a different IPX port than the first server. This parameter is very similar to the <code>-port</code>
+            parameter.</p>
+</dd>
+<dt class="command-line-term"><b>-listen</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Syntax:</i>
+<code>game.exe -listen [maximum players]</code></p>
+<p><i>Description:</i> Specify the maximum number of players that
+            can connect to the listen server.</p>
+<p><i>Note:</i> The maximum number of players that a listen server
+            can support is <code>8</code>. This parameter will determine the maximum value that the <code>maxplayers</code>
+            variable can be set to. If you are running a public server then you should use run a
+            dedicated server instead using the <code>-dedicated</code> parameter.</p>
+<p><i>Example:</i><br/>
+<code>game.exe -listen</code><br/>
+<code>game.exe -listen 8</code><br/>
+</p>
+</dd>
+<dt class="command-line-term"><b>-minmemory</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Syntax:</i>
+<code>game.exe -minmemory (kilobytes)</code></p>
+<p><i>Description:</i> The minimum amount of memory that will be
+            allocated by the game.</p>
+<p><i>Note:</i> It is best to leave this parameter alone and instead
+            use the <code>-heapsize</code> parameter to specify the amount of memory that the game can
+            use.</p>
+<p><i>Example:</i> <code>game.exe -minmemory 16384</code></p>
+</dd>
+<dt class="command-line-term"><b>-mode</b> </dt>
+<dd class="command-line-description"><i>Game:</i> GLQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Syntax:</i> <code>game.exe -mode (video mode)</code></p>
+<p><i>Description:</i> Start the game at the specified OpenGL video
+            mode.</p>
+<p><i>List:</i><br/>
+<code>1</code> - 640x480 in 16-bit color.<br/>
+<code>2</code> - 800x600 in 16-bit color.<br/>
+<code>3</code> - 1024x768 in 16-bit color.<br/>
+<code>4</code> - 1280x1024 in 16-bit color.<br/>
+<code>5</code> - 320x200 in 16-bit color.<br/>
+<code>6</code> - 320x240 in 16-bit color.<br/>
+<code>7</code> - 400x300 in 16-bit color.<br/>
+<code>8</code> - 512x384 in 16-bit color.<br/>
+</p>
+</dd>
+<dt class="command-line-term"><b>-noadjustaspect</b> </dt>
+<dd class="command-line-description"><i>Status:</i> Unknown<p><i>Type:</i>
+            Parameter</p>
+</dd>
+<dt class="command-line-term"><b>-noautostretch</b> </dt>
+<dd class="command-line-description"><i>Game:</i> WinQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Description:</i> Disable the stretching of the screen when
+            using high resolutions.</p>
+</dd>
+<dt class="command-line-term"><b>-nocdaudio</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Disable CD music audio.</p>
+<p><i>Note:</i> When this variable is used the <code>cd</code>
+            command will be unavailable.</p>
+</dd>
+<dt class="command-line-term"><b>-nodd</b> </dt>
+<dd class="command-line-description"><i>Game:</i> WinQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Description:</i> Disable DirectX DirectDraw video modes.</p>
+</dd>
+<dt class="command-line-term"><b>-noddraw</b> </dt>
+<dd class="command-line-description"><i>Game:</i> WinQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Description:</i> Disable DirectX DirectDraw video modes.</p>
+</dd>
+<dt class="command-line-term"><b>-nodirectdraw</b> </dt>
+<dd class="command-line-description"><i>Game:</i> WinQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Description:</i> Disable DirectX DirectDraw video modes.</p>
+</dd>
+<dt class="command-line-term"><b>-noforcemaccel</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Disable the setting of mouse acceleration.</p>
+<p><i>Note:</i> This parameter should only be used if you experiance
+            problems with the mouse.</p>
+</dd>
+<dt class="command-line-term"><b>-noforcemparms</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Disable the setting of mouse parameters.</p>
+<p><i>Note:</i> This parameter should only be used if you experiance
+            problems with the mouse.</p>
+</dd>
+<dt class="command-line-term"><b>-noforcemspd</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Disable the setting of mouse speed.</p>
+<p><i>Note:</i> This parameter should only be used if you experiance
+            problems with the mouse.</p>
+</dd>
+<dt class="command-line-term"><b>-noforcevga</b> </dt>
+<dd class="command-line-description"><i>Game:</i> WinQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Description:</i> Disable the forcing of the VGA video mode on
+            startup.</p>
+</dd>
+<dt class="command-line-term"><b>-nofulldib</b> </dt>
+<dd class="command-line-description"><i>Game:</i> WinQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Description:</i> Disable full screen window compatibility
+            mode.</p>
+<p><i>Note:</i> Some full screen modes are nothing more than window
+            display modes which have been sized to the exact size of the screen. This parameter will
+            disable support for such modes.</p>
+</dd>
+<dt class="command-line-term"><b>-noipx</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Disable game support for the IPX/SPX network protocol.</p>
+</dd>
+<dt class="command-line-term"><b>-nojoy</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Disable joystick support.</p>
+<p><i>Note:</i> When this parameter is used only support for the
+            joystick will be disabled, the fun factor in the game will remain the same.</p>
+</dd>
+<dt class="command-line-term"><b>-nolan</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Disable support for all network protocols.</p>
+</dd>
+<dt class="command-line-term"><b>-nomouse</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Disable support for the mouse.</p>
+</dd>
+<dt class="command-line-term"><b>-nosound</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Disable support for sound hardware.</p>
+</dd>
+<dt class="command-line-term"><b>-notriplebuf</b> </dt>
+<dd class="command-line-description"><i>Game:</i> WinQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Description:</i> Disable triple buffering video modes.</p>
+<p><i>Note:</i> This parameter will disable support for triple
+            buffer thus it will make the performance of the Accelerated VESA video drivers similar to
+            the Linear VESA drivers.</p>
+</dd>
+<dt class="command-line-term"><b>-noudp</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Disable support for the TCP/IP network protocol.</p>
+</dd>
+<dt class="command-line-term"><b>-novbeaf</b> </dt>
+<dd class="command-line-description"><i>Game:</i> WinQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Description:</i> Disable support for the Accelerated VESA
+            video modes.</p>
+</dd>
+<dt class="command-line-term"><b>-novesa</b> </dt>
+<dd class="command-line-description"><i>Game:</i> WinQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Description:</i> Disable support for all VESA video modes.</p>
+</dd>
+<dt class="command-line-term"><b>-nowd</b> </dt>
+<dd class="command-line-description"><i>Game:</i> WinQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Description:</i> Disable support for VESA video modes in favor
+            of DirectX DirectDraw video modes.</p>
+</dd>
+<dt class="command-line-term"><b>-nowindirect</b> </dt>
+<dd class="command-line-description"><i>Game:</i> WinQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Description:</i> Disable support for VESA video modes in favor
+            of DirectX DirectDraw video modes.</p>
+</dd>
+<dt class="command-line-term"><b>-particles</b> </dt>
+<dd class="command-line-description"><i>Game:</i> GLQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Syntax:</i> <code>game.exe -particles (particles)</code></p>
+<p><i>Description:</i> Specify the maximum number of particles to be
+            rendered on the screen at once.</p>
+<p><i>Example:</i> <code>game.exe -particles 5000</code></p>
+</dd>
+<dt class="command-line-term"><b>-path</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Syntax:</i>
+<code>game.exe -path (fully qualified path)</code></p>
+<p><i>Description:</i> Specify the location of game files.</p>
+<p><i>Note:</i> This parameter is very similar in context to the <code>-basedir</code>
+            parameter. You can use this parameter to specify the location of the game files.</p>
+<p><i>Example:</i><br/>
+<code>game.exe -path c:\quake</code><br/>
+<code>game.exe -path /usr/quake</code><br/>
+</p>
+</dd>
+<dt class="command-line-term"><b>-playback</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Load the information stored inside the <code>quake.vcr</code> file.</p>
+<p><i>Note:</i> If you wish to use this parameter you will have to
+            start the game without any other parameters so that the command line looks like '<code>game.exe
+            -playback</code>'.</p>
+</dd>
+<dt class="command-line-term"><b>-port</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Syntax:</i>
+<code>game.exe -port (port)</code></p>
+<p><i>Description:</i> The UDP port number used for the TCP/IP
+            network protocol for the server.</p>
+<p><i>Note:</i> If you run more than one server on the same computer
+            you will need to use this parameter to specify alterntaive ports for each server. The
+            default port value is <code>26000</code>, so it is recommended that you use port numbers
+            consecutive from that number, such as <code>26001</code> and so on. Any client who wishes
+            to connect to your server will have to set the port number in the <code>port</code>
+            variable in order to connect. You can also use the <code>-ipxport</code> or <code>-udpport</code>
+            to assign individual port numbers for each protocol.</p>
+<p><i>Example:</i><br/>
+<code>game.exe -port 26001</code><br/>
+<code>game.exe -port 25894</code><br/>
+</p>
+</dd>
+<dt class="command-line-term"><b>-primarysound</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Enable the use of the primary sound buffer when using DirectX DirectSound drivers.</p>
+<p><i>Note:</i> Normally the game will use the secondary sound
+            buffer because it is more compatible across more hardware. If you know that your harder is
+            100% DirectX DirectSound compliment you can use this setting in order to increase the
+            performance of the game.</p>
+</dd>
+<dt class="command-line-term"><b>-proghack</b> </dt>
+<dd class="command-line-description"><i>Status:</i> Unknown<p><i>Type:</i>
+            Parameter</p>
+</dd>
+<dt class="command-line-term"><b>-record</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Store debugging information.</p>
+<p><i>Note:</i> This command will create a file called <code>quake.vcr</code>
+            in the <code>quake/</code> directory. The file will contain the command line parameters
+            used to start the game, the names of all the game files which have been loaded into memory
+            and other types of information. This must have been the debugging file.</p>
+</dd>
+<dt class="command-line-term"><b>-resetwinpos</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Reset the postition of the game window on the desktop.</p>
+<p><i>Note:</i> If the game window will ever become inaccessible
+            because it was moved beyond the boundaries of the desktop you will have to use this
+            command to reset the position information for the game window. The position information is
+            stored in the <code>vid_window_x</code> and <code>vid_window_y</code> variables.</p>
+</dd>
+<dt class="command-line-term"><b>-rogue</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Start the game with the Rogue mission pack.</p>
+<p><i>Note:</i> When this parameter is used the game will be started
+            as if using the '<code>-game rogue</code>' parameter instead.</p>
+</dd>
+<dt class="command-line-term"><b>-safe</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Start the game in safe mode.</p>
+<p><i>Note:</i> When this parameter is used the game will start with
+            many options disabled in order to get the game up and running. If this parameter is used
+            it is equivalent to specifing all of the parameters which start with <code>-no</code>.</p>
+</dd>
+<dt class="command-line-term"><b>-simsound</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Disable sound playback but leave all sound functions enabled.</p>
+<p><i>Note:</i> When this parameter is used the game will function
+            as if sound is being played back normally, except that the sound card will not be
+            initialized and nothing will be heard from the speakers. This command will cut off the
+            sound information right before it is about to leave to the sound card for processing. This
+            command was used for testing the sound code in the game.</p>
+</dd>
+<dt class="command-line-term"><b>-snoforceformat</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Disable the forcing of the soundcard into the appropriate sound mode.</p>
+<p><i>Note:</i> When this parameter is used the game will not try to
+            force the sound card into the 11,025Hz at 16-bit stereo sound mode. Use this parameter if
+            you are having problems with the sound initialization for your sound card.</p>
+</dd>
+<dt class="command-line-term"><b>-starttime</b> </dt>
+<dd class="command-line-description"><i>Status:</i> Unknown<p><i>Type:</i>
+            Parameter</p>
+</dd>
+<dt class="command-line-term"><b>-startwindowed</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Start the game in windowed video mode.</p>
+<p><i>Note:</i> When this parameter is used the game will start in
+            the 640x480 windowed video mode <code>1</code>.</p>
+</dd>
+<dt class="command-line-term"><b>-stdvid</b> </dt>
+<dd class="command-line-description"><i>Status:</i> Unknown<p><i>Type:</i>
+            Parameter</p>
+</dd>
+<dt class="command-line-term"><b>-surfcachesize</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Syntax:</i>
+<code>game.exe -surfcachesize (kilobytes)</code></p>
+<p><i>Description:</i> Allocate the specified amount of memory for
+            storing textures.</p>
+<p><i>Note:</i> It is not necessary to use this parameter by default
+            because the game will automatically allocate the necessary amount of memory for storing
+            textures.</p>
+<p><i>Example:</i> <code>game.exe -surfcachesize 4096</code></p>
+</dd>
+<dt class="command-line-term"><b>-udpport</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Syntax:</i>
+<code>game.exe -udpport (port)</code></p>
+<p><i>Description:</i> Specify the UDP port number that the game
+            should use for the TCP/IP network protocol.</p>
+<p><i>Note:</i> You only need to use this parameter if you run more
+            than one server on the same computer and must assign an individual port to each server.
+            The default UDP port number used by the game is <code>26000</code>. This parameter works
+            exactly the same as the <code>-port</code> parameter.</p>
+<p><i>Example:</i><br/>
+<code>game.exe -port 26001</code><br/>
+<code>game.exe -port 25894</code><br/>
+</p>
+</dd>
+<dt class="command-line-term"><b>-wavonly</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Description:</i>
+            Disable support for DirectX DirectSound in favor of wave only output.</p>
+<p><i>Note:</i> If your sound card does not support DirectX
+            DirectSound then you will need to specify this parameter in order to force the game into
+            use the Windows wave only sound output. There will be a considerable loss in performance
+            when using this parameter, but at least you'll be able to hear sounds.</p>
+</dd>
+<dt class="command-line-term"><b>-width</b> </dt>
+<dd class="command-line-description"><i>Game:</i> GLQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Syntax:</i> <code>game.exe -width (resolution)</code></p>
+<p><i>Description:</i> The horizontal resolution to use for the game
+            screen.</p>
+<p><i>Note:</i> You should also use the <code>-height</code>
+            parameter when using this parameter to specify the vertical resolution.</p>
+<p><i>Example:</i><br/>
+<code>game.exe -width 800 -height 600</code><br/>
+<code>game.exe -width 640 -height 480 -window</code><br/>
+</p>
+</dd>
+<dt class="command-line-term"><b>-window</b> </dt>
+<dd class="command-line-description"><i>Game:</i> GLQuake<p><i>Type:</i>
+            Parameter</p>
+<p><i>Description:</i> Start the game in a windowed OpenGL video
+            mode.</p>
+<p><i>Note:</i> If you are using a 3Dfx Voodoo or Voodoo 2 card it
+            is recommended that you use this parameter to start the game. When you use the <kbd>ALT+TAB</kbd>
+            keyboard combination to switch to another window on your desktop normally the desktop
+            resolution would still be at the resolution used in the game thus enlarging or shrinking
+            your desktop. When you use this parameter the game will still play in full screen mode but
+            when you switch away from the game the desktop resolution will return to the normal
+            resolution.</p>
+</dd>
+<dt class="command-line-term"><b>-zone</b> </dt>
+<dd class="command-line-description"><i>Type:</i> Parameter<p><i>Syntax:</i>
+<code>game.exe -zone (bytes)</code></p>
+<p><i>Description:</i> Specify the amount of memory in bytes to
+            allocate to holding dynamic information such as aliases.</p>
+<p><i>Note:</i> You will need to specify a value such as <code>512</code>
+            if you experience game crashes because of too many aliases being loaded into memory. It is
+            not necessary specify any larger value, since this value will work suffice.</p>
+<p><i>Example:</i> <code>game.exe -zone 512</code></p>
+</dd>
+</dl>
+</section>
+</main>
+</div>
+</body>
+</html>
