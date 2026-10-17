@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>[QUAD] NetQuake Servers</title>
+  <link rel="stylesheet" href="../css/quad.css">
+  <style>
+    .servers-box{width:760px;max-width:calc(100% - 16px);margin:0 auto;padding:22px 20px;box-sizing:border-box}
+    .servers-header{text-align:center;margin:0 0 18px}.servers-header img{display:block;width:64px;height:64px;margin:0 auto;border:0}.servers-title{margin:10px 0 6px;text-align:center;color:#fff}.servers-summary{min-height:16px;margin:0;text-align:center}
+    .servers-actions{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;margin:16px 0}.servers-actions button{font:inherit;color:inherit;background:transparent;border:1px solid #666;padding:4px 10px;cursor:pointer}.servers-actions button:hover,.servers-actions button:focus-visible{border-color:#aaa;color:#fff}.servers-actions button:disabled{opacity:.5;cursor:default}
+    .servers-table-wrap{overflow-x:auto}.servers-table{width:100%;border-collapse:collapse;table-layout:fixed}.servers-table th,.servers-table td{padding:7px 8px;border-bottom:1px solid #333;text-align:left;vertical-align:middle;overflow-wrap:anywhere}.servers-table th{color:#f00;font-weight:normal}.servers-table .server-name{width:31%}.servers-table .server-map{width:15%}.servers-table .server-players{width:12%;text-align:center}.servers-table .server-mod{width:17%}.servers-table .server-address{width:25%}
+    .server-live{color:#fff}.server-empty{color:#aaa}.server-offline{opacity:.55}.copy-address,.players-toggle{font:inherit;color:inherit;background:transparent;border:0;padding:0;cursor:pointer;text-decoration:underline}.copy-address:hover,.copy-address:focus-visible,.players-toggle:hover,.players-toggle:focus-visible{color:#fff}.players-toggle[aria-expanded="true"]{color:#fff}
+    .roster-row td{padding:0 8px 10px;border-bottom:1px solid #444}.roster-panel{margin:0 0 2px;padding:10px 12px;background:rgba(0,0,0,.18)}.roster-status{text-align:center;color:#aaa}.roster-table{width:100%;border-collapse:collapse;table-layout:auto}.roster-table th,.roster-table td{padding:4px 8px;border:0}.roster-table th{color:#f00;font-weight:normal;border-bottom:1px solid #333}.roster-table .roster-score,.roster-table .roster-ping{text-align:right;width:80px}.roster-kind{color:#888;font-size:10px;margin-left:7px}
+    .servers-message{padding:18px;text-align:center}.servers-credit{margin:18px 0 0;text-align:center}.servers-credit p{margin:4px 0}@media(max-width:640px){.servers-box{padding:16px 12px}.servers-table{min-width:680px}}
+  </style>
+</head>
+<body class="content-page"><div class="page-fade"><main class="quad-content"><section class="content-box servers-box">
+<header class="servers-header"><img src="../images/news/servers/servers.jpg" alt="" aria-hidden="true" width="64" height="64"><h3 class="servers-title">NetQuake Servers</h3><p class="servers-summary" id="serversSummary" aria-live="polite">Loading live NetQuake servers...</p></header>
+<div class="servers-actions"><button type="button" id="refreshServers">Refresh</button><span id="serversUpdated"></span></div>
+<div class="servers-table-wrap"><table class="servers-table" id="serversTable" hidden><thead><tr><th class="server-name" scope="col">Server</th><th class="server-map" scope="col">Map</th><th class="server-players" scope="col">Players</th><th class="server-mod" scope="col">Mod</th><th class="server-address" scope="col">Address</th></tr></thead><tbody id="serversBody"></tbody></table><div class="servers-message" id="serversMessage">Contacting the NetQuake server feed...</div></div>
+<footer class="servers-credit"><p>Live NetQuake data provided by <a href="https://quakehub.net/netquake-servers" target="_blank" rel="noopener noreferrer">QuakeHub</a>.</p><p>See also the <a href="https://servers.quakeone.com/" target="_blank" rel="noopener noreferrer">QuakeOne Server Browser</a>.</p></footer>
+</section></main></div><script src="../js/servers.js"></script></body></html>
