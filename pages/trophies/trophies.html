@@ -69,7 +69,7 @@
     var player=p[p.length-2];
     player=player.charAt(0).toUpperCase()+player.slice(1);
     var m=file.match(/^(\d{4})(\d{2})(\d{2})_/);
-    return{player:player,date:m?m[3]+'/'+m[2]+'/'+m[1]:''};
+    return{player:player,date:m?m[2]+'/'+m[3]+'/'+m[1]:''};
   }
 
   function fadeChange(action,scrollTo){
