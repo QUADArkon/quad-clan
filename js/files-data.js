@@ -1,3 +1,134 @@
 /* QUAD Files catalogue.
    Add entries here progressively as files are published. */
-window.QUAD_FILES = [];
+window.QUAD_FILES = [
+  {
+    id: "obots102",
+    category: "bots",
+    title: "Omicron Bot 1.02",
+    latestTitle: "Omicron Bot",
+    filename: "obots102.zip",
+    date: "23031998",
+    version: "1.02",
+    author: "Mr. Elusive",
+    size: "986 KB",
+    description: "Advanced Quake bot featuring dynamic level learning: Omicron Bots can learn maps while playing, remember item locations and routes, and can also learn the level by following a human player's movement. Version 1.02 also includes Rocket Arena support.",
+    active: true
+  },
+  {
+  id: "extreme400",
+  category: "mods",
+  title: "Quake Extreme Mod 4.00",
+  latestTitle: "Extreme",
+  filename: "extreme.zip",
+  date: "15112003",
+  version: "4.00",
+  author: "Xeno & Arkon",
+  size: "713 KB",
+  description: "Single-player and cooperative Quake modification focused on completing maps as quickly and completely as possible with a weapon of your choice. Each map starts with only the ammunition required to kill all monsters and activate shootable doors and buttons, making the selected weapon an important part of the challenge. Performance is evaluated according to monsters killed and secrets found. Version 4.00 supports standard Quake, Scourge of Armagon and Dissolution of Eternity, with cooperative play for up to two players.",
+  active: true
+  },
+  {
+  id: "pakscape011",
+  category: "tools",
+  title: "PakScape 0.11",
+  latestTitle: "PakScape",
+  filename: "pakscape.zip",
+  date: "25072000",
+  version: "0.11",
+  author: "Peter Engström",
+  size: "106 KB",
+  description: "PAK, PK3, VOL and ZIP archive explorer and creator with an Explorer-like interface, multiple document support, drag and drop, and file and directory import/export. PakScape supports the PAK formats used by Quake and Quake II engine-based games, making it a convenient tool for browsing, extracting, creating and modifying Quake PAK archives.",
+  active: true
+  },
+  {
+  id: "qview50",
+  category: "tools",
+  title: "QView 5.0",
+  latestTitle: "QView 5.0",
+  filename: "qview.zip",
+  date: "09011999",
+  version: "5.0",
+  author: "Steve Otteson",
+  size: "485 KB",
+  description: "Quake server browser and administration suite displaying real-time server and player statistics, with automatic refresh, filters, player colors, server groups and configurable Quake launch options. The package also includes QHost functionality for remote server administration, allowing authorized users to start, stop and schedule game servers, view and control remote consoles, manage access rights and automatically restart crashed servers.",
+  active: true
+  },
+  {
+  id: "adquedit13",
+  category: "tools",
+  title: "AdQuedit 1.3",
+  latestTitle: "AdQuedit 1.3",
+  filename: "adquedit.zip",
+  date: "19081997",
+  version: "1.3",
+  author: "Cable Hicks",
+  size: "486 KB",
+  description: "Quake editing workstation, frontend and file-format utility designed to manipulate many of Quake's native resources. AdQuedit can replace textures in BSP files, edit entity lists, change model skins, create sprites and mip textures, and provides extensive WAD editing tools. The archive also includes the AdQuedit manual.",
+  active: true
+  },
+  {
+  id: "qme31p2",
+  category: "tools",
+  title: "QME 3.1 Preview 2",
+  latestTitle: "QME 3.1p2",
+  filename: "qme.zip",
+  date: "18031998",
+  version: "3.1 Preview 2",
+  author: "Rene Post",
+  size: "3.20 MB",
+  description: "Quake model editing suite including QME 3.0 Full and the 3.1 Preview 2 update. QME combines a 3D modeller, animator, 3D painter and 2D texture editor for creating and modifying Quake models, skins, textures and animations. The 3.1 Preview 2 update adds inverse kinematics, colormap and palette editing, Quake II model support and Hexen II Mission Pack model support.",
+  active: true
+  },
+  {
+  id: "texmex34",
+  category: "tools",
+  title: "Tex-Mex 3.4",
+  latestTitle: "Tex-Mex 3.4",
+  filename: "texmex.zip",
+  date: "16102000",
+  version: "3.4",
+  author: "Mickey",
+  size: "467 KB",
+  description: "Powerful texture and WAD editor with support for Quake BSP files, image import/export, custom palettes and animated textures. Textures can be replaced directly inside BSP files while preserving the original map structure.",
+  active: true
+  },
+  {
+  id: "fimg02",
+  category: "tools",
+  title: "Fimg 0.2",
+  latestTitle: "Fimg 0.2",
+  filename: "fimg.zip",
+  date: "21052009",
+  version: "0.2",
+  author: "Frikac",
+  size: "997 KB",
+  description: "Win32 image and sprite editor designed for game graphics. Fimg supports Quake SPR sprites, DarkPlaces SPR32 sprites, WAD2 and LMP files, together with several standard image formats, and includes dedicated palette and properties editing tools.",
+  active: true
+  },
+  {
+  id: "vispatch147",
+  category: "tools",
+  title: "VisPatch 1.4.7",
+  latestTitle: "VisPatch 1.4.7",
+  filename: "vispatch.zip",
+  date: "31122024",
+  version: "1.4.7",
+  author: "Andy Bay",
+  size: "2.57 MB",
+  description: "WaterVIS utility for applying transparent-water visibility data to Quake maps. This package includes VisPatch 1.4.7 together with ready-to-use VIS data for the original Quake maps, Scourge of Armagon and Dissolution of Eternity, allowing the official maps to support transparent water in compatible engines without recalculating their visibility data.",
+  active: true
+  },
+  {
+    id: "crmod66",
+    category: "mods",
+    title: "ClanRing CRMod++ 6.6",
+    latestTitle: "CRMod 6.6",
+    filename: "crmod66.zip",
+    date: "12032017",
+    version: "6.6",
+    author: "J.P. Grossman",
+    size: "269 KB",
+    description: "Quake 1 NetQuake competition server mod designed for FFA and organized match play. CRMod++ includes ffa, match, individual and practice modes, multiple observer and camera modes, player and team statistics, administrator controls, voting, server configuration features, entity and camera support, and native ProQuake integration.",
+    active: true
+  }
+];

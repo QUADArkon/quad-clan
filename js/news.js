@@ -3,8 +3,8 @@
 var FADE_MS=500,currentRandom=null,savedScroll=0;
 var AUTHOR_PAGES={Arkon:'members/arkon.html',Raistlin:'members/raistlin.html'};
 var page=document.getElementById('newsPage'),box=document.getElementById('randomPictureBox'),thumb=document.getElementById('randomPictureThumb'),info=document.getElementById('randomPictureInfo'),main=document.getElementById('newsMainView'),viewer=document.getElementById('randomViewer'),viewerImage=document.getElementById('randomViewerImage'),viewerInfo=document.getElementById('randomViewerInfo'),back=document.getElementById('randomBack'),tools=document.querySelector('.news-tools');
-function fmt(v){return v&&v.length===8?v.slice(6,8)+'/'+v.slice(4,6)+'/'+v.slice(0,4):v||''}
-function makeTrophy(path){var p=path.replace(/\\/g,'/').split('/'),file=p[p.length-1],player=p[p.length-2]||'',m=file.match(/^(\d{4})(\d{2})(\d{2})_/);player=player.charAt(0).toUpperCase()+player.slice(1);return{path:path,lines:['Trophies',player,m?m[3]+'/'+m[2]+'/'+m[1]:'']}}
+function fmt(v){return v&&v.length===8?v.slice(4,6)+'/'+v.slice(6,8)+'/'+v.slice(0,4):v||''}
+function makeTrophy(path){var p=path.replace(/\\/g,'/').split('/'),file=p[p.length-1],player=p[p.length-2]||'',m=file.match(/^(\d{4})(\d{2})(\d{2})_/);player=player.charAt(0).toUpperCase()+player.slice(1);return{path:path,lines:['Trophies',player,m?m[2]+'/'+m[3]+'/'+m[1]:'']}}
 function lanPath(x){return typeof x==='string'?x:x.path}
 function makeLan(a,x){var lines=[a.title];if(a.place)lines.push(a.place);if(a.id==='quads')lines.push(fmt(x.date));else if(a.dateEnd)lines.push(fmt(a.date)+' - '+fmt(a.dateEnd));else lines.push(fmt(a.date));return{path:lanPath(x),lines:lines}}
 function chooseTrophy(){return typeof trophies!=='undefined'&&trophies.length?makeTrophy(trophies[Math.floor(Math.random()*trophies.length)]):null}

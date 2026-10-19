@@ -2,6 +2,14 @@
   'use strict';
 
   var catalogue = Array.isArray(window.QUAD_FILES) ? window.QUAD_FILES : [];
+  var CATEGORY_PAGES = {
+    engines: 'files/engines.html',
+    maps: 'files/maps.html',
+    mods: 'files/mods.html',
+    bots: 'files/bots.html',
+    improvements: 'files/improvements.html',
+    tools: 'files/tools.html'
+  };
 
   function activeFiles() {
     return catalogue.filter(function (file) {
@@ -9,20 +17,45 @@
     });
   }
 
+  /* Stored as DDMMYYYY. Convert only for chronological comparison. */
+  function dateKey(value) {
+    var v = String(value || '');
+    var m = v.match(/^(\d{2})(\d{2})(\d{4})$/);
+    return m ? m[3] + m[2] + m[1] : '';
+  }
+
   function sortNewest(list) {
     return list.slice().sort(function (a, b) {
-      return String(b.date || '').localeCompare(String(a.date || ''));
+      return dateKey(b.date).localeCompare(dateKey(a.date));
     });
   }
 
+  /* Visible dates use English/US format MM/DD/YYYY. */
   function displayDate(value) {
     var v = String(value || '');
-    var m = v.match(/^(\d{4})-(\d{2})-(\d{2})$/);
-    return m ? m[2] + '/' + m[3] + '/' + m[1].slice(2) : v;
+    var m = v.match(/^(\d{2})(\d{2})(\d{4})$/);
+    return m ? m[2] + '/' + m[1] + '/' + m[3] : v;
   }
 
   function downloadHref(file) {
     return file.filename ? '../files/' + file.category + '/' + file.filename : '';
+  }
+
+  function categoryHref(file) {
+    var page = CATEGORY_PAGES[file.category];
+    return page && file.id ? page + '#' + encodeURIComponent(file.id) : '';
+  }
+
+  function navigateInternal(href) {
+    if (!href) return;
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'quad-desktop-navigate',
+        href: href
+      }, '*');
+    } else {
+      window.location.href = '../' + href;
+    }
   }
 
   function renderCategory() {
@@ -63,7 +96,8 @@
       if (file.version) metaParts.push('Version: ' + file.version);
       if (file.author) metaParts.push('Author: ' + file.author);
       if (file.size) metaParts.push('Size: ' + file.size);
-      if (file.date) metaParts.push('Date: ' + file.date);
+      if (file.date) metaParts.push('Date: ' + displayDate(file.date));
+
       if (metaParts.length) {
         var meta = document.createElement('p');
         meta.className = 'file-meta';
@@ -78,8 +112,35 @@
         download.textContent = 'Download ' + file.filename;
         article.appendChild(download);
       }
+
       list.appendChild(article);
     });
+
+    highlightHashTarget();
+  }
+
+  function highlightHashTarget() {
+    if (!window.location.hash) return;
+    var id;
+    try {
+      id = decodeURIComponent(window.location.hash.slice(1));
+    } catch (e) {
+      id = window.location.hash.slice(1);
+    }
+    if (!id) return;
+
+    var target = document.getElementById(id);
+    if (!target) return;
+
+    var title = target.querySelector('.file-title');
+    target.scrollIntoView({block: 'center'});
+
+    if (title) {
+      title.classList.add('is-target');
+      window.setTimeout(function () {
+        title.classList.remove('is-target');
+      }, 1800);
+    }
   }
 
   function renderLatest() {
@@ -100,14 +161,23 @@
     }
 
     files.forEach(function (file) {
+      var href = categoryHref(file);
+      if (!href) return;
+
       var a = document.createElement('a');
-      a.href = downloadHref(file);
-      a.target = 'main';
+      a.href = '../' + href;
+
       var label = displayDate(file.date);
       if (label) label += ' ';
-      label += file.title || file.filename || 'Untitled file';
+      label += file.latestTitle || file.title || file.filename || 'Untitled file';
       if (file.author) label += ' by ' + file.author;
       a.textContent = label;
+
+      a.addEventListener('click', function (event) {
+        event.preventDefault();
+        navigateInternal(href);
+      });
+
       links.appendChild(a);
     });
 
