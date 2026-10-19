@@ -8,24 +8,40 @@
   const menuHost = document.getElementById('mobile-menu-host');
   let desktopBusy = false;
   let mobileBusy = false;
+  function finishFade(frame, type) {
+    window.requestAnimationFrame(() => frame.classList.remove('is-fading'));
+    if (type === 'desktop') desktopBusy = false;
+    else mobileBusy = false;
+  }
+  function isAsyncPage(href) {
+    return /(?:^|\/)news\/servers\.html(?:[?#]|$)/.test(String(href));
+  }
   function fadeNavigate(frame, href, type) {
     if (!frame || !href) return;
     if ((type === 'desktop' && desktopBusy) || (type === 'mobile' && mobileBusy)) return;
     if (type === 'desktop') desktopBusy = true;
     else mobileBusy = true;
+    frame.dataset.quadWaitReady = isAsyncPage(href) ? '1' : '0';
+    frame.dataset.quadFrameType = type;
     frame.classList.add('is-fading');
     window.setTimeout(() => {
       frame.addEventListener('load', () => {
-        window.requestAnimationFrame(() => frame.classList.remove('is-fading'));
-        if (type === 'desktop') desktopBusy = false;
-        else mobileBusy = false;
+        if (frame.dataset.quadWaitReady !== '1') finishFade(frame, type);
       }, { once: true });
       frame.src = href;
     }, FADE_MS);
   }
   window.addEventListener('message', event => {
     const data = event.data;
-    if (!data || data.type !== 'quad-desktop-navigate' || typeof data.href !== 'string') return;
+    if (!data) return;
+    if (data.type === 'quad-page-ready') {
+      const frame = mobileMain && event.source === mobileMain.contentWindow ? mobileMain : desktopMain;
+      if (!frame || event.source !== frame.contentWindow || frame.dataset.quadWaitReady !== '1') return;
+      frame.dataset.quadWaitReady = '0';
+      finishFade(frame, frame.dataset.quadFrameType || (frame === mobileMain ? 'mobile' : 'desktop'));
+      return;
+    }
+    if (data.type !== 'quad-desktop-navigate' || typeof data.href !== 'string') return;
     if (mobileMain && event.source === mobileMain.contentWindow) {
       fadeNavigate(mobileMain, data.href, 'mobile');
       return;
