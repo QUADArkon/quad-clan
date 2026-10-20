@@ -38,7 +38,7 @@
   }
 
   function downloadHref(file) {
-    return file.filename ? '../files/' + file.category + '/' + file.filename : '';
+    return file.url || (file.filename ? '../files/' + file.category + '/' + file.filename : '');
   }
 
   function categoryHref(file) {
