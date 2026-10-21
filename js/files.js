@@ -4,7 +4,8 @@
   var catalogue = Array.isArray(window.QUAD_FILES) ? window.QUAD_FILES : [];
   var CATEGORY_PAGES = {
     engines: 'files/engines.html',
-    maps: 'files/maps.html',
+    maps_sp: 'files/maps_sp.html',
+    maps_mp: 'files/maps_mp.html',
     mods: 'files/mods.html',
     bots: 'files/bots.html',
     improvements: 'files/improvements.html',

@@ -297,6 +297,30 @@ window.QUAD_FILES = [
     description: "Texture WAD collection for Quake, Scourge of Armagon and Dissolution of Eternity, providing the id1, Hipnotic and Rogue texture sets for map editing."
   },
   {
+    id: "a-desert-dusk",
+    category: "maps_sp",
+    title: "A Desert Dusk",
+    latestTitle: "A Desert Dusk",
+    filename: "add.zip",
+    date: "07052003",
+    version: "1.0",
+    size: "3.24 MB",
+    author: "Dustin Geeraert",
+    description: "Single-player Quake map set in a desert fortress and canyon environment, with skill levels and additional Cooperative and Deathmatch support."
+  },
+  {
+    id: "aerowalk",
+    category: "maps_mp",
+    title: "AeroWalk",
+    latestTitle: "AeroWalk",
+    filename: "aerowalk.zip",
+    date: "21021998",
+    version: "1.0",
+    size: "221 KB",
+    author: "Mattias Konradsson",
+    description: "Medium-sized Quake deathmatch map designed especially for fast 1-on-1 play, with support for up to 16 players."
+  },
+  {
     id: "crmod66",
     category: "mods",
     title: "ClanRing CRMod++ 6.6",
