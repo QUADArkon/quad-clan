@@ -3,7 +3,7 @@ window.QUAD_MENU = [
     ["Clan Logo", "pages/logo/logo.html"], ["History", "pages/history/history.html"], ["Code", "pages/code/code.html"], ["Join", "pages/join/join.html"], ["Challenge", "pages/challenge/challenge.html"], ["Clanwars", "pages/clanwars/clanwars.html"], ["Demos", "pages/demos/demos.html"], ["Trophies", "pages/trophies/trophies.html"], ["LAN Parties", "pages/lan/lans.html"]
   ]},
   { title: "News & Boards", items: [
-    ["News", "news/news.html"], ["[QUAD] Forum", "https://pub22.bravenet.com/forum/1809239735/"], ["NetQuake Servers", "news/servers.html"], ["Interviews", "news/interviews.html"], ["Links", "news/links.html"]
+    ["News", "news/news.html"], ["News Archive", "news/archive.html"], ["[QUAD] Forum", "https://pub22.bravenet.com/forum/1809239735/"], ["NetQuake Servers", "news/servers.html"], ["Interviews", "news/interviews.html"], ["Links", "news/links.html"]
   ]},
   { title: "Hints & Guides", items: [
     ["Quake Bible", "help/bible.html"], ["Maps Overview", "help/overview.html"], ["Console 1.06", "help/console.html"], ["Command Line 1.09", "help/comlines.html"], ["Online Name Maker", "help/name.html"], ["N.O.T. Rules", "help/rules.html"], ["Quetiquette", "help/quetiquette.html"]
