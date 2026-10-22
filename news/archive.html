@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>[QUAD] News Archive</title>
+  <link rel="stylesheet" href="../css/quad.css">
+  <style>
+    .archive-shell{width:600px;max-width:calc(100% - 16px);margin:0 auto;padding:22px 20px;box-sizing:border-box}
+    #archiveContent{opacity:1;transition:opacity .5s ease}#archiveContent.is-fading{opacity:0}.archive-view[hidden]{display:none}
+    .archive-header{text-align:center;margin:0 0 18px}.archive-header img{display:block;width:64px;height:64px;margin:0 auto;border:0}.archive-title{margin:10px 0 6px;text-align:center;color:#fff}.archive-month-title{margin:10px 0 14px;text-align:center;color:#fff;font-size:1.17em}
+    .archive-years{margin:22px 0 0;text-align:center}.archive-year{margin:0 0 20px}.archive-year-title{margin:0 0 10px;color:#fff}.archive-month-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px 12px;text-align:center}.archive-month-list li{margin:0}
+    .archive-news{width:100%;max-width:none;margin:0 0 14px;padding:14px 16px;box-sizing:border-box}.archive-news:last-of-type{margin-bottom:0}.archive-news .news-header{margin:0 0 12px}.archive-news .news-title{text-align:center}.archive-news .news-meta{text-align:left}.archive-news .news-content{margin:0}.archive-news .news-content p{margin:0 0 12px}.archive-news .news-content p:last-child{margin-bottom:0}
+    #archiveMonthNews{margin:0;padding:0} .archive-back{text-align:center;margin:24px 0 0}
+    @media(max-width:640px){.archive-shell{padding:16px 12px}.archive-month-list{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body class="content-page">
+  <div class="page-fade" id="archiveContent">
+    <main class="quad-content">
+      <section class="content-box archive-shell">
+        <header class="archive-header">
+          <img src="../images/news/archive/archive.png" alt="" aria-hidden="true" width="64" height="64">
+          <h3 class="archive-title">News Archive</h3>
+        </header>
+        <div id="archiveStage">
+          <section class="archive-view" data-view="index" id="view-index">
+            <div class="archive-years" id="archiveYears"></div>
+          </section>
+          <section class="archive-view" data-view="month" id="view-month" hidden>
+            <h3 class="archive-month-title" id="archiveMonthTitle"></h3>
+            <div id="archiveMonthNews"></div>
+            <p class="archive-back"><a href="#" data-view="index">Back to News Archive</a></p>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="../js/news-data.js"></script>
+  <script>
+  (function(){
+    'use strict';
+    var content=document.getElementById('archiveContent');
+    var yearsHost=document.getElementById('archiveYears');
+    var monthTitle=document.getElementById('archiveMonthTitle');
+    var monthNews=document.getElementById('archiveMonthNews');
+    var current='index';
+    var busy=false;
+    var AUTHOR_PAGES={Arkon:'members/arkon.html',Raistlin:'members/raistlin.html'};
+    var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+    function view(id){return document.getElementById('view-'+id)}
+    function list(){return typeof newsArchive!=='undefined'&&Array.isArray(newsArchive)?newsArchive.slice().sort(function(a,b){return b.date.localeCompare(a.date)}):[]}
+    function latestMonth(){var data=list();return data.length?data[0].date.slice(0,6):''}
+    function navigateAuthor(authorName){var href=AUTHOR_PAGES[authorName];if(href)window.parent.postMessage({type:'quad-desktop-navigate',href:href},'*')}
+
+    function buildIndex(){
+      var groups={};
+      var latest=latestMonth();
+      list().forEach(function(n){
+        var key=n.date.slice(0,6);if(key===latest)return;
+        var y=n.date.slice(0,4),m=n.date.slice(4,6);
+        if(!groups[y])groups[y]={};groups[y][m]=true;
+      });
+      yearsHost.innerHTML='';
+      Object.keys(groups).sort(function(a,b){return b.localeCompare(a)}).forEach(function(y){
+        var section=document.createElement('section');section.className='archive-year';
+        var h=document.createElement('h4');h.className='archive-year-title';h.textContent=y;section.appendChild(h);
+        var ul=document.createElement('ul');ul.className='archive-month-list';
+        Object.keys(groups[y]).sort(function(a,b){return b.localeCompare(a)}).forEach(function(m){
+          var li=document.createElement('li'),a=document.createElement('a');
+          a.href='#'+y+'-'+m;a.dataset.view='month';a.dataset.year=y;a.dataset.month=m;a.textContent=MONTHS[Number(m)-1];
+          li.appendChild(a);ul.appendChild(li);
+        });
+        section.appendChild(ul);yearsHost.appendChild(section);
+      });
+    }
+
+    function renderArticle(n){
+      var article=document.createElement('article');article.className='content-box archive-news';
+      var header=document.createElement('header');header.className='news-header';
+      var title=document.createElement('div');title.className='news-title';
+      title.innerHTML='<img src="../images/news/menudot_l.gif" alt="" width="28" height="15"><strong></strong><img src="../images/news/menudot_r.gif" alt="" width="28" height="15">';
+      title.querySelector('strong').textContent=n.title;
+      var meta=document.createElement('div');meta.className='news-meta';
+      var d=n.date,dt=new Date(Number(d.slice(0,4)),Number(d.slice(4,6))-1,Number(d.slice(6,8)));
+      meta.textContent='Posted on '+dt.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})+' by ';
+      if(AUTHOR_PAGES[n.author]){var author=document.createElement('a');author.href=AUTHOR_PAGES[n.author];author.textContent=n.author;author.addEventListener('click',function(e){e.preventDefault();navigateAuthor(n.author)});meta.appendChild(author)}else meta.appendChild(document.createTextNode(n.author||''));
+      header.append(title,meta);
+      var body=document.createElement('div');body.className='news-content';
+      (n.content||[]).forEach(function(block){
+        if(block.type==='paragraph'){var p=document.createElement('p');p.innerHTML=block.html;body.appendChild(p)}
+        else if(block.type==='command'){var p=document.createElement('p'),span=document.createElement('span');span.className='news-command';span.textContent=block.text;p.appendChild(span);body.appendChild(p)}
+      });
+      article.append(header,body);return article;
+    }
+
+    function showMonth(y,m){
+      monthTitle.textContent=MONTHS[Number(m)-1]+' '+y;monthNews.innerHTML='';
+      list().filter(function(n){return n.date.slice(0,6)===y+m}).forEach(function(n){monthNews.appendChild(renderArticle(n))});
+    }
+
+    function go(next,push,y,m){
+      if(busy||next===current&&!y)return;
+      busy=true;content.classList.add('is-fading');
+      window.setTimeout(function(){
+        if(next==='month')showMonth(y,m);
+        view(current).hidden=true;view(next).hidden=false;current=next;window.scrollTo(0,0);
+        if(push)history.pushState(next==='month'?{view:next,year:y,month:m}:{view:'index'},'',next==='month'?'#'+y+'-'+m:'#');
+        requestAnimationFrame(function(){content.classList.remove('is-fading');window.setTimeout(function(){busy=false},500)});
+      },500);
+    }
+
+    document.addEventListener('click',function(e){
+      var a=e.target.closest('a[data-view]');if(!a)return;e.preventDefault();
+      go(a.dataset.view,true,a.dataset.year,a.dataset.month);
+    });
+    window.addEventListener('popstate',function(){
+      var m=location.hash.match(/^#(\d{4})-(\d{2})$/);if(m)go('month',false,m[1],m[2]);else go('index',false);
+    });
+
+    buildIndex();
+    var initial=location.hash.match(/^#(\d{4})-(\d{2})$/);
+    if(initial){showMonth(initial[1],initial[2]);view('index').hidden=true;view('month').hidden=false;current='month'}
+  })();
+  </script>
+</body>
+</html>
