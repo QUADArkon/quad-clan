@@ -1,4 +1,1223 @@
 const newsArchive = [
+{
+  "id": "20130620-things-i-should-have-reported",
+  "date": "20130620",
+  "author": "Arkon",
+  "title": "Things I Should Have Reported",
+  "content": [{"type":"paragraph","html":"This was supposed to be a quick overview of what Quake had become by 2012, but it really seems that I'm back in the gaming scene on a regular basis. For those who have been asking, it's all Xeno and Polarite's fault: seeing their enthusiasm for keeping Quake alive convinced me to become active again. Curiosity did the rest. A lot of things have changed over the years: new engines, new mods and new maps. Even online game modes are, in some ways, new. <a href=\"http://quakeone.com/cax/\" target=\"_blank\">ClanArena X</a> has taken the place of standard Clan Arena, CTF is now CTCTF, Rocket Arena is included in most mods, <a href=\"http://www.runequake.com/\" target=\"_blank\">RuneQuake</a> has evolved greatly, <a href=\"http://quakeone.com/rquake/\" target=\"_blank\">RQuake Coop</a> is a nice alternative to normal fragging, and <a href=\"http://crmod.com/\" target=\"_blank\">CRMod</a> has been updated to version 6.5. After doing some checking, I've also updated the server list for Qview with working servers.<br><br>Interesting engines such as <a href=\"http://icculus.org/twilight/darkplaces/\" target=\"_blank\">DarkPlaces</a>, <a href=\"http://quakespasm.sourceforge.net/\" target=\"_blank\">QuakeSpasm</a> and <a href=\"http://mhquake.blogspot.it/\" target=\"_blank\">DirectQ</a>, each in its own way, have continued the work started by <a href=\"http://tomaz.snowcold.net/news.php\" target=\"_blank\">Tomaz</a> with some great engines. <a href=\"http://quakeone.com/proquake/\" target=\"_blank\">ProQuake</a> has also been updated with a new release that supports new features and fixes bugs that newer operating systems may have introduced into the game.<br><br>An incredible number of maps have been released, along with several new single-player mods. Most of them can now be installed and played using <a href=\"https://www.quaddicted.com/files/tools/quakeinjector-alpha2.zip\" target=\"_blank\">QuakeInjector</a>, which automatically downloads and sets up all the necessary files in your Quake folder. Wow.<br><br>It took almost a year to check out most of this stuff, and I really had fun doing it, but the best part was [QUAD] LAN Party 5. Meeting old clan mates again after ten years was really great. It seems rust doesn't affect [QUAD] folks: old and young teammates alike still know the job. We welcomed Guren into the clan during the LAN. A former M.P member, he has been the technician at most of our LAN parties and has missed only one since we started playing. Talking to everyone, I discovered that most of them stopped playing when the Italian servers were shut down. Foreign servers were too laggy in 2004, while Italian game providers were moving on to newer games.<br><br>Now the situation is different. Even a local connection can host a few players and, with the correct settings, such a server can remain online permanently.<br><br>With Yanosh's help, I was able to set up two Italian servers: one running RuneQuake and the other CRMod. It took a long time, but the beta-testing phase is now over and both servers are running smoothly. Due to security settings, the servers are not listed in ProQuake's internal server list, but they do appear in most online server browsers, so they are quite easy to reach.<br><br>ProQuake users can set <strong style=\"color:red;\">cl_web_download_url \"http://quad.homepc.it/\"</strong> to download maps, models, sounds and loc files directly from our server. Map downloading also works with DirectQ and DarkPlaces.<br><br>Having a machine dedicated to Quake also makes it possible to run HTTP and FTP servers. So I've fixed this homepage to make it work with modern browsers, removed most of the JavaScript and almost all of the sounds. This page has never been as accessible as it is now. I've tested it with Chrome, Internet Explorer, Opera and Rekonq and found no bugs. A clone of this site is available at http://quad.homepc.it/, but for visibility reasons the official clan address remains http://web.tiscali.it/quadclan/. The [QUAD] machine doesn't seem very friendly to search engines and, well... I like it.<br><br>I've also collected all the Quake files I was able to find and categorized them as well as possible. The result is ftp://quad.homepc.it/: 22 gigabytes of pure old-school gibbing.<br><br>I've also found the time to finish the readme files for Quake Extreme Mod and all of Xeno's maps. They are minimal, but at least they now have a readme.txt.<br><br>Last but not least, I've created a Facebook page, linked at the top of this page, called Quake Italia. In the era of social networks, this is the easiest way to meet other players or organize events such as \"On the Rocks!\", which we held last month.<br><br>Don't expect news reporting like in the past. I will report only clan activity, major events or new file releases. There are better places to find regular Quake news: <a href=\"http://quakeone.com/\" target=\"_blank\">QuakeOne.com</a> and <a href=\"https://www.quaddicted.com/\" target=\"_blank\">Quaddicted.com</a> are first in line! NetQuake lives!"}]
+},
+{
+    "id": "20041109-no-more-news",
+    "date": "20041109",
+    "author": "Arkon",
+    "title": "No more news",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "After long years passed by reporting news about Quake I've finally decided to stop. [QUAD] Clan homepage has been a good place where to find informations about the game, new releases, guides as well as all other informations regarding the clan, but as years passed, also the interest moved in other ways. I'm sure that someone will start a new website Quake-related soon and in this case I'll update the links. I'm stopping reporting news, not abandoning this page. Xeno has some new maps to release, the server list will be updated as ever and the forums will remain active. People needs a place where to meet and discuss. I need it too, eheh. Also, most important, we've got matches to play or, who knows, I can set up a server in the future: in some way this sounds better than reporting news. Oh, the guestbook is there to be signed if you asked yourself what it is there for.</p> <p>So after http://quakehero.gamersrevolt.com/quad, http://quad.gamersrevolt.com, http://quad.ngi.it, http://www.quad.tk, http://www.quadhq.it and http://www.barcollo.org/quad, I've finally put this page on a new host, where it will remain as reference: http://web.tiscali.it/quadclan.</p> <p>Yes, the forum could stand alone, but this page contains some years of Quake story, faced from the [QUAD] side of it. Here is where the clan is born, where it has grown. In some way this is sad. Those were the best times we could have, we could ask for.</p> <p>No, [QUAD] Clan Homepage won't get deleted, not by my hand at least. I simply love the lightnings, eheh!</p> <p>Almost forgot: this page is better view on Internet Explorer at a resolution of 1366x768 and if you don't have Java installed there is a link for a plain HTML menu under the red/yellow led upon the menu.</p> <p>Cyas m8s, [QUAD] still rocks!</p>"
+      }
+    ]
+  },
+  {
+    "id": "20041108-quake-tattoo-contest",
+    "date": "20041108",
+    "author": "Arkon",
+    "title": "Quake tattoo contest",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "I just received a mail from Megazoid about this unofficial contest run by Todd Hollenshead. At the moment over 40 tattoos have been sent and Megazoid submitted both tattoos (his and mine). The contest is still open, so if there is someone who wants to join it check out <a href=\"http://www.webdog.org/plans/6/\" target=\"_blank\">Todd's weblog</a>! Thanks Megazoid, your tattoo rocks!</p> <p align=\"center\"></p>"
+      }
+    ]
+  },
+  {
+    "id": "20041108-ultimate-deathmatch-2-10",
+    "date": "20041108",
+    "author": "Arkon",
+    "title": "Ultimate deathmatch 2.10",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Shadowalker's mod reached version 2.10 and now supports quakeworld engines. A QW server is up and running since 8-13-04 and you can find it at the following ip: 69.39.68.147:28000. Admins functions are run now from 5 menus:<br/> track, script, options, spawn, and var menu. Full support for teamplay and CTF.<br/> <a href=\"http://planetquake.com/ud/\" target=\"_blank\">http://planetquake.com/ud/</a></p>"
+      }
+    ]
+  },
+  {
+    "id": "20040707-telejano-8-01-and-joequake-x-engines",
+    "date": "20040707",
+    "author": "Arkon",
+    "title": "Telejano 8.01 and Joequake X engines...",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "The long awaited new release of Tei's engine in finally out featuring a faster single player mode, a better internet compatibility and some more eyecandies in a really improved engine you can find at <a href=\"http://telejano.berlios.de/wiki3/\" target=\"_blank\">Telejano Quake Engine</a> website, and while Tei is taking care of that, Tryno found the time to modify <a href=\"http://delfin.unideb.hu/~sj0002/news.html\" target=\"_blank\">Joequake</a> engine by adding quite all the stuff needed for multiplayer (tp_took stuff, gib filter, deadbody filter, bestweapon, pent armour and more). It was quite hard to find 'em (yeah, there are both gl and software version), but finally I managed to spot them in a brazialian Quake forum, <a href=\"http://forum.unigames.com.br/ubb/ultimatebb.php\" target=\"_blank\">FÓRUM UNIGames</a> where you can search between the <a href=\"http://forum.unigames.com.br/cgi-bin/ubb/ultimatebb.cgi?ubb=get_topic;f=3;t=011808\" target=\"_blank\">posts</a> (even if the links were broken today...)"
+      }
+    ]
+  },
+  {
+    "id": "20040706-qview-server-list-updated",
+    "date": "20040706",
+    "author": "Arkon",
+    "title": "Qview server list updated!",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "I simply can't believe I've found the time to made the new server list, real life takes too much time and it's damn hard to check for servers... Once more I invite you to submit servers by using the form in Qview section."
+      }
+    ]
+  },
+  {
+    "id": "20040628-quakecon-2004",
+    "date": "20040628",
+    "author": "Arkon",
+    "title": "QuakeCon 2004",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "... 44 days to go...<br/> <a href=\"http://www.quakecon.org/\" target=\"_blank\">http://www.quakecon.org/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20040506-slipgate-duplex-remade",
+    "date": "20040506",
+    "author": "Arkon",
+    "title": "Slipgate Duplex remade",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Speedy has remade this map by adding an hard skill support with more monsters, more guns and a completely different route.<br/> <a href=\"http://planetquake.com/speedy/\" target=\"_blank\">http://planetquake.com/speedy/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20040506-quakeforge-0-5-5",
+    "date": "20040506",
+    "author": "Arkon",
+    "title": "Quakeforge 0.5.5",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Even the process of merging regular Quake and Quakeworld has been updated to release 0.5.5 but expect some bugs (which, in programmer's words, are going to be fixed in release 0.6).<br/> <a href=\"http://www.quakeforge.net/\" target=\"_blank\">http://www.quakeforge.net/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20040506-ultimate-deathmatch-2-00",
+    "date": "20040506",
+    "author": "Arkon",
+    "title": "Ultimate Deathmatch 2.00",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Alex Shadowalker released a new version of his awesome mod, fully documented to help new (and old lazy players) to set up this great mod in the right way. It also features some graphic enhancements from Tomaz and Qmb engines. Go check it out!<br/> <a href=\"http://www.planetquake.com/ud/\" target=\"_blank\">http://www.planetquake.com/ud/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20040428-menu-images-ready",
+    "date": "20040428",
+    "author": "Arkon",
+    "title": "Menu images ready!",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Moon [Drunk] has just released some new textures with some excellent menu images for Joequake and Fuhquake and a new set of numbers. You all can download this and all other texture sets in a (completely restyled) website called <a href=\"http://w1.470.telia.com/~u47016112/quake/\" target=\"_blank\">Moon[Drunk]'s Quake Graphics</a>. Nice work mate!"
+      }
+    ]
+  },
+{
+    "id": "20040108-alpha-industri",
+    "date": "20040108",
+    "author": "Arkon",
+    "title": "Alpha Industri",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "It went almost unnoticed, but an alpha release of the Industri engine (and a patch which fixes a few bugs) has been released on December 18! If you took a peek at the <a href=\"http://prdownloads.sourceforge.net/industri/ind1600x1024.zip\" target=\"_blank\">screenshots</a> released some months ago you know what to expect from this great engine based on Tenebrae!<br/> <a href=\"http://industri.sourceforge.net/\" target=\"_blank\">http://industri.sourceforge.net/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20031205-the-dark-age",
+    "date": "20031205",
+    "author": "Arkon",
+    "title": "The Dark Age",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "It's a map pack for Prydon Gate which features 15 new maps in 44 Megs of pure fun. If you like the original game, you'll love this map pack by the ELF team.<br/> <a href=\"http://www.inside3d.com/prydongate/\" target=\"_blank\">http://www.inside3d.com/prydongate/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20031205-first-beta-of-telejano-7-4",
+    "date": "20031205",
+    "author": "Arkon",
+    "title": "First BETA of Telejano 7.4",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Most of the bugs known in the latest alpha release have been fixed and now it's time for the first beta release of Telejano 7.4!<p>Latest hour: <br/> - host_delayer particle slower <br/> - fixed crash! <br/> - localmenus owns everything (need changes) <br/> - prydon gate cursor draw always on top <br/> - display lists for stable models <br/> - more minirun <br/> <br/> TODO: <br/> - fix builtin conchars system <br/> - fix tga loader <br/> - fix more bugs <br/> - Jos LocalScripts <br/> - others. <br/> <br/> TECHDEMO: <br/> - MiniRun: <br/> * Copy mini.exe at minirun folder <br/> * Unzip Prydon Gate TDA at \\minirun\\id1\\ <br/> * Start mini.exe <br/> * Play <br/> - Bug: conchars not correctly show, fix: copy gfx.wad to \\minirun\\id1\\ folder<br/> <a href=\"http://telejano.berlios.de/option/min01i.zip\" target=\"_blank\">http://telejano.berlios.de/option/min01i.zip</a></p>"
+      }
+    ]
+  },
+  {
+    "id": "20031120-ultimate-deathmatch-1-80",
+    "date": "20031120",
+    "author": "Arkon",
+    "title": "Ultimate deathmatch 1.80",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Alex Shadowalker has just released the new version of his SP/MP mod and engine featuring:<ul> <li>Catch fire chance and burn time variables for flamethrower </li> <li>Brightfield effect added for rune shield. </li> <li>Body limit in deathmatch variable added. </li> <li>Cloaked energy mine and Monster body timeout variable </li> <li>Flares altered to general use map editing tool with UDC engine: </li> <li>Control switches variable and super jumping rune </li> <li>List maps </li> <li>Sets the default map subdir </li> <li>Enhanced Key binds </li> <li>Extended effects builtin controls </li> <li>Fog controls </li> <li>SKYBOXES: 256x256 and 512X512 </li> <li>Conback, conchars, textures, sprites, skins JPG-&gt;TGA-&gt;PCX </li> <li>JPEG Screenshots </li> <li>Banning IP Addresses</li> </ul> <p>If you are bored of classic deathmatch this mod is the answer to all your needs! Go check it out!<br/> <a href=\"http://www.planetquake.com/ud/\" target=\"_blank\">http://www.planetquake.com/ud/</a></p>"
+      }
+    ]
+  },
+  {
+    "id": "20031120-an-e-mail-from-john-carmack",
+    "date": "20031120",
+    "author": "Arkon",
+    "title": "An e-mail from John Carmack...",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "The actual release of fjQuake has to be redone to fit shareware distributing laws. I completely forgot that shareware releases cannot be modified, so expect some changes in fjQuake section soon. Thanks John for answering my mail this fast!"
+      }
+    ]
+  },
+  {
+    "id": "20031119-darkplaces-update",
+    "date": "20031119",
+    "author": "Arkon",
+    "title": "Darkplaces update",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "After four months of silence, Lord Havoc has released a new version of his engine and his mod adding a lot of new features as the support for Quake 3 BSP files (no shades yet) or the possibility to use monster weapons. He also started fixing some security bugs.<br/> <a href=\"http://www.icculus.org/twilight/darkplaces/\" target=\"_blank\">http://www.icculus.org/twilight/darkplaces/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20031117-fjquake",
+    "date": "20031117",
+    "author": "Arkon",
+    "title": "fjQuake",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Some of you might think that I completely forgot about the latest release of <a href=\"http://delfin.unideb.hu/~sj0002/joeq_news.html\" target=\"_blank\">Joequake</a> and the awesome <a href=\"http://www.planetquake.com/sda/\" target=\"_blank\">The Dimension of the Gibbed movie from SDA team</a>. Well, is not so. When those files have been released I was building my personal Quake folder with full <a href=\"http://www.fuhquake.net/\" target=\"_blank\">Fuhquake</a> eyecandies. I saw that new Joequake engine is really similar to Fuh one, so why don't try to unify them in a single package and then see the SDA demo with those textures?<br/> It took a week to put all files in the right folders and testing it also online. It worked. I also thought to make an installer with full Quake and use it each time I need to re-install it. The latest question was if I could distribute it or not, so I simply removed pak1.pak file and upload the installer (172 MB) in a new section (with some screenshots) of [QUAD] homepage. Just check it out, it really worth the download."
+      }
+    ]
+  },
+  {
+    "id": "20031108-frikac-djquake-part-2",
+    "date": "20031108",
+    "author": "Arkon",
+    "title": "FrikaC @ DJQuake part 2",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Another great guest strip at DJQuake and it's a FrikaC one again!<br/> <a href=\"http://djquake.quakepit.com/\" target=\"_blank\">http://djquake.quakepit.com/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20031108-updated-in-frikbot-midair",
+    "date": "20031108",
+    "author": "Arkon",
+    "title": "Updated in FrikBot MidAir",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Parboil has just updated this mod by adding some long asked commands like addbot, removebot, skillup and botping and after match statistics. For the few ones that do not know anything about this FrikBot MidAir this mod is a combination of FrikaC Frikbots and the awesome Kombat Teams Pro by rxr.<br/> <a href=\"http://www.parboil.quakeworld.ru/\" target=\"_blank\">http://www.parboil.quakeworld.ru/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20031102-quakeworld-servers-in-qview-server-list",
+    "date": "20031102",
+    "author": "Arkon",
+    "title": "Quakeworld servers in Qview server list",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "I found the time to add Quakeworld servers to latest serverlist. This was not a manual update: I simply used master servers to check out for active servers. The list has grown a lot (maybe too much). QW servers are not divided by regions: maybe if I find the time I'll do that in a future update."
+      }
+    ]
+  },
+  {
+    "id": "20031102-new-guest-strip-djquake",
+    "date": "20031102",
+    "author": "Arkon",
+    "title": "New guest strip @ DJQuake!",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "I know you all know about DJQuake comic strips about Quake so I won't waste your time describing how funny they are. The new FrikaC one is simply amazing!<br/> <a href=\"http://djquake.quakepit.com/\" target=\"_blank\">http://djquake.quakepit.com/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20031102-speedmapping-pak-55-released",
+    "date": "20031102",
+    "author": "Arkon",
+    "title": "Speedmapping pak 55 released",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Another speedmapping session took place yesterday with 5 new maps from Asaki, czg, metlslime, scampie, and Starbuck. This session was the first of a planned \"four seasons of Quake\" where each session uses one of the original Quake themes as its inspiration.<br/> <a href=\"http://speedq1.spawnpoint.org/files/sm55_pack.zip\" target=\"_blank\">http://speedq1.spawnpoint.org/files/sm55_pack.zip</a>"
+      }
+    ]
+  },
+  {
+    "id": "20031029-telejano-7-3-status",
+    "date": "20031029",
+    "author": "Arkon",
+    "title": "Telejano 7.3 status",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Tei has just compiled a new ALPHA release of his amazing engine just to show the actual status of development of his great engine. Download it from the link below: there is no news in his official homepage ATM.<br/> <a href=\"http://telejano.berlios.de/option/telejano7oct29of2003bin.zip\" target=\"_blank\">http://telejano.berlios.de/option/telejano7oct29of2003bin.zip</a>"
+      }
+    ]
+  },
+  {
+    "id": "20031028-frogbot-clan-arena-updated",
+    "date": "20031028",
+    "author": "Arkon",
+    "title": "Frogbot Clan Arena updated!",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Even if not reported in the news, Parboil has updated his FMOD for Quakeworld. In this new release the Addbot function has been optimized the Addbot function. Even the source code has been released and in files section you can also find a waypoint archive to change the supported maps with the ones you prefer! Go check it out!<br/> <a href=\"http://www.parboil.quakeworld.ru/\" target=\"_blank\">http://www.parboil.quakeworld.ru/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20031013-6-new-servers-from-brazil",
+    "date": "20031013",
+    "author": "Arkon",
+    "title": "6 New servers from Brazil!",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Many thanks to Mont who reported 6 new servers just added to latest server list. I really hope this list will grow some more..."
+      }
+    ]
+  },
+  {
+    "id": "20031013-joequake-v-0-13",
+    "date": "20031013",
+    "author": "Arkon",
+    "title": "JoeQuake v 0.13",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "A new version of JoeQuake has just been released: it solves some bugs of older version:<br/> - gamma and contrast changing from menu under GL<br/> - fixed missing \"r_fullbright 1\" in GL<br/> - now player.mdl has shadow as well<br/> - dzip extraction now works from subfolders as well<br/> - scr_printstats now work also when cl_sbar is 1<br/> - fixed strange freezing bug when mission pack was started.<br/> <a href=\"http://delfin.unideb.hu/~sj0002/joeq_news.html\" target=\"_blank\">http://delfin.unideb.hu/~sj0002/joeq_news.html</a>"
+      }
+    ]
+  },
+  {
+    "id": "20031009-qview-server-list-updated",
+    "date": "20031009",
+    "author": "Arkon",
+    "title": "Qview server list updated",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Just found the time to update the official Qview server list and spotted that Gameaholic has only 48 active servers in its list! The number of servers has decreased really fast in those months I've been away."
+      }
+    ]
+  },
+  {
+    "id": "20031008-back",
+    "date": "20031008",
+    "author": "Arkon",
+    "title": "Back",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "It took more than I expected, but finally the page is up again: there are some sections which are not completed yet, but most of the page is up and running, the rest will be there as soon as possible. Due to what has happened in June with the old hosting site, we completely missed an event like <a href=\"http://www.qexpo.com/\" target=\"_blank\">Qexpo</a>, but there are a lot of new maps, mods and other files which are going to be released (even by me and Xeno) so stay tuned: Netquake still rocks!"
+      }
+    ]
+  },
+{
+    "id": "20030622-seven-years-of-quake",
+    "date": "20030622",
+    "author": "Arkon",
+    "title": "Seven Years of Quake...",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "...and we are still here. Quake seems eternal: despite the many possible successors, it is still alive, even though Europe is unfortunately neglecting it a little compared with the rest of the world. The end is still far away. Quake still rulez!"
+      }
+    ]
+  },
+  {
+    "id": "20030619-goodbye-clq",
+    "date": "20030619",
+    "author": "Arkon",
+    "title": "Goodbye CLQ!!!",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "After years of weekly reports with statistics for the main multiplayer games, The Champions League for Quake has closed its doors. The staff could no longer find the time to keep the software updated, while GameSpy has increasingly made servers private. This is a major loss for the gaming community that used these statistics as a reference. Anyone who wants to read the final statistics can use the link below.<br><a href=\"http://www.theclq.com\" target=\"_blank\">http://www.theclq.com</a>"
+      }
+    ]
+  },
+  {
+    "id": "20030529-qview-server-list-updated",
+    "date": "20030529",
+    "author": "Arkon",
+    "title": "Qview Server List Updated",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Both Qview server lists have been updated. As always, they can be downloaded from the Servers section."
+      }
+    ]
+  },
+  {
+    "id": "20030509-goodbye-bad",
+    "date": "20030509",
+    "author": "Arkon",
+    "title": "Goodbye Bad.",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "It is always difficult to find the words to announce that someone has passed away, and even more so when that person was a friend, a companion through so many sleepless nights with whom you shared so many wonderful and unforgettable moments.<br><br>Amedeo has left us.<br><br>After a long hospitalization that kept the entire Italian NetQuake community holding its breath for months, and after an even more painful chemotherapy that had even given us hope that he was finally out of danger, [COBRA] Bad passed away tonight at one o’clock. The void he leaves among us cannot be filled.<br><br>Among all of us, not only the [COBRA].<br><br>Bad was an example to everyone who approached Quake, both as a player and as a person, with his cheerfulness, his friendliness, and his very special way of experiencing Quake and making everyone part of that enjoyment.<br><br>All of us stood by him during his most important battle. Each of us, in our own way, tried not to let him feel alone during his hospitalization.<br><br>We have all lost a friend.<br><br>One of the best.<br><br>Goodbye Bad. Goodbye Amedeo.<br><br>NetQuake, as a whole, salutes you."
+      }
+    ]
+  },
+  {
+    "id": "20030505-telejano-7-2",
+    "date": "20030505",
+    "author": "Arkon",
+    "title": "Telejano 7.2",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "A new release from Tei adds a Matrix-style display mode, a Battlefield 1942-style echo effect, two new chase_active modes, and fixes the few bugs left from the previous version. If you love Quake and have always dreamed of spectacular graphics for your favorite game, this is the engine for you!<br><a href=\"http://telejano.berlios.de/wiki3/\" target=\"_blank\">http://telejano.berlios.de/wiki3/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20030505-netquake-overclocked-3",
+    "date": "20030505",
+    "author": "Arkon",
+    "title": "NetQuake Overclocked 3",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "After a couple of delays, the new NetQuake movie has finally been released. Although it is not packed with spectacular frags as we might have hoped, it contains a huge number of examples of Kimzan bunny hopping offline. We are still far from movies such as FDE, but it is worth a look.<br><a href=\"http://members.webdeveloping.nl/~trouby/nqmovie/index.html\" target=\"_blank\">http://members.webdeveloping.nl/~trouby/nqmovie/index.html</a>"
+      }
+    ]
+  },
+  {
+    "id": "20030415-frying-obstacles",
+    "date": "20030415",
+    "author": "Arkon",
+    "title": "Frying Obstacles",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Finally a new single-player map, and what a map! It is enormous to explore, extremely well balanced for difficulty across all playable skill levels, includes a new monster model and, believe it or not, two different endings. The second is extremely difficult to reach on Nightmare. Absolutely worth trying!<br><a href=\"http://www.hrimfaxi.dk/\" target=\"_blank\">http://www.hrimfaxi.dk/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20030407-crmod-6-4",
+    "date": "20030407",
+    "author": "Arkon",
+    "title": "CRMod 6.4",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Some of you may already have seen it running as a beta test on American servers. The new release is finally available from its official page and fixes several annoying bugs from previous versions, including color changes after a match has started and level voting that can now be enabled or disabled from the console.<br><a href=\"http://www.planetquake.com/crmod/\" target=\"_blank\">http://www.planetquake.com/crmod/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20030329-netquake-hungary",
+    "date": "20030329",
+    "author": "Arkon",
+    "title": "NetQuake Hungary",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Bent managed to give Hungary its own server. The address is 193.6.145.139:26000, or infosrv.tech.klte.hu if you prefer DNS. The Qview server list has already been updated. Thanks for helping to keep NetQuake alive, Bent!"
+      }
+    ]
+  },
+  {
+    "id": "20030325-qview-server-list-updated",
+    "date": "20030325",
+    "author": "Arkon",
+    "title": "Qview Server List Updated",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "The Qview server list has been updated. Once again it contains more servers than the official Gameaholic list, but no longer the huge number that could be found until a year ago: only 84 active servers remain, of which just 11 are in Europe. If anyone finds servers that are not included in the current list, please let me know by email and I will update it as soon as possible. Both files, the Europe-only list and the complete server list, are available in the Servers section."
+      }
+    ]
+  },
+  {
+    "id": "20030224-quad-turns-three",
+    "date": "20030224",
+    "author": "Arkon",
+    "title": "[QUAD] Turns Three!!!",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "The Quake Army of Darkness is three years old! Although today we have only one server, some inactive members, and hosting problems, the clan and the website, still the only Italian web page covering NetQuake, continue their activity both in the game and in reporting news about the greatest game ever created. Over the past year the team has grown again and, for the first time since its creation, non-Italian players have joined us, helping make the clan not only stronger but also better known on the European scene. Thanks to everyone. As always, if even one of us had not been here, the [QUAD] would not be what they are.<br><br>[QUAD] Rulez!"
+      }
+    ]
+  },
+  {
+    "id": "20030219-new-armor-model",
+    "date": "20030219",
+    "author": "Arkon",
+    "title": "New Armor Model",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "While looking through files in my archive I found an old redesigned armor model. The problem was that its colors were completely different from Quake’s armor colors: blue, purple and white. With the help of an image editor I changed the skin colors. If you would like to play with this model, use the download link below; the model is already included in a pak2. If anyone has the time and desire to redesign the skin in high resolution, send me the updated skins and I will replace the current ones immediately.<br><br><strong>Warning!</strong> If you play with any GL engine, remember to delete armour.ms2 from the Id1/glquake folder or the model will not be displayed correctly."
+      }
+    ]
+  },
+  {
+    "id": "20030218-telejano-7",
+    "date": "20030218",
+    "author": "Arkon",
+    "title": "Telejano 7",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "This time Tei did not make us wait long for a new release of his engine. It adds programmable extensions for multiple mods, programmable particle effects for explosions, programmable console applets, support for glowing textures, support for .loc files, the use of mdl/md2/md3/bsp/spr as weapon models in beta form, a fix for the overflow error, and map entities supported internally by the engine in beta form.<br><br>This release comes as an installer, but the previous version is required in order to use it.<br><a href=\"http://telejano.berlios.de/wiki3/\" target=\"_blank\">http://telejano.berlios.de/wiki3/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20030218-quake-redone-quick-avi",
+    "date": "20030218",
+    "author": "Arkon",
+    "title": "Quake Redone Quick AVI",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "The latest, deluxe edition of Quake Redone Quick has now also been released as a 130 MB AVI movie, allowing even people without Quake installed to see how, and how quickly, the game can be completed without the loading times between maps.<br><a href=\"http://www.planetquake.com/illmind\" target=\"_blank\">http://www.planetquake.com/illmind/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20030207-new-quad-member",
+    "date": "20030207",
+    "author": "Arkon",
+    "title": "New [QUAD] Member",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "The clan continues to grow, and this time it is Bent’s turn to join the Quake Army of Darkness. Welcome to the [QUAD], Bent, and happy fragging! His profile will be online within a few days, and at this point I expect a few changes to the clan page as the team becomes increasingly international."
+      }
+    ]
+  },
+  {
+    "id": "20030203-quake-redone-quick",
+    "date": "20030203",
+    "author": "Arkon",
+    "title": "Quake Redone Quick",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "A new speedrun combines the very best results achieved so far, in Nightmare mode of course, and adds both the option to watch the movie in third person and audio commentary from the player. Once again, the ingenious techniques created specifically to save time are astonishing. The progress since the first Quake Done Quick has been enormous and this demo is highly recommended.<br><a href=\"http://www.planetquake.com/illmind\" target=\"_blank\">http://www.planetquake.com/illmind/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20030203-telejano-7-techdemo",
+    "date": "20030203",
+    "author": "Arkon",
+    "title": "Telejano 7 Techdemo",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Anyone who wants to preview the new version of Telejano can find it at the link below. Be warned: it should not even be considered a beta and it does NOT replace version 6 in any way, so it is likely to be full of bugs. You have been warned.<br><a href=\"http://telejano.berlios.de/wiki3/\" target=\"_blank\">http://telejano.berlios.de/wiki3/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20030128-pxquake-1-00",
+    "date": "20030128",
+    "author": "Arkon",
+    "title": "PXQuake 1.00",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Trujen has finally kept his promise to make XQuake compatible with ProQuake. This release supports every ProQuake command through version 3.50, retains 24-bit textures for all models, and adds commands to stop object rotation or completely suppress in-game messages.<br><a href=\"http://clan2.agora.dk/nqeu/clients/xquake/pxglpro_v10_full_.zip\" target=\"_blank\">PXQuake GL version (22 Mb)</a><br><a href=\"http://clan2.agora.dk/nqeu/clients/xquake/pxpro_v10_full.zip\" target=\"_blank\">PXQuake non-GL version (463 Kb)</a>"
+      }
+    ]
+  },
+  {
+    "id": "20030116-qview-server-list-updated",
+    "date": "20030116",
+    "author": "Arkon",
+    "title": "Qview Server List Updated",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Both server lists have been updated: the European list now contains 20 active servers, while the global list contains 72. The files are available in the Servers section."
+      }
+    ]
+  },
+  {
+    "id": "20030112-qe1-retexturing-project",
+    "date": "20030112",
+    "author": "Arkon",
+    "title": "QE1 Retexturing Project",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Another 32 textures have been released for the project that is giving our favorite game a much more modern look. They work with recent Telejano and Tenebrae releases and with XQuake 1.01 or later. The goal remains to preserve Quake’s original look while adding modern effects such as bump mapping and gloss.<br><a href=\"http://www.quake.cz/winclan/qe1/\" target=\"_blank\">http://www.quake.cz/winclan/qe1/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20030112-q3plug",
+    "date": "20030112",
+    "author": "Arkon",
+    "title": "Q3Plug",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Q3Plug can display server status and connect to games directly from a web page. It supports QuakeWorld, Quake II, Quake III Arena and many other games, but not NetQuake. A new request has been posted on the official forum; the more players support it, the better the chance that NetQuake will be added.<br><a href=\"http://sourceforge.net/forum/forum.php?thread_id=793626&amp;forum_id=64015\" target=\"_blank\">http://sourceforge.net/forum/forum.php?thread_id=793626&amp;forum_id=64015</a>"
+      }
+    ]
+  },
+  {
+    "id": "20030109-telejano-6-6",
+    "date": "20030109",
+    "author": "Arkon",
+    "title": "Telejano 6.6",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "A new release of Tei’s engine adds support for detailed skins and models, included in the full installation, as well as MIDI and MOD files. Once again, this is an essential release.<br><a href=\"http://telejano.berlios.de/wiki3/\" target=\"_blank\">http://telejano.berlios.de/wiki3/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20030109-homepage",
+    "date": "20030109",
+    "author": "Arkon",
+    "title": "Homepage",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Hiroshi’s profile has a new photo, the HolyWars Frogbot mod has been added to the Bots files, and the demo section has been reorganized. All [QUAD] members are once again invited to send recordings of their best matches."
+      }
+    ]
+  },
+  {
+    "id": "20021226-quake-done-backwards",
+    "date": "20021226",
+    "author": "Arkon",
+    "title": "Quake Done Backwards",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Another Christmas brings another movie from the Quake done Quick team. This time the run starts at End and finishes at E1M1, overturning the usual weapon progression and route in spectacular fashion. The only drawback is FilePlanet, whose download system requires registration.<br><a href=\"http://www.planetquake.com/qdq/qdb.html\" target=\"_blank\">http://www.planetquake.com/qdq/qdb.html</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021224-christmas-beatings-2002",
+    "date": "20021224",
+    "author": "Hiroshi",
+    "title": "Christmas Beatings 2002",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "The Christmas Beatings initiative returns this year. The traditional gathering of Italian Quake players is scheduled for tomorrow afternoon. Hiroshi has already posted the details on the forum: admission is free, refreshments are optional, and all gibs will be donated to charity. Merry Christmas to everyone!"
+      }
+    ]
+  },
+  {
+    "id": "20021224-qe1-retexturing-project",
+    "date": "20021224",
+    "author": "Arkon",
+    "title": "QE1 Retexturing Project",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Another 33 textures have been completed. The download link is temporarily unavailable but should be restored soon. As with the previous update, some textures differ from the originals, but they still make a strong visual impact.<br><a href=\"http://www.quake.cz/winclan/qe1/\" target=\"_blank\">http://www.quake.cz/winclan/qe1/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021224-ultimate-deathmatch-1-50-beta",
+    "date": "20021224",
+    "author": "Arkon",
+    "title": "Ultimate Deathmatch 1.50 Beta",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Alex Starwalker’s mod has been updated with spider_monster support and several code fixes. Version 1.40 is required for the upgrade, and a map designed specifically for the mod has also been released.<br><a href=\"http://www.freewebs.com/shadowalker/\" target=\"_blank\">http://www.freewebs.com/shadowalker/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021221-eternal-war-shadows-of-light",
+    "date": "20021221",
+    "author": "Arkon",
+    "title": "Eternal War: Shadows of Light",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "A demo has been released for one of the few commercial single-player projects. Eternal War is a polished standalone game that does not require Quake. The roughly 33 MB demo shows the project’s potential and is especially recommended to single-player fans.<br><a href=\"http://www.twoguyssoftware.ca/eternalwar/\" target=\"_blank\">http://www.twoguyssoftware.ca/eternalwar/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021220-netquake-europe",
+    "date": "20021220",
+    "author": "Arkon",
+    "title": "NetQuake Europe",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Many sites have tried to focus exclusively on Quake over the years. The European NetQuake Community has taken up the challenge, publishing news and maintaining an FTP archive with plenty of Quake material. I have also started contributing news and links, while continuing my work on this site as usual.<br><a href=\"http://www.nqeu.tk\" target=\"_blank\">http://www.nqeu.tk</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021220-ngi-server-update",
+    "date": "20021220",
+    "author": "Arkon",
+    "title": "NGI Server Update",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "The NGI server has been updated to the new ProQuake version and several server parameters have been changed. Xman was as prompt as ever, unlike the continuing search at GamersRevolt for a new home for Arkon’s Lair after it was displaced by Dark Age of Camelot. Please be patient."
+      }
+    ]
+  },
+  {
+    "id": "20021218-quake-extreme-mod-released",
+    "date": "20021218",
+    "author": "Arkon",
+    "title": "Quake Extreme Mod Released!",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Almost two years after [COBRA] Xeno first proposed a Quake mod, and after practically forcing me to learn QuakeC, Quake Extreme Mod is finally complete. You had better try it, or I will ban you from every server for life! :)))"
+      }
+    ]
+  },
+  {
+    "id": "20021213-new-quad-member",
+    "date": "20021213",
+    "author": "Arkon",
+    "title": "New [QUAD] Member",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Ladies and gentlemen, I am honored to announce that a new player has joined the clan. “New” is hardly the right word for a former XJ, TOG and especially ISDN-K member. Welcome to the Quake Army of Darkness, Beast!"
+      }
+    ]
+  },
+  {
+    "id": "20021213-pic-of-the-week",
+    "date": "20021213",
+    "author": "Arkon",
+    "title": "Pic of the Week",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "As promised, this week’s picture features Wham! in another of his epic adventures."
+      }
+    ]
+  },
+  {
+    "id": "20021212-qview-server-list",
+    "date": "20021212",
+    "author": "Arkon",
+    "title": "Qview Server List",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "The global server list has been updated and can be downloaded from the Servers section. The European list is unchanged for now; another news item will follow as soon as the new list is ready."
+      }
+    ]
+  },
+  {
+    "id": "20021212-xquake-1-06",
+    "date": "20021212",
+    "author": "Arkon",
+    "title": "XQuake 1.06",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "This release of Trujen’s engine can create AVI movies directly from the executable without additional software. It offers no particular improvement for online play; version 1.01 remains my preferred balance of image quality, teamplay features and network performance.<br><a href=\"http://wtf.ms/glxpro+106.zip\" target=\"_blank\">http://wtf.ms/glxpro+106.zip</a><br><a href=\"http://members.chello.nl/a.troost1/glxpro106.zip\" target=\"_blank\">http://members.chello.nl/a.troost1/glxpro106.zip</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021212-tenebrae-1-03",
+    "date": "20021212",
+    "author": "Arkon",
+    "title": "Tenebrae 1.03",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "The engine of the moment continues to improve, adding underwater caustics, fog and compressed-texture support. Its only drawback is that it remains extremely demanding, even on relatively new machines.<br><a href=\"http://tenebrae.sourceforge.net/\" target=\"_blank\">http://tenebrae.sourceforge.net/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021212-telejano-6-52",
+    "date": "20021212",
+    "author": "Arkon",
+    "title": "Telejano 6.52",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Tei has released what he describes as an alpha build. Among its additions is support for loading Quake III Arena models. Despite its many innovations, Telejano remains the most stable engine aimed at single-player use.<br><a href=\"http://telejano.berlios.de/wiki3/\" target=\"_blank\">http://telejano.berlios.de/wiki3/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021212-qe1-retexturing-project",
+    "date": "20021212",
+    "author": "Arkon",
+    "title": "QE1 Retexturing Project",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Another 25 Episode 1 textures have been completed, although this time some differ considerably from the originals.<br><a href=\"http://www.quake.cz/winclan/qe1/\" target=\"_blank\">http://www.quake.cz/winclan/qe1/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021212-ultimate-deathmatch-1-40",
+    "date": "20021212",
+    "author": "Arkon",
+    "title": "Ultimate Deathmatch 1.40",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "If you are tired of the usual weapons and game modes, this mod may be for you. It adds new options and allows offline practice with FrikBot X, already included in the code.<br><a href=\"http://www.planetquake.com/botarea51/main/default.asp\" target=\"_blank\">http://www.planetquake.com/botarea51/main/default.asp</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021212-every-quake-you-ever-wanted",
+    "date": "20021212",
+    "author": "Arkon",
+    "title": "Every Quake You Ever Wanted...",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "While browsing the Internet I found nearly every existing version of Quake, from QTest to the retail release. The original post noted uncertainty about the legality of the retail download.<br><a href=\"http://www.quaketerminus.freeola.com/qtest1.zip\" target=\"_blank\">Qtest</a><br><a href=\"http://www.quaketerminus.freeola.com/1evilway.zip\" target=\"_blank\">Qtest single player mod</a><br><a href=\"http://www.quakepit.com/downloads/index.php?action=download&amp;id=18\" target=\"_blank\">Quake prerelease</a><br><a href=\"ftp://ftp.idsoftware.com/idstuff/quake/\" target=\"_blank\">Quake shareware</a><br><a href=\"http://rocketz.mine.nu/quake/quake_iso.zip\" target=\"_blank\">Quake full version</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021123-qe1-retexturing-project",
+    "date": "20021123",
+    "author": "Arkon",
+    "title": "QE1 Retexturing Project",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "As expected, after finishing the E1M1 textures the team continued with the rest of the game. More than 90 textures beyond E1M1 have already been redesigned. Some are only partially reworked, but they still preserve Quake’s visual spirit.<br><a href=\"http://www.quake.cz/winclan/qe1/\" target=\"_blank\">http://www.quake.cz/winclan/qe1/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021119-new-quad-member",
+    "date": "20021119",
+    "author": "Arkon",
+    "title": "New [QUAD] Member",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Just when the [QUAD] recruitment campaign seemed closed, Morpheus, formerly of [M.P] and Biagio’s brother, joined the clan. Welcome to the Quake Army of Darkness, and happy fragging!"
+      }
+    ]
+  },
+  {
+    "id": "20021116-qe1m1-retexturing-project",
+    "date": "20021116",
+    "author": "Arkon",
+    "title": "QE1M1 Retexturing Project",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "With no new textures pending, the E1M1 retexturing project can be considered complete. The 18 MB pack is the same one mentioned on November 7. Its visual impact is remarkable and it works with Tenebrae, Telejano, Qure and XQuake.<br><a href=\"http://switch.to/qe1m1textures\" target=\"_blank\">http://switch.to/qe1m1textures/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021114-quad-lan-party-4-photos",
+    "date": "20021114",
+    "author": "Arkon",
+    "title": "[QUAD] LAN Party 4 Photos",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "There are only a few photos this time, while we wait for Biagio’s and Java’s pictures. In the meantime, visit the LAN Parties section to see these photographic gems."
+      }
+    ]
+  },
+  {
+    "id": "20021114-second-pic-of-the-week",
+    "date": "20021114",
+    "author": "Arkon",
+    "title": "Second Pic of the Week",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Sometimes months pass without a new picture; this time another one has already been added. Anyone who wants to contribute can send images by email. The next picture will feature Wham!, after the best shot from the summer holidays is selected."
+      }
+    ]
+  },
+  {
+    "id": "20021113-pic-of-the-week",
+    "date": "20021113",
+    "author": "Arkon",
+    "title": "Pic of the Week :)",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Hiroshi returns with astonishing special effects courtesy of Raistlin’s new mobile phone. Enlarge it to believe it. :)"
+      }
+    ]
+  },
+  {
+    "id": "20021109-cobra-news",
+    "date": "20021109",
+    "author": "Arkon",
+    "title": "[COBRA] News",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "News from our Italian cousins: Kankudai, formerly [QIC] and a companion through many sleepless nights, and Benny, Hiroshi’s brother, have joined [COBRA]. Even after all these years, Quake continues to attract old and new players. On Death’s behalf, welcome Kan and Benny. GL guys, Quake still rules!"
+      }
+    ]
+  },
+  {
+    "id": "20021108-fearcraft",
+    "date": "20021108",
+    "author": "Arkon",
+    "title": "Fearcraft",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Kona has finally released a new three-map mini-episode using Heretic textures. Once again, the new monsters fit the setting perfectly. Well worth trying.<br><a href=\"http://ethereal-hell.telefragged.com/\" target=\"_blank\">http://ethereal-hell.telefragged.com/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021108-ultramarine",
+    "date": "20021108",
+    "author": "Arkon",
+    "title": "Ultramarine",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Built with Quake III Arena textures and the same monsters used in Fearcraft, this map is also thoroughly enjoyable. At last, some fresh fun for single-player fans.<br><a href=\"http://ethereal-hell.telefragged.com/\" target=\"_blank\">http://ethereal-hell.telefragged.com/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021108-jeht-1-14",
+    "date": "20021108",
+    "author": "Arkon",
+    "title": "Jeht 1.14",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "This multiplayer mod release adds alternate fire, completely new weapon models and FrikBot support. It is designed specifically for deathmatch and modernizes the original Quake formula.<br><a href=\"http://static.condemned.com/\" target=\"_blank\">http://static.condemned.com/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021107-darkplaces-1-05",
+    "date": "20021107",
+    "author": "Arkon",
+    "title": "DarkPlaces 1.05",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "A new release of LordHavoc’s engine adds stencil shadows and gloss effects for textures. Screenshots on the project page show the changes in greater detail.<br><a href=\"http://icculus.org/twilight/darkplaces/\" target=\"_blank\">http://icculus.org/twilight/darkplaces/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021107-qe1m1-retexturing-project",
+    "date": "20021107",
+    "author": "Arkon",
+    "title": "QE1M1 Retexturing Project",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Although every texture has been redesigned, the work is not considered finished. The authors are still improving image quality. E1M1 now looks spectacular; hopefully the project will continue with textures for other maps.<br><a href=\"http://switch.to/qe1m1textures\" target=\"_blank\">http://switch.to/qe1m1textures/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021107-qmb-1-13",
+    "date": "20021107",
+    "author": "Arkon",
+    "title": "QMB 1.13",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Dr. Labman has updated the engine and moved to a new host. Remember to download the sound pack as well so that the engine works correctly.<br><a href=\"http://qmb.quakepit.com/\" target=\"_blank\">http://qmb.quakepit.com/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021025-brazilian-extreme-frags",
+    "date": "20021025",
+    "author": "Arkon",
+    "title": "Brazilian Extreme Frags",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "It is QuakeWorld rather than NetQuake, but this is one of the best movies currently available, both for image quality and gameplay. FuhQuake was used for 24-bit textures and MD3 models. The download is 157 MB, so patience and a resumable download tool are recommended.<br><a href=\"http://ftp.papa-figo.com.br/videos/bef-hi.zip\" target=\"_blank\">http://ftp.papa-figo.com.br/videos/bef-hi.zip</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021023-telejano-6-4",
+    "date": "20021023",
+    "author": "Arkon",
+    "title": "Telejano 6.4",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "The bug that prevented Quake III Arena crosshairs from appearing has been fixed, along with the menu shots. Despite its enormous range of features and effects, Tei’s engine remains well balanced and responsive.<br><a href=\"http://telejano.berlios.de/wiki3/\" target=\"_blank\">http://telejano.berlios.de/wiki3/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021023-starship-bunker",
+    "date": "20021023",
+    "author": "Arkon",
+    "title": "Starship Bunker",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "At last, a new single-player map. Although very small, it is still enjoyable. The map and several screenshots are available from the link below.<br><a href=\"http://www.planetquake.com/mati\" target=\"_blank\">http://www.planetquake.com/mati</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021019-4th-quad-lan-party",
+    "date": "20021019",
+    "author": "Arkon",
+    "title": "4th [QUAD] LAN Party!",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "After being postponed twice, first because of me and then because of Hiro, we finally met in Lavezzola for the fourth time. Attendance was lower than at the previous event, but it was still a memorable day with an impressive number of frags. Hiro posted a detailed report on the forum; the photos will follow."
+      }
+    ]
+  },
+  {
+    "id": "20021011-qe1m1-retexturing-project",
+    "date": "20021011",
+    "author": "Arkon",
+    "title": "QE1M1 Retexturing Project",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Only a few textures remain before the E1M1 retexturing project is complete. The results so far are excellent and well worth seeing.<br><a href=\"http://switch.to/qe1m1textures\" target=\"_blank\">http://switch.to/qe1m1textures</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021011-quake-episode-1-remodelling-project",
+    "date": "20021011",
+    "author": "Arkon",
+    "title": "Quake Episode 1 Remodelling Project",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "The first models are beginning to appear, together with screenshots of work in progress. Although much more detailed, the new models retain the original shapes, just as the retexturing project preserves the look of the original textures.<br><a href=\"http://switch.to/qmodels\" target=\"_blank\">http://switch.to/qmodels</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021011-telejano-6-1",
+    "date": "20021011",
+    "author": "Arkon",
+    "title": "Telejano 6.1",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Tei continues to add features to an engine that remains impressive for both speed and visual effects. This release fixes several bugs and optimizes TGA file loading.<br><a href=\"http://telejano.berlios.de/wiki3/\" target=\"_blank\">http://telejano.berlios.de/wiki3/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20021011-map-convert",
+    "date": "20021011",
+    "author": "Arkon",
+    "title": "Map Convert",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "If you want to convert Quake II maps to Quake, this Java program is designed for the job. After a long period without updates, several functions have been optimized to reduce conversion errors.<br><a href=\"http://rem.fov120.com/\" target=\"_blank\">http://rem.fov120.com/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20020929-qe1m1-retexturing-project",
+    "date": "20020929",
+    "author": "Arkon",
+    "title": "QE1M1 Retexturing Project",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "More new textures have arrived for E1M1. With 41 textures redesigned so far, the project already appears to be well advanced.<br><a href=\"http://switch.to/qe1m1textures\" target=\"_blank\">http://switch.to/qe1m1textures</a>"
+      }
+    ]
+  },
+  {
+    "id": "20020929-quake-episode-1-remodelling-project",
+    "date": "20020929",
+    "author": "Arkon",
+    "title": "Quake Episode 1 Remodelling Project",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "After textures, it is time for models. No download is available yet, but new MD3 models are being developed for engines such as Tenebrae and Telejano. Further updates will follow.<br><a href=\"http://switch.to/qmodels\" target=\"_blank\">http://switch.to/qmodels</a>"
+      }
+    ]
+  },
+  {
+    "id": "20020929-qview-server-list-update",
+    "date": "20020929",
+    "author": "Arkon",
+    "title": "Qview Server List Update",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "The NetQuake server lists have been updated. The European list is available from the Servers section, while a longer list containing 108 servers is also available while QuadQuakers.com prepares its own update."
+      }
+    ]
+  },
+  {
+    "id": "20020926-regular-quake-players",
+    "date": "20020926",
+    "author": "Arkon",
+    "title": "Regular Quake Players",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Here is the first movie produced entirely in NetQuake that clearly surpasses NetQuake Overclocked in both quality and gameplay footage. It features old friends including Beast/Polarite, Plop and other players who made their mark on NetQuake. It is well worth watching.<br><a href=\"http://users.telenet.be/polarite/\" target=\"_blank\">http://users.telenet.be/polarite/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20020926-bulldog-arena",
+    "date": "20020926",
+    "author": "Arkon",
+    "title": "Bulldog Arena",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "Ajay has followed Raptors with something completely different. This time you must run unarmed through difficult courses populated by Quake monsters. Ajay has also added a Hall of Fame to record the best player results.<br><a href=\"http://www.ajaysquakesite.co.uk/\" target=\"_blank\">http://www.ajaysquakesite.co.uk/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20020926-cheaphack-1-5a",
+    "date": "20020926",
+    "author": "Arkon",
+    "title": "CheapHack 1.5a",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "A new release of CheapAlert’s engine, also based on the discontinued TomazQuake. Although similar to Telejano, it is much lighter and supports textures up to 1024 × 1024.<br><a href=\"http://www.planetquake.com/gargoyle\" target=\"_blank\">http://www.planetquake.com/gargoyle</a>"
+      }
+    ]
+  },
+  {
+    "id": "20020926-tenebrae-1-02",
+    "date": "20020926",
+    "author": "Arkon",
+    "title": "Tenebrae 1.02",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "This release is about 25 percent faster than the previous build, although still demanding with high-resolution textures, and now supports Radeon cards. A map designed specifically for the engine has also been released, together with Quake III Arena model support.<br><a href=\"http://tenebrae.sourceforge.net/\" target=\"_blank\">http://tenebrae.sourceforge.net/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20020926-darkplaces",
+    "date": "20020926",
+    "author": "Arkon",
+    "title": "DarkPlaces",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "LordHavoc has updated both the engine and the mod. The project is now hosted on a new website.<br><a href=\"http://icculus.org/twilight/darkplaces/\" target=\"_blank\">http://icculus.org/twilight/darkplaces/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20020926-candy-quake",
+    "date": "20020926",
+    "author": "Arkon",
+    "title": "Candy Quake",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "After the deathmatch map textures, E1M1 has received the Candy Quake treatment. They differ completely from the Tenebrae textures but are equally attractive. All textures on the site work with XQuake, Telejano and Tenebrae.<br><a href=\"http://www.geocities.com/quakecandy/\" target=\"_blank\">http://www.geocities.com/quakecandy/</a>"
+      }
+    ]
+  },
+  {
+    "id": "20020926-xquake-1-051",
+    "date": "20020926",
+    "author": "Arkon",
+    "title": "XQuake 1.051",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "This is essentially the previous XQuake release bundled with the new textures mentioned above.<br><a href=\"http://wtf.ms/glxpro+1051full.zip\" target=\"_blank\">http://wtf.ms/glxpro+1051full.zip</a>"
+      }
+    ]
+  },
+  {
+    "id": "20020926-homepage",
+    "date": "20020926",
+    "author": "Arkon",
+    "title": "Homepage",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "My previous demo against Frogbots at skill 200 has been replaced by a new ten-minute time-limit demo. It can be downloaded from the Demos section."
+      }
+    ]
+  },
+  {
+    "id": "20020926-star-wars",
+    "date": "20020926",
+    "author": "Arkon",
+    "title": "Star Wars?",
+    "content": [
+      {
+        "type": "paragraph",
+        "html": "This has nothing to do with Quake, but once again there is a link worth seeing. I am still speechless.<br><a href=\"telnet://towel.blinkenlights.nl/\" target=\"_blank\">STAR WARS ?</a>"
+      }
+    ]
+  },
   {
     "id": "20020925-telejano-5-54",
     "date": "20020925",
