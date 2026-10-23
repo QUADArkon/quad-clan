@@ -19,6 +19,12 @@
     const desktopMenuHost = document.getElementById('desktop-menu-host');
 
     renderQuadMenu(desktopMenuHost, { linkTarget: 'main' });
+    window.addEventListener('message', event => {
+      if (!event.data || event.data.type !== 'quad-admin-show-menu') return;
+      if (typeof showQuadAdministration !== 'function') return;
+      if (!showQuadAdministration()) return;
+      renderQuadMenu(desktopMenuHost, { linkTarget: 'main' });
+    });
 
     desktopMenuHost.addEventListener('click', event => {
       const link = event.target.closest('a');
