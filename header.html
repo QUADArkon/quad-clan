@@ -1,8 +1,108 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><title>[QUAD] Banner</title><link rel="stylesheet" href="css/quad.css"></head>
+<head><meta charset="utf-8"><title>[QUAD] Banner</title><link rel="stylesheet" href="css/quad.css"><style>
+.header-banner{position:relative;overflow:visible}
+#quadban2{position:absolute;left:50%;top:50%;width:600px;height:49px;transform:translate(-50%,-50%);opacity:0;pointer-events:none;z-index:1;transition:opacity 400ms ease}
+#quadban{position:relative;z-index:2;-webkit-user-drag:none;user-select:none;touch-action:none}
+#quadban.admin-armed{cursor:grab}
+#quadban.admin-dragging{cursor:grabbing}
+</style></head>
 <body class="header-page">
   <img class="header-grid" src="images/header/headret.png" alt="">
-  <div class="header-banner"><img src="images/header/quadban.gif" width="600" height="49" alt="[QUAD]"></div>
+  <div class="header-banner"><img id="quadban2" src="images/header/quadban2.png" width="600" height="49" alt=""><img id="quadban" src="images/header/quadban.gif" width="600" height="49" alt="[QUAD]"></div>
+  <audio id="quadwav" src="sound/quad.wav" preload="auto"></audio>
+
+<script>
+(function(){
+  'use strict';
+  var THRESHOLD=120,EXIT_MS=450,FADE_MS=400,RETURN_MS=200;
+  var main=document.getElementById('quadban');
+  var secret=document.getElementById('quadban2');
+  var sound=document.getElementById('quadwav');
+  var armed=false,dragging=false,running=false,startX=0,currentX=0;
+
+  function reset(){
+    armed=false;dragging=false;running=false;currentX=0;
+    main.classList.remove('admin-armed','admin-dragging');
+    main.style.transition='';main.style.transform='';main.style.opacity='1';main.style.pointerEvents='auto';
+    secret.style.opacity='0';secret.style.pointerEvents='none';secret.style.zIndex='1';
+  }
+
+  function setArmed(active){
+    if(running)return;
+    armed=active===true;
+    main.classList.toggle('admin-armed',armed);
+    if(!armed&&!dragging){
+      main.style.transition='transform '+RETURN_MS+'ms ease-out';
+      main.style.transform='';currentX=0;
+    }
+  }
+
+  window.addEventListener('message',function(event){
+    if(event.data&&event.data.type==='quad-admin-arm')setArmed(event.data.active);
+  });
+
+  function launch(){
+    if(running)return;
+    running=true;dragging=false;armed=false;
+    main.classList.remove('admin-armed','admin-dragging');
+    var rect=main.getBoundingClientRect();
+    var exitX=currentX+(window.innerWidth-rect.left)+rect.width+20;
+    main.style.transition='transform '+EXIT_MS+'ms ease-in';
+    main.style.transform='translateX('+exitX+'px)';
+    window.setTimeout(function(){
+      main.style.transition='none';main.style.opacity='0';main.style.pointerEvents='none';main.style.transform='';currentX=0;
+      void main.offsetWidth;
+      secret.style.zIndex='3';
+      secret.style.opacity='1';
+      window.setTimeout(function(){if(running)secret.style.pointerEvents='auto';},FADE_MS);
+    },EXIT_MS);
+  }
+
+  main.addEventListener('pointerdown',function(event){
+    if(!armed||running)return;
+    dragging=true;startX=event.clientX;currentX=0;
+    main.classList.add('admin-dragging');
+    if(main.setPointerCapture)main.setPointerCapture(event.pointerId);
+    event.preventDefault();
+  });
+
+  main.addEventListener('pointermove',function(event){
+    if(!dragging||running)return;
+    currentX=Math.max(0,event.clientX-startX);
+    main.style.transition='none';
+    main.style.transform='translateX('+currentX+'px)';
+    if(currentX>=THRESHOLD)launch();
+  });
+
+  function release(event){
+    if(!dragging||running)return;
+    dragging=false;main.classList.remove('admin-dragging');
+    if(main.releasePointerCapture){try{main.releasePointerCapture(event.pointerId);}catch(error){}}
+    main.style.transition='transform '+RETURN_MS+'ms ease-out';
+    main.style.transform='';currentX=0;
+  }
+  main.addEventListener('pointerup',release);
+  main.addEventListener('pointercancel',release);
+
+  secret.addEventListener('click',function(){
+    if(!running)return;
+    secret.style.pointerEvents='none';
+    try{sound.currentTime=0;var playback=sound.play();if(playback&&playback.catch)playback.catch(function(){});}catch(error){}
+    secret.style.opacity='0';
+    window.setTimeout(function(){
+      main.style.transition='none';main.style.transform='';main.style.opacity='0';main.style.pointerEvents='auto';
+      void main.offsetWidth;
+      main.style.transition='opacity '+FADE_MS+'ms ease';main.style.opacity='1';
+      window.setTimeout(function(){
+        reset();
+        window.parent.postMessage({type:'quad-admin-header-complete'},'*');
+      },FADE_MS);
+    },FADE_MS);
+  });
+
+  reset();
+}());
+</script>
 </body>
 </html>
