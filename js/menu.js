@@ -29,6 +29,7 @@ window.renderQuadMenu = function(container, options = {}) {
     summary.textContent = sectionData.title;
     const ul = document.createElement("ul");
     sectionData.items.forEach(([label, href, target]) => {
+      if (mobile && label === "Administration") return;
       const li = document.createElement("li");
       const a = document.createElement("a");
       a.textContent = label;
@@ -41,4 +42,14 @@ window.renderQuadMenu = function(container, options = {}) {
     details.append(summary, ul);
     container.appendChild(details);
   });
+};
+
+
+window.showQuadAdministration = function() {
+  const section = window.QUAD_MENU.find(item => item.title === "News & Boards");
+  if (!section) return false;
+  if (!section.items.some(([label]) => label === "Administration")) {
+    section.items.splice(2, 0, ["Administration", "admin/index.html"]);
+  }
+  return true;
 };
