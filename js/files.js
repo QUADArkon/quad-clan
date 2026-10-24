@@ -18,11 +18,10 @@
     });
   }
 
-  /* Stored as DDMMYYYY. Convert only for chronological comparison. */
+  /* Stored as YYYYMMDD, matching the News archive. */
   function dateKey(value) {
     var v = String(value || '');
-    var m = v.match(/^(\d{2})(\d{2})(\d{4})$/);
-    return m ? m[3] + m[2] + m[1] : '';
+    return /^\d{8}$/.test(v) ? v : '';
   }
 
   function sortNewest(list) {
@@ -31,11 +30,11 @@
     });
   }
 
-  /* Visible dates use English/US format MM/DD/YYYY. */
+  /* Visible dates remain compact English/US MM/DD/YYYY. */
   function displayDate(value) {
     var v = String(value || '');
-    var m = v.match(/^(\d{2})(\d{2})(\d{4})$/);
-    return m ? m[2] + '/' + m[1] + '/' + m[3] : v;
+    var m = v.match(/^(\d{4})(\d{2})(\d{2})$/);
+    return m ? m[2] + '/' + m[3] + '/' + m[1] : v;
   }
 
   function downloadHref(file) {

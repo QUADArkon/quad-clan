@@ -49,7 +49,7 @@ window.showQuadAdministration = function() {
   const section = window.QUAD_MENU.find(item => item.title === "News & Boards");
   if (!section) return false;
   if (!section.items.some(([label]) => label === "Administration")) {
-    section.items.splice(2, 0, ["Administration", "admin/index.html"]);
+    section.items.splice(2, 0, ["Administration", "admin/admin.html"]);
   }
   return true;
 };
