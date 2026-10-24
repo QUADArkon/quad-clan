@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>[QUAD] Administration</title>
+  <link rel="stylesheet" href="../css/quad.css">
+</head>
+<body class="content-page admin-page">
+  <main class="quad-content admin-page-frame">
+    <section class="content-box admin-outer-box">
+      <div class="admin-shell" id="adminApp">
+      <header class="admin-head">
+        <div>
+          <h1>QUAD ADMINISTRATION</h1>
+          <div class="admin-subtitle">Local archive editor. Changes are never published automatically.</div>
+        </div>
+        <button id="adminLogout" class="admin-button admin-button-danger" type="button">LOG OUT</button>
+      </header>
+      <div id="adminDesktopOnly" class="admin-desktop-only" hidden>QUAD Administration is available on desktop only.</div>
+      <div id="adminWorkspace">
+        <nav class="admin-tabs admin-primary-tabs" aria-label="Archive type">
+          <button type="button" data-admin-archive="news">NEWS</button>
+          <button type="button" data-admin-archive="files">FILES</button>
+        </nav>
+        <section class="admin-sourcebar">
+          <div class="admin-source-info">
+            <strong id="adminSourceTitle">Select NEWS or FILES</strong>
+            <div id="adminSourceStatus" class="admin-muted">No archive selected.</div>
+          </div>
+          <div class="admin-source-actions">
+            <label class="admin-backup"><input id="adminBackup" type="checkbox" checked> Create backup on download</label>
+            <label id="adminLoadLabel" class="admin-button admin-button-secondary" hidden>LOAD LOCAL COPY<input id="adminFileInput" type="file" accept=".js,text/javascript" hidden></label>
+            <button id="adminDownload" class="admin-button" type="button" hidden>DOWNLOAD UPDATED FILE</button>
+          </div>
+        </section>
+        <nav id="adminModeTabs" class="admin-tabs" aria-label="Editor mode" hidden>
+          <button type="button" data-admin-mode="new">NEW</button>
+          <button type="button" data-admin-mode="edit">EDIT</button>
+        </nav>
+        <section id="adminEmpty" class="admin-panel admin-empty">Choose NEWS or FILES to begin.</section>
+        <section id="adminNewPane" class="admin-pane" hidden></section>
+        <section id="adminEditPane" class="admin-pane" hidden></section>
+      </div>
+      </div>
+    </section>
+  </main>
+  <div id="adminModal" class="admin-modal" hidden role="dialog" aria-modal="true">
+    <div class="admin-dialog">
+      <h2 id="adminModalTitle">Unsaved changes</h2>
+      <p id="adminModalText"></p>
+      <div id="adminModalActions" class="admin-actions"></div>
+    </div>
+  </div>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
