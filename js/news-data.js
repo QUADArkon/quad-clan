@@ -1,10 +1,471 @@
 const newsArchive = [
 {
+  "id": "20261028-looks-like-the-original",
+  "date": "20261028",
+  "author": "Arkon",
+  "title": "Looks Like the Original...",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>...but it isn't.</p>\n\n<p>When I started rebuilding the [QUAD] homepage, I thought I was restoring an old website.</p>\n\n<p>As usual, things got slightly out of hand.</p>\n\n<p>The objective was never to redesign it. I wanted to preserve the menus, colours, backgrounds, graphics, boxes and all those little details that made the old homepage immediately recognizable, while replacing almost everything underneath with modern HTML, CSS and JavaScript.</p>\n\n<p>I didn't want to build a modern website inspired by [QUAD].</p>\n\n<p><strong>I wanted to build the [QUAD] homepage I always had in mind.</strong></p>\n\n<p>The difference is that this time I actually have the tools to do it.</p>\n\n<p>The site now works properly with modern browsers and, for the first time, has been adapted for mobile devices without sacrificing the original desktop layout.</p>\n\n<p>But the real surprise came when I started going through the material that had survived all these years.</p>\n\n<p>There was a lot of it.</p>\n\n<p><strong>More than 400 news posts, more than 500 trophy screenshots, around 150 photographs from our LAN parties and more than 100 demos</strong>, covering clanwars, duels and FFA matches.</p>\n\n<p>Apparently I have never been particularly good at throwing things away.</p>\n\n<p>Instead of simply putting the files back online, I've tried to give all this material a structure again. Clanwars, Demos, Trophies, members, LAN galleries, Code and the other surviving sections have gradually returned to their places.</p>\n\n<p>Some parts, however, have become something I could only imagine when I built the original site.</p>\n\n<p><strong>History</strong> is probably the clearest example.</p>\n\n<p>In 2000 I wanted a real presentation for the QUake Army of Darkness, something closer to a movie introducing the clan than another page full of text and pictures.</p>\n\n<p>I knew what I wanted to make.</p>\n\n<p>I simply couldn't make it.</p>\n\n<p>Now History is finally that presentation.</p>\n\n<p>Twenty-six years late, admittedly.</p>\n\n<p>I also have a <strong>server browser built directly into the homepage</strong>.</p>\n\n<p>And looking at the servers is quite educational.</p>\n\n<p>There are more public Quake servers visible today than I remember having available in the early 2000s.</p>\n\n<p>Most of the time, many of them are empty.</p>\n\n<p>That makes some Quake websites rather entertaining.</p>\n\n<p>Apparently it is perfectly possible for a site to have thousands of \"guests online\", thousands of views and wonderfully impressive counters while actual human beings remain surprisingly difficult to locate.</p>\n\n<p>If all those guests ever decide to install Quake at the same time, we're going to need bigger servers.</p>\n\n<p>Download counters deserve a little caution too. From what I can observe, when something genuinely interesting is released, a new map, episode or mod can attract a few hundred real downloads. After the initial burst of interest, the numbers normally settle back into the tens.</p>\n\n<p>That may look less impressive on a webpage.</p>\n\n<p>It is also considerably more believable.</p>\n\n<p>And for a game released in 1996, I find those real numbers far more interesting than imaginary thousands.</p>\n\n<p>The other striking thing is where most of the creative energy has gone.</p>\n\n<p><strong>Single-player Quake is extraordinarily active.</strong></p>\n\n<p>New maps, episodes, mods and mapping jams keep appearing, along with new engines, compilers, editors, textures and tools for creating them.</p>\n\n<p>I have seen the claim that something like 95% of current Quake activity is single player. Looking at what is being released, I can understand where that impression comes from, but I haven't found data solid enough to pretend that 95% is a measured statistic.</p>\n\n<p>Let's just say that if multiplayer is winning the content race, it is doing an excellent job of hiding the evidence.</p>\n\n<p>Multiplayer itself isn't gone. The way people use it has changed.</p>\n\n<p>In the past I would connect to a public server to see who was there.</p>\n\n<p>Today players are more likely to find each other first, arrange a game or an event, and only then decide where to play. That might be an existing public server, a temporary private one or even a virtual-LAN setup when that is the simplest solution.</p>\n\n<p><strong>The server used to be the meeting place. Now it is often just the place where the meeting happens.</strong></p>\n\n<p>And choosing the server isn't necessarily straightforward anymore either.</p>\n\n<p>Quake first divided into two multiplayer worlds when QuakeWorld appeared alongside the original NetQuake.</p>\n\n<p>I stayed with <strong>NetQuake</strong>. So did [QUAD].</p>\n\n<p>Then <strong>Quake Enhanced</strong> arrived and added another official way of playing, while NetQuake and QuakeWorld continued to exist alongside it.</p>\n\n<p>That brings me to one part of the new site that I'm deliberately not trying to finish too quickly.</p>\n\n<p><strong>Files.</strong></p>\n\n<p>The archive already contains a collection of <strong>development and editing tools</strong>: programs for building maps, working with QuakeC, creating and editing models and textures, compiling content and generally taking Quake apart and putting it back together again.</p>\n\n<p>Eventually I want to add a carefully selected collection of <strong>maps, engines and mods</strong>.</p>\n\n<p>Finding material isn't the problem.</p>\n\n<p>Deciding what belongs there is.</p>\n\n<p>Because sooner or later I have to answer a very simple question:</p>\n\n<p><strong>Which Quake?</strong></p>\n\n<p>Do I stay completely loyal to NetQuake, because that's what [QUAD] has always been?</p>\n\n<p>Do I include Quake Enhanced and the official ecosystem now developing around it?</p>\n\n<p>Do I find a sensible way of accommodating both?</p>\n\n<p>Or do I eventually build something of my own?</p>\n\n<p>I don't know yet.</p>\n\n<p>For the moment, I'm leaving that question open.</p>\n\n<p>There are already enough things in this homepage that I couldn't have realistically built in 2000.</p>\n\n<p>Including a proper <strong>Easter egg</strong>.</p>\n\n<p>It's there.</p>\n\n<p>I'm not telling you where.</p>\n\n<p>Unfortunately, I have also put <strong>the complete source code of the website on GitHub</strong>, which is admittedly not the smartest possible way to protect a secret.</p>\n\n<p>You can search the source and cheat.</p>\n\n<p>But where's the fun in that?</p>\n\n<p>And this is where the whole reconstruction has become slightly paradoxical.</p>\n\n<p>In 2000 I already had a fairly clear picture of what I wanted the [QUAD] homepage to be. I just wasn't able to build all of it.</p>\n\n<p>Some ideas were beyond my skills. Some were beyond the browsers and technology of the time. Bandwidth made every large file a problem. Other ideas never got further than \"wouldn't it be nice if...\".</p>\n\n<p>Today I can make History into the presentation I originally imagined. I can organize hundreds of pictures, trophies and demos into a proper archive. I can put live server information inside the homepage. I can make the same site work on a desktop and a phone. I can even publish every line of its source code for anyone curious enough to inspect it.</p>\n\n<p>So after rebuilding almost everything, I ended up somewhere I didn't expect.</p>\n\n<p><strong>The [QUAD] homepage I'm building in 2026 is closer to the website I dreamed of in 2000 than the website I was actually able to build in 2000.</strong></p>\n\n<p>Twenty-six years later, the technology finally caught up with the idea.</p>\n\n<p><strong>Looks like the original...</strong></p>\n\n<p>...but this may actually be the original I wanted all along.</p>"
+    }
+  ]
+},
+{
+  "id": "20260915-quake-30th-anniversary-update-september-update",
+  "date": "20260915",
+  "author": "Arkon",
+  "title": "Quake 30th Anniversary Update: September Update",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>The 30th Anniversary Update has received another round of fixes and additions.</p>\n\n<p>On PC, the update fixes missing shaders when running in <strong>Direct3D 11</strong> and a startup crash affecting <strong>Vulkan on Intel GPUs</strong>. Bethesda still recommends Vulkan where possible, as Direct3D 11 remains unsupported.</p>\n\n<p>Nintendo Switch also gets a fix for graphical problems in split-screen mode.</p>\n\n<p>The Cheats menu has been expanded for <strong>Dawn of the Machine</strong>, with new options for granting upgrades, Bloody Nightmare, New Game+, the Super Axe and the Bloody Shotgun/Super Shotgun.</p>\n\n<p>Private cooperative games get a useful change too: the lobby host can now use cheats during the match.</p>\n\n<p>Online multiplayer now includes a <strong>Report Player</strong> option directly from the scoreboard.</p>\n\n<p>GOG and the Epic Games Store have also been updated to include Dawn of the Machine.</p>\n\n<p>But the most interesting part of this update may actually be outside the game.</p>\n\n<p><strong>id Software has released the QuakeC source code for Dawn of the Machine.</strong></p>\n\nThirty years after Quake made its game logic accessible through QuakeC, the source code behind its newest official episode is once again being handed to the modding community.</br>\n<a href=\"https://github.com/id-Software/quake-rerelease-qc\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/id-Software/quake-rerelease-qc</a>"
+    }
+  ]
+},
+{
+  "id": "20260806-dawn-of-the-machine",
+  "date": "20260806",
+  "author": "Arkon",
+  "title": "Dawn of the Machine",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p><strong>MachineGames, in collaboration with id Software, has released Dawn of the Machine</strong>, a completely new episode as part of the free 30th Anniversary Update.</p>\n\n<p>And this isn't simply another collection of maps.</p>\n\n<p>Dawn of the Machine contains <strong>19 new maps</strong> forming a single campaign, with its own episode hub, hidden secrets, a new soundtrack and a new Deathmatch map.</p>\n\n<p>The structure is considerably more ambitious than traditional Quake episodes. Ranger is trapped in a dimension where time loops back on itself, and returning through previously visited areas can reveal new routes, encounters and secrets.</p>\n\n<p>Runes unlock previously inaccessible paths, while health and ammunition upgrades persist through the loops, adding an actual progression system to the usual Quake formula.</p>\n\n<p>There are new variations of familiar enemies too, including the <strong>Rocket Ogre, Demo Dog and Blood Shambler</strong>, each with different attacks and behaviours.</p>\n\n<p>The arsenal also gets some new toys. The <strong>Super Axe</strong> builds up lightning through successive strikes, while the <strong>Laser Cannon</strong> fires projectiles capable of ricocheting around the environment.</p>\n\n<p>The anniversary update itself goes beyond the new episode. It adds a new Cheats menu, three achievements, engine fixes and improvements, and an <strong>id Vault</strong> containing development material and playable maps from Quake's early history.</p>\n\nThere are also changes aimed directly at modders, including a revised localization system for custom content.</br>\n<a href=\"https://slayersclub.bethesda.net/en-US/news/quake-30th-anniversary-update\" target=\"_blank\" rel=\"noopener noreferrer\">https://slayersclub.bethesda.net/en-US/news/quake-30th-anniversary-update</a>"
+    }
+  ]
+},
+{
+  "id": "20260622-30-years-of-quake",
+  "date": "20260622",
+  "author": "Arkon",
+  "title": "30 Years of Quake",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p><strong>Thirty years.</strong></p>\n\n<p>I honestly don't know whether that's more impressive for Quake or more worrying for the rest of us.</p>\n\n<p>When this game appeared in 1996, nobody could possibly have known where it would lead.</p>\n\n<p>I certainly didn't.</p>\n\n<p>But for me the calculation is pretty simple.</p>\n\n<p><strong>No Quake, no [QUAD].</strong></p>\n\n<p>And without [QUAD], quite a few people who have been part of my life for the last twenty-six years would probably still be complete strangers.</p>\n\n<p>That's a rather impressive achievement for a piece of software whose basic purpose is to give you a double-barrelled shotgun and point you towards something unpleasant.</p>\n\n<p>Thirty years later, you can run Quake on machines Carmack could only have dreamed about, with resolutions, framerates and effects that would have sounded ridiculous in 1996.</p>\n\n<p>But press the button, load a map and pick up a Rocket Launcher...</p>\n\n<p><strong>and it's still Quake.</strong></p>\n\n<p>Happy 30th anniversary.</p>\n\n<p>Now stop making me feel old.</p>"
+    }
+  ]
+},
+{
+  "id": "20260201-gone-but-not-for-long",
+  "date": "20260201",
+  "author": "Arkon",
+  "title": "Gone... But Not for Long",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>Well, this wasn't how I expected the old QUAD homepage to end.</p>\n\n<p>After all these years, Tiscali has shut down the web service that hosted the <strong>QUake Army of Darkness clan homepage</strong>.</p>\n\n<p>And just like that, the old site disappeared from the Internet.</p>\n\n<p>[QUAD] website survived several revisions, complete redesigns, experiments with ASP and PHP, changing browsers, changing standards and more than two decades of the Web itself.</p>\n\n<p>Ironically, in the end it wasn't broken HTML, obsolete JavaScript or one of my terrible ideas that killed it.<strong>They simply switched the service off.</strong></p>\n\n<p>Fortunately, the website itself isn't lost.</p>\n\n<p>The files are still here. The pictures are still here. The demos are still here. And, most importantly, the history is still here.</p>\n\n<p>So rather than simply finding somewhere else to dump the old files, I've decided to use this as an opportunity to do something I've been putting off for a very long time:<strong>rebuild the whole thing properly.</strong></p>\n\n<p>The new home is:\n<a href=\"https://quad.statichost.page/\" target=\"_blank\" rel=\"noopener noreferrer\">https://quad.statichost.page/</a></p>\n\n<p>QUAD Clan Homepage isn't gone.<strong>We're just moving.</strong></p>"
+    }
+  ]
+},
+{
+  "id": "20250508-about-damn-time",
+  "date": "20250508",
+  "author": "Arkon",
+  "title": "About Damn Time",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p><strong>Quake has officially entered the World Video Game Hall of Fame.</strong></p>\n\n<p>The Strong National Museum of Play has announced the 2025 inductees, and Quake joins <strong>Defender, GoldenEye 007 and Tamagotchi</strong> in this year's selection.</p>\n\n<p>For those of us who have spent a rather unreasonable part of our lives playing it, its importance hardly needs explaining.</p>\n\n<p>Quake didn't simply move first-person shooters into a fully 3D world. It helped define Internet multiplayer, client/server gaming, competitive online play and a culture of mods, custom maps and community-created content that is still producing new material almost thirty years later.</p>\n\n<p>Many of the things that became normal in multiplayer games during the following decades were being experimented with in Quake while most of us were still trying to work out how to get a decent ping.</p>\n\n<p>Almost thirty years after its release, Quake is officially part of gaming history.</p>\n\n<p><strong>Which, after twenty-five years of [QUAD], probably makes us museum pieces too.</strong></p>\n\n<strong>At least we're in good company.</strong></br>\n<a href=\"https://www.museumofplay.org/press-release/2025-world-video-game-hall-of-fame-inductees-announced/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.museumofplay.org/press-release/2025-world-video-game-hall-of-fame-inductees-announced/</a>"
+    }
+  ]
+},
+{
+  "id": "20250224-25-years-of-quad",
+  "date": "20250224",
+  "author": "Arkon",
+  "title": "25 Years of [QUAD]",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>A quarter of a century.</p>\n\n<p>At this point I think we're entitled to ask a slightly ridiculous question:</p>\n\n<p><strong>Are [QUAD] the longest-running NetQuake clan still around?</strong></p>\n\n<p>Twenty-five years is a very long time for a gaming clan. Long enough for Quake itself to go from current game, to old game, to classic, to remaster, without us ever really deciding that [QUAD] had ended.</p>\n\n<p>There are older Quake clans still around, particularly in the QuakeWorld community. Fraggers United, for example, dates back to 1997 and is still playing.</p>\n\n<p>But NetQuake is a different story.</p>\n\n<p>I honestly don't know if another original <strong>NetQuake clan</strong> can claim twenty-five years under the same name.</p>\n\n<p>If there is one, I'd genuinely like to hear from them.</p>\n\n<p>Until somebody proves otherwise, however...</p>\n\n<p><strong>25 years of QUake Army of Darkness.</strong></p>\n\n<p>Not bad, team.</p>\n\n<p><strong>Not bad at all.</strong></p>"
+    }
+  ]
+},
+{
+  "id": "20151101-ffa11-fun-tournament",
+  "date": "20151101",
+  "author": "Arkon",
+  "title": "FFA11 Fun Tournament",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>FFA11 once again took place across <strong>Damage_UK</strong> and <strong>FFANY-New York</strong>, with Hell, Misdm8, E4M3 and Go2hell on the menu.</p>\n\n<p>Polarite recorded his POV on the maps and Mr.Burns helped with the setup again.</p>\n\n<p>The final tally reached <strong>2,238 frags at 27.975 FPM</strong>.</p>\n\n<p>Go2hell felt a little cramped during the game.</p>\n\n<p>We discovered why afterwards.</p>\n\n<p><strong>Nobody opened the second part of the map.</strong></p>\n\n<p>Polarite says he tried, but apparently everyone considered shooting him more important than helping with map exploration.</p>\n\n<p>Hard to argue with that.</p>\n\n<p>Thanks to everybody who joined FFA11, and once again to Mr.Burns for helping get everything running.</p>"
+    }
+  ]
+},
+{
+  "id": "20140831-ffa10-fun-tournament",
+  "date": "20140831",
+  "author": "Arkon",
+  "title": "FFA10 Fun Tournament",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>FFA10 split the action between <strong>Damage_UK</strong> and <strong>FFANY-New York</strong>, with Cleaver, Q3dm6qw, Q1shw2 and Kikdm3 providing the battlefields.</p>\n\n<p>And yes, it was another proper fragfest.</p>\n\n<p>It was particularly nice to see some old faces back in action, which is really what these tournaments have been about from the beginning: get people together, load some maps and see how much old-school damage we can produce.</p>\n\n<p>This time the answer was <strong>3,102 frags at 38.775 FPM</strong>.</p>\n\n<p>Mr.Burns handled the random camera and also prepared statistics for each map, while Polarite recorded his own POV.</p>\n\n<p>Talisa has even turned the games into <strong>720p HD videos</strong>, so apparently our old NetQuake fragfests have finally entered the high-definition era.</p>\n\n<p>Thanks to everyone who played and to Mr.Burns for the recording and admin help.</p>"
+    }
+  ]
+},
+{
+  "id": "20140720-ffa1-runequake-fun-tournament",
+  "date": "20140720",
+  "author": "Arkon",
+  "title": "FFA1 RuneQuake Fun Tournament",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>The first <strong>RuneQuake FFA Fun Tournament</strong> is over, and apparently adding runes, hooks and everything else RuneQuake likes to throw into the mix doesn't make people frag any less.</p>\n\n<p>We played Safe1, Sanity, BalDm7 and Cleaver.</p>\n\n<p>Cleaver was actually a last-minute replacement for GenDM1 after EZJack and Dee Killer found a small hole in the map. According to Mr.Burns, using the hook in exactly the wrong place could send a player through the geometry and leave him stuck in a loop.</p>\n\n<p>Probably not the kind of secret area the mapper had in mind.</p>\n\n<p>The tournament itself went extremely well, with <strong>four different winners across four maps</strong>.</p>\n\n<p>By the end we had produced <strong>2,167 frags at 36.11 FPM</strong>.</p>\n\n<p>Mr.Burns recorded the random camera and helped with the administration, so we also have demos of the games.</p>\n\n<p>Thanks to everyone who joined us for this first RuneQuake experiment.</p>"
+    }
+  ]
+},
+{
+  "id": "20120428-ffa9-fun-tournament",
+  "date": "20120428",
+  "author": "Arkon",
+  "title": "FFA9 Fun Tournament",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>FFA9 started in Europe with E4M3 and Q3dm6qw before moving to FFANY in the USA for Dokkur and Q1edge.</p>\n\n<p>E4M3 immediately turned into a Quad Damage festival.</p>\n\n<p>Polarite opened a substantial lead, but Leopold kept closing the gap and by the fifteenth minute was only twelve frags behind.</p>\n\n<p>Polarite managed to hold him off, while Raef took third after another close fight with RoyalAssassin.</p>\n\n<p>The remaining maps continued the trend, with close scores and POV demos from several players to prove that none of us are exaggerating too much.</p>\n\n<p>The four maps produced <strong>2,555 frags at 31.93 FPM</strong>.</p>\n\n<p>Thanks to Bigfoot for providing the European server, Peg for tweaking the setup and everyone who joined us on both sides of the Atlantic.</p>"
+    }
+  ]
+},
+{
+  "id": "20110828-ffa8-fun-tournament",
+  "date": "20110828",
+  "author": "Arkon",
+  "title": "FFA8 Fun Tournament",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>For FFA8 we played the first two maps on <strong>Bigfoot's European server</strong> and the final two on <strong>FFANY in the USA</strong>.</p>\n\n<p>Croctear opened the evening with Loco taking the early lead before Polarite eventually caught him and pulled away.</p>\n\n<p>Cleaver produced the expected pile of bodies, with four players finishing above 100 frags.</p>\n\n<p>Then we crossed the Atlantic.</p>\n\n<p>Gmdm1 became the first FFA Fun Tournament map played on FFANY, with Cd taking the win after a long fight with Polarite.</p>\n\n<p>Kikdm3 produced an even better finish.</p>\n\n<p>With only ninety seconds remaining, Cd still had a ten-frag lead. Somehow Polarite managed <strong>sixteen frags in the final minute</strong> and stole the victory by four.</p>\n\n<p>Final count: <strong>3,089 frags at 38.61 FPM</strong>.</p>\n\n<p>Thanks to Bigfoot for the European server, Polarite for FFANY and Peg for helping with the setup.</p>"
+    }
+  ]
+},
+{
+  "id": "20110325-ffa7-fun-tournament",
+  "date": "20110325",
+  "author": "Arkon",
+  "title": "FFA7 Fun Tournament",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>FFA7 is done, although the scoreboard apparently didn't survive the experience quite as well as the players did.</p>\n\n<p>At times we had <strong>nine or ten players fighting across two servers</strong>, playing Dranzdm6, Q1shw2, Q3dm6qw, Q1edge and Stalker's Ramses2.</p>\n\n<p>Unfortunately we only have the results from one of the two servers, so there won't be a complete final score this time.</p>\n\n<p>Polarite did record his POV on server two, so at least part of the tournament survives in demo form.</p>\n\n<p>If anybody else recorded demos or took screenshots, send them in. We may still be able to reconstruct more of what happened.</p>\n\n<p>Thanks to Bigfoot for providing his NetQuake server and to Peg for configuring both servers for FFA7 and handling the admin duties.</p>"
+    }
+  ]
+},
+{
+  "id": "20100531-ffa6-fun-tournament",
+  "date": "20100531",
+  "author": "Arkon",
+  "title": "FFA6 Fun Tournament",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>This one was all about Xeno.</p>\n<p>For FFA6 we played five maps made by our own Italian NetQuake mapper: <strong>Follie, MK, FIJ1, Domus and Deceit</strong>.</p>\n\n<p>And they survived the test.</p>\n\n<p>Follie started with Xeno, ORL and Rock all taking the lead at different points before RocketGuy eventually won the map.</p>\n\n<p>On MK, ORL demonstrated once again that having a high ping doesn't necessarily mean you can't frag, while RocketGuy took control of FIJ1.</p>\n\n<p>Deceit gave us the best finish of the evening. RocketGuy had built a comfortable lead, but ORL came back hard and by the fourteenth minute both were sitting on 100 frags.</p>\n\n<p>They finished the map in a draw.</p>\n\n<p>RocketGuy won the tournament overall and also gets Polarite's secret prize: a brand-new <strong>Razer Imperator mouse</strong>.</p>\n\n<p>The five maps produced <strong>3,064 frags at 40.43 FPM</strong>.</p>\n\n<p>Thanks to Xeno for giving us five excellent maps to destroy each other on, Bigfoot for the server, Peg for the admin work and Mr.Burns for recording the random cameras.</p>\n\n<p>See you at FFA7.</p>"
+    }
+  ]
+},
+{
+  "id": "20090809-ffa5-fun-tournament",
+  "date": "20090809",
+  "author": "Arkon",
+  "title": "FFA5 Fun Tournament",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "FFA5 is over, and this time there were no exotic maps to learn: we played the entire first episode, from E1M1 through E1M7.\n\nAttendance was a little lower than expected, but that didn't stop the tournament from producing plenty of close fights and some very entertaining demos.\n\nIncluding, apparently, footage of Peg axing Polarite.\n\nThat alone may have made recording the event worthwhile.\n\nAfter seven maps, Polarite finished first with 543 frags, Nitro took second with 425 and Peg third with 357.\n\nLoco and Rock followed close behind, while the complete tournament produced 2,386 frags at 22.72 FPM.\n\nThanks to Peg for taking care of the admin work and to everyone who joined us.\n\nThe top three are also supposed to receive EuroQuake cups."
+    }
+  ]
+},
+{
+  "id": "20090419-ffa4-fun-tournament",
+  "date": "20090419",
+  "author": "Arkon",
+  "title": "FFA4 Fun Tournament",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p><strong>FFA4</strong> is over, and this one is going to be difficult to beat.</p>\n\n<p>We started on Omdm1, with its author ORL among us, and immediately got a close game: Cortex won by only two frags. Apparently he liked that number, because he won Dranzdm7 by another two.</p>\n\n<p>Dazdm12 gave us a little more room to move, especially on the roof, before Pain-giver turned the tournament into complete chaos.</p>\n\n<p>Cortex absolutely destroyed that one with <strong>220 frags</strong>. Ten players still managed to finish the map above 100.</p>\n\n<p>Then came DM7.</p>\n\n<p>Getting to the upper Rocket Launcher meant dodging a small artillery barrage every time, and picking up the Quad was basically an invitation for everybody else on the server to hunt you down.</p>\n\n<p>After five maps, Polarite finished first with <strong>695 frags</strong>.</p>\n\n<p>Cortex was only five behind with 690, followed by Loco with 564. I finished eighth with 386.</p>\n\n<p>Sixteen players joined the tournament and together we produced an absurd <strong>5,966 frags at 59.66 FPM</strong>.</p>\n\n<p><strong>New record.</strong></p>\n\n<p>Thanks to Bigfoot for providing the server, Peg for handling the admin work and everyone who showed up.</p>\n\n<p>And yes, if you signed up and played, Polarite owes you a EuroQuake T-shirt.</p>"
+    }
+  ]
+},
+{
+  "id": "20081026-ffa3-fun-tournament",
+  "date": "20081026",
+  "author": "Arkon",
+  "title": "FFA3 Fun Tournament",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>Number three is done and this time the server was full for the first two games.</p>\n\n<p>We started on Gmdm1, where newcomer Britishseapower immediately made it clear that \"newcomer\" doesn't necessarily mean \"easy target\". ORL also did particularly well despite playing with a much higher ping than most of us.</p>\n\n<p>Trimp gave us plenty of open space to work with, while Nindm2 concentrated a lot of the action around the Red Armor and MegaHealth.</p>\n\n<p>UKCLDM2 brought back an old multiplayer classic and produced some particularly entertaining fights around the Rocket Launcher and Red Armor areas.</p>\n\n<p>Then we finished with <strong>Q3dm6qw</strong>, bringing one of Quake III's most familiar arenas back into the game where all this started.</p>\n\n<p>Polarite finished first overall with <strong>562 frags</strong>, followed by Britishseapower with 447 and Loco with 438.</p>\n\n<p>Fifteen players joined during the tournament, including Trouby from NetQuake Europe.</p>\n\n<p>Final count: <strong>3,529 frags at 35.29 FPM</strong>.</p>\n\n<p>Thanks to Peg once again for putting up with the admin work, and thanks to everyone who joined us.</p>"
+    }
+  ]
+},
+{
+  "id": "20020922-ffa2-fun-tournament",
+  "date": "20080922",
+  "author": "Arkon",
+  "title": "FFA2 Fun Tournament",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>The second FFA2 Fun Tournament is over, more players showed up, and somehow we've managed to produce even more carnage than last time.</p>\n\n<p>DM6 was completely insane: <strong>1,577 frags in twenty minutes, or 78.85 FPM</strong>. Ten players finished above 100 frags. If you managed to stay alive for more than ten seconds, congratulations.</p>\n\n<p>Croctear gave everyone a little more space and produced a much closer fight, before we returned to good old DM2.</p>\n\n<p>Dranzdm8 ended with Cortex and Peg both on <strong>127 frags</strong>, while E1M2 once again proved that some maps simply don't get old.</p>\n\n<p>The overall result couldn't have been much closer either.</p>\n\n<p><strong>Loco: 640 frags.<br>\nPolarite: 637.</strong></p>\n\n<p>Three frags between first and second after five maps.</p>\n\n<p>Cortex finished third with 464, followed by Peg with 446. I ended up eighth with 293. Xeno and Hiroshi joined us too, along with a good mix of familiar and new faces.</p>\n\n<p>Total damage for the evening: <strong>4,147 frags at 41.47 FPM</strong>.</p>\n\n<p>Thanks again to Peg for handling the admin work and to everyone who joined the games.</p>\n\n<p><strong>FFA3, anyone?</strong></p>"
+    }
+  ]
+},
+{
+  "id": "20080824-ffa1-fun-tournament",
+  "date": "20080824",
+  "author": "Arkon",
+  "title": "FFA1 Fun Tournament",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>The first <strong>FFA Fun Tournament</strong> is over and I'd say Polarite's experiment worked pretty well.</p>\n\n<p>Five maps, plenty of players and more rockets flying around than anybody could reasonably keep track of.</p>\n\n<p>Ultrav immediately turned into complete chaos: <strong>1,047 frags in only twenty minutes</strong>. Staying alive for more than a few seconds was already something of an achievement.</p>\n\n<p>DM2 gave us a little more room to breathe, while playing Omdm1 with its own author ORL among us was particularly nice. Cleaver was the largest battlefield of the evening, before we finished where every Quake player feels at home: <strong>E1M2</strong>.</p>\n\n<p>Polarite won the tournament with <strong>568 frags</strong>, followed by Loaded1mbimage with 528 and Lucky Luke with 335.</p>\n\n<p>I finished seventh with 190. Apparently I still remember which end of the Rocket Launcher I'm supposed to point at people.</p>\n\n<p>After five maps we had accumulated <strong>2,823 frags, averaging 28.23 frags per minute</strong>.</p>\n\n<p>Thanks to Peg for setting up the server and taking care of the admin work, and thanks to everybody who showed up and played.</p>\n\n<p><strong>See you at FFA2.</strong></p>"
+    }
+  ]
+},
+{
+  "id": "20230202-dwell-episode-2-the-sunken-city",
+  "date": "20230202",
+  "author": "Arkon",
+  "title": "Dwell: Episode 2 - The Sunken City",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p><strong>Dwell</strong> began in 2020 as an ambitious four-episode Quake campaign built on the refined gameplay foundations of Copper.</p>\n\n<p>More than two years later, the journey continues with <strong>Episode 2: The Sunken City</strong>.</p>\n\n<p>This is considerably more than a small expansion. Episode 2 adds <strong>fourteen new maps</strong>, including three bonus levels, together with two new bosses, three new monsters, three power-ups and two new weapons designed around skill-based mechanics.</p>\n\n<p>The update also introduces a new start hub and revisits the original episode with corrections, improvements and a completely new final boss.</p>\n\n<p>Music plays an important role too. The Sunken City includes <strong>sixteen new tracks by Alekswithak</strong>, giving the episode its own atmosphere and identity.</p>\n\n<p>With the new material included, Dwell now contains <strong>twenty-three levels</strong>, three of them secret bonus maps, and the project is still only halfway through its planned four-episode structure.</p>\n\n<p>Technically, Dwell also shows how far modern Quake mapping has moved beyond the limits of the original engine. Its maps require a modern source port with increased limits and support for features such as BSP2, transparency and illuminated water.</p>\n\nThe authors recommend <strong>Ironwail</strong>. QuakeSpasm and vkQuake can also run the campaign, although some visual problems may occur, while the official Quake Enhanced engine is not supported.</br>\n<a href=\"https://www.slipseer.com/index.php?resources/dwell.21/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.slipseer.com/index.php?resources/dwell.21/</a>"
+    }
+  ]
+},
+{
+  "id": "20230304-alkaline-1-2",
+  "date": "20230304",
+  "author": "Arkon",
+  "title": "Alkaline 1.2",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p><strong>Alkaline</strong> started by taking Rubicon 2 as its foundation and turning that branch of Quake into something much larger: a full science-fiction and base-oriented mod with an expanded enemy roster, additional weapons, new gameplay systems and maps from a large group of community authors.</p>\n\n<p>The new release expands the project with additional maps and features while incorporating fixes and improvements accumulated since the previous versions.</p>\n\nDuring development, the team deliberately went through older Quake mods looking for interesting ideas worth preserving. Elements from previous projects were recovered, modified, fixed and rebalanced alongside completely new material, with the aim of making everything feel like part of the same game rather than a collection of unrelated assets.<br>\n<a href=\"https://www.slipseer.com/index.php?resources/alkaline.62/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.slipseer.com/index.php?resources/alkaline.62/</a>"
+    }
+  ]
+},
+{
+  "id": "20190621-copper-quake",
+  "date": "20190621",
+  "author": "Arkon",
+  "title": "Copper Quake",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>After years of adding more things to Quake, Matthew \"Lunaran\" Breit has decided to try something considerably stranger.<strong>Don't add anything.</strong></p>\n\n<p>Copper describes itself as a <strong>Vanilla+ single-player refinement mod</strong>. It doesn't add or replace weapons, monsters or items. Instead, it goes back through the original Quake gameplay and tries to polish what is already there.</p>\n\n<p>Enemy behaviour is refined. Old bugs and strange edge cases are fixed. Weapons behave more consistently. Cooperative play is reconsidered. Nightmare difficulty is reworked. Mapping features and quality-of-life improvements are added without trying to turn Quake into something else.</p>\n\n<p>The premise is particularly interesting: Quake's original development ended with an exhausted id Software team trying to ship the game, leaving behind something brilliant but not necessarily as refined as it might have become with more time.</p>\n\n<p>Copper tries to imagine that extra development time.</p>\n\nIt is also deliberately designed as a <strong>foundation for other mods and maps</strong>, with mapping documentation and its QuakeC source available to developers.</br>\n<a href=\"http://lunaran.com/copper/download/\" target=\"_blank\" rel=\"noopener noreferrer\">http://lunaran.com/copper/download/</a>"
+    }
+  ]
+},
+{
+  "id": "20151224-arcane-dimensions",
+  "date": "20151224",
+  "author": "Arkon",
+  "title": "Arcane Dimensions",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p><strong>Arcane Dimensions</strong> started from a relatively small experiment: replace hitscan attacks with projectiles and see what happens.</p>\n\n<p>The project grew into an enormous expansion of Quake's single-player vocabulary, with new weapons, monsters, items, breakable environments, visual effects, new gameplay systems and an increasingly ambitious collection of maps.</p>\n\n<p>Instead of a conventional episode sequence, portals lead to different environments, each essentially its own dimension. Exploration, multiple routes, secrets and enormous spaces become as important as simply reaching the exit.</p>\n\n<p>Some maps push Quake so far beyond its original limits that <strong>BSP2, increased engine limits and modern compiler technology</strong> become necessary. The enormous Forgotten Sepulcher initially required a dedicated engine and special compilation tools simply to exist in Quake.</p>\n\n<p>But perhaps the most important thing about Arcane Dimensions is that it isn't closed.</p>\n\nMapping configurations, documentation, test maps and source material allow other authors to create entirely new content using the same systems.</br>\n<a href=\"https://simonoc.com/pages/design/sp/ad.html\" target=\"_blank\" rel=\"noopener noreferrer\">https://simonoc.com/pages/design/sp/ad.html</a>"
+    }
+  ]
+},
+{
+  "id": "20110211-rubicon-2",
+  "date": "20110211",
+  "author": "Arkon",
+  "title": "Rubicon 2",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>John \"metlslime\" Fitzgibbons and Christian \"czg\" Grawert have released <strong>Rubicon 2</strong>, a new single-player Quake experience consisting of three large maps, a start map and a custom game modification built around a distinctive base and industrial environment.</p>\n\n<p>But the interesting part is everything underneath the maps.</p>\n\n<p>Rubicon 2 brings its own textures, sounds, map models, hazards and three new enemies: the flame-throwing <strong>Dreadnaught</strong>, the flying <strong>Centurion</strong> and the wonderfully named atomic security robot <strong>Floyd</strong>.</p>\n\n<p>The environments become more interactive too. There are ladders, breakable panels, security lasers, steam vents and automated turrets, allowing maps to behave in ways the original Quake levels never really attempted.</p>\n\nBetter still, the authors have made the texture WAD, entity definitions, map sources and <strong>QuakeC source code available to mappers and modders</strong>.</br><a href=\"https://www.celephais.net/levels/rubicon2/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.celephais.net/levels/rubicon2/</a>"
+    }
+  ]
+},
+{
+  "id": "20080309-quoth",
+  "date": "20080309",
+  "author": "Arkon",
+  "title": "Quoth",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>Here's an interesting idea: instead of building a mod around a set of maps, build a mod <strong>for people who make maps</strong>.</p>\n\n<p>That's essentially what <strong>Quoth</strong> does.</p>\n\n<p>Created by Kell and necros, Quoth provides a large collection of new monsters, weapons, items, entities and environmental components designed to fit alongside id Software's original content rather than replace it.</p>\n\n<p>There are new creatures such as the Sentinel, Bob, Rocketeer and Defender, together with additional weapons, power-ups and tools that level designers can use in their own creations.</p>\n\n<p>And that's the important part.</p>\n\n<p>The maps that use Quoth don't have to be part of Quoth itself. The mod provides the <strong>toolbox</strong>, while individual authors can build entirely separate maps around it. Mapping documentation and entity definitions are provided specifically for that purpose.</p>\n\nIt's a subtle change in approach, but possibly an important one.\n<a href=\"https://tomeofpreach.wordpress.com/quoth/\" target=\"_blank\" rel=\"noopener noreferrer\">https://tomeofpreach.wordpress.com/quoth/</a>"
+    }
+  ]
+},
+{
+  "id": "20240516-tainted",
+  "date": "20240516",
+  "author": "Arkon",
+  "title": "Tainted",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>After Spiritworld, QDOOM and the rather unexpected detour into the Slave Zero universe, the latest <strong>official Quake Enhanced Add-on</strong> is once again all about exploring dark places and shooting things that probably shouldn't be there.</p>\n\n<p><strong>Tainted</strong> is a single-player campaign created by Jakob \"DragonsForLunch\" Christoffersen and built around the Copper mod.</p>\n\n<p>It consists of <strong>eight levels</strong> designed around exploration and spatial awareness, combining classic Quake combat with vertical environments, interconnected passages and puzzles that can alter and expand the maps as you progress.</p>\n\n<p>Tainted is also very much a one-man project. Christoffersen created the entire episode himself.</p>\n\n<p>His mapping history actually started with DOOM in late 2019, when he built a demon-infested version of his childhood home. After a few standalone maps and a short episode, he moved to Quake about a year later.</p>\n\n<p>For the original version of Tainted he used a number of community-created textures. When the episode was selected for the Quake re-release, he went back to the project and created new textures of his own, combining them with work by Kell and Lunaran and the original Quake texture set.</p>\n\nThe result is something considerably more ambitious than a traditional collection of maps: <strong>eight interconnected exercises in getting lost, finding the way forward and surviving whatever is waiting around the next corner.</strong></br><a href=\"https://bethesda.net/en/game/quake\" target=\"_blank\" rel=\"noopener noreferrer\">https://bethesda.net/en/game/quake</a>"
+    }
+  ]
+},
+{
+  "id": "20240116-slave-zero-x-episode-enyo",
+  "date": "20240116",
+  "author": "Arkon",
+  "title": "Slave Zero X: Episode Enyo",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>The latest <strong>official Quake Enhanced Add-on</strong> isn't really about Quake at all.</p>\n\n<p><strong>Slave Zero X: Episode Enyo</strong> uses the Quake engine to tell a new story set in the universe of Slave Zero X, the upcoming prequel to the 1999 game Slave Zero.</p>\n\n<p>Developed by Poppy Works and Ironwood Software, the campaign puts you in the role of <strong>Enyo</strong>, an elite assassin and one of the main antagonists of Slave Zero X, on a mission to eliminate the Sovereign Khan.</p>\n\n<p>This isn't simply a collection of Quake maps with different textures. Episode Enyo effectively transforms Quake into another game.</p>\n\n<p>The complete package features <strong>six campaign levels</strong>, a Deathmatch arena, <strong>eight new weapons plus a secret weapon</strong>, thirteen new enemies, a new power-up and an original soundtrack by Aleks Kmiec.</p>\n\n<p>Its connection with Quake goes deeper than the engine. Ironwood Software founder James Greenwood began mapping for Quake in 2019, learning level design with TrenchBroom and creating custom maps before eventually working on Slave Zero X.</p>\n\n<p>The chronology is unusual too. Episode Enyo takes place before Slave Zero X, which is itself set four years before the original Slave Zero.</p>\n\nSo a game released in 1996 is now being used to expand the story of a completely different series that began in 1999.</br><a href=\"https://bethesda.net/en/game/quake\" target=\"_blank\" rel=\"noopener noreferrer\">https://bethesda.net/en/game/quake</a>"
+    }
+  ]
+},
+{
+  "id": "20231211-qdoom",
+  "date": "20231211",
+  "author": "Arkon",
+  "title": "QDOOM",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>Quake meets DOOM.</p>\n\n<p><strong>Again.</strong></p>\n\n<p>These two games have been invading each other's territory for a very long time.</p>\n\n<p>Back in 2001, Marc \"Fanatic\" Pullen released a total conversion called <strong>QDOOM</strong>, bringing Quake's weapons and almost its entire monster roster into DOOM.</p>\n\n<p>More than twenty years later, we're going the other way.</p>\n\n<p>To celebrate <strong>DOOM's 30th anniversary</strong>, Spanish programmer and level designer Antonio \"Drugod\" González has taken <strong>Knee-Deep in the Dead</strong>, the legendary first episode of DOOM, and rebuilt it inside Quake.</p>\n\n<p>The project started as an experiment in converting DOOM's monsters to QuakeC. Once the entire monster roster was working, the idea grew into a complete recreation of the original episode rather than simply another collection of Quake maps.</p>\n\n<p>The result combines two generations of id Software history in the same game. Familiar DOOM environments and demons are brought into Quake, where they can share the battlefield with Quake's own monsters.</p>\n\n<p>There is something wonderfully backwards about all this.</p>\n\n<p>In 1996, Quake was the technological successor to DOOM.</p>\n\n<p>In 2001, QDOOM brought Quake into DOOM.</p>\n\nNow DOOM has found its way back into Quake, this time as an <strong>official Quake Enhanced Add-on</strong>.</br><a href=\"https://bethesda.net/en/game/quake\" target=\"_blank\" rel=\"noopener noreferrer\">https://bethesda.net/en/game/quake</a>"
+    }
+  ]
+},
+{
+  "id": "20231130-spiritworld",
+  "date": "20231130",
+  "author": "Arkon",
+  "title": "Spiritworld",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>The stream of new content for Quake doesn't seem to be slowing down.</p>\n\n<p>This time it's <strong>Spiritworld</strong>, a full single-player and cooperative episode by Finnish mappers Newhouse and zigi, now available as a free add-on directly from Quake's in-game menu.</p>\n\n<p>Spiritworld is heavily inspired by <strong>The Elder World</strong>, Quake's fourth episode, and takes that style considerably further with strange architecture, interconnected layouts and plenty of traps.</p>\n\n<p>The original community release includes <strong>seven main maps, three secret maps, a start map and an end map with a new boss</strong>.</p>\n\n<p>Underneath the maps is a modified version of <strong>Copper</strong>, with additional code, textures, models, sounds and a completely new soundtrack. Around ten people contributed to the project, and the episode took roughly ten months to build.</p>\n\n<p>What's particularly interesting here is where Spiritworld came from.</p>\n\n<p>This wasn't commissioned as official Quake content. The episode was originally released by the community in <strong>April 2023</strong> and was later adapted for the Enhanced release.</p>\n\n<p>So we're now at the point where a modern community-made Quake episode can make the jump directly into the officially supported game.</p>\n\n<p>For a mapping community that has been producing new Quake levels for more than twenty-five years, that's probably exactly how it should be.</p>\n\n<p><strong>Spiritworld is available now as a free Quake add-on</strong> on PC, Xbox One, PlayStation 4 and Nintendo Switch, with backward compatibility on Xbox Series X|S and PlayStation 5.</p>\n\n<p>And judging by the description of its layouts and traps...</p>\n\n<strong>save often.</strong></br><a href=\"https://bethesda.net/en/game/quake\" target=\"_blank\" rel=\"noopener noreferrer\">https://bethesda.net/en/game/quake</a>"
+    }
+  ]
+},
+{
+  "id": "20220818-quake-enhanced-update-4",
+  "date": "20220818",
+  "author": "Arkon",
+  "title": "Quake Enhanced: Update 4",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>Now <strong>this</strong> brings back memories.</p>\n\n<p>Twenty-six years after its original release, <strong>Threewave Capture the Flag is officially back in Quake</strong>.</p>\n\n<p>Created by David \"Zoid\" Kirsch in 1996, Threewave CTF was one of the mods that helped define team-based multiplayer in the early days of online first-person shooters.</p>\n\n<p>The idea was simple: two teams, two flags. Protect yours, steal theirs and bring it back to your base.</p>\n\n<p>Then add Quake.</p>\n\n<p>And a grappling hook.</p>\n\n<p>The original Threewave was wonderfully improvised. Existing maps were modified into team bases, keys were initially used as flags, and the earliest version of the grappling hook was essentially an axe that fired a Vore ball. None of that stopped CTF from becoming hugely popular and eventually influencing multiplayer games far beyond Quake.</p>\n\n<p><strong>Update 4 brings nine classic Threewave CTF maps back into the game:</strong></p>\n\n<ul>\n    <li>CTF1: McKinley Base</li>\n    <li>CTF2: McKinley Station</li>\n    <li>CTF3: Spill the Blood</li>\n    <li>CTF4: Gloom Castles</li>\n    <li>CTF5: Capture Phobopolis</li>\n    <li>CTF6: Vertigo</li>\n    <li>CTF7: The Strongbox</li>\n    <li>CTF8: Chthon's Capture House</li>\n    <li>CTF9: Da Ancient War Grounds</li>\n</ul>\n\n<p>The maps have been given improved lighting and fog for the Enhanced release, while a new interface keeps track of flag status and team scores.</p>\n\n<p>The <strong>four runes</strong> are back too, spawning randomly and providing additional abilities to whoever manages to keep hold of them.</p>\n\nThe whole Threewave package is included directly with Update 4, so there's no separate add-on to download or install.</br><a href=\"https://bethesda.net/en/game/quake\" target=\"_blank\" rel=\"noopener noreferrer\">https://bethesda.net/en/game/quake</a>"
+    }
+  ]
+},
+{
+  "id": "20220420-quake-enhanced-update-3",
+  "date": "20220420",
+  "author": "Arkon",
+  "title": "Quake Enhanced: Update 3",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>Quake Enhanced: Update 3 is out, and this time the update isn't just about adding more monsters to shoot.</p>\n\n<p>A major part of Update 3 is dedicated to <strong>accessibility</strong>. The game now includes text-to-speech for incoming multiplayer chat, voice-chat transcription, the ability to convert outgoing text messages to speech, an alternative readable typeface, high-contrast options and controls for the intensity of screen flashes.</p>\n\n<p>Horde Mode also gets some attention. MachineGames has added <strong>three new Horde maps: Relic, The Trial and The Tower</strong>, while difficulty balancing has been adjusted using community feedback. Easy should now be easier, while Hard and Nightmare become considerably less forgiving.</p>\n\n<p>A useful new gameplay option finally lets players <strong>disable automatic weapon switching when picking up a new weapon</strong>, and the enemy spawning logic in Horde Mode has also been improved.</p>\n\nThere are plenty of smaller quality-of-life improvements and bug fixes under the hood too, but accessibility is clearly the important part of this update.</br><a href=\"https://bethesda.net/en/game/quake\" target=\"_blank\" rel=\"noopener noreferrer\">https://bethesda.net/en/game/quake</a>"
+    }
+  ]
+},
+{
+  "id": "20211202-quake-enhanced-update-2",
+  "date": "20211202",
+  "author": "Arkon",
+  "title": "Quake Enhanced: Update 2",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>The new Quake Enhanced hasn't been around for four months yet and MachineGames is already adding more stuff to it.</p>\n\n<p><strong>Update 2 is out, and this time the big addition is Horde Mode.</strong></p>\n\n<p>This is an entirely new multiplayer PvE mode designed by MachineGames, playable solo or cooperatively with up to four players or bots, both locally and online. Four new maps have been created specifically for it, and all Quake difficulty levels are supported.</p>\n\n<p>The rules are simple enough: kill monsters, score points and try not to die.</p>\n\n<p>Every third wave brings boss monsters. Survive them and you get a Silver Key that unlocks better weapons and items. Make it through the ninth wave and you'll earn a Gold Key that opens the exit.</p>\n\n<p>Or you can ignore the exit and keep fighting until Quake eventually settles the matter for you.</p>\n\n<p>There's more.</p>\n\n<p>Update 2 also adds <strong>Honey</strong>, available as a free downloadable add-on. Originally created by Christian Grawert, now a Senior Level Designer at MachineGames, Honey is another interesting example of material born in the Quake community eventually finding its way into an official release.</p>\n\n<p>There are several smaller improvements too: configurable crosshair type and colour, improved auto-aim, offline access to previously downloaded add-ons, text chat and push-to-talk in pre-game lobbies, and cross-PC-platform invitations through the Bethesda.net friends list.</p>\n\nUpdate 2 also marks the arrival of Quake on the Epic Games Store.</br><a href=\"https://bethesda.net/en/game/quake\" target=\"_blank\" rel=\"noopener noreferrer\">https://bethesda.net/en/game/quake</a>"
+    }
+  ]
+},
+{
+  "id": "20210819-quake-returns",
+  "date": "20210819",
+  "author": "Arkon",
+  "title": "Quake Enhanced",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>Twenty-five years after the original release, <strong>Quake gets an official upgrade.</strong></p>\n\n<p>And quite a few things have changed behind the scenes since 1996.</p>\n\n<p>The name on the box was once id Software. Today Quake is published by Bethesda Softworks, after id became part of ZeniMax Media, and the new <strong>Quake Enhanced</strong> brings several more names into the family: Nightdive Studios worked on the remaster using its KEX Engine, while MachineGames contributed new Quake content. By the time of this release, Bethesda itself had already become part of Microsoft. Quite a journey for a game that originally arrived as shareware.</p>\n\n<p>Fortunately, underneath all those company names, <strong>it's still Quake</strong>.</p>\n\n<p>The Enhanced release adds widescreen and resolutions up to <strong>4K</strong>, improved models, dynamic and coloured lighting, anti-aliasing, ambient occlusion, model interpolation, high-resolution lightmaps and dynamic shadows. Most of the graphical enhancements can be individually disabled if, like me, you prefer your Quake looking a little more like Quake.</p>\n\n<p>The original campaign is joined by <strong>Scourge of Armagon</strong>, <strong>Dissolution of Eternity</strong> and MachineGames' <strong>Dimension of the Past</strong>, plus an entirely new episode created for the 25th anniversary: <strong>Dimension of the Machine</strong>.</p>\n\n<p>The original Trent Reznor soundtrack is finally included digitally too, together with the music for the two original mission packs. No CD required this time.</p>\n\n<p>Multiplayer gets a substantial update as well: online Deathmatch, dedicated servers for matchmaking, cross-platform play, local split-screen and cooperative play are all supported, with up to eight players online. Free downloadable add-ons are also built directly into the game.</p>\n\n<p>The Enhanced version is available on PC, Xbox, PlayStation and Nintendo Switch, and existing Steam and Bethesda Launcher owners receive the update for free.</p>\n\nSo after twenty-five years, Quake has changed publisher, changed owners, changed engine, changed platforms and acquired several new developers along the way.\n</br>\n<strong>But the Rocket Launcher still works exactly as expected. Good.</strong>\n\n<a href=\"https://bethesda.net/en/game/quake\" target=\"_blank\" rel=\"noopener noreferrer\">https://bethesda.net/en/game/quake</a>"
+    }
+  ]
+},
+{
+  "id": "20200224-20-years-of-quake-army-of-darkness",
+  "date": "20200224",
+  "author": "Arkon",
+  "title": "20 years of QUake Army of Darkness",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "Twenty years already?\n</br>\nI still blame Raistlin.\n\nIt was his idea. He kept telling me that we should start our own Quake clan and, eventually, I made the mistake of listening to him.\n\nTwenty years later, here we are.\n</br>\nThere were clanwars and LAN parties, victories and spectacular defeats, new members, old friends, servers, demos, websites, endless nights of Quake and probably enough rockets fired at each other to demolish a small country.\n</br>\nThen, inevitably, real life got in the way.\n\nWe got older. Jobs happened. Families happened. People moved around. Some stopped playing, some disappeared for years and some eventually turned up again as if they'd only logged off the night before.\n\nFunny thing is, after all this time, meeting another [QUAD] still feels exactly like meeting a clan mate, not someone you used to play a computer game with twenty years ago.\n</br>\nI don't think either Raistlin or I had that in mind when this whole thing started.\n\nThen again, I don't think we had much of a plan at all.\n\nWe just wanted to play Quake.\n</br></br>\nHappy twentieth, [QUAD].\n</br></br>\nAnd Raistlin, seriously...\n\nlook what you started."
+    }
+  ]
+},
+{
+  "id": "20170312-crmod-6-6",
+  "date": "20170312",
+  "author": "Arkon",
+  "title": "CRMod++ 6.6",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "Four years after the 6.5 release, J.P. Grossman has dusted off the old QuakeC once again and released CRMod++ 6.6.\n</br>\nThis release includes a number of bug fixes and adds full rankings at the end of FFA matches, a feature suggested by Simon Hejonik.\n</br>\nCRMod remains a Quake 1 NetQuake competition server mod and, for anyone running a CRMod server, the new version is available from the official CRMod site.\n</br>\nNot a revolution this time, just some fixes, a useful new feature and a shiny new version number.\n</br>\nSometimes that's exactly what an old and reliable Quake mod needs.\n</br><a href=\"http://www.crmod.com/\" target=\"_blank\">http://www.crmod.com/</a>"
+    }
+  ]
+},
+{
+  "id": "20140921-quad-lan-party-7",
+  "date": "20140921",
+  "author": "Arkon",
+  "title": "[QUAD] LAN Party 7",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "As expected... here we are again.\n\nTechnology has changed quite a bit since our first LAN parties. Computers have become smaller, monitors thinner and lighter, and carrying enough hardware for a weekend of Quake no longer feels like moving house.\n\nOur car trunks, after hundreds of kilometres on the motorway, are particularly grateful for the progress.\n\nSo Lavezzola was invaded once again, this time with considerably less bulky equipment but exactly the same intentions.\n\nQuake, food, friends, very little sleep and more Quake.\n\nLooking at the hardware around the room, it's hard not to notice how much everything has changed since we started doing this. The huge CRT monitors are gone, computers that once required a small gym session just to get them out of the car have disappeared, and setting up a network no longer feels like experimental science.\n\nA big thank you, as always, to the Lavezzola division of QUake Army of Darkness for the usual outstanding hospitality, and especially to Zizu for once again turning his home into the perfect [QUAD] lodge.\n\nThe people sitting in front of those computers, on the other hand, haven't changed nearly as much.\n\nWell, perhaps that's being generous.\n\nSeven LAN parties and counting.\n\nNot bad for a game we're supposedly too old to play."
+    }
+  ]
+},
+{
+  "id": "20131006-quad-lan-party-6",
+  "date": "20131006",
+  "author": "Arkon",
+  "title": "[QUAD] Lan Party 6",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "Another year, another excuse to move computers around, connect far too many cables and spend a weekend playing Quake.\n\nOnce again, Lavezzola was invaded by QUADs, this time joined by a few brave guests from outside the clan.\n\nThe usual recipe worked perfectly: lots of Quake, seriously good food, very little sleep and plenty of laughs. We kept playing until exhaustion and somehow still found enough energy to enjoy everything else that makes these gatherings worth repeating year after year.\n\nAnd this time we even managed to solve one of the greatest mysteries in QUAD history:\n\nwe finally discovered what Biagio keeps under his cap.\n\nSome secrets are probably better left undocumented.\n\nOld friends, new guests, full stomachs, tired eyes and a ridiculous number of frags.\n\nIn other words, another perfectly successful QUAD LAN party.\n\nSee you at number seven."
+    }
+  ]
+},
+{
+  "id": "20130427-crmod-6-5",
+  "date": "20130427",
+  "author": "Arkon",
+  "title": "CRMod++ 6.5",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "After more than ten years, CRMod gets another major update.\n\nVersion 6.5 of J.P. Grossman's classic competitive Quake mod is here, proving once again that old Quake software has a rather peculiar definition of \"dead.\"\n\nOne of the most interesting additions is an ELO rating system, designed to provide a better indication of player strength and help create more balanced teams.\n\nFor anyone who remembers how important CRMod became for competitive NetQuake, seeing development continue after all these years is great news.\n\nAnd since one of the two [QUAD] servers is already running CRMod, you can probably guess where I'll be testing it.\n\nTime for an upgrade.</br><a href=\"http://www.crmod.com/\" target=\"_blank\">http://www.crmod.com/</a>"
+    }
+  ]
+},
+{
   "id": "20130620-things-i-should-have-reported",
-  "date": "20130620",
+  "date": "20121006",
   "author": "Arkon",
   "title": "Things I Should Have Reported",
-  "content": [{"type":"paragraph","html":"This was supposed to be a quick overview of what Quake had become by 2012, but it really seems that I'm back in the gaming scene on a regular basis. For those who have been asking, it's all Xeno and Polarite's fault: seeing their enthusiasm for keeping Quake alive convinced me to become active again. Curiosity did the rest. A lot of things have changed over the years: new engines, new mods and new maps. Even online game modes are, in some ways, new. <a href=\"http://quakeone.com/cax/\" target=\"_blank\">ClanArena X</a> has taken the place of standard Clan Arena, CTF is now CTCTF, Rocket Arena is included in most mods, <a href=\"http://www.runequake.com/\" target=\"_blank\">RuneQuake</a> has evolved greatly, <a href=\"http://quakeone.com/rquake/\" target=\"_blank\">RQuake Coop</a> is a nice alternative to normal fragging, and <a href=\"http://crmod.com/\" target=\"_blank\">CRMod</a> has been updated to version 6.5. After doing some checking, I've also updated the server list for Qview with working servers.<br><br>Interesting engines such as <a href=\"http://icculus.org/twilight/darkplaces/\" target=\"_blank\">DarkPlaces</a>, <a href=\"http://quakespasm.sourceforge.net/\" target=\"_blank\">QuakeSpasm</a> and <a href=\"http://mhquake.blogspot.it/\" target=\"_blank\">DirectQ</a>, each in its own way, have continued the work started by <a href=\"http://tomaz.snowcold.net/news.php\" target=\"_blank\">Tomaz</a> with some great engines. <a href=\"http://quakeone.com/proquake/\" target=\"_blank\">ProQuake</a> has also been updated with a new release that supports new features and fixes bugs that newer operating systems may have introduced into the game.<br><br>An incredible number of maps have been released, along with several new single-player mods. Most of them can now be installed and played using <a href=\"https://www.quaddicted.com/files/tools/quakeinjector-alpha2.zip\" target=\"_blank\">QuakeInjector</a>, which automatically downloads and sets up all the necessary files in your Quake folder. Wow.<br><br>It took almost a year to check out most of this stuff, and I really had fun doing it, but the best part was [QUAD] LAN Party 5. Meeting old clan mates again after ten years was really great. It seems rust doesn't affect [QUAD] folks: old and young teammates alike still know the job. We welcomed Guren into the clan during the LAN. A former M.P member, he has been the technician at most of our LAN parties and has missed only one since we started playing. Talking to everyone, I discovered that most of them stopped playing when the Italian servers were shut down. Foreign servers were too laggy in 2004, while Italian game providers were moving on to newer games.<br><br>Now the situation is different. Even a local connection can host a few players and, with the correct settings, such a server can remain online permanently.<br><br>With Yanosh's help, I was able to set up two Italian servers: one running RuneQuake and the other CRMod. It took a long time, but the beta-testing phase is now over and both servers are running smoothly. Due to security settings, the servers are not listed in ProQuake's internal server list, but they do appear in most online server browsers, so they are quite easy to reach.<br><br>ProQuake users can set <strong style=\"color:red;\">cl_web_download_url \"http://quad.homepc.it/\"</strong> to download maps, models, sounds and loc files directly from our server. Map downloading also works with DirectQ and DarkPlaces.<br><br>Having a machine dedicated to Quake also makes it possible to run HTTP and FTP servers. So I've fixed this homepage to make it work with modern browsers, removed most of the JavaScript and almost all of the sounds. This page has never been as accessible as it is now. I've tested it with Chrome, Internet Explorer, Opera and Rekonq and found no bugs. A clone of this site is available at http://quad.homepc.it/, but for visibility reasons the official clan address remains http://web.tiscali.it/quadclan/. The [QUAD] machine doesn't seem very friendly to search engines and, well... I like it.<br><br>I've also collected all the Quake files I was able to find and categorized them as well as possible. The result is ftp://quad.homepc.it/: 22 gigabytes of pure old-school gibbing.<br><br>I've also found the time to finish the readme files for Quake Extreme Mod and all of Xeno's maps. They are minimal, but at least they now have a readme.txt.<br><br>Last but not least, I've created a Facebook page, linked at the top of this page, called Quake Italia. In the era of social networks, this is the easiest way to meet other players or organize events such as \"On the Rocks!\", which we held last month.<br><br>Don't expect news reporting like in the past. I will report only clan activity, major events or new file releases. There are better places to find regular Quake news: <a href=\"http://quakeone.com/\" target=\"_blank\">QuakeOne.com</a> and <a href=\"https://www.quaddicted.com/\" target=\"_blank\">Quaddicted.com</a> are first in line! NetQuake lives!"}]
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "This was supposed to be a quick overview of what Quake had become by 2012, but it really seems that I'm back in the gaming scene on a regular basis. For those who have been asking, it's all Xeno and Polarite's fault: seeing their enthusiasm for keeping Quake alive convinced me to become active again. Curiosity did the rest. A lot of things have changed over the years: new engines, new mods and new maps. Even online game modes are, in some ways, new. <a href=\"http://quakeone.com/cax/\" target=\"_blank\">ClanArena X</a> has taken the place of standard Clan Arena, CTF is now CTCTF, Rocket Arena is included in most mods, <a href=\"http://www.runequake.com/\" target=\"_blank\">RuneQuake</a> has evolved greatly, <a href=\"http://quakeone.com/rquake/\" target=\"_blank\">RQuake Coop</a> is a nice alternative to normal fragging, and <a href=\"http://crmod.com/\" target=\"_blank\">CRMod</a> is still alive and kicking. After doing some checking, I've also updated the server list for Qview with working servers.<br><br>Interesting engines such as <a href=\"http://icculus.org/twilight/darkplaces/\" target=\"_blank\">DarkPlaces</a>, <a href=\"http://quakespasm.sourceforge.net/\" target=\"_blank\">QuakeSpasm</a> and <a href=\"http://mhquake.blogspot.it/\" target=\"_blank\">DirectQ</a>, each in its own way, have continued the work started by <a href=\"http://tomaz.snowcold.net/news.php\" target=\"_blank\">Tomaz</a> with some great engines. <a href=\"http://quakeone.com/proquake/\" target=\"_blank\">ProQuake</a> has also been updated with a new release that supports new features and fixes bugs that newer operating systems may have introduced into the game.<br><br>An incredible number of maps have been released, along with several new single-player mods. Most of them can now be installed and played using <a href=\"https://www.quaddicted.com/files/tools/quakeinjector-alpha2.zip\" target=\"_blank\">QuakeInjector</a>, which automatically downloads and sets up all the necessary files in your Quake folder. Wow.<br><br>It took almost a year to check out most of this stuff, and I really had fun doing it, but the best part was [QUAD] LAN Party 5. Meeting old clan mates again after ten years was really great. It seems rust doesn't affect [QUAD] folks: old and young teammates alike still know the job. We welcomed Guren into the clan during the LAN. A former M.P member, he has been the technician at most of our LAN parties and has missed only one since we started playing. Talking to everyone, I discovered that most of them stopped playing when the Italian servers were shut down. Foreign servers were too laggy in 2004, while Italian game providers were moving on to newer games.<br><br>Now the situation is different. Even a local connection can host a few players and, with the correct settings, such a server can remain online permanently.<br><br>With Yanosh's help, I was able to set up two Italian servers: one running RuneQuake and the other CRMod. It took a long time, but the beta-testing phase is now over and both servers are running smoothly. Due to security settings, the servers are not listed in ProQuake's internal server list, but they do appear in most online server browsers, so they are quite easy to reach.<br><br>ProQuake users can set <strong style=\"color:red;\">cl_web_download_url \"http://quad.homepc.it/\"</strong> to download maps, models, sounds and loc files directly from our server. Map downloading also works with DirectQ and DarkPlaces.<br><br>Having a machine dedicated to Quake also makes it possible to run HTTP and FTP servers. So I've fixed this homepage to make it work with modern browsers, removed most of the JavaScript and almost all of the sounds. This page has never been as accessible as it is now. I've tested it with Chrome, Internet Explorer, Opera and Rekonq and found no bugs. A clone of this site is available at http://quad.homepc.it/, but for visibility reasons the official clan address remains http://web.tiscali.it/quadclan/. The [QUAD] machine doesn't seem very friendly to search engines and, well... I like it.<br><br>I've also collected all the Quake files I was able to find and categorized them as well as possible. The result is ftp://quad.homepc.it/: 22 gigabytes of pure old-school gibbing.<br><br>I've also found the time to finish the readme files for Quake Extreme Mod and all of Xeno's maps. They are minimal, but at least they now have a readme.txt.<br><br>Last but not least, I've created a Facebook page, linked at the top of this page, called Quake Italia. In the era of social networks, this is the easiest way to meet other players or organize events such as \"On the Rocks!\", which we held last month.<br><br>Don't expect news reporting like in the past. I will report only clan activity, major events or new file releases. There are better places to find regular Quake news: <a href=\"http://quakeone.com/\" target=\"_blank\">QuakeOne.com</a> and <a href=\"https://www.quaddicted.com/\" target=\"_blank\">Quaddicted.com</a> are first in line! NetQuake lives!"
+    }
+  ]
 },
 {
     "id": "20041109-no-more-news",
