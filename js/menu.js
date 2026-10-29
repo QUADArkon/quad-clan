@@ -1,6 +1,6 @@
 window.QUAD_MENU = [
   { title: "Main", items: [
-    ["Clan Logo", "pages/logo/logo.html"], ["History", "pages/history/history.html"], ["Code", "pages/code/code.html"], ["Join", "pages/join/join.html"], ["Challenge", "pages/challenge/challenge.html"], ["Clanwars", "pages/clanwars/clanwars.html"], ["Demos", "pages/demos/demos.html"], ["Trophies", "pages/trophies/trophies.html"], ["LAN Parties", "pages/lan/lans.html"]
+    ["Clan Logo", "pages/logo/logo.html"], ["History", "pages/history/history.html"], ["Code", "pages/code/code.html"], ["Clan Mates", "pages/members/members.html"], ["Join", "pages/join/join.html"], ["Challenge", "pages/challenge/challenge.html"], ["Clanwars", "pages/clanwars/clanwars.html"], ["Demos", "pages/demos/demos.html"], ["Trophies", "pages/trophies/trophies.html"], ["LAN Parties", "pages/lan/lans.html"]
   ]},
   { title: "News & Boards", items: [
     ["News", "news/news.html"], ["News Archive", "news/archive.html"], ["[QUAD] Forum", "https://pub22.bravenet.com/forum/1809239735/"], ["NetQuake Servers", "news/servers.html"], ["Interviews", "news/interviews.html"], ["Links", "news/links.html"]
@@ -8,7 +8,7 @@ window.QUAD_MENU = [
   { title: "Hints & Guides", items: [
     ["Quake Bible", "help/bible.html"], ["Maps Overview", "help/overview.html"], ["Console 1.06", "help/console.html"], ["Command Line 1.09", "help/comlines.html"], ["Online Name Maker", "help/name.html"], ["N.O.T. Rules", "help/rules.html"], ["Quetiquette", "help/quetiquette.html"]
   ]},
-  { title: "Clanmates", items: [
+  { title: "The Elders", items: [
     ["[QUAD] Arkon", "members/arkon.html"], ["[QUAD] Bent", "members/bent.html"], ["[QUAD] Biagio", "members/biagio.html"], ["[QUAD] Hiroshi", "members/hiroshi.html"], ["[QUAD] Morpheus", "members/morpheus.html"], ["[QUAD] Polarite", "members/polarite.html"], ["[QUAD] Raistlin", "members/raistlin.html"], ["[QUAD] Ronin666", "members/ronin.html"], ["[QUAD] Wham!", "members/wham.html"], ["[QUAD] Yanosh", "members/yanosh.html"], ["[QUAD] Zizu", "members/zizu.html"]
   ]},
   { title: "Files", items: [
