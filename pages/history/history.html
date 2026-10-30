@@ -166,7 +166,8 @@ function updateDom(t){
     intro.style.display='none';
     crawlViewport.style.display='block';
     const p=Math.max(0,Math.min(1,(t-INTRO_END)/(CRAWL_END-INTRO_END)));
-    crawl.style.transform=`translateY(${-4230*p}px)`;
+    const crawlDistance = window.innerWidth <= 600 ? 3300 : 4230;
+    crawl.style.transform=`translateY(${-crawlDistance*p}px)`;
     const fp=Math.max(0,Math.min(1,(t-LOGO_START)/(CRAWL_END-LOGO_START)));
     const fade=fp*fp*(3-2*fp);
     crawlViewport.style.opacity=String(1-fade);
