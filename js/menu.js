@@ -15,7 +15,7 @@ window.QUAD_MENU = [
     ["Engines", "files/engines.html"], ["Single Player Maps", "files/maps_sp.html"], ["Multiplayer Maps", "files/maps_mp.html"], ["Modifications", "files/mods.html"], ["Offline Bots", "files/bots.html"], ["Improvements", "files/improvements.html"], ["Tools", "files/tools.html"]
   ]},
   { title: "Extra", items: [
-    ["Under Construction", "undercon.html"], ["Site Mainteinance", "updating.html"], ["[QUAD] Portal", "portal.html"]
+    ["Under Construction", "undercon.html"], ["Site Mainteinance", "updating.html"], ["[QUAD] Portal", "portal.html"], ["[QUAD] Messages", "messages.html"]
   ]}
 ];
 
