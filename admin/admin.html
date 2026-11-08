@@ -15,6 +15,7 @@
           <h1>QUAD ADMINISTRATION</h1>
           <div class="admin-subtitle">Local archive editor. Changes are never published automatically.</div>
         </div>
+        <span>TOTAL VISITS: <span id="visitCount">...</span></span>
         <button id="adminLogout" class="admin-button admin-button-danger" type="button">LOG OUT</button>
       </header>
       <div id="adminDesktopOnly" class="admin-desktop-only" hidden>QUAD Administration is available on desktop only.</div>
@@ -52,6 +53,18 @@
       <div id="adminModalActions" class="admin-actions"></div>
     </div>
   </div>
+<script>
+fetch("https://countapi.mileshilliard.com/api/v1/get/quad_statichost_page")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    document.getElementById("visitCount").textContent = data.value;
+  })
+  .catch(function() {
+    document.getElementById("visitCount").textContent = "N/A";
+  });
+</script>
   <script src="../js/admin.js"></script>
 </body>
 </html>
