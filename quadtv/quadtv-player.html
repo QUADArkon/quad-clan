@@ -2,13 +2,5 @@
 (function(){
   'use strict';
   window.QUAD_DEMO_PLAYER=true;
-  const params=new URLSearchParams(location.search);
-  const demo=params.get('demo');
-  if(!demo||!/^\.\.\/demos\/[A-Za-z0-9._/-]+\.dem$/i.test(demo)||demo.includes('..','../'.length)){
-    document.getElementById('progress').textContent='Invalid or missing demo path.';
-    return;
-  }
-  /* quadtv.js already consumes Quake-style location.search. Replace ?demo= with the exact command line before it loads. */
-  history.replaceState(null,'',location.pathname+'?+playdemo%20'+encodeURIComponent(demo).replace(/%2F/gi,'/'));
 })();
 </script><script src="quadtv.js?v=0.42-wateralpha4"></script></body></html>
