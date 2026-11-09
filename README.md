@@ -270,8 +270,6 @@ Historical material is retained as faithfully as practical while allowing improv
 
 The main page structure is substantially complete, while the historical archive can continue to expand with additional demos, maps, files, media and other recovered material.
 
-The historical `tricks & bugs` material is outside the current project scope.
-
 ---
 
 ## Contributing
