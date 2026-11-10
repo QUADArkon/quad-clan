@@ -12,7 +12,7 @@ Website: https://quad.statichost.page/
 
 [QUAD] was founded on February 24, 2000 by Arkon and Raistlin, two former [MiA] members of the Italian NetQuake community, with the goal of bringing teamplay back to Quake.
 
-From its Italian roots, [QUAD] expanded into the wider European NetQuake scene through clanwars, duels and tournaments. Between 2001 and 2003, the clan reached its competitive peak. In the worldwide scene documented at the time by **CLQ (Champions League for Quake)**, an early service for tracking and ranking Quake players and clans, [QUAD] counts **five world titles: three in Clanwar and two individual titles in Duel and FFA**.
+From its Italian roots, [QUAD] expanded into the wider European NetQuake scene through clanwars, duels and tournaments. The clan reached its competitive peak in the early 2000s. In the worldwide scene documented at the time by **CLQ (Champions League for Quake)**, an early service for tracking and ranking Quake players and clans, **[QUAD] repeatedly reached and held the top of the clan rankings between 2000 and 2003**, while several of its players also reached leading positions in the individual rankings.
 
 Beyond competition, [QUAD] became a long-lasting community built around online play, servers, LAN parties and the creation of original Quake content. Although competitive activity gradually declined, the clan never formally disappeared and many of its members remained friends over the years.
 
