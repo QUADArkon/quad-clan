@@ -1,5 +1,17 @@
 const newsArchive = [
 {
+  "id": "20240624-re-mobilize-1-2",
+  "date": "20240624",
+  "author": "Arkon",
+  "title": "Re: Mobilize 1.2",
+  "content": [
+    {
+      "type": "paragraph",
+      "html": "<p>If you thought standard Quake movement mechanics were already pushed to their absolute limits, <strong>Re:Mobilize</strong> completely rewrites the rules.</p>\n\n<p>Created by EmeraldTiger and Inky, the mod completely transforms how you navigate a Quake map by introducing three core movement mechanics that turn traditional gameplay on its head: <strong>Trampolines</strong> for massive vertical leaps, <strong>Wiremeshes</strong> for 360-degree surface and ceiling crawling, and <strong>Lighthooks</strong> that let you instantly zip toward any visible light panel across an arena.</p>\n\n<p><strong>Version 1.2 is out today</strong>, taking that high-octane foundation and significantly expanding it.</p>\n\n<p>The update delivers a fresh batch of new maps designed to push these mechanics to the absolute limit, alongside crucial quality-of-life adjustments and flow improvements to existing environments.</p>\n\n<p>For level designers, version 1.2 also introduces powerful new tools into the sandbox—most notably <strong>Magnets</strong>, complete with a dedicated test map, and expanded trigger logic supporting custom audio and persistent multi-explosions.</p>\n\nIt is one of the most creative and fluid overhauls for anyone looking to test their spatial reflexes in classic Quake.</br>\n<a href=\"https://www.slipseer.com/index.php?resources/re-mobilize.239/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.slipseer.com/index.php?resources/re-mobilize.239/</a>"
+    }
+  ]
+},
+{
   "id": "20261108-quad-tv-press-play",
   "date": "20261108",
   "author": "Arkon",

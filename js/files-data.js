@@ -1,32 +1,79 @@
 /* QUAD Files catalogue.
    Add entries here progressively as files are published. */
 window.QUAD_FILES = [
+{
+  "category": "engines",
+  "title": "Proquake",
+  "latestTitle": "Proquake",
+  "date": "20020921",
+  "version": "3.50",
+  "author": "J.P. Grossman",
+  "rating": 3,
+  "description": "ProQuake is a NetQuake engine designed specifically for competitive deathmatch play, providing precise aiming, improved networking, cheat protection and numerous client and server enhancements while remaining fully compatible with standard NetQuake and CRMod 6.x.",
+  "active": true,
+  "downloads": [
+    {
+      "label": "Windows Software",
+      "filename": "wqpro350.zip",
+      "size": "296 KB"
+    },
+    {
+      "label": "Windows OpenGL",
+      "filename": "glpro350.zip",
+      "size": "240 KB"
+    },
+    {
+      "label": "Linux",
+      "filename": "sqpro350.zip",
+      "size": "211 KB"
+    },
+    {
+      "label": "Security Module",
+      "filename": "qsecurity320.zip",
+      "size": "25,2 KB"
+    },
+    {
+      "label": "Location files",
+      "filename": "locs.zip",
+      "size": "9,52 KB"
+    },
+    {
+      "label": "Source Code",
+      "filename": "pqsrc350.zip",
+      "size": "1,62 MB"
+    }
+  ],
+  "id": "proquake"
+},
+
   {
-    id: "obots102",
-    category: "bots",
-    title: "Omicron Bot 1.02",
-    latestTitle: "Omicron Bot",
-    filename: "obots102.zip",
-    date: "19980323",
-    version: "1.02",
-    author: "Mr. Elusive",
-    size: "986 KB",
-    description: "Advanced Quake bot featuring dynamic level learning: Omicron Bots can learn maps while playing, remember item locations and routes, and can also learn the level by following a human player's movement. Version 1.02 also includes Rocket Arena support.",
-    active: true
-  },
+  "id": "obots102",
+  "category": "bots",
+  "title": "Omicron Bot 1.02",
+  "latestTitle": "Omicron Bot",
+  "filename": "obots102.zip",
+  "date": "19980323",
+  "version": "1.02",
+  "author": "Mr. Elusive",
+  "size": "986 KB",
+  "description": "Advanced Quake bot featuring dynamic level learning: Omicron Bots can learn maps while playing, remember item locations and routes, and can also learn the level by following a human player's movement. Version 1.02 also includes Rocket Arena support.",
+  "active": true,
+  "rating": 5
+},
   {
-  id: "extreme400",
-  category: "mods",
-  title: "Quake Extreme Mod 4.00",
-  latestTitle: "Extreme",
-  filename: "extreme.zip",
-  date: "20031115",
-  version: "4.00",
-  author: "Xeno & Arkon",
-  size: "713 KB",
-  description: "Single-player and cooperative Quake modification focused on completing maps as quickly and completely as possible with a weapon of your choice. Each map starts with only the ammunition required to kill all monsters and activate shootable doors and buttons, making the selected weapon an important part of the challenge. Performance is evaluated according to monsters killed and secrets found. Version 4.00 supports standard Quake, Scourge of Armagon and Dissolution of Eternity, with cooperative play for up to two players.",
-  active: true
-  },
+  "id": "extreme400",
+  "category": "mods",
+  "title": "Quake Extreme Mod 4.00",
+  "latestTitle": "Extreme",
+  "filename": "extreme.zip",
+  "date": "20031115",
+  "version": "4.00",
+  "author": "Xeno & Arkon",
+  "size": "713 KB",
+  "description": "Single-player and cooperative Quake modification focused on completing maps as quickly and completely as possible with a weapon of your choice. Each map starts with only the ammunition required to kill all monsters and activate shootable doors and buttons, making the selected weapon an important part of the challenge. Performance is evaluated according to monsters killed and secrets found. Version 4.00 supports standard Quake, Scourge of Armagon and Dissolution of Eternity, with cooperative play for up to two players.",
+  "active": true,
+  "rating": 3
+},
   {
   id: "pakscape011",
   category: "tools",
@@ -302,42 +349,45 @@ window.QUAD_FILES = [
   active: true
   },
   {
-    id: "a-desert-dusk",
-    category: "maps_sp",
-    title: "A Desert Dusk",
-    latestTitle: "A Desert Dusk",
-    filename: "add.zip",
-    date: "20030507",
-    version: "1.0",
-    size: "3.24 MB",
-    author: "Dustin Geeraert",
-    description: "Single-player Quake map set in a desert fortress and canyon environment, with skill levels and additional Cooperative and Deathmatch support.",
-  active: true
-  },
+  "id": "a-desert-dusk",
+  "category": "maps_sp",
+  "title": "A Desert Dusk",
+  "latestTitle": "A Desert Dusk",
+  "filename": "add.zip",
+  "date": "20030507",
+  "version": "1.0",
+  "size": "3.24 MB",
+  "author": "Dustin Geeraert",
+  "description": "Single-player Quake map set in a desert fortress and canyon environment, with skill levels and additional Cooperative and Deathmatch support.",
+  "active": true,
+  "rating": 3
+},
   {
-    id: "aerowalk",
-    category: "maps_mp",
-    title: "AeroWalk",
-    latestTitle: "AeroWalk",
-    filename: "aerowalk.zip",
-    date: "19980221",
-    version: "1.0",
-    size: "221 KB",
-    author: "Mattias Konradsson",
-    description: "Medium-sized Quake deathmatch map designed especially for fast 1-on-1 play, with support for up to 16 players.",
-  active: true
-  },
+  "id": "aerowalk",
+  "category": "maps_mp",
+  "title": "AeroWalk",
+  "latestTitle": "AeroWalk",
+  "filename": "aerowalk.zip",
+  "date": "19980221",
+  "version": "1.0",
+  "size": "221 KB",
+  "author": "Mattias Konradsson",
+  "description": "Medium-sized Quake deathmatch map designed especially for fast 1-on-1 play, with support for up to 16 players.",
+  "active": true,
+  "rating": 5
+},
   {
-    id: "crmod66",
-    category: "mods",
-    title: "ClanRing CRMod++ 6.6",
-    latestTitle: "CRMod 6.6",
-    filename: "crmod66.zip",
-    date: "20170312",
-    version: "6.6",
-    author: "J.P. Grossman",
-    size: "269 KB",
-    description: "Quake 1 NetQuake competition server mod designed for FFA and organized match play. CRMod++ includes ffa, match, individual and practice modes, multiple observer and camera modes, player and team statistics, administrator controls, voting, server configuration features, entity and camera support, and native ProQuake integration.",
-    active: true
-  }
+  "id": "crmod66",
+  "category": "mods",
+  "title": "ClanRing CRMod++ 6.6",
+  "latestTitle": "CRMod 6.6",
+  "filename": "crmod66.zip",
+  "date": "20170312",
+  "version": "6.6",
+  "author": "J.P. Grossman",
+  "size": "269 KB",
+  "description": "Quake 1 NetQuake competition server mod designed for FFA and organized match play. CRMod++ includes ffa, match, individual and practice modes, multiple observer and camera modes, player and team statistics, administrator controls, voting, server configuration features, entity and camera support, and native ProQuake integration.",
+  "active": true,
+  "rating": 5
+}
 ];
